@@ -107,14 +107,14 @@ Players can press **Suggest it** on a rejected answer. Suggestions are stored in
 ## Avatars, unlocks & sound
 
 - Snowman avatars live in `public/avatars/*.png` (64×64, made from the `.pixil` files: soft brush edges snapped to crisp pixels, insides filled with snow white). Add one by dropping a PNG there and listing it in [src/game/profile.ts](src/game/profile.ts) with an unlock rule. The scene assumes the snowman's feet are on row 62 and its right edge ≈ column 56.
-- Only **Winky** (the v3 snowman) is unlocked at first. The rest are earned and announced with a popup:
+- Only **Buttons** is unlocked at first. The rest are earned and announced with a popup:
 
 | Snowman | How to unlock |
 | --- | --- |
-| Winky | start |
+| Buttons | start |
 | Classic | finish your first roll |
 | Meh | run out of time once |
-| Buttons | get an Icefrost (or colder) answer |
+| Winky | get an Icefrost (or colder) answer |
 | Cap | finish 3 custom rolls |
 | Top Hat | 3-day daily streak |
 | Pointy | get a Brain Freeze (or colder) answer |

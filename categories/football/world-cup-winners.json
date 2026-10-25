@@ -1,0 +1,29 @@
+{
+  "id": "world-cup-winners",
+  "prompt": "Name a country that has won the men's FIFA World Cup",
+  "ranking": {
+    "title": "{name} national football team"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 8,
+    "coverage": "100%"
+  },
+  "answers": {
+    "slush": [
+      "England", "Argentina"
+    ],
+    "snowflake": [
+      "Spain"
+    ],
+    "icefrost": [
+      "Germany|West Germany", "France"
+    ],
+    "brainfreeze": [
+      "Brazil", "Italy"
+    ],
+    "absolutezero": [
+      "Uruguay"
+    ]
+  }
+}

@@ -31,10 +31,10 @@ const colder = (p: Progress, from: TierId) => {
 };
 
 export const AVATARS: Avatar[] = [
-  { id: 'winking', name: 'Winky', hint: '', isUnlocked: () => true },
+  { id: 'buttons', name: 'Buttons', hint: '', isUnlocked: () => true },
   { id: 'classic', name: 'Classic', hint: 'Finish your first roll', isUnlocked: (p: Progress) => p.rollsFinished >= 1 },
   { id: 'meh', name: 'Meh', hint: 'Run out of time once', isUnlocked: (p: Progress) => p.timeouts >= 1 },
-  { id: 'buttons', name: 'Buttons', hint: 'Get an Icefrost (or colder) answer', isUnlocked: (p: Progress) => colder(p, 'icefrost') >= 1 },
+  { id: 'winking', name: 'Winky', hint: 'Get an Icefrost (or colder) answer', isUnlocked: (p: Progress) => colder(p, 'icefrost') >= 1 },
   { id: 'cap', name: 'Cap', hint: 'Finish 3 custom rolls', isUnlocked: (p: Progress) => p.customFinished >= 3 },
   { id: 'tophat', name: 'Top Hat', hint: 'Reach a 3-day daily streak', isUnlocked: (p: Progress) => p.bestStreak >= 3 },
   { id: 'pointy', name: 'Pointy', hint: 'Get a Brain Freeze (or colder) answer', isUnlocked: (p: Progress) => colder(p, 'brainfreeze') >= 1 },

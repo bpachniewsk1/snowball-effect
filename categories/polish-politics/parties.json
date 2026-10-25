@@ -51,7 +51,7 @@
   },
   "answers": {
     "slush": [
-      "Prawo i Sprawiedliwość|PiS|Law and Justice", "Polska Zjednoczona Partia Robotnicza|PZPR",
+      "Polska Zjednoczona Partia Robotnicza|PZPR", "Prawo i Sprawiedliwość|PiS|Law and Justice",
       "Koalicja Obywatelska|KO|Civic Coalition",
       "Platforma Obywatelska|PO|Civic Platform|Platforma Obywatelska RP|Platforma Obywatelska Rzeczypospolitej Polskiej",
       "Konfederacja|Confederation|Konfederacja Wolność i Niepodległość|Koalicja Propolska|Konfederacja KORWiN Braun Liroy Narodowcy|KWiN",
@@ -65,11 +65,11 @@
     "snowflake": [
       "Zjednoczone Stronnictwo Ludowe|ZSL", "Polska Razem|Polska Razem Jarosława Gowina",
       "Samoobrona|Samoobrona RP|Self-Defence|Samoobrona Rzeczpospolitej Polskiej|Przymierze Samoobrona|Samoobrona Rzeczypospolitej Polskiej|Nasz Dom Polska – Samoobrona Andrzeja Leppera",
-      "Ruch Palikota|Twój Ruch|Palikot's Movement|Ruch PL|Ruch Poparcia|Ruch Poparcia Janusza Palikota|Ruch Poparcia Palikota",
       "Komunistyczna Partia Polski|KPP", "Inicjatywa Polska|iPL",
       "Nowa Nadzieja|New Hope|KORWiN|Wolność|Konfederacja Odnowy Rzeczypospolitej Wolność i Niepodległość",
       "Liga Polskich Rodzin|LPR|League of Polish Families",
       "Konfederacja Korony Polskiej|Korona|Confederation of the Polish Crown|Korona Polska|KKP",
+      "Ruch Palikota|Twój Ruch|Palikot's Movement|Ruch Poparcia|Ruch Poparcia Janusza Palikota|Ruch Poparcia Palikota|Ruch PL",
       "Kukiz'15|Kukiz", "Ruch Narodowy|National Movement",
       "Akcja Wyborcza Solidarność|AWS|Solidarity Electoral Action", "Obóz Narodowo-Radykalny|ONR",
       "Unia Wolności|UW|Freedom Union", "Nowoczesna|Modern|Nowoczesna Ryszarda Petru|NowoczesnaPL",
@@ -81,16 +81,16 @@
       "Polska Partia Pracy – Sierpień 80|Alternatywa - Partia Pracy|Polska Partia Pracy|PPP-Sierpień 80",
       "Bezpartyjny Blok Wspierania Reform", "Krajowa Partia Emerytów i Rencistów|KPEiR",
       "Ruch Obywatelski Akcja Demokratyczna|ROAD", "Wolni i Solidarni",
-      "RACJA Polskiej Lewicy|Antyklerykalna Partia Postępu \"Racja\"|APP \"Racja\"|RACJA PL",
       "Wolność i Praworządność|PJKM|Platforma Janusza Korwin-Mikke|Platforma JKM",
-      "Partia Centrum|Centrum"
+      "Partia Centrum|Centrum",
+      "RACJA Polskiej Lewicy|Antyklerykalna Partia Postępu \"Racja\"|APP \"Racja\"|RACJA PL"
     ],
     "icefrost": [
       "Polskie Stronnictwo Ludowe – Porozumienie Ludowe",
       "Polska Partia Piratów|Piraci|Partia Piratów", "Unia Pracy|UP|Labour Union",
-      "Zieloni|Partia Zieloni|The Greens", "Unia Polityki Realnej|UPR", "Związek Słowiański",
+      "Zieloni|Partia Zieloni|The Greens", "Unia Polityki Realnej|UPR",
+      "Wolność i Równość|Unia Lewicy|WiR", "Związek Słowiański",
       "Porozumienie|Porozumienie Jarosława Gowina|Agreement", "Partia Konserwatywna",
-      "Wolność i Równość|Unia Lewicy|WiR",
       "Stronnictwo Pracy|ChDSP|Chrześcijańsko-Demokratyczne Stronnictwo Pracy",
       "Kongres Nowej Prawicy|KNP", "Wiosna|Spring", "Wolnościowcy",
       "Porozumienie Centrum|PC|Centre Agreement", "Federacja dla Rzeczypospolitej|Federacja|FdR",

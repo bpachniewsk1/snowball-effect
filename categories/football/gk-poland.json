@@ -1,0 +1,60 @@
+{
+  "id": "goalkeepers-poland",
+  "prompt": "Name a goalkeeper from Poland's national team (any era)",
+  "matchSurname": true,
+  "ranking": {
+    "hints": [
+      "(footballer)",
+      "(goalkeeper)"
+    ],
+    "expect": "footballer|goalkeeper|football|soccer|manager|coach",
+    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q166196 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . ?o rdfs:label ?ol . FILTER(?ol IN (\"midfielder\"@en, \"forward\"@en)) }",
+    "max": 150
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 75,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Wojciech Szczęsny|Szczesny", "Łukasz Fabiański|Fabianski"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Jerzy Dudek|Jerzy Henryk Dudek", "Tomasz Kuszczak|Tomasz Miroslaw Kuszczak", "Artur Boruc",
+      "Wojciech Szczęsny|Szczesny", "Łukasz Fabiański|Fabianski", "Łukasz Skorupski", "Marcin Bułka",
+      "Przemysław Tytoń", "Jan Tomaszewski", "Bartosz Białkowski|Bartosz Marek Białkowski",
+      "Józef Młynarczyk", "Jakub Słowik", "Radosław Majdan", "Grzegorz Sandomierski", "Adam Matysek"
+    ],
+    "snowflake": [
+      "Łukasz Załuska", "Wojciech Kowalewski", "Jacek Kazimierski", "Józef Wandzik", "Maciej Szczęsny",
+      "Piotr Mowlik", "Hubert Kostka", "Arkadiusz Onyszko", "Andrzej Fischer|Andrzej Lucjan Fischer",
+      "Radosław Cierzniak", "Grzegorz Szamotulski|Gregorz Szamotulski", "Zygmunt Kalinowski",
+      "Edward Madejski|Edward Dominik Jerzy Madejski", "Aleksander Kłak",
+      "Marian Szeja|Marian Henryk Szeja"
+    ],
+    "icefrost": [
+      "Jarosław Bako", "Zygmunt Kukla", "Walter Brom|Walter Henryk Brom", "Mariusz Pawełek",
+      "Zdzisław Kostrzewa", "Andrzej Woźniak", "Edward Szymkowiak", "Kazimierz Sidorczuk",
+      "Michał Miśkiewicz", "Spirydion Albański|Spirydion Jan Albański", "Jan Gomola",
+      "Rafał Leszczyński", "Sebastian Małkowski", "Krys Sobieski|Krzysztof Sobieski", "Michał Gliwa",
+      "Jakub Wierzchowski", "Mieczysław Zygmunt Wiśniewski"
+    ],
+    "brainfreeze": [
+      "Tomasz Stefaniszyn|Tomasz Tadeusz Stefaniszyn", "Andrzej Przeworski", "Sebastian Przyrowski",
+      "Janusz Jojko|Janusz Andrzej Jojko", "Stanisław Ryszard Burzyński|Stanisław Burzyński",
+      "Emil Görlitz", "Mariusz Liberda", "Jan Loth", "Andrzej Bledzewski", "Maciej Nalepa",
+      "Henryk Bolesta", "Bogusław Wyparło", "Antoni Janik|Werner Janik", "Waldemar Piątek",
+      "Stanisław Fołtyn", "Konrad Kornek|Konrad Józef Kornek",
+      "Henryk Gronowski|Henryk Teodor Gronowski|Henryk Teodor Gruner", "Adolf Krzyk",
+      "Ryszard Jankowski", "Jan Karwecki", "Stefan Popiel|Stefan Sulima-Popiel",
+      "Zbigniew Robakiewicz", "Eugeniusz Cebrat", "Grzegorz Tomala", "Marian Fontowicz",
+      "Antoni Keller"
+    ],
+    "absolutezero": [
+      "Antoni Piasecki", "Henryk Pietrek"
+    ]
+  }
+}

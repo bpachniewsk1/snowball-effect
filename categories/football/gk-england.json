@@ -1,0 +1,89 @@
+{
+  "id": "goalkeepers-england",
+  "prompt": "Name a goalkeeper from England's national team (any era)",
+  "matchSurname": true,
+  "ranking": {
+    "hints": [
+      "(footballer)",
+      "(goalkeeper)"
+    ],
+    "expect": "footballer|goalkeeper|football|soccer|manager|coach",
+    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q47762 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . ?o rdfs:label ?ol . FILTER(?ol IN (\"midfielder\"@en, \"forward\"@en)) }",
+    "max": 150
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 114,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Jordan Pickford|Pickford"
+    ],
+    "snowflake": [
+      "Nick Pope", "Aaron Ramsdale"
+    ],
+    "icefrost": [
+      "Fraser Forster"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Peter Shilton|Peter Leslie Shilton", "Joe Hart|Charles Joseph John Hart",
+      "David Seaman|David Andrew Seaman", "Jordan Pickford|Pickford",
+      "James Trafford|James Harrington Trafford", "David James|David Benjamin James",
+      "Robert Green|Robert Paul Green", "Ben Foster|Ben Anthony Foster",
+      "Sam Johnstone|Samuel Luke Johnstone", "Gordon Banks", "Scott Carson|Scott Paul Carson",
+      "Dean Henderson|Dean Bradley Henderson", "Jack Butland", "Tom Heaton|Thomas David Heaton",
+      "Aaron Ramsdale"
+    ],
+    "snowflake": [
+      "Ray Clemence|Raymond Neal Clemence", "Paul Robinson|Paul William Robinson", "John Ruddy",
+      "Nick Pope", "Alex McCarthy", "Nigel Martyn|Antony Nigel Martyn", "Peter Bonetti",
+      "Chris Kirkland|Christopher Edmund Kirkland", "Chris Woods|Christopher Charles Eric Woods",
+      "Richard Wright", "Alex Stepney|Alexander Cyril \"Alex\" Stepney",
+      "Tim Flowers|Timothy David \"Tim\" Flowers", "Dave Beasant", "Gary Bailey",
+      "Ian Walker|Ian Michael Walker", "Jimmy Rimmer|John Rimmer|John James Rimmer|James Rimmer",
+      "Ron Springett|Ronald Deryk George \"Ron\" Springett", "William Foulke",
+      "Joe Corrigan|Joseph Thomas Corrigan", "Bert Williams|Bert Frederick Williams",
+      "Nigel Spink|Nigel Philip Spink", "Phil Parkes", "Fraser Forster", "Alan Hodgkinson"
+    ],
+    "icefrost": [
+      "Frank Swift|Frank Victor Swift", "Gil Merrick|Gilbert Harold Merrick", "Ted Ditchburn",
+      "Tony Waiters", "Colin McDonald", "Eddie Hopkinson|Edward Hopkinson", "Gordon West",
+      "Ray Wood|Raymond Ernest Wood", "Sam Hardy", "Jimmy Ashcroft|James Ashcroft",
+      "Ted Sagar|Edward Sagar", "Alexander Morten|Alec Morten", "Robert Barker",
+      "Harry Hibbs|Henry Edward Hibbs", "Horace Bailey|Horace Peter Bailey",
+      "Jack Alderson|John Thomas Alderson", "Dick Pym|Richard Henry Pym",
+      "Jack Robinson|John Robinson|John William Robinson", "Benjamin Howard Baker",
+      "John Willie Sutcliffe|John William Sutcliffe", "Vic Woodley|Victor Robert Woodley",
+      "Frank Moss", "Teddy Davison|John Edward Davison", "Tim Williamson",
+      "Rupert Anderson|Rupert Darnley Anderson", "Reginald Courtenay Welch",
+      "Herby Arthur|William John Herbert Arthur", "Reg Matthews|Reginald Derrick Matthews",
+      "Leslie Gay|Leslie Hewitt Gay"
+    ],
+    "brainfreeze": [
+      "Ted Hufton|Arthur Edward Hufton", "Ron Baynham|Ronald Baynham|Ronald Leslie Baynham",
+      "Billy Moon|William Robert Moon", "Jerry Dawson|Jeremiah Dawson",
+      "Harry Linacre|James Henry Linacre", "Tom Baddeley|Thomas Baddeley",
+      "Billy George|William George", "William Rose|William Crisp Rose|William Crispin Rose",
+      "William Maynard|William John Maynard", "Ted Taylor|Edward Taylor",
+      "James Mitchell|Fred Mitchell|Jim Mitchell|James Frederick Mitchell", "Bert Coleman",
+      "Jack Mew|John William Mew", "William Carr|William Henry Carr", "Jack Brown|John Henry Brown",
+      "Bob Roberts|Robert John Roberts", "Percival Parr|Percival Chase Parr", "Bill Rowley",
+      "John Rawlinson|John Frederick Peel Rawlinson", "Jack Hillman|William John Hillman",
+      "Jack Hacking|John Hacking", "Harry Hardy", "Ernest Williamson|Ernest Clarke Williamson",
+      "John Hawtrey|John Purvis Hawtrey", "George Ashmore|George Samuel Austin Ashmore",
+      "Harold Pearson|Harold Frederick Pearson", "Freddie Fox|Frederick Samuel Fox", "Albert McInroy",
+      "Matt Kingsley|Matthew Kingsley", "Chris Charsley|Charles Christopher Charsley",
+      "Ernald Scattergood", "George Tweedy|George Jacob Tweedy", "Conrad Warner",
+      "Harry Swepstone|Harry Albemarle Swepstone", "Joe Reader", "Hugh Turner", "George Holdcroft",
+      "Leonard Wilkinson|Leonard Rodwell Wilkinson", "Harry Maskrey|Harry Mart Maskrey",
+      "Dan Tremelling|Richard Daniel Tremelling", "Bernard Streten|Bernard Reginald Streten",
+      "George Toone", "John Sands", "Arthur Savage"
+    ],
+    "absolutezero": [
+      "Harold Gough", "Ben Olney|Benjamin Albert Olney"
+    ]
+  }
+}

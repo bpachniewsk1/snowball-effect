@@ -1,0 +1,71 @@
+{
+  "id": "goalkeepers-spain",
+  "prompt": "Name a goalkeeper from Spain's national team (any era)",
+  "matchSurname": true,
+  "ranking": {
+    "hints": [
+      "(footballer)",
+      "(goalkeeper)"
+    ],
+    "expect": "footballer|goalkeeper|football|soccer|manager|coach",
+    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q42267 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . ?o rdfs:label ?ol . FILTER(?ol IN (\"midfielder\"@en, \"forward\"@en)) }",
+    "max": 150
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 62,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "David de Gea|De Gea", "Unai Simón|Unai Simon"
+    ],
+    "snowflake": [
+      "Kepa Arrizabalaga|Kepa", "Robert Sánchez|Robert Sanchez", "David Raya|Raya"
+    ],
+    "icefrost": [
+      "Álex Remiro|Remiro", "Molina|José Francisco Molina"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Iker Casillas|Iker Casillas Fernández", "David de Gea|De Gea",
+      "Pepe Reina|Jose Manuel Reina Paez", "Unai Simón", "Víctor Valdés",
+      "Julen Lopetegui|Julen Lopetegui Argote",
+      "Andoni Zubizarreta|Zubizarreta|Andoni Zubizarreta Urreta", "Santiago Cañizares",
+      "David Raya|Raya", "Diego López|Diego López Rodríguez", "Robert Sánchez",
+      "Kiko Casilla|Francisco Casilla Cortés"
+    ],
+    "snowflake": [
+      "Kepa Arrizabalaga|Kepa", "Ricardo Zamora|Ricardo Zamora Martinez",
+      "Andrés Palop|Andres Palop Cervera", "Josep Martínez|Josep Martinez Riera",
+      "César Sánchez|Cesar", "Sergio Asenjo|El Estuche", "Antoni Ramallets|Antonio Ramallets",
+      "José Ángel Iribar", "Luis Arconada|Luis Miguel Arconada Etxarri",
+      "Álvaro Fernández|Álvaro Fernández Llorente|Alvaro Ferllo",
+      "Álex Remiro|Remiro|Alejandro Remiro|Alejandro \"Álex\" Remiro Gargallo",
+      "Dani Aranzubia|Daniel Aranzubia|Daniel Aranzubia Aguado"
+    ],
+    "icefrost": [
+      "Molina|José Francisco Molina", "Ricardo", "Miguel Reina|Miguel Reina Santos",
+      "Javier Urruticoechea", "José Manuel Ochotorena|Jose Manuel Ochotorena Santacruz",
+      "Miguel Ángel González Suárez", "Salvador Sadurní", "Abel Resino", "Mariano García Remón",
+      "Francisco Buyo|Francisco 'Paco' Buyo Sánchez|Francisco Buyo Sanchez|Paco Buyo",
+      "Pedro Contreras", "Toni Jiménez|Antonio Jimenez Sistachs",
+      "José Araquistáin|José Araquistáin Arrieta", "Juan Alonso|Juanito Alonso"
+    ],
+    "brainfreeze": [
+      "Juan José Nogués", "Juan Carlos Ablanedo|Juan Carlos Ablanedo Iglesias", "Carmelo Cedrún",
+      "Pedro María Artola|Pedro Artola|Pello Artola", "Ignacio Eizaguirre|Ignacio Eizaguirre Arregui",
+      "Antonio Betancort|Antonio Rodrigo Betancort Barrera", "José Vicente Train", "Juanmi García",
+      "Guillermo Eizaguirre|Guillermo Eizaguierre|Guillermo Eizaguirre Olmos", "Juan Zambudio Velasco",
+      "Gregorio Blasco", "José Manuel Pesudo|José Manuel Pesudo Soler",
+      "Pedro Valentín Mora|Pere Valentí Mora Mariné", "Jesús Castro González",
+      "Raimundo Pérez Lezama|Lezama", "Agustín Eizaguirre", "Pepín|Jose Casas Gris",
+      "Fernando Argila|Fernando de Argila Pazzaglia", "José Manuel Sempere|José Sempere",
+      "José María Jauregi|José María Jáuregui", "Manuel Vidal Hermosa", "Juan Antonio Deusto"
+    ],
+    "absolutezero": [
+      "José María Echevarría|José María Etxebarria", "Alberto Martorell|Alberto Martorell Otzet"
+    ]
+  }
+}

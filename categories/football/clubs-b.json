@@ -1,0 +1,60 @@
+{
+  "id": "football-clubs-b",
+  "prompt": "Name a football club starting with B (FC, AC, CF… don't count)",
+  "ignoreWords": [
+    "fc",
+    "afc",
+    "cf",
+    "ac",
+    "sc",
+    "club",
+    "fk",
+    "sk",
+    "kv",
+    "sl",
+    "calcio",
+    "the"
+  ],
+  "ranking": {
+    "hints": [
+      "F.C."
+    ],
+    "expect": "football|soccer|club|futebol|fútbol|calcio"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 49,
+    "coverage": "86%"
+  },
+  "answers": {
+    "slush": [
+      "Barcelona|Barca", "Bayern Munich|Bayern|Bayern München", "Borussia Dortmund|Dortmund|BVB",
+      "Brentford|Brentford F.C.", "Burnley|Burnley F.C.",
+      "Blackburn Rovers|Blackburn Rovers F.C.|Blackburn", "Benfica|S.L. Benfica",
+      "Bayer Leverkusen|Bayer 04 Leverkusen|Leverkusen", "Beşiktaş|Beşiktaş J.K.",
+      "Boca Juniors|Club Atlético Boca Juniors|Boca"
+    ],
+    "snowflake": [
+      "Bodø/Glimt", "Bolton Wanderers|Bolton Wanderers F.C.|Bolton",
+      "Bordeaux|FC Girondins de Bordeaux", "Birmingham City|Birmingham City F.C.|Birmingham",
+      "Club Brugge|Bruges", "Borussia Mönchengladbach|Gladbach|Monchengladbach",
+      "Bristol City|Bristol City F.C.", "Bologna|Bologna FC 1909", "Blackpool|Blackpool F.C."
+    ],
+    "icefrost": [
+      "Bradford City|Bradford City A.F.C.|Bradford", "Basel", "Barnsley|Barnsley F.C.",
+      "Braga|S.C. Braga|Sporting Braga", "Bristol Rovers|Bristol Rovers F.C.", "Brøndby|Brøndby IF",
+      "Boavista|Boavista F.C.", "Brest|Stade Brestois 29|Stade Brestois", "Bury|Bury F.C.",
+      "Botafogo|Botafogo de Futebol e Regatas", "Bromley|Bromley F.C."
+    ],
+    "brainfreeze": [
+      "Barnet|Barnet F.C.", "Burton Albion|Burton Albion F.C.", "Bournemouth",
+      "Brighton|Brighton & Hove Albion F.C.|Brighton and Hove Albion", "Bursaspor",
+      "Bahia|Esporte Clube Bahia", "Brescia", "Benevento", "Brann", "Bastia", "Bochum|VfL Bochum",
+      "Brisbane Roar", "Beitar Jerusalem|Beitar Jerusalem F.C.|Beitar", "Bari|SSC Bari",
+      "Banfield|Club Atlético Banfield", "Belgrano|Club Atlético Belgrano", "BATE Borisov|BATE"
+    ],
+    "absolutezero": [
+      "Budućnost Podgorica|Buducnost", "Bolívar"
+    ]
+  }
+}

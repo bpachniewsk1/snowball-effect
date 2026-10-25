@@ -1,0 +1,52 @@
+{
+  "id": "european-cup-winners",
+  "prompt": "Name a club that has won the European Cup / Champions League",
+  "ignoreWords": [
+    "fc",
+    "afc",
+    "cf",
+    "ac",
+    "sc",
+    "club",
+    "fk",
+    "sk",
+    "kv",
+    "sl",
+    "the"
+  ],
+  "ranking": {
+    "hints": [
+      "F.C."
+    ],
+    "expect": "football|soccer|club|futebol|fútbol|calcio"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 24,
+    "coverage": "96%"
+  },
+  "answers": {
+    "slush": [
+      "Manchester City|Manchester City F.C.|Man City",
+      "Manchester United|Manchester United F.C.|Man United|Man Utd", "Barcelona|Barca",
+      "Liverpool|Liverpool F.C.", "Real Madrid|Real"
+    ],
+    "snowflake": [
+      "Chelsea|Chelsea F.C.", "Paris Saint-Germain|Paris Saint-Germain F.C.|PSG|Paris SG",
+      "Juventus|Juve", "Milan", "Bayern Munich|Bayern|Bayern München"
+    ],
+    "icefrost": [
+      "Aston Villa|Aston Villa F.C.|Villa", "Inter Milan|Internazionale|Inter",
+      "Nottingham Forest|Nottingham Forest F.C.|Forest", "Borussia Dortmund|Dortmund|BVB",
+      "Ajax|Ajax Amsterdam"
+    ],
+    "brainfreeze": [
+      "Celtic|Celtic F.C.", "Benfica|S.L. Benfica", "Feyenoord", "Porto",
+      "Marseille|Olympique de Marseille|Olympique Marseille|OM", "PSV Eindhoven|PSV",
+      "Red Star Belgrade|Crvena Zvezda|Red Star", "Hamburger SV|Hamburg|HSV"
+    ],
+    "absolutezero": [
+      "Steaua București|FCSB|Steaua Bucharest|Steaua"
+    ]
+  }
+}

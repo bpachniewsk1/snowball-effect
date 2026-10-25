@@ -1,0 +1,62 @@
+{
+  "id": "goalkeepers-germany",
+  "prompt": "Name a goalkeeper from Germany's national team (any era, West Germany counts)",
+  "matchSurname": true,
+  "ranking": {
+    "hints": [
+      "(footballer)",
+      "(goalkeeper)"
+    ],
+    "expect": "footballer|goalkeeper|football|soccer|manager|coach",
+    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q43310 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . ?o rdfs:label ?ol . FILTER(?ol IN (\"midfielder\"@en, \"forward\"@en)) }",
+    "max": 150
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 77,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Manuel Neuer", "Marc-André ter Stegen|ter Stegen|Marc-Andre ter Stegen"
+    ],
+    "snowflake": [
+      "Harald Schumacher|Toni Schumacher", "Kevin Trapp", "Bernd Leno"
+    ],
+    "icefrost": [
+      "Oliver Baumann"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Oliver Kahn", "Jens Lehmann|Jens Gerhard Lehmann", "Manuel Neuer",
+      "Marc-André ter Stegen|ter Stegen", "Robert Enke", "Sepp Maier", "Roman Weidenfeller",
+      "Ron-Robert Zieler", "Hans-Jörg Butt|Jörg Butt", "Bodo Illgner", "Andreas Köpke", "Tim Wiese",
+      "Bernd Leno", "Kevin Trapp", "René Adler"
+    ],
+    "snowflake": [
+      "Timo Hildebrand", "Eike Immel|Eike Heinrich Immel", "Hans Tilkowski",
+      "Harald Schumacher|Toni Schumacher|Toni Schuhmacher", "Raimond Aumann|Balu",
+      "Toni Turek|Anton Turek", "Frank Rost", "Uli Stein", "Wolfgang Kleff", "Oliver Reck",
+      "Oliver Baumann", "Heinz Kwiatkowski", "Norbert Nigbur", "Dieter Burdenski", "Rudolf Kargus"
+    ],
+    "icefrost": [
+      "Günter Bernard", "Bernd Franke", "Horst Wolter", "Manfred Manglitz", "Hans Jakob",
+      "Günter Sawitzki", "Fritz Buchloh", "Fritz Herkenrath", "Heinz Kubsch", "Willibald Kreß",
+      "Helmut Roleder", "Rudolf Raftl|Rudolf Leopold Raftl", "Wolfgang Fahrian",
+      "Heinrich Stuhlfauth|Heinrich (\"Heiner\") Stuhlfauth", "Peter Platzer", "Volkmar Groß",
+      "Adolf Werner", "Fritz Ewert"
+    ],
+    "brainfreeze": [
+      "Karl Bögelein", "Karl Adam", "Helmut Jahn", "Georg Ertl", "Albert Weber",
+      "Theodor Lohrmann|Teddy|Theodor Robert Lohrmann", "Christian Schmidt", "Willy Jürissen",
+      "Johannes Schneider", "Fritz Baumgarten", "Hans Klodt", "Walter Borck", "Robert Faas",
+      "Carl Zörner", "Georg Köhl", "Heinz Flotho", "Paul Gehlhaar", "Ludwig Hofmeister",
+      "Paul Eichelmann", "Heinrich Sonnrein", "Hans Riso", "Erwin Deyhle", "Alexander Martinek",
+      "Eberhardt Illmer", "Hans Wentorf", "Willy Schwedler", "Karl Zolper"
+    ],
+    "absolutezero": [
+      "Paul Mauch", "Ludwig Wenz"
+    ]
+  }
+}

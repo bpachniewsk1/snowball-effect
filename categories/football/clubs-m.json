@@ -1,0 +1,58 @@
+{
+  "id": "football-clubs-m",
+  "prompt": "Name a football club starting with M (FC, AC, CF… don't count)",
+  "ignoreWords": [
+    "fc",
+    "afc",
+    "cf",
+    "ac",
+    "sc",
+    "club",
+    "fk",
+    "sk",
+    "kv",
+    "sl",
+    "calcio",
+    "the"
+  ],
+  "ranking": {
+    "hints": [
+      "F.C."
+    ],
+    "expect": "football|soccer|club|futebol|fútbol|calcio"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 42,
+    "coverage": "86%"
+  },
+  "answers": {
+    "slush": [
+      "Manchester City|Manchester City F.C.|Man City",
+      "Manchester United|Manchester United F.C.|Man United|Man Utd|Manchester Utd", "Milan",
+      "Monaco|AS Monaco FC", "Millwall|Millwall F.C.",
+      "Marseille|Olympique de Marseille|Olympique Marseille|OM",
+      "Middlesbrough|Middlesbrough F.C.|Boro", "Monterrey|C.F. Monterrey"
+    ],
+    "snowflake": [
+      "MK Dons|Milton Keynes Dons F.C.|Milton Keynes Dons", "Maccabi Tel Aviv|Maccabi Tel Aviv F.C.",
+      "Málaga", "Midtjylland", "Monza", "Mallorca|RCD Mallorca",
+      "Mamelodi Sundowns|Mamelodi Sundowns F.C.|Sundowns", "Mainz 05|1. FSV Mainz 05|Mainz"
+    ],
+    "icefrost": [
+      "Melbourne Victory", "Motherwell|Motherwell F.C.", "Melbourne City", "Metz",
+      "Montréal|Montreal Impact", "Mansfield Town|Mansfield Town F.C.|Mansfield",
+      "Morecambe|Morecambe F.C.", "Molde", "Malmö FF|Malmö", "Montpellier|Montpellier HSC"
+    ],
+    "brainfreeze": [
+      "Mjällby|Mjällby AIF", "Minnesota United", "Marítimo|C.S. Marítimo",
+      "Maccabi Haifa|Maccabi Haifa F.C.", "Millonarios|Millonarios F.C.", "Maribor|NK Maribor",
+      "Mirandés|CD Mirandés", "Macclesfield Town|Macclesfield Town F.C.|Macclesfield",
+      "Moreirense|Moreirense F.C.", "Mechelen|K.V. Mechelen", "Modena|Modena FC 2018",
+      "Mazatlán|Mazatlán F.C.", "Metalist Kharkiv|Metalist", "Messina|ACR Messina"
+    ],
+    "absolutezero": [
+      "Mladá Boleslav", "Melgar|FBC Melgar"
+    ]
+  }
+}

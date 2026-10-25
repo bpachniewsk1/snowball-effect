@@ -1,0 +1,57 @@
+{
+  "id": "football-clubs-a",
+  "prompt": "Name a football club starting with A (FC, AC, CF… don't count)",
+  "ignoreWords": [
+    "fc",
+    "afc",
+    "cf",
+    "ac",
+    "sc",
+    "club",
+    "fk",
+    "sk",
+    "kv",
+    "sl",
+    "calcio",
+    "the"
+  ],
+  "ranking": {
+    "hints": [
+      "F.C."
+    ],
+    "expect": "football|soccer|club|futebol|fútbol|calcio"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 49,
+    "coverage": "92%"
+  },
+  "answers": {
+    "slush": [
+      "Arsenal|Arsenal F.C.|Gunners", "Aston Villa|Aston Villa F.C.|Villa", "Atlético Madrid|Atleti",
+      "Al-Nassr", "Al-Hilal|Al Hilal SFC", "Ajax|Ajax Amsterdam", "Athletic Bilbao|Athletic Club",
+      "AEK Athens|AEK Athens F.C.|AEK", "Atalanta|Atalanta BC", "AZ Alkmaar|AZ"
+    ],
+    "snowflake": [
+      "Al-Ahli|Al-Ahli Saudi FC", "Al-Ittihad|Al-Ittihad Club (Jeddah)", "Alavés|Deportivo Alavés",
+      "Anderlecht|R.S.C. Anderlecht", "América", "Aberdeen|Aberdeen F.C.",
+      "Atlético Mineiro|Clube Atlético Mineiro", "Al Ahly", "Auxerre|AJ Auxerre"
+    ],
+    "icefrost": [
+      "Atlético Nacional", "Al Ain", "Almería|UD Almería", "Augsburg",
+      "Aris Thessaloniki|Aris Thessaloniki F.C.|Aris", "APOEL", "Atlas|Atlas F.C.",
+      "Accrington Stanley|Accrington Stanley F.C.|Accrington", "Angers|Angers SCO",
+      "AGF|Aarhus Gymnastik Forening|Aarhus", "Antwerp|Royal Antwerp F.C.|Royal Antwerp"
+    ],
+    "brainfreeze": [
+      "Argentinos Juniors", "Athletico Paranaense", "Austria Wien|Austria Vienna",
+      "Albacete|Albacete Balompié", "Adelaide United", "Alanyaspor", "Arminia Bielefeld|Bielefeld",
+      "Ajaccio", "Amiens", "Avellino|U.S. Avellino 1912", "Akhmat Grozny", "Auckland City",
+      "AaB|AaB Fodbold|Aalborg", "Airdrieonians|Airdrieonians F.C.", "Ascoli|Ascoli Calcio 1898 FC",
+      "Arbroath|Arbroath F.C.", "Alianza Lima"
+    ],
+    "absolutezero": [
+      "Arsenal Tula", "Admira Wacker|FC Admira Wacker Mödling"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "ballon-dor-winners",
+  "prompt": "Name a Ballon d'Or winner (men's or women's, any year)",
+  "matchSurname": true,
+  "ranking": {
+    "hints": [
+      "(footballer)"
+    ],
+    "expect": "footballer|football|soccer|manager|coach",
+    "titles": {
+      "Ronaldo": "Ronaldo (Brazilian footballer)",
+      "Rodri": "Rodri (footballer, born 1996)",
+      "Luis Suárez Miramontes": "Luis Suárez Miramontes",
+      "Gerd Müller": "Gerd Müller",
+      "Raymond Kopa": "Raymond Kopa"
+    }
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 51,
+    "coverage": "98%"
+  },
+  "answers": {
+    "slush": [
+      "Cristiano Ronaldo|CR7", "Lionel Messi|Messi|Leo Messi", "Ronaldinho",
+      "Rodri|Rodrigo Hernández Cascante", "Zinedine Zidane|Zidane|Zizou", "Ronaldo|Ronaldo Nazário|R9",
+      "Michael Owen", "Luka Modrić|Modric", "Karim Benzema", "Kaká"
+    ],
+    "snowflake": [
+      "Ousmane Dembélé|Dembele", "Kevin Keegan", "Johan Cruyff|Cruyff|Cruijff", "George Best",
+      "Alexia Putellas|Putellas", "Andriy Shevchenko|Andrei Shevchenko|Shevchenko", "Luís Figo|Figo",
+      "Marco van Basten|van Basten", "Franz Beckenbauer", "Rivaldo"
+    ],
+    "icefrost": [
+      "Ruud Gullit", "Bobby Charlton", "Lev Yashin|Yashin", "Alfredo Di Stéfano|Di Stefano",
+      "Megan Rapinoe|Rapinoe", "Roberto Baggio", "George Weah", "Fabio Cannavaro",
+      "Aitana Bonmatí|Aitana|Bonmati", "Eusébio", "Michel Platini", "Pavel Nedvěd|Nedved"
+    ],
+    "brainfreeze": [
+      "Lothar Matthäus|Matthaus|Matthaeus", "Karl-Heinz Rummenigge|Rummenigge", "Gerd Müller",
+      "Hristo Stoichkov|Stoichkov", "Stanley Matthews", "Denis Law", "Jean-Pierre Papin|JPP",
+      "Paolo Rossi", "Matthias Sammer", "Raymond Kopa|Kopa", "Oleh Blokhin|Oleg Blokhin|Blokhin",
+      "Gianni Rivera", "Igor Belanov|Ihor Belanov|Belanov", "Omar Sívori|Sivori", "Allan Simonsen",
+      "Ada Hegerberg|Hegerberg", "Flórián Albert"
+    ],
+    "absolutezero": [
+      "Luis Suárez Miramontes|Luis Suárez|Luisito Suárez", "Josef Masopust|Masopust"
+    ]
+  }
+}

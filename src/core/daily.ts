@@ -3,7 +3,7 @@ import type { Category, Pack } from './types';
 
 export const PROMPTS_PER_DAY = 7;
 /** Roll #1. */
-export const LAUNCH_DATE = '2026-10-24';
+export const LAUNCH_DATE = '2026-10-25';
 
 /** Local calendar date as YYYY-MM-DD. */
 export function dateKey(d: Date = new Date()): string {

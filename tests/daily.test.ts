@@ -5,8 +5,8 @@ import { LAUNCH_DATE, PROMPTS_PER_DAY, dateKey, dayNumber, pickDailyCategories }
 describe('daily roll', () => {
   it('numbers rolls from launch day', () => {
     expect(dayNumber(LAUNCH_DATE)).toBe(1);
-    expect(dayNumber('2026-10-25')).toBe(2);
-    expect(dayNumber('2026-11-24')).toBe(32);
+    expect(dayNumber('2026-10-26')).toBe(2);
+    expect(dayNumber('2026-11-24')).toBe(31);
   });
 
   it('formats local dates', () => {

@@ -1,0 +1,77 @@
+{
+  "id": "goalkeepers-brazil",
+  "prompt": "Name a goalkeeper from Brazil's national team (any era)",
+  "matchSurname": true,
+  "ranking": {
+    "hints": [
+      "(footballer)",
+      "(goalkeeper)"
+    ],
+    "expect": "footballer|goalkeeper|football|soccer|manager|coach",
+    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q83459 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . ?o rdfs:label ?ol . FILTER(?ol IN (\"midfielder\"@en, \"forward\"@en)) }",
+    "max": 150
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 72,
+    "coverage": "96%"
+  },
+  "handpicked": {
+    "slush": [
+      "Alisson|Alisson Becker", "Ederson|Ederson Moraes"
+    ],
+    "snowflake": [
+      "Weverton", "Bento|Bento Krepski"
+    ],
+    "icefrost": [
+      "Cássio|Cassio Ramos|Cassio", "Moacyr Barbosa|Barbosa"
+    ],
+    "brainfreeze": [
+      "Valdir Peres", "Carlos Castilho|Castilho"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Júlio César|Júlio César Soares Espíndola", "Dida|Nélson de Jesus Silva",
+      "Rogério Ceni|Ceni|Rogério Mücke Ceni", "Alisson|Alisson Becker", "Ederson|Ederson Moraes",
+      "Cláudio Taffarel|Cláudio André Mergen Taffarel", "Heurelho Gomes|Heurelho da Silva Gomes",
+      "Doni|Doniéber Alexander Marangon", "Émerson Leão", "Diego Alves|Diego Alves Carreira", "Marcos",
+      "Gilmar|Gilmar dos Santos Neves|Gylmar dos Santos Neves", "Fábio|Fábio Deivson Lopes Maciel",
+      "Bento|Bento Krepski"
+    ],
+    "snowflake": [
+      "Rafael Cabral|Rafael Cabral Barbosa", "Jefferson", "Diego Cavalieri", "Gilmar Rinaldi",
+      "Félix|Felix Mieli Venerando|Felix Mielli Venerando",
+      "Helton|Helton Arruda|Helton da Silva Arruda", "Gabriel|Gabriel Vasconcelos Ferreira",
+      "Moacir Barbosa|Moacir Barbosa do Nascimento|Moacir Barbosa Nascimento", "Weverton",
+      "Zetti|Armelino Donizete Quagliato|Armelino Donizetti Quagliato", "Victor|Victor Leandro Bagy",
+      "Cássio|Cassio Ramos|Cássio Bramitos", "Marcelo Grohe", "Aymoré Moreira"
+    ],
+    "icefrost": [
+      "Carlos Roberto Gallo|Carlos Roberto Rocha Gallo", "Manga|Haílton Corrêa de Arruda",
+      "Mazarópi|Geraldo Pereira de Matos Filho", "Carlos Germano|Carlos Germano Schwambach Neto",
+      "Ado", "José Carlos da Costa Araújo", "Acácio Cordeiro Barreto", "Moacyr Barbosa|Barbosa",
+      "Matheus Vidotto|Matheus Caldeira Vidotto|Matheus Caldeira Vidotto de Oliveira",
+      "Carlos Castilho|Castilho|Carlos José Castilho", "Fábio Costa",
+      "Valdir Peres|Waldir Peres|Valdir Peres de Arruda|Waldir Peres de Arruda",
+      "Paulo Vitor|Paulo Victor|Paulo Vítor Barbosa de Carvalho", "Paulo Sérgio de Oliveira Lima",
+      "Danrlei de Deus Hinterholz", "Luís Morais|Cabeção", "Batatais|Algisto Lorenzato Domingos"
+    ],
+    "brainfreeze": [
+      "Joel de Oliveira Monteiro", "Roberto Gomes Pedrosa",
+      "Caetano Silva|Caetano da Silva Nascimento", "João Leite da Silva Neto|João Leite",
+      "Osvaldo Velloso de Barros|Oswaldo de Barros Velloso", "Oberdan Cattani",
+      "Ronaldo Soares Giovanelli", "Wagner Fernando Velloso",
+      "Raul Plassmann|Raul Guilherme Plassmann", "Germano Boettcher Sobrinho",
+      "Marcos Carneiro de Mendonça", "Roberto Costa|Roberto Costa Cabral", "Sérgio Guedes",
+      "Yustrich|Dorival Knippel|Dorival Yustrich", "Renato Cunha Valle|Renato",
+      "Walter de Souza Goulart", "Fernando Henrique dos Anjos", "Jesus Carlos da Silva",
+      "Casemiro do Amaral", "Luís Henrique Dias", "Silvio Luiz Oliveira de Paula", "André Doring",
+      "Reginaldo Paes Leme|Reginaldo Paes Leme Ferreira", "João Marcos|João Marcos Coelho da Silva",
+      "Ronei Paulo Travi|Picasso"
+    ],
+    "absolutezero": [
+      "Osvaldo Alfredo da Silva|Osvaldo Baliza|Oswaldo Baliza", "Mussula|Luiz de Matos Luchesi"
+    ]
+  }
+}
