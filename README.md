@@ -116,14 +116,12 @@ Players can press **Suggest it** on a rejected answer. Suggestions are stored in
 | Buttons | start |
 | Classic | finish your first roll |
 | Meh | run out of time once |
-| Scarf | get a Snowflake answer |
 | Winky | get an Icefrost answer |
 | Pointy | get a Brain Freeze answer |
 | Pirate | get an Absolute Zero answer |
 | Beanie | get 10 Slush answers |
 | Viking | get 5 Brain Freeze answers |
 | King | get 3 Absolute Zero answers |
-| Footy | get a Brain Freeze answer in a Football prompt |
 | Shades | answer correctly within 3 seconds |
 | Ninja | answer correctly with 2 seconds or less left |
 | Party | finish a roll with no wrong guesses and no timeouts |

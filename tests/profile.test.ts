@@ -17,13 +17,13 @@ describe('snowman unlocks', () => {
     expect(byId('crown').isUnlocked(p)).toBe(true);
     expect(byId('winking').isUnlocked(p)).toBe(false);
     expect(byId('pointy').isUnlocked(p)).toBe(false);
-    expect(byId('scarf').isUnlocked(p)).toBe(false);
+    expect(byId("party").isUnlocked(p)).toBe(false);
     p.tierCounts.icefrost = 1;
     expect(byId('winking').isUnlocked(p)).toBe(true);
   });
 
   it('every avatar has a picture and a unique id', () => {
     expect(new Set(AVATARS.map((a) => a.id)).size).toBe(AVATARS.length);
-    expect(AVATARS.length).toBe(21);
+    expect(AVATARS.length).toBe(19);
   });
 });

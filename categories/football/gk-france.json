@@ -1,6 +1,6 @@
 {
   "id": "goalkeepers-france",
-  "prompt": "Name a goalkeeper from France's national team (any era)",
+  "prompt": "Name a goalkeeper from France (any era)",
   "matchSurname": true,
   "ranking": {
     "hints": [
@@ -8,12 +8,12 @@
       "(goalkeeper)"
     ],
     "expect": "footballer|goalkeeper|football|soccer|manager|coach",
-    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q47774 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
-    "max": 150
+    "wikidata": "VALUES ?c { wd:Q142 } { ?item wdt:P27|wdt:P1532 ?c } UNION { ?item wdt:P54 wd:Q47774 } ?item wdt:P413 wd:Q201330 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
+    "max": 300
   },
   "ranked": {
     "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
-    "answers": 76,
+    "answers": 300,
     "coverage": "100%"
   },
   "handpicked": {
@@ -29,38 +29,106 @@
   },
   "answers": {
     "slush": [
-      "Fabien Barthez|Fabien Alain Barthez", "Steve Mandanda|Steve Mandanda Mpidi",
-      "Hugo Lloris|Lloris", "Mickaël Landreau|Mickael Vincent Andre-Marie Landreau",
-      "Mike Maignan|Maignan", "Grégory Coupet", "Sébastien Frey",
-      "Bernard Lama|Bernard Pascal Maurice Lama", "Stéphane Ruffier",
-      "Cédric Carrasso|Cedric Pascal Regis Carrasso", "Joël Bats",
-      "Benoît Costil|Benoit Guy Robert Costil", "Lionel Charbonnier|Lionel Andre Michel Charbonnier",
-      "Ulrich Ramé|Ulrich Jean Eugene Rame", "Alphonse Areola|Areola"
+      "Fabien Barthez|Fabien Alain Barthez", "Édouard Mendy|Edouard Osoque Mendy",
+      "Hugo Lloris|Lloris|Hugo Hadrien Dominique Lloris", "Luca Zidane|Luca Zinedine Zidane",
+      "David Ospina|David Ospina Ramírez", "Mike Maignan|Maignan|Mike Peterson Maignan",
+      "Steve Mandanda|Steve Mandanda Mpidi", "Mickaël Landreau|Mickael Vincent Andre-Marie Landreau",
+      "Illan Meslier|Illan Stephane Meslier", "Grégory Coupet", "Sébastien Frey",
+      "Robin Risser|Robin Francois Philippe Risser", "Alban Lafont|Alban-Marc Lafont",
+      "Lucas Chevalier|Lucas Eugene Chevalier", "Bernard Lama|Bernard Pascal Maurice Lama"
     ],
     "snowflake": [
-      "Jean-Luc Ettori", "Bruno Martini", "Albert Rust|Albert Marcel Henri Rust", "Dominique Dropsy",
-      "François Remetter", "Brice Samba", "Dominique Baratelli",
-      "Richard Dutruel|Richard Philippe Dutruel", "Dominique Colonna", "René Llense",
-      "Jean-Paul Bertrand-Demanes|Jean-Paul Fernand Gabriel Bertrand-Demanes", "Lionel Letizi",
-      "Philippe Bergeroo", "Claude Abbes|Claude Jean Jules César Abbes", "Jean Castaneda"
+      "Charles Itandje|Charles Hubert Itandje",
+      "Raïs M'Bolhi|Adi Raïs Cobos Adrien M'Bolhi|Adi Raïs Mbolhi",
+      "Benjamin Lecomte|Benjamin Pascal Lecomte", "Walter Benítez|Walter Daniel Benitez",
+      "Lionel Mpasi|Lionel Mpasi Nzau", "Yahia Fofana", "Stéphane Ruffier",
+      "Guillaume Restes|Guillaume Lino Restes", "Cédric Carrasso|Cedric Pascal Regis Carrasso",
+      "Joël Bats", "Mory Diaw", "Johnny Placide|Johnny Plaide|Johny Placide|Johny Plaide",
+      "Dudu Aouate", "Jacques Songo'o", "Benoît Costil|Benoit Guy Robert Costil",
+      "Yehvann Diouf|Yehvann Djibril Victor Diouf", "Ulrich Ramé|Ulrich Jean Eugene Rame",
+      "Lionel Charbonnier|Lionel Andre Michel Charbonnier",
+      "Simon Ngapandouetnbu|Simon Brady Ngapandouetnbu", "Jean-Luc Ettori",
+      "Alphonse Areola|Areola|Alphonse Francis Areola", "Sarah Bouhaddi",
+      "Tony Sylva|Tony Mario Sylva", "Devis Epassy|Devis Rogers Epassy Mboka",
+      "Pauline Peyraud-Magnin|Pauline Camille Peyraud-Magnin",
+      "Nicolas Douchez|Nicolas Pascal Douchez", "Dimitry Bertaud|Dimitry Jean Sylvain Bertaud",
+      "Philippe Montanier|Philippe Jacques William Montanier", "Loïs Diony",
+      "Rémy Descamps|Remy Serge Claude Descamps", "Zacharie Boucher",
+      "Rémy Vercoutre|Remy Rene Paul Vercoutre", "Bruno Martini", "Louis Yamaguchi",
+      "Joseph-Antoine Bell", "Abdoulaye Diallo", "Paul Bernardoni|Paul Jean Francois Bernardoni",
+      "Albert Rust|Albert Marcel Henri Rust", "Jean Butez", "Ali Boumnijel", "François Remetter",
+      "Richard Dutruel|Richard Philippe Dutruel", "Malcolm Barcola",
+      "Obed Nkambadio|Obed Alpha Nkambadio", "Dominique Dropsy", "Kossi Agassa", "Mathieu Gorgelin",
+      "Ali Ahamada", "Dominique Baratelli", "Alexandre Pierre", "Donovan Léon", "Jean-Louis Leca",
+      "Gautier Larsonneur", "Pascal Olmeta", "Lionel Letizi", "Jérémie Janot|Jeremie Roger Janot",
+      "Alexandre Letellier", "René Llense", "Élie Baup", "Parfait Mandanda",
+      "Etienne Green|Etienne Frederic Green", "Alexandre Oukidja", "Maxime Dupé", "Mouez Hassen",
+      "Yohann Pelé|Yohann Denis Patrick Pele", "Pegguy Arphexad", "Dominique Colonna", "Paul Nardi",
+      "Landry Bonnefoi", "Jean-Paul Bertrand-Demanes|Jean-Paul Fernand Gabriel Bertrand-Demanes",
+      "Stefan Bajic"
     ],
     "icefrost": [
-      "Alex Thépot", "Georges Carnus", "Julien Darui", "Marcel Aubour", "Marcel Domingo",
-      "Gilles Rousset", "André Tassin", "Stéphane Porato|Stephane Patrick Porato",
-      "Rudi Hiden|Rodolphe Hiden", "Paul Sinibaldi", "César Ruminski", "Pierre Chayriguès",
-      "Georges Lamia", "Pierre Bernard", "Laurent Di Lorto", "René Vignal", "Robert Défossé",
-      "Jean Taillandier"
+      "Gérard Gnanhouan", "Yohann Thuram-Ulien|Yohann Georges Thuram-Ulien|Yohann Thuram",
+      "Claude Abbes|Claude Jean Jules César Abbes", "Jean Castaneda", "Alain Casanova",
+      "Mamadou Samassa", "Guillaume Warmuz", "Ludovic Butelle|Ludovic Jean-Luc Butelle",
+      "Thomas Didillon", "Alfred Schneidau|A. J. Schneidau|Alfred John Schneidau",
+      "Loïc Badiashile|Loïc Muka Badiashile Mukinayi", "Georges Carnus", "Julien Darui", "Alex Thépot",
+      "Brice Samba", "Rémy Riou", "Philippe Bergeroo", "Marcel Aubour", "Marcel Domingo",
+      "Gérard Gili", "Johnny Schuth|Jean Schuth", "Régis Gurtner", "Gilles Rousset",
+      "Patrice Luzi|Patrice Rene Jean Luzi-Bernardi", "Bingourou Kamara", "Anthony Mandrea",
+      "Hubert Velud", "Mehdi Cerbah", "Théo De Percin|Théo Franck Mathias De Percin",
+      "Nicolas Penneteau", "Saturnin Allagbé", "Ronan Le Crom", "Gennaro Bracigliano",
+      "Henri Stambouli", "Mylène Chavas", "Michel Dussuyer", "Oumar Sissoko", "Jonathan Joubert",
+      "Alain Gouaméné|Pierre Alain Gouaméné Guiahouli", "Stéphane Porato|Stephane Patrick Porato",
+      "Geoffrey Jourdren", "Gauthier Gallon", "Jérôme Alonzo|Jerome Sebastien Alonzo",
+      "Michel Bensoussan", "Garissone Innocent", "Cédric Si Mohamed", "Constance Picaud",
+      "Guy Roland Ndy Assembe|Guy Rolland N'Dy Assembé", "Rudi Hiden|Rodolphe Hiden",
+      "Christophe Revault|Christophe Maurice Robert Revault", "Luc Borrelli", "Grégoire Coudert",
+      "Benjamin Leroy", "Steeve Elana|Steeve Olivier Elana",
+      "Christoffer Mafoumbi|Christoffer Henri Mafoumbi", "Quentin Westberg|Quentin Oyamo Westberg",
+      "Romain Salin", "Yoan Cardinale", "Alexis Guendouz", "Teddy Richert|Teddy Alain Vivian Richert",
+      "Simon Pouplin", "Kévin Olimpa", "Cheikh Ndiaye|Cheikh Tidiane Ndiaye", "Rudy Riou",
+      "Paul Sinibaldi", "André Tassin", "Ewen Jaouen", "Julien Lachuer", "Pierre Chayriguès",
+      "Mathieu Michel", "Marc Vidal", "Maxence Prévot", "Mathieu Patouillet", "Jérôme Prior",
+      "Marc-Aurèle Caillard", "César Ruminski", "René-Jean Jacquet", "Olivier Sorin",
+      "Alexander Vencel", "Gaëtan Poussin", "Fabien Audard", "Solène Durand", "Quentin Braat",
+      "Matthieu Dreyer", "Alexis André Jr."
     ],
     "brainfreeze": [
-      "Abderrahman Ibrir", "Pierrick Hiard", "André Rey", "Yves Chauveau", "Georges Crozier",
-      "Maurice Tillette", "Maurice Cottenet", "Fernand Desrousseaux", "Daniel Eon",
-      "Jean-Pierre Tempet", "Laurent Henric", "Albert Parsys|Albert Parsis", "René Charrier",
-      "Charles Allé", "Charles Berthelot", "Gaston Rouxel|Guy Rouxel", "Maurice Baudier",
-      "Stéphan Dakowski", "Henri Beau", "Jean-Pierre Kress", "Jérémy Sopalski", "André Renaux",
-      "Zacharie Baton", "Raoul Chaisaz", "Bruno Ferrero", "Raymond Frémont"
+      "Jessy Moulin", "Geoffrey Lembet|Geoffrey Didace Lembet", "Georges Lamia", "Jonathan Ligali",
+      "Pierre Bernard", "Méline Gérard", "Joris Delle", "Riffi Mandanda", "Arthur Desmas",
+      "Mathieu Valverde", "Fabien Cool", "Dominique Casagrande|Dominique Paul Antoine Casagrande",
+      "Anthony Basso", "Mickaël Roche", "Laurent Di Lorto", "Mathyas Randriamamy", "Gaëtan Huard",
+      "Nicolas Kocik", "Ben Salime Boina", "Bertrand Laquait", "Franck Grandel", "Laurent Pionnier",
+      "Anthony Mfa Mezui", "Romain Larrieu", "Nicolas Lemaître", "Fatih Öztürk", "Ludovic Batelli",
+      "Inès Arouaissa", "Brice Maubleu", "Bobby Allain", "Ludovic Roy", "Damien Gregorini",
+      "Sébastien Cibois", "Karima Benameur", "Lisandru Olmeta",
+      "Quentin Beunardeau|Quentin Régis Beunardeau", "Jonathan Matijas",
+      "Lionel Perez|Lionel Pierre Antoine Perez", "Arnold Sowinski", "Rocky Nyikeine",
+      "Céline Deville", "Alexandre Olliero", "René Vignal", "Jérémy Gavanon", "Grégory Wimbée",
+      "Robert Défossé", "Thierry Debès", "Paul Delecroix", "Baptiste Reynet", "David Oberhauser",
+      "Fabien Farnolle|Fabien Ceddy Farnolle", "André Gérard",
+      "Hillel Konaté|Hillel-Yored Amilcar Tony Konaté", "Jean Taillandier", "Romuald Peiser",
+      "Vincent Fernandez", "Xavier Samin", "Sébastien Chabbert", "Justin Bengui Joao",
+      "Pierrick Hiard", "Angelo Hugues", "Jean-Daniel Padovani", "Frédéric Roux", "Jean-Louis Garcia",
+      "Willy Grondin", "Abderrahman Ibrir", "Sébastien Hamel", "Justine Lerond", "Aléxis Thébaux",
+      "Mehdi Jeannin", "Yannis Clementia", "Gérard Banide",
+      "Christopher Dilo|Christopher Jean-Louis Dilo", "Yassine El Kharroubi", "Ghislain Printant",
+      "Melvin Adrien", "Mathieu Chabert", "Emmanuel Vermignon", "Willy Guéret|Willy Julie Gueret",
+      "Florian Escales", "Valentin Belon", "Paul Argney", "Johann Carrasso", "Florent Chaigneau",
+      "Vincent Planté", "Thomas Vincensini", "Guillaume Dietsch", "Cédric Mensah", "Johann Durand",
+      "Noah Raveyre", "André Rey", "Julien Fabri", "Jean-François Bedenik", "Grégory Malicki",
+      "Noël Tosi", "Melvin Zinga", "Cédric Berthelin", "Olivier Blondel", "Laëtitia Philippe",
+      "Tony Heurtebis", "Kevin Sommer", "Axel Maraval", "Dominique Jean-Zéphirin", "Yves Chauveau",
+      "Mathieu Moreau|Mathieu Christian Moreau", "Didier Desprez|Didier Pierre Jean-Paul Desprez",
+      "Pierrick Cros", "Abdoulaye Keita", "Alain Michel", "Lucien Huteau", "Ouparine Djoco",
+      "Ibrahima Dabo|Ibrahima Ousmane Arthur Dabo", "Yannick Quesnel", "Pascal Janin",
+      "Maurice Cottenet", "William Dutoit", "Nicolas Cousin", "Bérangère Sapowicz", "Théo Guivarch",
+      "Nicolas Puydebois", "Théo Defourny", "Esteban Salles", "Stéphane Cassard", "Baptiste Valette",
+      "Vincent Demarconnay", "Michaël Fabre", "Joan Hartock"
     ],
     "absolutezero": [
-      "Jacques Dhur", "Alfred Dambach"
+      "Jérémy Vachoux", "Jody Viviani"
     ]
   }
 }

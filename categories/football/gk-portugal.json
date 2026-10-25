@@ -1,6 +1,6 @@
 {
   "id": "goalkeepers-portugal",
-  "prompt": "Name a goalkeeper from Portugal's national team (any era)",
+  "prompt": "Name a goalkeeper from Portugal (any era)",
   "matchSurname": true,
   "ranking": {
     "hints": [
@@ -8,13 +8,13 @@
       "(goalkeeper)"
     ],
     "expect": "footballer|goalkeeper|football|soccer|manager|coach",
-    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q267245 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
-    "max": 150
+    "wikidata": "VALUES ?c { wd:Q45 } { ?item wdt:P27|wdt:P1532 ?c } UNION { ?item wdt:P54 wd:Q267245 } ?item wdt:P413 wd:Q201330 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
+    "max": 300
   },
   "ranked": {
     "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
-    "answers": 56,
-    "coverage": "98%"
+    "answers": 162,
+    "coverage": "100%"
   },
   "handpicked": {
     "slush": [
@@ -32,37 +32,83 @@
   },
   "answers": {
     "slush": [
-      "Rui Patrício|Rui Pedro dos Santos Patrício", "Vítor Baía|Vitor Manuel Martins Baia",
-      "Diogo Costa", "Ricardo|Ricardo Alexandre Martins Soares Pereira",
-      "Beto|António Alberto Bastos Pimparel",
-      "Henrique Hilário|Hilário|Henrique Hilario Meireles Alves Sampaio", "Quim",
-      "Eduardo|Eduardo Carvalho|Eduardo dos Reis Carvalho", "Daniel Fernandes|Daniel Marcio Fernandes",
-      "José Moreira|Jose Filipe da Silva Moreira", "José Manuel Mourinho Félix|Felix Mourinho"
+      "Ederson|Ederson Santana de Moraes", "Rui Patrício|Rui Pedro dos Santos Patrício",
+      "Carlos Queiroz|Carlos Manuel Brito Leal de Queiroz|Carlos Manuel Brito Leal Queiroz",
+      "Nuno Espírito Santo|Nuno", "Diogo Costa|Diogo Meireles da Costa|Diogo Meireles Costa",
+      "Vítor Baía|Vitor Manuel Martins Baia", "José Sá|José Pedro Malheiro de Sá",
+      "Ricardo|Ricardo Alexandre Martins Soares Pereira", "João Virgínia|João Manuel Neves Virgínia",
+      "Henrique Hilário|Hilário|Henrique Hilario Meireles Alves Sampaio",
+      "Joel Pereira|Joel Castro Pereira|Joel Dinis Castro Pereira",
+      "Beto|António Alberto Bastos Pimparel", "José Manuel Mourinho Félix|Felix Mourinho", "Quim",
+      "Bruno Varela|Bruno Miguel Semedo Varela"
     ],
     "snowflake": [
-      "Anthony Lopes|Anthony Lopez", "Manuel Bento|Manuel Galrinho Bento", "Nélson Pereira",
-      "Paulo Santos", "Silvino Louro|Silvino de Almeida Louro", "Bruno Vale|Bruno Miguel Esteves Vale",
-      "José Henrique", "Damas|Vítor Damas", "Neno|Adelino Augusto Graça Barbosa Barros",
-      "Américo Lopes", "José Pereira"
+      "Anthony Lopes|Anthony Lopez", "Eduardo|Eduardo Carvalho|Eduardo dos Reis Carvalho",
+      "Daniel Fernandes|Daniel Marcio Fernandes", "José Moreira|Jose Filipe da Silva Moreira",
+      "Manuel Bento|Manuel Galrinho Bento", "André Campos Moreira",
+      "Luís Maximiano|Luís Manuel Arantes Maximiano", "Pedro Caixinha|Pedro Miguel Faria Caixinha",
+      "Kristof Van Hout", "Michael Simões Domingues|Mika", "Cláudio Ramos",
+      "Silvino Louro|Silvino de Almeida Louro", "Nélson Pereira", "Paulo Santos",
+      "Bruno Vale|Bruno Miguel Esteves Vale", "Ricardo Velho", "Inês Pereira|Inês Teixeira Pereira",
+      "João Paulo Santos Costa|João Costa|João Paulo Santos da Costa", "José Henrique", "Tiago Sá",
+      "Rui Silva", "Neno|Adelino Augusto Graça Barbosa Barros", "João Miguel Macedo Silva",
+      "Elinton Andrade|Elinton Sanchotene Andrade", "José Pereira",
+      "André Filipe Magalhães Ribeiro Ferreira", "Mário Felgueiras|Mário Jorge Quintas Felgueiras",
+      "Celton Biai", "Américo Lopes", "Ricardo Batista",
+      "Patrícia Morais|Patrícia Isabel Sousa Barros Morais", "Cristiano Pereira Figueiredo",
+      "Joaquim Carvalho", "Rute Costa|Ana Rute Campos Costa", "Paulo Lopes", "Damas|Vítor Damas"
     ],
     "icefrost": [
-      "Joaquim Carvalho", "Pedro Espinha", "António Amaral",
-      "Zé Beto|José Alberto Teixeira Ferreirinha", "Rui Correia|Rui Manuel da Silva Correia",
-      "Alfredo Castro", "Rui Silva", "Costa Pereira|Alberto da Costa Pereira", "António Botelho",
-      "Carlos António Gomes|Carlos António do Carmo Costa Gomes", "João Azevedo",
-      "Acúrsio Carrelo|Acurcio Carrelo", "António Roquete|António Fernandes Roquete"
+      "José Marafona|Marafona|José Carlos Coentrão Marafona", "Pedro Espinha",
+      "Jorge Martins|Jorge Manuel Martins da Silva", "Manuel Baldé", "Tiago Ferreira",
+      "Rui Correia|Rui Manuel da Silva Correia", "Nuno Claro", "António Amaral", "Alfredo Castro",
+      "Igor Rodrigues|Igor Carreira Rodrigues", "Paulo Costinha|Paulo Rebelo Costinha Castro",
+      "Zé Beto|José Alberto Teixeira Ferreirinha", "Sierra Cota-Yarde", "José Veiga",
+      "Fernando Brassard", "Carlos António Gomes|Carlos António do Carmo Costa Gomes",
+      "Ricardo Jorge Novo Nunes", "António Botelho", "Hugo Ventura", "Francisco Meixedo",
+      "Costa Pereira|Alberto da Costa Pereira",
+      "Rafael Veloso|Rafael Henrique Vasquez Veloso|Rafael Henriques Vasquez Veloso",
+      "Sérgio Leite|Sérgio Dias Barbosa Leite", "Pedro Taborda", "João Azevedo",
+      "Diogo Sousa|Diogo Fesnard Nogueira de Sousa", "Gideão|Gideão Lima de Castro",
+      "Pedro Roma|Pedro Miguel da Mota Roma",
+      "Xisco Pires|Francisco Pires|Francisco Manuel Pires Costa", "Barroca", "Casemiro do Amaral",
+      "Gonçalo Ribeiro", "João Fonseca", "António Caldas",
+      "Daniel Figueira|Daniel Alexis Leite Figueira", "Tiago Maia",
+      "Paulo Ribeiro|Paulo António da Silva Ribeiro", "Nuno Santos|Nuno Filipe Oliveira Santos",
+      "António Roquete|António Fernandes Roquete", "Acúrsio Carrelo|Acurcio Carrelo",
+      "Ricardo Abreu Ribeiro", "Miguel Santos", "João Botelho|João Manuel Raposo Botelho",
+      "Luís Ribeiro"
     ],
     "brainfreeze": [
-      "João Fonseca", "Ernesto Oliveira|Ernesto Nogueira do Oliveira", "Tibi",
-      "Dinis Vital|Dinis Martins Vital", "Manuel Capela|Manuel Maria Nogueira Capela",
-      "António Martins", "António Jesus Pereira", "Frederico Barrigana", "Jorge Soares da Silva",
-      "Artur Dyson|Artur Dyson dos Santos", "Carlos Guimarães",
-      "Cipriano Santos|Cipriano Nunes dos Santos", "Manuel Soares dos Reis", "Francisco Vieira",
-      "Eduardo Lúcio Esteves Pereira", "Augusto Amaro|Augusto Marques Rodrigues Amaro",
-      "José Matos Reis", "Carlos Silva", "José Sério"
+      "Dinis Vital|Dinis Martins Vital", "Igor Diogo Moreira Araújo", "Paulo Jorge Sousa Vieira",
+      "Jamila Marreiros|Jamila Soraia Martins Marreiros", "Tibi",
+      "Pedro Mingote|João Pedro Mingote Ribeiro", "Pedro Trigueira|Pedro José da Silva Trigueira",
+      "Vítor Pontes", "Jorge Carlos Santos Moreira Baptista", "Ricardo Janota|Ricardo Baleia Janota",
+      "Alfredo José Henriques Nascimento|Alfredo Henriques Nascimento",
+      "Ernesto Oliveira|Ernesto Nogueira do Oliveira", "Ernesto da Conceição Soares",
+      "Ricardo Abel Barbosa Ferreira", "Pedro Alves|Pedro Miguel Morais Alves",
+      "Guilherme Mata Oliveira|Guilherme da Mata Oliveira",
+      "Manuel Capela|Manuel Maria Nogueira Capela", "António Jesus Pereira", "Frederico Barrigana",
+      "Marco André Rocha Pereira", "Jorge Soares da Silva", "Filipe Mendes|Filipe José Lima Mendes",
+      "Vladimir Stojković", "António Filipe de Carvalho|António Filipe Norinho de Carvalho",
+      "José Rita", "Ricardo Silva|Ricardo Manuel Rodrigues Vieira da Silva", "Sérgio da Silva Andrade",
+      "Pedro José Moreira Silva", "António Martins", "Rui Nereu|Rui Miguel Nereu de Branco Batista",
+      "Rui Vieira|Rui Gabriel Pinheiro Vieira", "Artur Dyson|Artur Dyson dos Santos", "André Preto",
+      "Carlos Guimarães", "Rui Sacramento|Rui Miguel Ferreira Neto Sacramento", "Rui Rêgo",
+      "Paulo Graça", "Daniel Jesus Moreira Carvalho", "Cipriano Santos|Cipriano Nunes dos Santos",
+      "Márcio Santos|Márcio Alexandre Henriques Gonçalves Santos", "Francisco Vieira",
+      "Vítor São Bento|Vítor Emanuel Gonçalves São Bento",
+      "Augusto Amaro|Augusto Marques Rodrigues Amaro", "Manuel Soares dos Reis",
+      "Bruno Costa|Bruno Miguel Guerreiro Costa", "José Matos Reis", "Marco Aurélio Ribeiro Sousa",
+      "Márcio Henrique Silva Paiva", "José Bastos", "Carlos Silva", "Rui Dabó",
+      "Marco Aurélio Siqueira", "Cândido Tavares", "Eduardo Lúcio Esteves Pereira",
+      "Pedro Freitas|Pedro Miguel Sousa Freitas", "João Godinho", "Júlio Pires Coelho|Julio Coelho",
+      "André Martins", "Tiago Rocha|Tiago Rafael Moreira da Rocha",
+      "Pedro das Neves Correia|Pedro Miguel das Neves Correia", "Filipe Leão", "José Sério",
+      "André Caio", "Ricardo Filipe Rodrigues Matos", "Artur Camolas"
     ],
     "absolutezero": [
-      "Artur Camolas", "Sebastião Loureiro da Silva"
+      "Sebastião Loureiro da Silva", "Júlio Neiva"
     ]
   }
 }

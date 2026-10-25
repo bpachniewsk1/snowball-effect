@@ -10,7 +10,7 @@
   },
   "ranked": {
     "by": "hand-picked order",
-    "answers": 74
+    "answers": 140
   },
   "answers": {
     "slush": [
@@ -19,17 +19,28 @@
     ],
     "snowflake": [
       "stash", "cherry-pick", "revert", "tag", "switch", "restore", "remote", "show", "blame", "rm",
-      "mv", "config", "bisect", "reflog"
+      "mv", "config", "bisect", "reflog", "worktree", "submodule", "grep", "clean", "describe",
+      "shortlog", "apply", "archive", "gc", "help", "mergetool", "difftool", "rerere", "fsck",
+      "filter-branch", "bundle", "sparse-checkout"
     ],
     "icefrost": [
-      "worktree", "submodule", "grep", "clean", "describe", "shortlog", "apply", "archive", "gc",
-      "help", "mergetool", "difftool", "rerere", "fsck", "filter-branch", "bundle", "sparse-checkout"
-    ],
-    "brainfreeze": [
       "range-diff", "am", "format-patch", "request-pull", "maintenance", "prune", "repack", "ls-files",
       "ls-tree", "cat-file", "rev-parse", "hash-object", "update-index", "send-email", "instaweb",
       "fast-import", "rev-list", "symbolic-ref", "update-ref", "for-each-ref", "merge-base",
-      "whatchanged", "notes", "replace", "count-objects", "verify-commit"
+      "whatchanged", "notes", "replace", "count-objects", "verify-commit", "write-tree", "read-tree",
+      "commit-tree", "ls-remote", "show-ref", "pack-objects", "unpack-objects", "verify-pack",
+      "index-pack", "mktree", "mktag"
+    ],
+    "brainfreeze": [
+      "merge-file", "merge-tree", "diff-tree", "diff-index", "diff-files", "name-rev", "check-ignore",
+      "check-attr", "check-ref-format", "var", "fetch-pack", "send-pack", "receive-pack",
+      "upload-pack", "http-backend", "annotate", "cherry", "citool", "gui", "fast-export", "imap-send",
+      "subtree", "multi-pack-index", "commit-graph", "credential", "credential-cache",
+      "credential-store", "mailinfo", "mailsplit", "show-branch", "stripspace", "interpret-trailers",
+      "bugreport", "version", "scalar", "verify-tag", "column", "hook", "for-each-repo",
+      "prune-packed", "pack-refs", "p4", "quiltimport", "get-tar-commit-id", "unpack-file",
+      "show-index", "patch-id", "cvsimport", "cvsserver", "cvsexportcommit", "archimport",
+      "merge-index", "merge-one-file", "replay", "diagnose"
     ],
     "absolutezero": [
       "daemon", "svn"

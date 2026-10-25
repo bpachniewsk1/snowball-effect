@@ -11,11 +11,10 @@
   },
   "answers": {
     "slush": [
-      "United States|USA|US|America|United States of America", "England", "France",
-      "Germany|West Germany"
+      "United States|USA|US|America|United States of America", "England", "Sweden", "France"
     ],
     "snowflake": [
-      "Argentina", "Spain", "Sweden"
+      "Germany|West Germany", "Argentina", "Spain"
     ],
     "icefrost": [
       "Brazil", "Italy", "Mexico", "Russia"

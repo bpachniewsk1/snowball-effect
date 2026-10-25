@@ -10,9 +10,8 @@
     "expect": "oil|fuel|lubricant|petroleum|fat|extract|plant|tree|seed"
   },
   "ranked": {
-    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
-    "answers": 86,
-    "coverage": "77%"
+    "by": "hand-picked order",
+    "answers": 210
   },
   "answers": {
     "slush": [
@@ -25,23 +24,45 @@
       "Motor oil|Engine oil", "Coconut oil", "Hazelnut oil", "Patchouli oil", "Sunflower oil",
       "Mineral oil", "Safflower oil", "Almond oil", "Ylang-ylang oil", "Whale oil",
       "Black seed oil|Nigella oil|Black cumin oil", "Oregano oil", "Tea tree oil", "Jojoba oil",
-      "Sesame oil", "Avocado oil", "Grapeseed oil"
+      "Sesame oil", "Avocado oil", "Grapeseed oil", "Evening primrose oil", "Soybean oil|Soy oil",
+      "Fish oil", "Heating oil", "Neem oil", "Mustard oil", "Tung oil", "Rice bran oil",
+      "Bergamot oil", "Chili oil|Chilli oil", "Lemon oil", "Cinnamon oil",
+      "Hydraulic oil|Hydraulic fluid", "Silicone oil", "Peanut oil|Groundnut oil", "Citronella oil",
+      "Cottonseed oil", "Truffle oil", "Corn oil|Maize oil", "Eucalyptus oil", "Lavender oil",
+      "Neroli oil", "MCT oil", "Shale oil", "Transformer oil", "Perilla oil", "Palm kernel oil",
+      "Clove oil", "Hemp seed oil|Hemp oil", "Pumpkin seed oil", "Rosehip oil"
     ],
     "icefrost": [
-      "Evening primrose oil", "Soybean oil|Soy oil", "Fish oil", "Heating oil", "Neem oil",
-      "Mustard oil", "Tung oil", "Rice bran oil", "Bergamot oil", "Chili oil|Chilli oil", "Lemon oil",
-      "Cinnamon oil", "Hydraulic oil|Hydraulic fluid", "Silicone oil", "Peanut oil|Groundnut oil",
-      "Citronella oil", "Cottonseed oil", "Truffle oil", "Corn oil|Maize oil", "Eucalyptus oil",
-      "Lavender oil"
-    ],
-    "brainfreeze": [
-      "Neroli oil", "MCT oil", "Shale oil", "Transformer oil", "Perilla oil", "Palm kernel oil",
-      "Clove oil", "Hemp seed oil|Hemp oil", "Pumpkin seed oil", "Rosehip oil", "Baobab oil",
-      "Thyme oil", "Cajeput oil", "Sperm whale oil|Spermaceti", "Wintergreen oil", "Vetiver oil",
-      "Pine oil", "Camphor oil", "Kerosene oil|Paraffin oil", "Sandalwood oil",
+      "Baobab oil", "Thyme oil", "Cajeput oil", "Sperm whale oil|Spermaceti", "Wintergreen oil",
+      "Vetiver oil", "Pine oil", "Camphor oil", "Kerosene oil|Paraffin oil", "Sandalwood oil",
       "Camellia oil|Tea seed oil", "Marula oil", "Krill oil", "Peppermint oil",
       "Cedarwood oil|Cedar oil", "Sea buckthorn oil", "Gear oil", "Orange oil", "Walnut oil",
-      "Macadamia oil", "Borage oil"
+      "Macadamia oil", "Borage oil", "Rose oil", "Geranium oil", "Chamomile oil", "Jasmine oil",
+      "Tuberose oil", "Clary sage oil", "Sage oil", "Basil oil", "Fennel oil", "Anise oil|Aniseed oil",
+      "Star anise oil", "Nutmeg oil", "Cardamom oil", "Ginger oil", "Black pepper oil", "Cumin oil",
+      "Coriander oil", "Dill oil", "Lemongrass oil", "Palmarosa oil", "Lime oil", "Grapefruit oil",
+      "Mandarin oil", "Tangerine oil", "Petitgrain oil", "Spearmint oil", "Birch oil", "Myrrh oil",
+      "Benzoin oil", "Spikenard oil", "Rosewood oil", "Copaiba oil", "Tamanu oil", "Kukui nut oil",
+      "Moringa oil", "Babassu oil", "Buriti oil"
+    ],
+    "brainfreeze": [
+      "Sacha inchi oil", "Chia seed oil", "Apricot kernel oil", "Peach kernel oil", "Carrot seed oil",
+      "Raspberry seed oil", "Blackcurrant seed oil", "Pomegranate seed oil", "Prickly pear seed oil",
+      "Wheat germ oil", "Olive pomace oil", "Lubricating oil|Lube oil", "Cutting oil",
+      "Two-stroke oil|2-stroke oil", "Fuel oil", "Bunker fuel", "Lamp oil", "Stand oil",
+      "Boiled linseed oil", "Danish oil", "Teak oil", "Mink oil", "Emu oil", "Seal oil",
+      "Shark liver oil", "Squalane", "Neatsfoot oil", "Beard oil", "Hair oil", "Massage oil",
+      "Garlic oil", "Scallion oil", "Sichuan pepper oil", "Red palm oil", "Snake oil", "CBD oil",
+      "Algae oil|Algal oil", "Hash oil", "Orris oil", "Turpentine|Oil of turpentine", "Tall oil",
+      "Rosin oil", "Fusel oil", "Grapefruit seed oil", "Watermelon seed oil", "Cranberry seed oil",
+      "Tomato seed oil", "Oat oil", "Coffee oil", "Shea oil", "Cherry kernel oil", "Plum kernel oil",
+      "Black walnut oil", "Pecan oil", "Pine nut oil", "Avocado seed oil", "Okra seed oil",
+      "Kapok seed oil", "Mowrah oil", "Jatropha oil", "Karanja oil", "Rubber seed oil",
+      "Fir needle oil", "Juniper berry oil", "Cypress oil", "Manuka oil", "Kanuka oil", "Niaouli oil",
+      "Ravintsara oil", "Litsea oil", "Davana oil", "Helichrysum oil", "Blue tansy oil", "Yarrow oil",
+      "Hyssop oil", "Marjoram oil", "Tarragon oil", "Bay oil", "Allspice oil", "Cassia oil",
+      "Galbanum oil", "Elemi oil", "Ambrette seed oil", "Angelica root oil", "Valerian oil",
+      "Calamus oil", "Agarwood oil|Oud"
     ],
     "absolutezero": [
       "Pistachio oil", "Poppyseed oil"

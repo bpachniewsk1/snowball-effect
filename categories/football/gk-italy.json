@@ -1,6 +1,6 @@
 {
   "id": "goalkeepers-italy",
-  "prompt": "Name a goalkeeper from Italy's national team (any era)",
+  "prompt": "Name a goalkeeper from Italy (any era)",
   "matchSurname": true,
   "ranking": {
     "hints": [
@@ -8,13 +8,13 @@
       "(goalkeeper)"
     ],
     "expect": "footballer|goalkeeper|football|soccer|manager|coach",
-    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q676899 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
-    "max": 150
+    "wikidata": "VALUES ?c { wd:Q38 } { ?item wdt:P27|wdt:P1532 ?c } UNION { ?item wdt:P54 wd:Q676899 } ?item wdt:P413 wd:Q201330 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
+    "max": 300
   },
   "ranked": {
     "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
-    "answers": 73,
-    "coverage": "97%"
+    "answers": 300,
+    "coverage": "100%"
   },
   "handpicked": {
     "slush": [
@@ -32,33 +32,96 @@
   },
   "answers": {
     "slush": [
-      "Gianluigi Buffon|Buffon|Gigi Buffon", "Dino Zoff", "Gianluigi Donnarumma|Donnarumma",
-      "Francesco Toldo", "Christian Abbiati|Cristian Abbiati", "Angelo Peruzzi", "Alex Meret",
-      "Walter Zenga", "Gianluca Pagliuca", "Morgan De Sanctis", "Marco Amelia", "Gianpiero Combi",
-      "Guglielmo Vicario", "Lorenzo Buffon", "Salvatore Sirigu"
+      "Gianluigi Buffon|Buffon|Gigi Buffon", "Yann Sommer", "Dida|Nélson de Jesus Silva", "Dino Zoff",
+      "Gianluigi Donnarumma|Donnarumma", "Juan Musso|Juan Agustin Musso", "Emil Audero Mulyadi",
+      "Francesco Toldo", "Carlo Cudicini", "Gianpiero Combi", "Alex Meret",
+      "Christian Abbiati|Cristian Abbiati", "Angelo Peruzzi", "Walter Zenga", "Vito Mannone"
     ],
     "snowflake": [
-      "Federico Marchetti", "Enrico Albertosi|Ricky Albertosi", "Giovanni Galli", "Emiliano Viviano",
-      "Luca Marchegiani", "Mattia Perin", "Ivano Bordon", "Stefano Tacconi", "Sebastiano Rossi",
-      "Flavio Roma", "Massimo Taibi", "Franco Tancredi", "Ivan Pelizzoli", "Giuliano Sarti"
+      "Gianluca Pagliuca", "Marco Amelia", "Pierluigi Gollini", "Fábio|Fábio Deivson Lopes Maciel",
+      "Morgan De Sanctis", "Roberto Abbondanzieri|Roberto Carlos Abbondanzieri",
+      "Diego Alves|Diego Alves Carreira", "Lorenzo Buffon", "Enrico Albertosi|Ricky Albertosi",
+      "Federico Marchetti", "Michele Di Gregorio", "Giovanni Galli", "Ivan Provedel",
+      "Emiliano Viviano", "Marco Storari", "Daniele Padelli", "Marco Carnesecchi",
+      "Leo Franco|Leonardo Franco|Leonardo Noeren Franco", "Luca Marchegiani", "Antonio Donnarumma",
+      "Carlo Pinsoglio", "Sebastiano Rossi", "Stefano Tacconi", "Antonio Mirante el flecheiro",
+      "Francesco Antonioli", "Flavio Roma", "Guglielmo Vicario", "Salvatore Sirigu",
+      "Marco Sportiello", "Ivano Bordon", "Massimo Taibi",
+      "Alfred Gomis|Alfred Benjamin Gomis|Amigo Alfred Junior Gomis", "Pietro Terracciano",
+      "Raffaele Di Gennaro", "Simone Scuffet", "Fabio Cudicini", "Nicola Leali", "Alessio Cragno",
+      "Zetti|Armelino Donizete Quagliato|Armelino Donizetti Quagliato", "Alberto Brignoli",
+      "Marco Ballotta", "Giuliano Sarti", "Cristiano Lupatelli", "Franco Tancredi", "Luca Bucci",
+      "Ivan Pelizzoli", "Andrea Consigli", "Luca Castellazzi", "Léo Jardim|Léo|Leonardo César Jardim",
+      "Michelangelo Rampulla", "Paolo Orlandoni",
+      "Sergio Padt|Padt Sergio|Sergio Vincenzo Roberto Padt", "Antonio Chimenti", "Valerio Fiori",
+      "Stefano Sorrentino", "Artur Moraes|Artur", "Guido Masetti", "Gianluca Curci",
+      "Wladimiro Falcone", "Alessandro Plizzari", "Silvio Proto", "Elia Caprile",
+      "Nikita Contini Baranovsky|Nikita Baranovsky Contini", "Marco Silvestri", "Laura Giuliani",
+      "Lido Vieri", "Giorgio Ghezzi", "Michael Agazzi", "Filip Stanković",
+      "Mark Birighitti|Mark Romano Birighitti", "Tommaso Berni"
     ],
     "icefrost": [
-      "Luca Bucci", "Aldo Olivieri", "Guido Masetti", "Giuseppe Cavanna", "Roberto Anzolin",
-      "Lido Vieri", "Luciano Castellini", "Giorgio Ghezzi", "Carlo Ceresoli", "Valerio Bacigalupo",
-      "Lucidio Sentimenti", "Pier Luigi Pizzaballa", "Paolo Conti", "Giuseppe Moro", "Carlo Mattrel",
-      "Giovanni Viola", "Giuseppe Casari"
+      "Aldo Olivieri", "Renato Marin", "Valerio Bacigalupo", "Luciano Castellini", "Luca Lezzerini",
+      "Francesco Bardi", "Paulo Victor Vidotti|Paulo Victor|Paulo Victor Mileo Vidotti",
+      "Edoardo Colombo", "Federico Ravaglia", "Alessandro Longoni",
+      "Mauro Goicoechea|Mauro Daniel Goicoechea Furia", "Pier Luigi Pizzaballa", "Roberto Anzolin",
+      "Matteo Sereni", "Lorenzo Torriani", "Alex Cordaz", "Stefano Turati", "Luigi Sepe",
+      "Paolo Conti", "Mattia Perin", "Lorenzo Montipò", "Emanuele Belardi", "Vincenzo Fiorillo",
+      "Giuseppe Cavanna", "Andrea Pazzagli", "Carlo Zotti", "Claudio Garella", "Carlo Ceresoli",
+      "Dino Ballarin", "Giuliano Giuliani", "Antonio Rosati", "Lucidio Sentimenti", "Andrea Seculin",
+      "Ferdinando Coppola", "Roberto Colombo", "Rachele Baldi",
+      "Giuseppe Taglialatela|Pino Taglialatela", "Gennaro Iezzo", "Alessandro Caparco",
+      "Nicola Pavarini", "Francesco Rossi", "Lys Gomis", "Marco Landucci", "Federico Agliardi",
+      "Franco Torgnascioli|Franco Luis Torgnascioli Lagreca", "Mario Ielpo", "Tommaso Martinelli",
+      "Carlo Mattrel", "Giuseppe Moro", "Villiam Vecchi|William Vecchi",
+      "Mirko Pigliacelli|Mirco Pigliacelli", "Gianluca Pegolo", "Luciano Bodini|Bodini",
+      "Fabrizio Ferron", "Giorgio Frezzolini", "Alessio Scarpi", "Alessandro Nista", "Beniamino Abate",
+      "Francesco Mancini", "Matteo Guardalben", "Marco Ambrosio", "Vincenzo Sicignano",
+      "Diamante Crispino", "Francesco Benussi", "Mauro Vigorito",
+      "Alberto Paleari|Alberto Andrea Paleari", "Simone Colombi", "Angelo Pagotto", "Giovanni Viola",
+      "Gino Gardassanich", "Marco Fortin", "Enrico Alfonso", "Giovanni Cervone", "Lorenzo Squizzi",
+      "Fabio Lopez", "Giulio Nuciari", "Pietro Carmignani", "Gaëlle Thalmann", "Ottavio Bugatti",
+      "Nicola Ravaglia", "Matteo Gianello", "Christian Puggioni|Cristian Puggioni", "Roberto Landi",
+      "Giovanni De Prà", "Massimo Piloni"
     ],
     "brainfreeze": [
-      "Giovanni De Prà", "Ottavio Bugatti", "Bruno Venturini", "Giuseppe Vavassori", "Piero Campelli",
-      "Leonardo Costagliola", "Gianluca Spinelli", "Giuseppe Peruchetti", "Franco Superchi",
-      "William Negri", "Giuseppe Giacone|Giovanni Giacone|Giuseppe Antonio Giacone", "Ugo Amoretti",
-      "Giampiero Combi", "Attilio Trerè", "Angelo Franzosi", "Ezio Sclavi",
-      "Roberto Lovati|Bob Lovati", "Vittorio Faroppa|Faroppa II", "Giovanni Costa", "Luigi Griffanti",
-      "Mario De Simoni", "Giovanni Innocenti", "Cesare Gallea",
-      "Angelo Cameroni|Angelo Arturo Cameroni", "Pietro Ferrari"
+      "Narciso Soldan", "Katja Schroffenegger|Schroffenegger, Katja", "Andrea Fulignati",
+      "Ciro Polito", "Giuseppe Vavassori", "Eugenio Lamanna", "Luigi Turci", "Giuseppe Casari",
+      "Fernando Orsi", "Bruno Venturini",
+      "Margot Shore|Margot Annie Shore Cavazzoni|Margot Shore Cavazzoni", "Pierluigi Frattali",
+      "Alberto Frison", "Alberto Michelotti", "Stefano Gori", "Raffaele Di Fusco", "Guido Guerrieri",
+      "Alex Brunner", "Piero Campelli", "Leonardo Costagliola",
+      "Alberto Maria Fontana|Alberto Fontana", "Davide Pinato", "Massimo Pessina", "Walter Bressan",
+      "Giacomo Brichetto", "Rolando Ugolini", "Pietro Pipolo", "Giuseppe Peruchetti", "Paolo Tornaghi",
+      "Andrea Guatelli", "Mattia Del Favero", "Andrea Campagnolo", "Davide Marfella",
+      "Gabriele Aldegani", "Simone Aresti|Simoni Aresti", "Andrea Mazzantini", "Filippo Perucchini",
+      "Alfonso De Lucia", "Astutillo Malgioglio", "Riccardo Piscitelli", "Alberto Pomini",
+      "Alessandro Micai", "Enrico Malatesta|Enrico Maria Malatesta", "Fernando Monetti|Jopito",
+      "Marco Roccati", "Davide Bassi", "Renato Gandolfi", "Eva Russo", "Mario Gianni", "Luigi Cennamo",
+      "Pietro Boer", "Simone Perilli", "Daniele Balli", "Daniele Sommariva",
+      "Gianni Romano|Giovanni Romano|Giannino Romano", "Camilla Forcinella", "Franco Superchi",
+      "William Negri", "Matteo Pisseri", "Giorgio Sterchele", "Maurice Gomis", "Kelly Chiavaro",
+      "Alfredo Bodoira", "Andrea Zaccagno", "Riccardo Melgrati", "Alessandro Russo", "Sergio Buso",
+      "Fabrizio Alastra", "Fabrizio Lorieri", "Marco Bleve", "Lapo Nava|Lapo Francesco Maria Nava",
+      "Luca Gemello", "Adriano Bonaiuti", "Davide Facchin", "Lorenzo Caccialanza", "Ugo Amoretti",
+      "Andrea Cano", "Chiara Marchitelli", "Antonio Rigamonti", "Edoardo Pazzagli", "Andrea Tozzo",
+      "Simone Farelli", "Davide Mastrantonio", "Maurizio Pugliesi", "Gianluca Berti",
+      "Francesco Anacoura|Joyce Francesco Anacoura", "Sara Penzo", "Giuliano Terraneo",
+      "Giuseppe Giacone|Giovanni Giacone|Giuseppe Antonio Giacone", "Marco Festa",
+      "Luciano Alfieri|Luciano Cesare Alfieri", "Emanuele Concetti", "Massimiliano Benassi",
+      "Demetrio Greco|Demetrio Alessandro Greco", "Generoso Rossi", "Pierluigi Brivio",
+      "Valentino Degani", "Marco Costantino", "Francesco Ruberto", "Luca Mondini",
+      "Alessandro Iacobucci", "Silvano Martina", "Massimo Battara",
+      "Antonio Santurro|Antonio Santurro Bueno", "Vitangelo Spadavecchia|Vito Angelo Spadavecchia",
+      "Anna Maria Picarelli", "Fabrizio Casazza", "Gianmatteo Mareggini", "Manlio Bacigalupo",
+      "Alberto Pelagotti", "Luca Mazzoni", "Alessandro Berardi", "Sergio Viotti", "Edoardo Corvi",
+      "Roberto Mancinelli", "Angelo Franzosi", "Giancarlo Alessandrelli", "Mario Cassano",
+      "Roberto Lovati|Bob Lovati", "Arturo Maffei", "Alex Calderoni", "Michele Cerofolini",
+      "Attilio Trerè", "Gabriele Marchegiani", "Arianna Criscione", "Cristiano Novembre",
+      "Rosario Di Vincenzo"
     ],
     "absolutezero": [
-      "Giuseppe Trivellini", "Clemente Morando"
+      "Giacomo Venturi", "Angelo Martino Colombo"
     ]
   }
 }

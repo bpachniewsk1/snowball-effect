@@ -1,6 +1,6 @@
 {
   "id": "goalkeepers-netherlands",
-  "prompt": "Name a goalkeeper from the Netherlands' national team (any era)",
+  "prompt": "Name a goalkeeper from the Netherlands (any era)",
   "matchSurname": true,
   "ranking": {
     "hints": [
@@ -8,12 +8,12 @@
       "(goalkeeper)"
     ],
     "expect": "footballer|goalkeeper|football|soccer|manager|coach",
-    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q47050 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) } FILTER(?item != wd:Q287815)",
-    "max": 150
+    "wikidata": "VALUES ?c { wd:Q29999 wd:Q55 } { ?item wdt:P27|wdt:P1532 ?c } UNION { ?item wdt:P54 wd:Q47050 } ?item wdt:P413 wd:Q201330 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) } FILTER(?item != wd:Q287815)",
+    "max": 300
   },
   "ranked": {
     "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
-    "answers": 58,
+    "answers": 281,
     "coverage": "100%"
   },
   "handpicked": {
@@ -30,33 +30,89 @@
   "answers": {
     "slush": [
       "Edwin van der Sar", "Tim Krul|Timothy Michael Krul", "Bart Verbruggen|Verbruggen",
-      "Maarten Stekelenburg", "Marco Bizot|Marco Remon Bizot", "Michel Vorm|Michel Armand Vorm",
-      "Jasper Cillessen|Cillessen", "Hans van Breukelen", "Sander Westerveld", "Andries Noppert",
-      "Ed de Goey|Ed de Goeij", "Jan Jongbloed"
+      "Maarten Stekelenburg", "Jasper Cillessen|Cillessen|Jacobus Antonius Peter Johannes Cillessen",
+      "Marco Bizot|Marco Remon Bizot", "Michel Vorm|Michel Armand Vorm",
+      "Robin Roefs|Robin Gerardus Petrus Roefs", "Hans van Breukelen", "Kjell Scherpen",
+      "Sander Westerveld", "Eloy Room", "Ed de Goey|Ed de Goeij", "Andries Noppert",
+      "Ruud Hesp|Rudolfus Hubertus Hesp"
     ],
     "snowflake": [
-      "Sander Boschker|Sander Bernard Jozef Boschker", "Stanley Menzo", "Kenneth Vermeer",
-      "Henk Timmer|Hendrik Timmer", "Mark Flekken|Flekken", "Piet Schrijvers", "Ronald Waterreus",
-      "Pim Doesburg|Willem Doesburg", "Justin Bijlow|Bijlow", "Theo Snelders",
-      "Piet Velthuizen|Piet Hubertus Velthuizen"
+      "Jeroen Zoet", "Raimond van der Gouw", "Dido Havenaar", "Jan Jongbloed", "Stanley Menzo",
+      "Maarten Paes", "Kenneth Vermeer", "Sander Boschker|Sander Bernard Jozef Boschker",
+      "Daphne van Domselaar", "Piet Schrijvers", "Pim Doesburg|Willem Doesburg", "Serdar Gözübüyük",
+      "Ronald Waterreus", "Sergio Padt|Padt Sergio|Sergio Vincenzo Roberto Padt", "Ronald Koeman Jr.",
+      "Tyrick Bodak|Tyrick Jeremy Bodak", "Theo Snelders", "Joel Drommel", "Warner Hahn",
+      "Henk Timmer|Hendrik Timmer", "Trevor Doornbusch|Trevor Irving Doornbusch", "Patrick Lodewijks",
+      "Nick Olij", "Sari van Veenendaal", "Lize Kop", "Etienne Vaessen", "Dorus de Vries",
+      "Boy Waterman", "Jan van Beveren", "Heinz Stuy", "Daniel Agyei|Daniel Yaw Agyei",
+      "Erwin Mulder|Erwin Gerardus Theodorus Franc Mulder", "Jay Gorter", "Hans Vonk",
+      "Fred Grim|Johann Georg Friedrich \"Fred\" Grim", "Eddy Treijtel|Eduard Willem Treijtel",
+      "Piet Velthuizen|Piet Hubertus Velthuizen", "Nick Marsman", "Kayne van Oevelen",
+      "Mark Flekken|Flekken|Mark Maria Hubertus Flekken", "Jelle ten Rouwelaar", "Kilian Nikiema",
+      "Justin Bijlow|Bijlow", "Eddy Pieters Graafland", "Hans Segers",
+      "Joeri Jesse Heerkens|Joeri Heerkens", "Joop Hiele", "Sonny Stevens", "Benjamin van Leer",
+      "Diederik Boer", "Rob van Dijk|Robert van Dijk", "Edwin Zoetebier", "Robbin Ruiter",
+      "Mike Hauptmeijer", "Stefan Postma", "Joshua Smits|Joshua Gerardus Petrus Wilhelmus Smits",
+      "Kelle Roos", "Dennis Gentenaar", "Gejus van der Meulen", "Khalid Sinouh",
+      "Erik Heijblok|Erik Willem Heijblok", "Jeroen Verhoeven", "Rome-Jayden Owusu-Oduro",
+      "Quincy Kammeraad", "Bas Roorda", "André Krul"
     ],
     "icefrost": [
-      "Eddy Treijtel|Eduard Willem Treijtel", "Jan van Beveren", "Eddy Pieters Graafland",
-      "Joop Hiele", "Gejus van der Meulen", "Remko Pasveer|Pasveer", "Jan Ruiter", "Adri van Male",
-      "Reinier Beeuwkes|Reinier Bertus Beeuwkes", "Leo Halle|Leonard Herman Gerrit Halle",
-      "Just Göbel", "Frans de Munck", "Jan de Boer"
+      "Jan Ruiter", "Frans Hoek|Franciscus Petrus Theodorus Hoek", "Sem Westerveld", "Arno van Zwam",
+      "Loes Geurts", "Gert Bals|Gerrit Bals", "Nordin Bakker", "Mickey van der Hart",
+      "Harald Wapenaar", "Jasper Schendelaar", "Lloyd Doesburg|Lloyd Harvy Doesburg",
+      "Jan de Boer|J. de Boer", "Yanick van Osch", "Michael Verrips|Michael Robin Verrips",
+      "Gino Coutinho", "Maikel Aerts", "Calvin Raatsie|Calvin Owen Harm Raatsie", "Bernt Klaverboer",
+      "Reinier Beeuwkes|Reinier Bertus Beeuwkes", "Adri van Male",
+      "Thijmen Nijhuis|Thijmen Joel Sander Nijhuis", "Frans de Munck", "Gerrit Keizer", "Just Göbel",
+      "Peter Leeuwenburgh", "Leo Halle|Leonard Herman Gerrit Halle", "Mattijs Branderhorst",
+      "Ronald Graafland", "Oscar Moens", "Luuk Koopmans", "Hobie Verhulst", "Michael Brouwer",
+      "Cees Paauwe", "Niek Schiks", "Issam El Maach", "Stijn van Gassel", "John Achterberg",
+      "Remko Pasveer|Pasveer|Remko Jurian Pasveer", "Robert Zwinkels", "Fabian de Keijzer",
+      "Niek Michel|Nicolaas Johannes Michel", "Nico de Bree|Nicolaas Alphonsus Petrus",
+      "Andrew Dykstra", "Hidde Jurjus", "Jacintha Weimar", "Hans de Koning", "Dani van den Heuvel",
+      "Michel Kuipers", "Sieb Dijkstra", "Rowendy Sumter|Rowendy Wendy José Sumter", "Bilal Bayazit",
+      "Roy Kortsmit", "Piet Bouman", "Agil Etemadi", "Piet Kraak|Peter Kraak|Pieter Cornelis Kraak",
+      "Dick MacNeill|Richard MacNeill", "Jarzinho Pieter|Jarzinho Saul Emmanuel Pieter", "Eric Abdul",
+      "Danielle de Jong", "Mike Havekotte", "John Karelse", "Brian van Loo",
+      "Marco van Duin|Marco Rudolf van Duin", "Norbert Alblas", "Arjan van Dijk", "Edward Metgod",
+      "René Ponk", "Xavier Mous", "Tom de Graaff", "Rody de Boer", "Femke Liefting",
+      "Lo La Chapelle|Eloi Hubert la Chapelle", "Ishan Kort", "Hennie Spijkerman", "Jordy Deckers",
+      "Hans Galjé", "Rein van Duijnhoven", "Peter van de Merwe", "Leen Barth|Leendert Barth"
     ],
     "brainfreeze": [
-      "Oscar Moens", "Edward Metgod", "Piet Kraak|Peter Kraak|Pieter Cornelis Kraak",
-      "Niek Michel|Nicolaas Johannes Michel", "Dick MacNeill|Richard MacNeill", "Piet Bouman",
-      "Peter van de Merwe", "Hans Venneker", "Lo La Chapelle|Eloi Hubert la Chapelle",
-      "Tonny van Leeuwen|Teunis Pieter van Leeuwen", "Wim Landman", "Lieuwe Steiger",
-      "Herman van Raalte", "Joop Wille", "Jan Schindeler", "Barend van Hemert",
-      "Fred van der Poel|F.C.G. van der Poel", "Dré Saris|André Saris|Andries Johannes Saris",
-      "Piet Lagarde", "Jan Schoemaker|Jacobus Schoemaker"
+      "Joost Terol", "Zeus de la Paz|Zeus Chandi de la Paz", "Jeroen Houwen", "Wouter van der Steen",
+      "Angela Christ|Angela Anna Christ", "Danny Wintjens",
+      "Wieger Sietsma|Wieger Martin Frisco Sietsma", "Boy de Jong", "Indy Groothuizen",
+      "Jim van Fessem", "Mees Bakker", "Eric Verstappen", "Brahim Zaari", "Renze Fij", "Carlo l'Ami",
+      "Tim Coremans", "Peter van der Vlag", "Hans Venneker", "Hennie Ardesch|Henny Ardesch",
+      "Joey Roggeveen", "Menno Bergsen", "Tonny van Leeuwen|Teunis Pieter van Leeuwen", "Laura du Ry",
+      "Guido van de Kamp", "Serge van den Ban", "Erik Cummins", "Elber Evora", "Wim Landman",
+      "Erik de Haan", "Herman van Raalte", "Dennis Telgenkamp", "Nigel Bertrams", "Wilko de Vogt",
+      "Chiel Kramer", "Leon ter Wielen", "Lieuwe Steiger", "Delano van Crooy|Delano van Crooij",
+      "Nick Hengelman", "Sten Kremers", "Maarten Van der Want", "Wesley de Ruiter", "Robbert te Loeke",
+      "Bart Griemink", "Ramón ten Hove", "Harm Zeinstra", "Leonard Nienhuis", "Daan Huiskamp",
+      "Johan Jansen", "Piet de Wolf", "Tein Troost", "Joop Wille", "Ruud Swinkels",
+      "Mitchel Michaelis", "Marleen Wissink", "Jörg van Nieuwenhuijzen",
+      "Mike van de Meulehof|Mike van de Meulenhof", "Diederik Bangma", "Arjan Christianen",
+      "René Oosterhof", "Thom Jonkerman|Thom Anthony Walter Jonkerman", "Kees Heemskerk",
+      "Maarten de Fockert", "Frank Kooiman", "Theo Zwarthoed", "Marco Ruitenbeek",
+      "Jan Willem van Ede", "Wesley Zonneveld", "Jeroen Gies", "Stan van Bladeren",
+      "Patrick Zonneveld", "Jan Schindeler", "Barry Ditewig", "Jean-Marc Antersijn", "Azing Griever",
+      "Petra Dugardein", "Rein Baart", "Fred van der Poel|F.C.G. van der Poel", "Barend van Hemert",
+      "Timo Plattel", "Harry Schellekens", "Martijn de Zwart", "Raymond Homoet|Raymond Lesley Homoet",
+      "Abe Knoop", "Rodney Ubbergen", "Marcello Pisas", "Jennifer Vreugdenhil", "Mark Spenkelink",
+      "Jos Bax|Joseph Wilhelmus Allegonda Bax", "Beau Molenaar", "Jesse Bertrams", "Alessandro Damen",
+      "Jurgen Wevers", "Dré Saris|André Saris|Andries Johannes Saris", "Pim Bekkering", "Piet Lagarde",
+      "Harmen Kuperus", "Bryan Janssen", "Stefan van der Lei", "Raymond van Driel",
+      "Jasper Heusinkveld", "Barry Lauwers", "Ariën Pietersma", "Jan Schoemaker|Jacobus Schoemaker",
+      "Ton van Engelen", "Lex van Haeften", "Jordy van de Corput", "Theo Timmermans", "Kees Quax",
+      "Ralph Vos", "Bas van Wegen", "Maurits Schmitz", "Nick Wolters", "Sven van der Maaten",
+      "Jacob van den Belt", "Roy Pistoor", "Josephine Frigge", "Nils den Hartog", "Youri Roulaux",
+      "Jaap Kelderman"
     ],
     "absolutezero": [
-      "Ton van Engelen", "Kees Quax"
+      "Ricardo Kieboom", "Job van de Walle"
     ]
   }
 }

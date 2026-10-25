@@ -9,8 +9,8 @@
   },
   "ranked": {
     "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
-    "answers": 96,
-    "coverage": "75%"
+    "answers": 166,
+    "coverage": "64%"
   },
   "handpicked": {
     "slush": [
@@ -35,34 +35,58 @@
       "Protein chips", "Black bean pasta", "Ezekiel bread", "Kangaroo meat", "Emu meat",
       "Ostrich meat", "Cricket flour|Cricket protein", "Sprouted lentils", "Hemp protein",
       "Rice protein", "Bone broth", "Kidney beans", "Navy beans", "Split peas", "Mung beans", "Natto",
-      "Paneer", "Gruyère|Gruyere", "Pecorino"
+      "Paneer", "Gruyère|Gruyere", "Pecorino", "Cheddar", "Oysters", "Clams", "Squid", "Peas", "Oats",
+      "Buckwheat", "Chicken thighs", "Ground beef|Minced beef|Mince", "Chicken liver", "Salami", "Ham",
+      "Prosciutto", "Bresaola", "Smoked salmon", "Canned tuna|Tinned tuna", "Rabbit", "Goat",
+      "Quail eggs", "Ostrich", "Kangaroo", "Mealworms", "Hummus", "Falafel", "Fava beans|Broad beans",
+      "Protein cookie", "Protein ice cream", "Pork rinds|Pork scratchings", "Babybel", "Gelatin",
+      "Surimi|Crab sticks", "Caviar", "Roe", "Swordfish", "Haddock", "Catfish", "Herring", "Eel",
+      "Turkey mince", "Chicken sausage", "Turkey bacon", "Egg white omelette", "Overnight oats",
+      "Protein porridge", "Soy chunks|TVP|Textured vegetable protein", "Chickpea pasta",
+      "Edamame pasta", "Pumpkin seed butter", "Almond butter", "Brown rice protein", "Egg protein",
+      "Beef protein", "Mass gainer", "Protein water", "Protein coffee", "Protein yogurt", "Feta",
+      "Gouda", "Emmental", "Grana Padano", "Edam", "Provolone", "Goat cheese", "Tuna steak",
+      "Pork chop", "Veal", "Chicken drumsticks", "Rotisserie chicken", "Tandoori chicken",
+      "Chicken tikka"
     ]
   },
   "answers": {
     "slush": [
-      "Tofu", "Chicken breast|Chicken", "Edamame", "Tuna", "Chickpeas", "Cottage cheese", "Lentils",
-      "Milk", "Almonds", "Tempeh", "Greek yogurt|Greek yoghurt", "Quark|Twaróg", "Beef|Steak", "Kefir",
-      "Seitan"
+      "Chicken breast|Chicken", "Tuna", "Tofu", "Edamame", "Cottage cheese", "Chickpeas", "Lentils",
+      "Milk", "Almonds", "Tempeh", "Black beans", "Lean ground beef|Lean mince", "Quark|Twaróg",
+      "Greek yogurt|Greek yoghurt", "Seitan"
     ],
     "snowflake": [
-      "Chia seeds", "Black beans", "Lean ground beef|Lean mince", "Parmesan", "Eggs|Egg", "Soy beans",
-      "Scallops", "Skyr", "Peanut butter", "Halloumi", "Tilapia", "Lamb",
-      "Whey protein|Whey|Protein shake", "Lobster", "Pumpkin seeds", "Halibut", "Salmon", "Anchovies",
-      "Beef jerky|Jerky", "Turkey"
+      "Beef|Steak", "Parmesan", "Kefir", "Eggs|Egg", "Chia seeds", "Skyr", "Peanut butter",
+      "Soy beans", "Scallops", "Halloumi", "Tilapia", "Lamb", "Lobster", "Pumpkin seeds",
+      "Whey protein|Whey|Protein shake", "Halibut", "Goat", "Salmon", "Falafel", "Buckwheat",
+      "Anchovies", "Trout", "Hummus", "Beef jerky|Jerky", "Mussels", "Catfish", "Hemp seeds", "Quinoa",
+      "Duck breast", "Bison", "Pistachios", "Peanuts", "Spirulina", "Lentil pasta", "Protein pudding",
+      "Protein pancakes", "Chicken thigh"
     ],
     "icefrost": [
-      "Trout", "Shrimp|Prawns", "Mussels", "Mozzarella", "Hemp seeds", "Quinoa", "Duck breast",
-      "Bison", "Pistachios", "Peanuts", "Spirulina", "Lentil pasta", "Protein pudding",
-      "Protein pancakes", "Chicken thigh", "Egg whites", "Protein bar", "Sardines", "Biltong",
-      "Ricotta", "Pork loin", "Venison", "Paneer", "Mung beans"
+      "Shrimp|Prawns", "Mozzarella", "Turkey", "Egg whites", "Veal", "Protein bar", "Sardines",
+      "Biltong", "Caviar", "Ricotta", "Swordfish", "Pork loin", "Venison", "Fava beans|Broad beans",
+      "Gelatin", "Oysters", "Paneer", "Mung beans", "Natto", "Soy milk", "Casein", "Collagen", "Peas",
+      "Cod", "Sunflower seeds", "Overnight oats", "Pemmican", "Haddock", "Salami", "Pollock",
+      "String cheese", "Lupini beans|Lupin beans", "Clams", "Feta", "Gruyère", "Crab", "Babybel",
+      "Surimi|Crab sticks", "Mackerel", "Navy beans", "Pea protein", "Egg white omelette", "Octopus",
+      "Squid", "Kidney beans"
     ],
     "brainfreeze": [
-      "Natto", "Soy milk", "Casein", "Collagen", "Sunflower seeds", "Cod", "Pemmican", "String cheese",
-      "Pollock", "Lupini beans|Lupin beans", "Crab", "Gruyère", "Mackerel", "Navy beans",
-      "Pea protein", "Octopus", "Kidney beans", "Roasted chickpeas", "Pecorino", "Kangaroo meat",
-      "Split peas", "Nutritional yeast", "Sea bass", "Cashews", "Egg white protein", "Protein chips",
-      "Black bean pasta", "Emu meat", "Ostrich meat", "Sprouted lentils", "Bone broth",
-      "Ezekiel bread", "Mycoprotein|Quorn", "Liver|Beef liver", "Cricket flour|Cricket protein"
+      "Grana Padano", "Mealworms", "Tandoori chicken", "Roasted chickpeas", "Provolone", "Roe",
+      "Soy chunks|TVP|Textured vegetable protein", "Pecorino", "Rotisserie chicken", "Kangaroo meat",
+      "Split peas", "Quail eggs", "Nutritional yeast", "Sea bass", "Cashews", "Egg white protein",
+      "Protein chips", "Black bean pasta", "Emu meat", "Ostrich meat", "Sprouted lentils",
+      "Bone broth", "Cheddar", "Oats", "Chicken thighs", "Ground beef|Minced beef|Mince",
+      "Chicken liver", "Ham", "Prosciutto", "Bresaola", "Smoked salmon", "Canned tuna|Tinned tuna",
+      "Rabbit", "Ostrich", "Kangaroo", "Protein cookie", "Protein ice cream",
+      "Pork rinds|Pork scratchings", "Chicken sausage", "Protein porridge", "Chickpea pasta",
+      "Edamame pasta", "Pumpkin seed butter", "Brown rice protein", "Egg protein", "Beef protein",
+      "Mass gainer", "Protein water", "Protein coffee", "Protein yogurt", "Gouda", "Emmental", "Edam",
+      "Tuna steak", "Chicken drumsticks", "Chicken tikka", "Goat cheese", "Pork chop", "Ezekiel bread",
+      "Eel", "Herring", "Mycoprotein|Quorn", "Turkey bacon", "Liver|Beef liver", "Almond butter",
+      "Cricket flour|Cricket protein", "Turkey mince"
     ],
     "absolutezero": [
       "Rice protein", "Hemp protein"

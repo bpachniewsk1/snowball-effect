@@ -1,6 +1,6 @@
 {
   "id": "goalkeepers-poland",
-  "prompt": "Name a goalkeeper from Poland's national team (any era)",
+  "prompt": "Name a goalkeeper from Poland (any era)",
   "matchSurname": true,
   "ranking": {
     "hints": [
@@ -8,12 +8,12 @@
       "(goalkeeper)"
     ],
     "expect": "footballer|goalkeeper|football|soccer|manager|coach",
-    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q166196 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
-    "max": 150
+    "wikidata": "VALUES ?c { wd:Q36 } { ?item wdt:P27|wdt:P1532 ?c } UNION { ?item wdt:P54 wd:Q166196 } ?item wdt:P413 wd:Q201330 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
+    "max": 300
   },
   "ranked": {
     "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
-    "answers": 75,
+    "answers": 179,
     "coverage": "100%"
   },
   "handpicked": {
@@ -23,38 +23,66 @@
   },
   "answers": {
     "slush": [
-      "Jerzy Dudek|Jerzy Henryk Dudek", "Tomasz Kuszczak|Tomasz Miroslaw Kuszczak", "Artur Boruc",
-      "Wojciech Szczęsny|Szczesny", "Łukasz Fabiański|Fabianski", "Łukasz Skorupski", "Marcin Bułka",
-      "Przemysław Tytoń", "Jan Tomaszewski", "Bartosz Białkowski|Bartosz Marek Białkowski",
-      "Józef Młynarczyk", "Jakub Słowik", "Radosław Majdan", "Grzegorz Sandomierski", "Adam Matysek"
+      "Jerzy Dudek|Jerzy Henryk Dudek", "Kamil Grabara|Kamil Mieczysław Grabara",
+      "Wojciech Szczęsny|Szczesny|Wojciech Tomasz Szczesny|Wojciech Szczesny En el Barça",
+      "Tomasz Kuszczak|Tomasz Miroslaw Kuszczak", "Łukasz Fabiański|Fabianski|Łukasz Marek Fabiański",
+      "Artur Boruc", "Gabriel Slonina|Gabriel Pawel Slonina|Gaga Slonina", "Łukasz Skorupski",
+      "Marcin Bułka", "Jan Tomaszewski", "Bartłomiej Drągowski",
+      "Bartosz Białkowski|Bartosz Marek Białkowski", "Przemysław Tytoń", "Czesław Michniewicz",
+      "Józef Młynarczyk"
     ],
     "snowflake": [
-      "Łukasz Załuska", "Wojciech Kowalewski", "Jacek Kazimierski", "Józef Wandzik", "Maciej Szczęsny",
-      "Piotr Mowlik", "Hubert Kostka", "Arkadiusz Onyszko", "Andrzej Fischer|Andrzej Lucjan Fischer",
-      "Radosław Cierzniak", "Grzegorz Szamotulski|Gregorz Szamotulski", "Zygmunt Kalinowski",
-      "Edward Madejski|Edward Dominik Jerzy Madejski", "Aleksander Kłak",
-      "Marian Szeja|Marian Henryk Szeja"
+      "Jakub Słowik", "Radosław Majdan", "Rafał Gikiewicz", "Radosław Majecki",
+      "Grzegorz Sandomierski", "Katarzyna Kiedrzynek", "Adam Matysek", "Filip Bednarek",
+      "Łukasz Załuska", "Eddie Niedzwiecki", "Maciej Szczęsny", "Józef Wandzik", "Wojciech Kowalewski",
+      "Hubert Kostka", "Mateusz Kochalski", "Jacek Kazimierski", "Arkadiusz Onyszko", "Piotr Mowlik",
+      "Filip Kurto", "Krzysztof Kamiński", "Paweł Kieszek", "Radosław Cierzniak",
+      "Grzegorz Szamotulski|Gregorz Szamotulski", "Tomer Chencinski",
+      "Andrzej Fischer|Andrzej Lucjan Fischer", "Sławomir Abramowicz", "Arkadiusz Malarz",
+      "Karol Niemczycki|Karol Stanisław Niemczycki", "Max Stryjek|Maksymilian Stryjek",
+      "Cezary Miszta", "Oliwier Zych", "Zygmunt Kalinowski", "César Ruminski",
+      "Alex Cisak|Aleksander Cisak", "Edward Madejski|Edward Dominik Jerzy Madejski",
+      "Aleksander Kłak", "Marian Szeja|Marian Henryk Szeja", "Jarosław Bako", "Zygmunt Kukla",
+      "Daniel Bielica", "Zbigniew Małkowski"
     ],
     "icefrost": [
-      "Jarosław Bako", "Zygmunt Kukla", "Walter Brom|Walter Henryk Brom", "Mariusz Pawełek",
-      "Zdzisław Kostrzewa", "Andrzej Woźniak", "Edward Szymkowiak", "Kazimierz Sidorczuk",
-      "Michał Miśkiewicz", "Spirydion Albański|Spirydion Jan Albański", "Jan Gomola",
-      "Rafał Leszczyński", "Sebastian Małkowski", "Krys Sobieski|Krzysztof Sobieski", "Michał Gliwa",
-      "Jakub Wierzchowski", "Mieczysław Zygmunt Wiśniewski"
+      "Walter Brom|Walter Henryk Brom", "Albert Posiadała", "Kacper Trelowski", "Marcel Łubik",
+      "Artur Krysiak|Artur Łukasz Krysiak", "Mariusz Pawełek", "Mateusz Bąk", "Zdzisław Kostrzewa",
+      "Edward Szymkowiak", "Piotr Leciejewski", "Max Wosniak|Max Wozniak",
+      "Spirydion Albański|Spirydion Jan Albański", "Darius Kampa", "Maciej Gostomski",
+      "Andrzej Woźniak", "Wojciech Pawłowski", "Kazimierz Sidorczuk", "Łukasz Jarosiński",
+      "Alexander Famulla", "Michał Miśkiewicz", "Rafał Leszczyński", "Xavier Dziekoński",
+      "Grégory Malicki", "Jakub Szumski", "Krzysztof Kotorowski", "Sebastian Małkowski",
+      "Michał Gliwa", "Artur Sarnat", "Jan Gomola", "Adam Stachowiak|Adam Mieczysław Stachowiak",
+      "Krys Sobieski|Krzysztof Sobieski", "Tomasz Bobel", "Bartoloměj Kuru", "Robert Wulnikowski",
+      "Jakub Wierzchowski", "Mateusz Prus", "Tomasz Loska",
+      "Tomasz Stefaniszyn|Tomasz Tadeusz Stefaniszyn", "Mieczysław Zygmunt Wiśniewski",
+      "Erwin Zelazny", "Filip Majchrowicz", "Michał Szromnik", "Sebastian Przyrowski", "Filip Wichman",
+      "Dawid Pietrzkiewicz", "Dominik Hładun", "Grzegorz Kasprzik",
+      "Janusz Jojko|Janusz Andrzej Jojko", "Daria Antończyk"
     ],
     "brainfreeze": [
-      "Tomasz Stefaniszyn|Tomasz Tadeusz Stefaniszyn", "Andrzej Przeworski", "Sebastian Przyrowski",
-      "Janusz Jojko|Janusz Andrzej Jojko", "Stanisław Ryszard Burzyński|Stanisław Burzyński",
-      "Emil Görlitz", "Mariusz Liberda", "Jan Loth", "Andrzej Bledzewski", "Maciej Nalepa",
-      "Henryk Bolesta", "Bogusław Wyparło", "Antoni Janik|Werner Janik", "Waldemar Piątek",
-      "Stanisław Fołtyn", "Konrad Kornek|Konrad Józef Kornek",
-      "Henryk Gronowski|Henryk Teodor Gronowski|Henryk Teodor Gruner", "Adolf Krzyk",
-      "Ryszard Jankowski", "Jan Karwecki", "Stefan Popiel|Stefan Sulima-Popiel",
-      "Zbigniew Robakiewicz", "Eugeniusz Cebrat", "Grzegorz Tomala", "Marian Fontowicz",
-      "Antoni Keller"
+      "Konrad Jałocha", "Oliwia Szperkowska", "Michał Buchalik", "Dawid Kudła", "Jakub Szmatuła",
+      "Kacper Bieszczad", "Rafał Strączek", "Anna Szymańska", "Konrad Forenc", "Andrzej Przeworski",
+      "Jan Loth", "Emil Görlitz", "Jakub Wrąbel", "Stanisław Ryszard Burzyński|Stanisław Burzyński",
+      "Jędrzej Grobelny", "Jack Stefanowski", "Aleksander Ptak", "Maciej Nalepa", "Mariusz Liberda",
+      "Paweł Linka", "Marcin Juszczyk", "Wojtek Zarzycki", "Andrzej Bledzewski",
+      "Radosław Janukiewicz", "Antoni Janik|Werner Janik", "Henryk Bolesta", "Seweryn Kiełpin",
+      "Bogusław Wyparło", "Stanisław Fołtyn", "Dariusz Trela", "Waldemar Piątek", "Daniel Kajzer",
+      "Wojciech Skaba", "Jérémy Sopalski", "Konrad Kornek|Konrad Józef Kornek",
+      "Henryk Gronowski|Henryk Teodor Gronowski|Henryk Teodor Gruner", "Bartosz Fabiniak",
+      "Bartłomiej Żynel", "Piotr Lech", "Dawid Kręt", "Adolf Krzyk", "Krzysztof Pilarz",
+      "Mirosław Dreszer", "Łukasz Sapela", "Ryszard Jankowski", "Stefan Popiel|Stefan Sulima-Popiel",
+      "Jan Karwecki", "Maciej Mielcarz", "Zbigniew Robakiewicz", "Łukasz Budziłek",
+      "Sebastian Nowak|Sebastian Andrzej Nowak", "Andrzej Czyżniewski", "Eugeniusz Cebrat",
+      "Wojciech Muzyk", "Norbert Witkowski", "Szymon Gąsiński", "Grzegorz Szerszenowicz",
+      "Gerard Bieszczad", "Wojciech Kaczmarek", "Dominik Kisiel", "Grzegorz Tomala", "Patryk Procek",
+      "Jarosław Tkocz", "Wojciech Tomasiewicz", "Krzysztof Kozik", "Marian Fontowicz",
+      "Henryk Siedlecki", "Michał Sławuta", "Antoni Keller", "Krzysztof Baran", "Henryk Pietrek",
+      "Antoni Piasecki"
     ],
     "absolutezero": [
-      "Antoni Piasecki", "Henryk Pietrek"
+      "Sławomir Olszewski", "Zdzisław Sosnowski"
     ]
   }
 }

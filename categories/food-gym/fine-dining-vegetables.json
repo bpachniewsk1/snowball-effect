@@ -10,8 +10,8 @@
   },
   "ranked": {
     "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
-    "answers": 89,
-    "coverage": "79%"
+    "answers": 159,
+    "coverage": "70%"
   },
   "handpicked": {
     "slush": [
@@ -37,39 +37,71 @@
       "Ice plant", "Oyster leaf", "Nasturtium", "Borage", "Hop shoots", "Salsola", "Mizuna", "Tatsoi",
       "Chayote", "Kalettes", "Kai lan|Chinese broccoli", "Romanesco broccoli", "Shiitake", "Enoki",
       "Maitake|Hen-of-the-woods", "Lion's mane", "Black garlic", "Spring onion|Scallion", "Celtuce",
-      "Cime di rapa|Rapini|Broccoli rabe", "Sea kale", "Alexanders", "Wasabi", "Bamboo shoots"
+      "Cime di rapa|Rapini|Broccoli rabe", "Sea kale", "Alexanders", "Wasabi", "Bamboo shoots",
+      "Treviso", "Sea purslane", "Black truffle", "White truffle", "Oyster mushroom",
+      "King oyster mushroom", "Purple carrot", "Baby leeks", "Watermelon radish",
+      "Candy cane beetroot|Chioggia beet", "Delicata squash", "Kabocha",
+      "Courgette flowers|Zucchini flowers|Squash blossoms", "Pea shoots", "Shiso|Perilla",
+      "Mustard greens", "Purple sprouting broccoli|Sprouting broccoli", "Piquillo pepper",
+      "Padrón peppers|Padron peppers", "Shishito peppers", "Tomatillo", "Sweetcorn|Corn", "Baby corn",
+      "Runner beans", "Haricots verts|French beans|Green beans", "Sugar snap peas",
+      "Mangetout|Snow peas", "Water chestnut", "Horseradish", "Banana shallot", "Pearl onions",
+      "Spring onions|Scallions", "Calçots|Calcots", "Garlic scapes", "Celery", "Lovage",
+      "Rocket|Arugula", "Lamb's lettuce|Mâche|Corn salad", "Frisée|Frisee", "Little gem",
+      "Tromboncino", "Jicama", "Taro", "Cassava", "Sweet potato", "Purple potato", "Ratte potato",
+      "Jersey Royal potatoes|Jersey Royals", "Pink Fir Apple potato",
+      "Hispi cabbage|Sweetheart cabbage", "Savoy cabbage", "Red cabbage", "Cucamelon", "Baby beetroot",
+      "Baby fennel", "Wild mushrooms", "Lion's mane mushroom", "Girolles",
+      "Trompette de la mort|Black trumpet", "Hedgehog mushroom", "Matsutake", "Nameko",
+      "Beech mushroom|Shimeji", "Chickweed", "Wood sorrel", "Sea aster", "Elderflower", "Pea flowers",
+      "Wild asparagus", "Sea fennel|Rock samphire"
     ]
   },
   "answers": {
     "slush": [
-      "Eggplant|Aubergine", "Asparagus", "Truffle", "Mushroom", "Zucchini|Courgette", "Artichoke",
-      "Pumpkin", "Fennel", "Beetroot|Beet", "Carrot", "Butternut squash", "Leek", "Pak choi|Bok choy",
-      "Cauliflower", "Edamame"
+      "Asparagus", "Carrot", "Eggplant|Aubergine", "Truffle", "Mushroom", "Zucchini|Courgette",
+      "Artichoke", "Fennel", "Pumpkin", "Beetroot|Beet", "Leek", "Butternut squash",
+      "Pak choi|Bok choy", "White asparagus", "Celeriac"
     ],
     "snowflake": [
-      "Porcini", "Okra", "White asparagus", "Celeriac", "Romanesco", "Broad beans|Fava beans",
-      "Brussels sprouts", "Kohlrabi", "Spinach", "Kale", "Rutabaga|Swede", "Pea|Peas|Petit pois",
-      "Jerusalem artichoke|Sunchoke", "Lotus root", "Shallot", "Chanterelle|Chanterelles", "Parsnip",
-      "Swiss chard|Chard"
+      "Endive|Chicory", "Romanesco", "Cauliflower", "Porcini", "Broad beans|Fava beans",
+      "Brussels sprouts", "Kohlrabi", "Edamame", "Kale", "Okra", "Pea|Peas|Petit pois", "Spinach",
+      "Shallot", "Rutabaga|Swede", "Jerusalem artichoke|Sunchoke", "Lotus root",
+      "Chanterelle|Chanterelles", "Parsnip", "Swiss chard|Chard", "Radish", "Watercress", "Turnip",
+      "Morel|Morels", "Cassava", "Sweetcorn|Corn", "Parsley root", "Purple potato", "Taro",
+      "Radicchio", "Sorrel", "Sweet potato", "Chayote", "Wasabi", "Elderflower",
+      "Purple sprouting broccoli|Sprouting broccoli", "Salsify"
     ],
     "icefrost": [
-      "Turnip", "Radish", "Watercress", "Chayote", "Wasabi", "Parsley root", "Sorrel",
-      "Endive|Chicory", "Morel|Morels", "Radicchio", "Salsify", "Cavolo nero|Lacinato kale",
-      "Baby carrots|Heritage carrots", "Golden beet|Golden beetroot", "Puntarelle", "Celery root",
-      "Nettle|Stinging nettle", "Fiddlehead|Fiddleheads|Fiddlehead fern", "Chervil root", "Daikon",
-      "Broccolini|Tenderstem broccoli", "Microgreens"
+      "Cavolo nero|Lacinato kale", "Baby carrots|Heritage carrots", "Golden beet|Golden beetroot",
+      "Puntarelle", "Celery root", "Nettle|Stinging nettle", "Fiddlehead|Fiddleheads|Fiddlehead fern",
+      "Chervil root", "Lion's mane mushroom", "Daikon", "Broccolini|Tenderstem broccoli",
+      "Garlic scapes", "Microgreens", "Horseradish", "Tomatillo", "Heirloom tomato|Heirloom tomatoes",
+      "Kabocha", "Pea flowers", "Samphire|Sea asparagus", "Shiso|Perilla", "Delicata squash", "Celery",
+      "Ramps|Wild garlic|Ramsons", "Rocket|Arugula", "Cardoon", "Cime di rapa|Rapini|Broccoli rabe",
+      "Haricots verts|French beans|Green beans", "Black garlic", "Black salsify|Scorzonera",
+      "Maitake|Hen-of-the-woods", "Romanesco broccoli", "Enoki", "Shiitake", "Borage", "Lovage",
+      "Matsutake", "Kai lan|Chinese broccoli", "Jicama", "Mustard greens", "Burdock|Gobo",
+      "Bamboo shoots", "Purslane", "Wood sorrel"
     ],
     "brainfreeze": [
-      "Spring onion|Scallion", "Cime di rapa|Rapini|Broccoli rabe",
-      "Heirloom tomato|Heirloom tomatoes", "Samphire|Sea asparagus", "Black garlic",
-      "Ramps|Wild garlic|Ramsons", "Cardoon", "Maitake|Hen-of-the-woods", "Black salsify|Scorzonera",
-      "Romanesco broccoli", "Enoki", "Shiitake", "Borage", "Purslane", "Kai lan|Chinese broccoli",
-      "Burdock|Gobo", "Bamboo shoots", "Yacón", "Ice plant", "Oyster leaf", "Nasturtium", "Hop shoots",
-      "Tatsoi", "Lion's mane", "Celtuce", "Mizuna", "Oca", "Sea beet", "Alexanders", "Sea kale",
-      "Salsola", "Kalettes"
+      "Cucamelon", "Red cabbage", "Lamb's lettuce|Mâche|Corn salad", "Savoy cabbage",
+      "Mangetout|Snow peas", "Yacón", "Runner beans", "King oyster mushroom", "Celtuce",
+      "Trompette de la mort|Black trumpet", "Sugar snap peas", "Ice plant", "Oyster leaf",
+      "Nasturtium", "Hop shoots", "Tatsoi", "Lion's mane", "Spring onion|Scallion", "Treviso",
+      "Black truffle", "Purple carrot", "Baby leeks", "Watermelon radish",
+      "Candy cane beetroot|Chioggia beet", "Courgette flowers|Zucchini flowers|Squash blossoms",
+      "Piquillo pepper", "Padrón peppers", "Shishito peppers", "Baby corn", "Banana shallot",
+      "Pearl onions", "Spring onions|Scallions", "Frisée", "Little gem", "Tromboncino", "Ratte potato",
+      "Jersey Royal potatoes|Jersey Royals", "Pink Fir Apple potato", "Baby beetroot", "Baby fennel",
+      "Wild mushrooms", "Girolles", "Hedgehog mushroom", "Wild asparagus", "Mizuna", "Chickweed",
+      "Oyster mushroom", "Hispi cabbage|Sweetheart cabbage", "Oca", "Sea fennel|Rock samphire",
+      "White truffle", "Pea shoots", "Sea beet", "Alexanders", "Water chestnut", "Sea kale", "Calçots",
+      "Beech mushroom|Shimeji", "Salsola", "Kalettes", "Nameko", "Crosnes|Chinese artichoke",
+      "Agretti"
     ],
     "absolutezero": [
-      "Crosnes|Chinese artichoke", "Agretti"
+      "Sea aster", "Sea purslane"
     ]
   }
 }

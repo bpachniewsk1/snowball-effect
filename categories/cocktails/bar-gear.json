@@ -15,28 +15,42 @@
   },
   "ranked": {
     "by": "hand-picked order",
-    "answers": 57
+    "answers": 139
   },
   "answers": {
     "slush": [
       "Shaker", "Shot glass", "Martini glass", "Jigger", "Strainer", "Wine glass", "Highball",
-      "Champagne flute|Flute", "Bottle opener", "Corkscrew", "Ice bucket"
+      "Champagne flute|Flute", "Bottle opener", "Corkscrew", "Ice bucket", "Muddler", "Straw",
+      "Bar spoon", "Rocks glass|Lowball|Old fashioned glass"
     ],
     "snowflake": [
-      "Muddler", "Straw", "Bar spoon", "Rocks glass|Lowball|Old fashioned glass", "Coupe", "Collins",
-      "Margarita glass", "Hawthorne strainer|Hawthorne", "Mixing glass", "Boston shaker",
-      "Cobbler shaker"
+      "Coupe", "Collins", "Margarita glass", "Hawthorne strainer|Hawthorne", "Mixing glass",
+      "Boston shaker", "Cobbler shaker", "Citrus press|Juicer", "Ice tongs", "Copper mug", "Tiki mug",
+      "Pint glass", "Snifter|Brandy snifter", "Speed pourer|Pourer", "Julep strainer",
+      "Fine strainer|Tea strainer", "Channel knife", "Zester", "Nick & Nora", "Hurricane glass",
+      "Glencairn", "Ice pick", "Lewis bag", "Bar mat", "Speed rail", "Atomizer", "Japanese jigger",
+      "Absinthe spoon", "Wine key", "Julep cup", "Sour glass"
     ],
     "icefrost": [
-      "Citrus press|Juicer", "Ice tongs", "Copper mug", "Tiki mug", "Pint glass",
-      "Snifter|Brandy snifter", "Speed pourer|Pourer", "Julep strainer", "Fine strainer|Tea strainer",
-      "Channel knife", "Zester", "Nick & Nora", "Hurricane glass"
+      "Poco grande", "Fizz glass", "Cordial glass", "Punch bowl", "Swizzle stick", "Bar caddy",
+      "Ice mold", "Cocktail smoker|Smoking gun", "Dasher bottle|Bitters bottle",
+      "French shaker|Parisian shaker", "Peeler", "Ice scoop", "Bar towel", "Cutting board",
+      "Paring knife", "Garnish tray", "Cocktail pick", "Coaster", "Funnel", "Blender", "Soda siphon",
+      "Cream whipper", "Blowtorch|Torch", "Glass rimmer", "Decanter", "Wine aerator|Aerator",
+      "Champagne stopper", "Bottle stopper", "Beer tap", "Kegerator", "Ice well", "Glass washer",
+      "Double old fashioned glass", "Champagne saucer", "Tulip glass", "Beer mug", "Beer stein|Stein"
     ],
     "brainfreeze": [
-      "Glencairn", "Ice pick", "Lewis bag", "Bar mat", "Speed rail", "Atomizer", "Japanese jigger",
-      "Absinthe spoon", "Wine key", "Julep cup", "Sour glass", "Poco grande", "Fizz glass",
-      "Cordial glass", "Punch bowl", "Swizzle stick", "Bar caddy", "Ice mold",
-      "Cocktail smoker|Smoking gun", "Dasher bottle|Bitters bottle"
+      "Weizen glass", "Pilsner glass", "Goblet", "Chalice", "Teku glass", "Irish coffee glass",
+      "Toddy glass", "Sherry glass|Copita", "Port glass", "Absinthe glass", "Absinthe fountain",
+      "Punch cup", "Carafe", "Pitcher|Jug", "Ochoko|Sake cup", "Tokkuri", "Masu", "Yard glass",
+      "Boot glass", "Porrón", "Quaich", "Drinking horn", "Mint julep strainer", "Bar blade",
+      "Cocktail tray", "Ice crusher", "Ice mallet", "Shot ruler", "Cocktail kit", "Measuring spoon",
+      "Hip flask|Flask", "Wine bucket|Wine cooler", "Vacuum wine pump", "Sugar cube tongs",
+      "Bitters dropper", "Ice ball press", "Swizzle", "Tumbler", "Rocks tumbler",
+      "Copa glass|Balloon glass", "Coupette", "Footed pilsner", "Dimpled mug", "Nonic glass",
+      "Thistle glass", "Stange", "Willi Becher", "Pony glass", "Tasting glass", "Spirit glass",
+      "Grappa glass", "Sake set", "Shochu glass", "Hot toddy mug"
     ],
     "absolutezero": [
       "Yarai mixing glass|Yarai", "Fish bowl"

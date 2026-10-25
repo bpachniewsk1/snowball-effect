@@ -1,6 +1,6 @@
 {
   "id": "goalkeepers-germany",
-  "prompt": "Name a goalkeeper from Germany's national team (any era, West Germany counts)",
+  "prompt": "Name a goalkeeper from Germany (any era)",
   "matchSurname": true,
   "ranking": {
     "hints": [
@@ -8,12 +8,12 @@
       "(goalkeeper)"
     ],
     "expect": "footballer|goalkeeper|football|soccer|manager|coach",
-    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q43310 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
-    "max": 150
+    "wikidata": "VALUES ?c { wd:Q183 wd:Q713750 } { ?item wdt:P27|wdt:P1532 ?c } UNION { ?item wdt:P54 wd:Q43310 } ?item wdt:P413 wd:Q201330 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
+    "max": 300
   },
   "ranked": {
     "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
-    "answers": 77,
+    "answers": 300,
     "coverage": "100%"
   },
   "handpicked": {
@@ -29,34 +29,93 @@
   },
   "answers": {
     "slush": [
-      "Oliver Kahn", "Jens Lehmann|Jens Gerhard Lehmann", "Manuel Neuer",
-      "Marc-André ter Stegen|ter Stegen", "Robert Enke", "Sepp Maier", "Roman Weidenfeller",
-      "Ron-Robert Zieler", "Hans-Jörg Butt|Jörg Butt", "Bodo Illgner", "Andreas Köpke", "Tim Wiese",
-      "Bernd Leno", "Kevin Trapp", "René Adler"
+      "Oliver Kahn", "Loris Karius", "Manuel Neuer|Manuel Peter Neuer",
+      "Jens Lehmann|Jens Gerhard Lehmann", "Marc-André ter Stegen|ter Stegen", "Robert Enke",
+      "Alexander Nübel", "Sepp Maier",
+      "Bert Trautmann|Bernd Trautmann|Bernhard Carl \"Bert\" Trautmann|Bernhard Carl Trautman",
+      "Sven Ulreich|Ulreich, Sven", "Roman Weidenfeller", "Stefan Ortega", "Bodo Illgner",
+      "Hans-Jörg Butt|Jörg Butt", "Ron-Robert Zieler"
     ],
     "snowflake": [
-      "Timo Hildebrand", "Eike Immel|Eike Heinrich Immel", "Hans Tilkowski",
-      "Harald Schumacher|Toni Schumacher|Toni Schuhmacher", "Raimond Aumann|Balu",
-      "Toni Turek|Anton Turek", "Frank Rost", "Uli Stein", "Wolfgang Kleff", "Oliver Reck",
-      "Oliver Baumann", "Heinz Kwiatkowski", "Norbert Nigbur", "Dieter Burdenski", "Rudolf Kargus"
+      "Andreas Köpke", "Odysseas Vlachodimos", "Tim Wiese", "Matt Freese|Matthew Andrew Geary Freese",
+      "Marcus Hahnemann|Marcus Stephan Hahnemann|Marcus Stephen Hahnemann", "René Adler",
+      "Timo Hildebrand", "Maduka Okoye|Maduka Emilio Okoye", "Ann-Katrin Berger",
+      "Eike Immel|Eike Heinrich Immel", "Lutz Pfannenstiel", "Michael Rensing", "Alexander Schwolow",
+      "Nadine Angerer", "Timo Horn", "Ralf Fährmann", "Merle Frohms", "Tom Starke|Tom Peter Starke",
+      "Stefan Klos", "Hans Tilkowski", "Bernd Leno", "Janis Blaswich|Janis Jonathan Blaswich",
+      "Lars Unnerstall", "Kevin Trapp", "Raimond Aumann|Balu",
+      "Timon Wellenreuther|Timon Janis Wellenreuther", "Michael Zetterer|Zetterer", "Frank Rost",
+      "Uli Stein", "Toni Turek|Anton Turek", "Harald Schumacher|Toni Schumacher|Toni Schuhmacher",
+      "Thomas Kraft|Kraft, Thomas", "Christian Früchtl", "Finn Dahmen|Finn Gilbert Dahmen",
+      "Jürgen Croy", "Marcelo Grohe", "Oliver Reck", "Florian Müller|Florian Lorenz Müller",
+      "Diant Ramaj", "Gerhard Tremmel|Gerhard Martin Tremmel|Gerry Tremmel",
+      "Marius Müller|Müller, Marius", "Fabian Bredlow", "Jannik Huth", "Zlatan Alomerović",
+      "Daniel Heuer Fernandes", "Norbert Nigbur", "Wolfgang Kleff", "Marvin Schwäbe", "Felix Wiedwald",
+      "Tobias Sippel", "Hendrik Bonmann|Bonmann, Hendrik",
+      "Alexander Meyer|Alexander Niklas Meyer-Schade", "Noah Atubolu", "Almuth Schult",
+      "Florian Kohfeldt", "Ron-Thorben Hoffmann", "Daniel Davari", "Bernd Dreher", "Oka Nikolov",
+      "Nico Mantl", "Andreas Reinke", "Rudolf Kargus", "Dieter Burdenski", "Robin Zentner",
+      "Jens Grahl", "Heinz Kwiatkowski", "Laura Benkarth|Laura Anna Benkarth", "Ena Mahmutovic",
+      "Niklas Lomb", "Manuel Baum", "Markus Schubert"
     ],
     "icefrost": [
-      "Günter Bernard", "Bernd Franke", "Horst Wolter", "Manfred Manglitz", "Hans Jakob",
-      "Günter Sawitzki", "Fritz Buchloh", "Fritz Herkenrath", "Heinz Kubsch", "Willibald Kreß",
-      "Helmut Roleder", "Rudolf Raftl|Rudolf Leopold Raftl", "Wolfgang Fahrian",
-      "Heinrich Stuhlfauth|Heinrich (\"Heiner\") Stuhlfauth", "Peter Platzer", "Volkmar Groß",
-      "Adolf Werner", "Fritz Ewert"
+      "Svend Brodersen|Svend Arvid Stanislaw Brodersen", "Raphael Schäfer", "Jonathan Klinsmann",
+      "Kevin Müller", "Rowen Fernández", "Stefan Wessels", "Walter Junghans", "Wolfgang de Beer",
+      "Bernd Franke", "George Forsyth|Forsay", "David Yelldell", "Manfred Manglitz",
+      "Julian Pollersbeck", "Hans Jakob", "Tjark Ernst", "Georg Koch", "Toni Tapalović",
+      "Moritz Nicolas", "Leopold Zingerle", "Lennart Moser", "Mohamed Amsif", "Günter Bernard",
+      "Uwe Kamps", "Günay Güvenç", "Lukas Raeder", "Alexander Bade", "Daniel Batz",
+      "Steven Benda|Steven-Andreas Benda", "Manuel Riemann", "Silke Rottenberg",
+      "Antal Szabó|Antal Steinbach", "Horst Wolter", "Christian Mathenia", "René Müller|René Mueller",
+      "Max Grün", "Baboucarr Gaye", "Lennart Grill", "Thomas Dähne", "Oliver Baumann", "Fabian Giefer",
+      "Günter Sawitzki", "Fritz Buchloh", "Ursula Holl|Ursula Ulrika Holl|Ursula Ulrike Holl",
+      "Patrick Rakovsky", "Marc Ziegler", "Philipp Tschauner", "Raphael Wolf", "Rüdiger Vollborn",
+      "Luca Plogmann", "Sebastian Mielitz", "Andreas Luthe", "Fritz Herkenrath", "Patrick Drewes",
+      "Christian Vander", "Dennis Seimen", "Frank Lehmann", "Stina Johannes", "Sead Ramović",
+      "Max Weiß|Max Oliver Weiss", "Willibald Kreß", "Marius Gersbeck",
+      "Rudolf Raftl|Rudolf Leopold Raftl", "Florian Fromlowitz", "Alexander Walke", "Mathias Schober",
+      "Marius Funk", "Thomas Kessler", "Heinz Kubsch", "Florian Kastenmeier", "Helmut Roleder",
+      "Sascha Burchert", "Wolfgang Fahrian", "Lisa Weiß", "Hans-Ulrich Grapenthin",
+      "Rouven Sattelmaier|Rouven Kai Sattelmaier", "Eric Oelschlägel", "Cristiano Pereira Figueiredo",
+      "Simon Jentzsch", "Jan Zimmermann", "Robert Dekeyser", "Christian Fiedler", "Wolfgang Blochwitz",
+      "Ioannis Gelios", "Uwe Gospodarek", "Michael Weiß|Hans Michael Weiß"
     ],
     "brainfreeze": [
-      "Karl Bögelein", "Karl Adam", "Helmut Jahn", "Georg Ertl", "Albert Weber",
-      "Theodor Lohrmann|Theodor Robert Lohrmann|Teddy", "Christian Schmidt", "Willy Jürissen",
-      "Johannes Schneider", "Fritz Baumgarten", "Hans Klodt", "Walter Borck", "Robert Faas",
-      "Carl Zörner", "Georg Köhl", "Heinz Flotho", "Paul Gehlhaar", "Ludwig Hofmeister",
-      "Paul Eichelmann", "Heinrich Sonnrein", "Hans Riso", "Erwin Deyhle", "Alexander Martinek",
-      "Eberhardt Illmer", "Hans Wentorf", "Willy Schwedler", "Karl Zolper"
+      "Bodo Rudwaleit", "Benjamin Uphoff", "Maximilian Riedmüller", "Bernd Meier",
+      "Christofer Heimeroth", "Patrick Platins", "Philipp Laux",
+      "Heinrich Stuhlfauth|Heinrich (\"Heiner\") Stuhlfauth", "Marcel Schuhen", "Aykut Erçetin",
+      "Thorsten Kirschbaum", "Vincent Müller", "Daniel Haas", "Egon Loy", "Peter Platzer",
+      "Thomas Ernst", "Heinz Müller", "Philipp Pentke", "Werner Friese", "Manfred Müller",
+      "Kristian Nicht", "Richard Golz", "Janina Leitzig", "Michael Kraft|Michael Willi Kraft",
+      "Roland Müller", "Alexander Stolz", "Charlotte Voll", "Jürgen Pahl", "Bernd Jakubowski",
+      "Volkmar Groß", "Martin Pieckenhagen", "Markus Miller", "Tom Mickel|Tom Lutz-Hans Mickel",
+      "Dirk Heinen", "Christian Wetklo", "Markus Pröll", "Michael Esser", "Wolfgang Kneib",
+      "Lisa Schmitz", "Jürgen Heinsch|Hans-Jürgen Heinsch",
+      "Ralf Zumdick|Ralf Christoph Bernard Zumdick", "Horst Weigang",
+      "Ehrenfried Patzel|Čestmír Patzel", "André Lenz", "Dominik Reimann|ULI", "Ralf Kellermann",
+      "Perry Bräutigam|Perry Braeutigam", "Gerry Ehrmann", "Anna Klink", "Maria-Luisa Grohs",
+      "Vitus Eicher", "Sven Scheuer", "Detlef Müller|Metin Mert", "Silas Ostrzinski",
+      "Benjamin Kirsten", "Fabijan Buntić", "Jens Adler", "Pascal Borel", "Marcel Łubik",
+      "Lukas Kruse", "Martin Männel", "Philipp Kühn", "Luca Unbehaun", "Constantin Frommann",
+      "Hubert Birkenmeier", "Benedikt Fernandez", "Sascha Kirschstein", "Lena Pauels",
+      "Jörg Schmadtke", "Wolfgang Hesl", "Timo Ochs", "Mathias Hain", "Claus Reitmaier", "Dimo Wache",
+      "Adolf Werner", "Dirk Heyne", "Katja Kraus", "Matheo Raab", "Stephan Loboué", "Sven Neuhaus",
+      "Stefan Wächter", "Volkan Ünlü", "Gerhardt Neef", "Thomas Gebauer", "Lars Leese",
+      "Niclas Heimann", "Anneke Borbe", "Robin Himmelmann|Robin Himmelman", "André Weis",
+      "Daniel Mesenhöler", "Dan Twardzik|Daniel Twardzik", "Michael Boris", "Darius Kampa",
+      "Morten Behrens|Morten Jens Behrens", "Aykut Özer", "Ronny Teuber", "Marcel Höttecke",
+      "Carl Klaus", "Marjan Petković", "Marcel Engelhardt", "Anton Schumacher",
+      "Tim Schreiber|Tim Stanislaw Schreiber", "Alexander Famulla",
+      "Henry Gray|Henry Merson Leonard Gray", "Peter Kunter",
+      "Nils Körber|Nils Koerber|Nils-Jonathan Koerber|Nils-Jonathan Körber",
+      "Nico Pellatz|Nico-Stéphàno Pellatz", "Michael Ratajczak", "Benedikt Pliquett",
+      "Philipp Heerwagen", "René Renno", "Niclas Thiede", "Thorsten Stuckmann", "Dieter Schneider",
+      "Gerhard Prokop", "Michael Rechner", "Kenneth Kronholm", "Alejandro Duarte", "Luigi Cennamo",
+      "Dennis Eilhoff", "Stefan Drljača", "Laura Dick", "Ulrich Schulze", "Marco Hiller",
+      "Benjamin Bellot", "Karl Bögelein", "Tim Boss"
     ],
     "absolutezero": [
-      "Paul Mauch", "Ludwig Wenz"
+      "Fritz Ewert", "Markus Kolke"
     ]
   }
 }

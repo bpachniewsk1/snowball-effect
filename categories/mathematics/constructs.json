@@ -97,9 +97,9 @@
       "Pi|π|0.5tau|3.14...|Archimedes' constant|pi number|ratio of circumference to diameter|tau over two",
       "Sine|Sin", "Logarithm|Log", "Matrix", "Derivative", "Integral", "Fibonacci sequence",
       "Function", "Normal distribution|Gaussian distribution|Bell curve",
-      "Golden ratio|Phi|φ|Tau|golden section|golden mean|1.618...|1.618033...|2pi|two pi",
+      "Golden ratio|Phi|φ|1.618...|1.618033...|Tau|golden section|golden mean|2pi|two pi",
       "Prime number|Prime",
-      "Euler's number|e|constant e|e constant|e number|Euler constant|natural logarithm base|number e|base of natural logarithm|Napier's constant|Euler number",
+      "Euler's number|e|base of natural logarithm|Napier's constant|Euler number|Euler's constant|constant e|e constant|e number|Euler constant|natural logarithm base|number e",
       "Imaginary unit|i|unit imaginary number", "Square root", "Tangent|Tan"
     ],
     "snowflake": [
@@ -112,9 +112,8 @@
       "Sum|Summation|Sigma|Σ", "Quaternion", "Möbius strip", "Cross product|Vector product",
       "Partial derivative", "Laplace transform", "Fractal", "Fraction", "Convolution", "Tensor",
       "Jacobian matrix|Jacobian", "Absolute value|Modulus", "Dirac delta function|Dirac delta",
-      "Sequence", "Catalan's constant", "Gradient|Grad", "Fourier series",
-      "Euler–Mascheroni constant|Euler’s constant", "Vector space", "Graph", "Percentage", "Torus",
-      "Binomial coefficient|n choose k", "Field"
+      "Sequence", "Catalan's constant", "Gradient|Grad", "Fourier series", "Euler–Mascheroni constant",
+      "Vector space", "Graph", "Percentage", "Torus", "Binomial coefficient|n choose k", "Field"
     ],
     "icefrost": [
       "Laplacian|Laplace operator", "Series", "Klein bottle", "Permutation", "Divergence|Div",

@@ -38,8 +38,8 @@
     ],
     "snowflake": [
       "Mastika", "Pastis", "Bénédictine", "Drambuie", "Advocaat", "Grand Marnier", "Licor 43",
-      "Crème de cassis", "Galliano", "Becherovka|Karlsbader Becherbitter",
-      "Malibu|Malibu liqueur|Malibu Rum", "Fernet", "Pimm's", "Fernet-Branca", "Amarula", "Unicum",
+      "Crème de cassis", "Malibu|Malibu liqueur|Malibu Rum", "Galliano",
+      "Becherovka|Karlsbader Becherbitter", "Fernet", "Pimm's", "Fernet-Branca", "Amarula", "Unicum",
       "Cynar", "Maraschino|maraschino liqueur", "Southern Comfort|SoCo", "Goldschläger", "Fragoli",
       "Lillet", "Brennivín", "Rumple Minze", "Amaro|Italian bitter", "Riga Black Balsam",
       "Crème de menthe|mint cream", "Sloe gin", "Frangelico", "Umeshu|plum wine", "Murta", "Midori",
@@ -48,31 +48,30 @@
     "icefrost": [
       "Tej", "Goldwasser|Danziger Goldwasser", "Chambord", "Licor Beirão", "Vana Tallinn",
       "Barraquito", "Jeppson's Malört|Malort", "Strega", "Falernum", "Amaro Montenegro", "Nocino",
-      "Sheridan's", "Génépi", "Krupnik", "Disaronno", "Pelinkovac", "Rompope", "Punsch", "Suze",
-      "Alchermes", "Crème de violette", "Medovukha", "Mirto", "Chocolate liqueur|chocolate liquor",
+      "Sheridan's", "Génépi", "Krupnik", "Pelinkovac", "Disaronno", "Rompope", "Punsch", "Suze",
+      "Alchermes", "Crème de violette", "Medovukha", "Chocolate liqueur|chocolate liquor", "Mirto",
       "Sima|Finnish spring mead", "Kitron", "Amaro Ramazzotti|Ramazzotti",
-      "Kümmel|caraway-flavoured spirit drink", "Pisang Ambon", "Kruškovac",
-      "Herbal liqueur|herb liqueur|plant liqueur", "Hpnotiq", "Wisniowka", "Allasch",
-      "Amaro Tuzla|Amaro Lucano", "Cherry Heering|Heering", "St. Germain", "Cordial", "Shrub",
-      "Killepitsch", "Bärenfang", "Floc de Gascogne", "Vişinată", "Vin de liqueur|Mistela",
-      "Salmiakki Koskenkorva"
+      "Kümmel|caraway-flavoured spirit drink", "Pisang Ambon", "Kruškovac", "Hpnotiq", "Wisniowka",
+      "Herbal liqueur|herb liqueur|plant liqueur", "Allasch", "Amaro Tuzla|Amaro Lucano",
+      "Cherry Heering|Heering", "St. Germain", "Shrub", "Cordial", "Killepitsch", "Bärenfang",
+      "Floc de Gascogne", "Vişinată", "Vin de liqueur|Mistela", "Salmiakki Koskenkorva"
     ],
     "brainfreeze": [
-      "Tuaca", "Glayva", "Chouchen", "Lemon liqueur", "Zirbenlikör", "Balsam", "Cream liqueur",
-      "Izarra", "Parfait d'Amour", "Ammazzacaffè", "Blue Curaçao", "Gentian liqueur", "Rosolio",
-      "Crème de Noyaux", "Carmelite Water", "Boerenjongens", "Crème de banane", "Tubi 60", "Zucca",
-      "Gold Strike", "Grappamiel|Grapamiel", "Apfelkorn", "Crème liqueur", "Cherry bounce",
-      "Schrobbelèr", "Cedratine", "Sabra liqueur", "Agwa de Bolivia", "Mandarine Napoléon", "Półtorak",
-      "Guignolet", "Sassolino", "Allen's Coffee Brandy", "Fruit soju|Gwail Soju", "Herbsaint",
-      "Montenegro", "Averna", "Aurum", "Dooley's", "Villa Massa Limoncello", "Nocello",
-      "Manzana verde", "Schierker Feuerstein", "Boilo", "Bierlikör", "Ancho Reyes", "Sourz",
-      "Verveine du Velay", "Licor de oro", "Amaro Sibilla", "Cantueso", "Stellina", "Blutwurz",
-      "Saint Brendan's", "Midus", "Nespolino", "Hideous", "Sechsämtertropfen", "Micheline",
-      "Tip van Bootz", "Café Rica", "Crème de Cerise", "Murtado|Enmurtillado", "Pucker",
-      "Peanut liqueur", "Calisaya", "Menta", "Eau Creole"
+      "Tuaca", "Glayva", "Lemon liqueur", "Chouchen", "Zirbenlikör", "Balsam", "Cream liqueur",
+      "Izarra", "Ammazzacaffè", "Parfait d'Amour", "Blue Curaçao", "Gentian liqueur", "Rosolio",
+      "Tubi 60", "Crème de Noyaux", "Carmelite Water", "Boerenjongens", "Cedratine", "Crème de banane",
+      "Zucca", "Gold Strike", "Cherry bounce", "Grappamiel|Grapamiel", "Apfelkorn", "Crème liqueur",
+      "Schrobbelèr", "Sabra liqueur", "Agwa de Bolivia", "Mandarine Napoléon", "Guignolet",
+      "Fruit soju|Gwail Soju", "Sassolino", "Bierlikör", "Półtorak", "Allen's Coffee Brandy",
+      "Ancho Reyes", "Herbsaint", "Montenegro", "Averna", "Aurum", "Manzana verde",
+      "Villa Massa Limoncello", "Dooley's", "Schierker Feuerstein", "Boilo", "Nocello",
+      "Verveine du Velay", "Sourz", "Blutwurz", "Licor de oro", "Amaro Sibilla", "Cantueso",
+      "Stellina", "Nespolino", "Midus", "Saint Brendan's", "Tip van Bootz", "Crème de Cerise",
+      "Peanut liqueur", "Café Rica", "Hideous", "Sechsämtertropfen", "Micheline",
+      "Murtado|Enmurtillado", "Pucker", "Toussaint Coffee Liqueur", "Calisaya", "Garluche"
     ],
     "absolutezero": [
-      "Toussaint Coffee Liqueur", "Garluche"
+      "Eau Creole", "Menta"
     ]
   }
 }

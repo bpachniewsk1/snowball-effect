@@ -11,30 +11,44 @@
   },
   "ranked": {
     "by": "hand-picked order",
-    "answers": 61
+    "answers": 126
   },
   "answers": {
     "slush": [
       "Lipstick", "Mascara", "Foundation", "Eyeliner", "Eyeshadow", "Blush|Blusher", "Concealer",
-      "Bronzer", "Lip gloss|Gloss", "Primer", "Highlighter", "Powder|Face powder"
+      "Bronzer", "Lip gloss|Gloss", "Primer", "Highlighter", "Powder|Face powder", "Contour",
+      "Nail polish|Nail varnish", "Lip liner"
     ],
     "snowflake": [
-      "Contour", "Nail polish|Nail varnish", "Lip liner", "BB cream", "Setting spray",
-      "Eyebrow pencil|Brow pencil", "CC cream", "Setting powder|Translucent powder",
-      "False eyelashes|False lashes|Fake lashes", "Brow gel|Eyebrow gel",
-      "Tinted moisturiser|Tinted moisturizer", "Lip stain"
+      "BB cream", "Setting spray", "Eyebrow pencil|Brow pencil", "CC cream",
+      "Setting powder|Translucent powder", "False eyelashes|False lashes|Fake lashes",
+      "Brow gel|Eyebrow gel", "Tinted moisturiser|Tinted moisturizer", "Lip stain", "Lip oil", "Kohl",
+      "Eye primer", "Brow pomade", "Color corrector|Colour corrector", "Liquid blush", "Cream blush",
+      "Lip balm", "Glitter", "Lip plumper", "Cushion foundation|Cushion compact|Cushion", "Skin tint",
+      "Illuminator", "Brow powder", "Tinted brow gel", "Eyeshadow base", "Lash primer",
+      "Colored mascara|Coloured mascara"
     ],
     "icefrost": [
-      "Lip oil", "Kohl", "Eye primer", "Brow pomade", "Color corrector|Colour corrector",
-      "Liquid blush", "Cream blush", "Lip balm", "Glitter", "Lip plumper",
-      "Cushion foundation|Cushion compact|Cushion", "Skin tint", "Illuminator", "Brow powder"
-    ],
-    "brainfreeze": [
-      "Tinted brow gel", "Eyeshadow base", "Lash primer", "Colored mascara|Coloured mascara",
       "Highlighting stick", "Cheek tint", "Lip and cheek tint", "Liquid lipstick",
       "Brow lamination gel", "Blurring powder", "Water-based primer", "Lash serum",
       "Lash glue|Eyelash glue", "Pigment|Loose pigment", "Gel liner", "Cake eyeliner", "Mixing medium",
-      "Glitter glue", "Kajal", "Tear-off lip tint|Peel-off lip tint", "Grease paint"
+      "Glitter glue", "Kajal", "Tear-off lip tint|Peel-off lip tint", "Grease paint", "Contour stick",
+      "Loose powder", "Pressed powder", "Banana powder", "Face gems", "Lip tint", "Makeup remover",
+      "Micellar water", "Cleansing balm", "Makeup sponge", "Makeup brush", "Kabuki brush",
+      "Eyelash curler", "Spoolie", "Brow wax", "Gel eyeliner"
+    ],
+    "brainfreeze": [
+      "Liquid eyeliner", "Tubing mascara", "Eyeshadow palette", "Contour palette", "Serum foundation",
+      "Stick foundation", "Mineral powder", "Bronzing drops", "Blotting paper|Blotting sheets",
+      "Face mist", "Tinted sunscreen", "Top coat", "Base coat", "Cuticle oil", "Press-on nails",
+      "Gel polish", "Brow tint", "Lip mask", "Lip scrub", "Glow drops", "Pore filler",
+      "Concealer palette", "Multi-stick", "Liquid highlighter", "Powder foundation",
+      "Water-based foundation", "Eyeshadow stick", "Brow pen", "Lash extensions|Eyelash extensions",
+      "Magnetic lashes", "Individual lashes|Lash clusters", "Setting powder puff|Powder puff",
+      "Lip pencil", "Lip lacquer", "Lip crayon", "Lip butter", "Tinted lip balm", "Nail art stickers",
+      "Nail glitter", "Body glitter", "Face paint", "Self-tanner|Fake tan", "Bronzing powder",
+      "Contour powder", "Shimmer", "Cream eyeshadow", "Glitter eyeshadow", "Under-eye patches",
+      "Brush cleaner"
     ],
     "absolutezero": [
       "Pancake makeup|Pan-cake", "Body shimmer"

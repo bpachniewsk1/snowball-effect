@@ -25,12 +25,12 @@
     ],
     "icefrost": [
       "Charlotte Hornets|Hornets", "Minnesota Timberwolves|Timberwolves|Wolves",
-      "Portland Trail Blazers|Trail Blazers|Blazers", "Oklahoma City Thunder|Thunder|OKC",
-      "Milwaukee Bucks|Bucks", "Denver Nuggets|Nuggets", "Sacramento Kings|Kings"
+      "Sacramento Kings|Kings", "Portland Trail Blazers|Trail Blazers|Blazers",
+      "Oklahoma City Thunder|Thunder|OKC", "Milwaukee Bucks|Bucks", "Denver Nuggets|Nuggets"
     ],
     "brainfreeze": [
-      "Houston Rockets|Rockets", "Washington Wizards|Wizards", "Atlanta Hawks|Hawks",
-      "Detroit Pistons|Pistons", "Cleveland Cavaliers|Cavaliers|Cavs", "Utah Jazz|Jazz",
+      "Washington Wizards|Wizards", "Atlanta Hawks|Hawks", "Detroit Pistons|Pistons",
+      "Cleveland Cavaliers|Cavaliers|Cavs", "Houston Rockets|Rockets", "Utah Jazz|Jazz",
       "New Orleans Pelicans|Pelicans", "Memphis Grizzlies|Grizzlies", "Orlando Magic|Magic",
       "Phoenix Suns|Suns"
     ],

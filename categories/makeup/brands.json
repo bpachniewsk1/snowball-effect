@@ -17,7 +17,7 @@
   },
   "ranked": {
     "by": "hand-picked order",
-    "answers": 74
+    "answers": 162
   },
   "answers": {
     "slush": [
@@ -27,19 +27,31 @@
     "snowflake": [
       "Fenty Beauty", "Essence", "Sephora Collection|Sephora", "Rare Beauty", "Huda Beauty",
       "Urban Decay", "Too Faced", "Charlotte Tilbury", "Catrice", "Bourjois", "Glossier",
-      "Bobbi Brown", "Yves Saint Laurent|YSL", "Giorgio Armani|Armani Beauty"
+      "Bobbi Brown", "Yves Saint Laurent|YSL", "Giorgio Armani|Armani Beauty", "Kylie Cosmetics",
+      "Morphe", "CoverGirl", "Inglot", "Eveline", "Wibo", "KIKO Milano|Kiko", "Makeup Revolution",
+      "Tarte", "Anastasia Beverly Hills|ABH", "Pat McGrath Labs|Pat McGrath", "Natasha Denona",
+      "Hourglass", "Laura Mercier", "bareMinerals", "Smashbox", "Milani", "Wet n Wild", "Bell",
+      "Golden Rose", "Shiseido", "Tom Ford Beauty"
     ],
     "icefrost": [
-      "Kylie Cosmetics", "Morphe", "CoverGirl", "Inglot", "Eveline", "Wibo", "KIKO Milano|Kiko",
-      "Makeup Revolution", "Tarte", "Anastasia Beverly Hills|ABH", "Pat McGrath Labs|Pat McGrath",
-      "Natasha Denona", "Hourglass", "Laura Mercier", "bareMinerals", "Smashbox", "Milani"
+      "Givenchy", "Guerlain", "Physicians Formula", "Pupa", "Collistar", "Sisley", "Kevyn Aucoin",
+      "Danessa Myricks", "Kosas", "Westman Atelier", "Surratt", "Viseart", "Hindash", "Juvia's Place",
+      "Make Up For Ever|Makeup Forever", "Byredo", "Lisa Eldridge", "Ilia", "Victoria Beckham Beauty",
+      "Clé de Peau", "Paese", "ColourPop", "Tower 28", "Merit", "Shu Uemura", "Haus Labs", "Rhode",
+      "Jeffree Star Cosmetics", "Sugar Cosmetics", "Lakmé", "Deborah Milano", "Clarins",
+      "Burberry Beauty", "Gucci Beauty", "Hermès Beauty", "Valentino Beauty", "Rose Inc", "Saie",
+      "Milk Makeup", "Stila", "Becca", "Origins", "Dermablend", "IT Cosmetics"
     ],
     "brainfreeze": [
-      "Wet n Wild", "Bell", "Golden Rose", "Shiseido", "Tom Ford Beauty", "Givenchy", "Guerlain",
-      "Physicians Formula", "Pupa", "Collistar", "Sisley", "Kevyn Aucoin", "Danessa Myricks", "Kosas",
-      "Westman Atelier", "Surratt", "Viseart", "Hindash", "Juvia's Place",
-      "Make Up For Ever|Makeup Forever", "Byredo", "Lisa Eldridge", "Ilia", "Victoria Beckham Beauty",
-      "Clé de Peau", "Paese"
+      "Peripera", "Etude House|Etude", "Rom&nd|Romand", "3CE", "Clio", "Missha", "Innisfree",
+      "Canmake", "Kate Tokyo", "Kosé", "Cezanne", "Suqqu", "Lunasol", "Lime Crime", "Sleek MakeUP",
+      "Barry M", "Avon", "Mary Kay", "Oriflame", "Elizabeth Arden", "By Terry", "Nudestix",
+      "Jones Road", "Uoma Beauty", "RMS Beauty", "Kjaer Weis", "Trish McEvoy", "Chantecaille",
+      "Sigma Beauty", "Zoeva", "BH Cosmetics", "Ciaté", "OPI", "Essie", "Sally Hansen", "Laneige",
+      "Sulwhasoo", "Hera", "Fwee", "Hince", "Wakemake", "About-Face", "Florence by Mills", "Ere Perez",
+      "Pixi", "Bioderma", "La Roche-Posay", "Nivea", "Garnier", "CeraVe", "The Ordinary", "Ziaja",
+      "Lumene", "Real Techniques", "Beautyblender", "Nabla Cosmetics", "Mesauda", "Wycon",
+      "Neve Cosmetics", "Affect Cosmetics", "Hean", "Lovely", "Vipera", "Constance Carroll", "Miyo"
     ],
     "absolutezero": [
       "Ingrid", "Joko"

@@ -6,28 +6,42 @@
   },
   "ranked": {
     "by": "hand-picked order",
-    "answers": 54
+    "answers": 121
   },
   "answers": {
     "slush": [
       "Contouring|Contour", "Smoky eye|Smokey eye", "Makeup brush|Brush", "Sponge|Makeup sponge",
       "Winged eyeliner|Winged liner|Cat eye", "No-makeup makeup|No makeup look", "Highlighting",
-      "Strobing", "Beauty Blender", "Eyelash curler|Lash curler", "Tweezers"
+      "Strobing", "Beauty Blender", "Eyelash curler|Lash curler", "Tweezers", "Baking", "Cut crease",
+      "Ombré lips", "Overlining"
     ],
     "snowflake": [
-      "Baking", "Cut crease", "Ombré lips", "Overlining", "Draping",
-      "Color correcting|Colour correcting", "Kabuki brush", "Spoolie", "Fan brush", "Blending brush"
+      "Draping", "Color correcting|Colour correcting", "Kabuki brush", "Spoolie", "Fan brush",
+      "Blending brush", "Powder puff", "Tightlining", "Glass skin", "Clean girl look|Clean girl",
+      "Fox eye", "Halo eye", "Graphic liner", "Setting", "Underpainting", "Sandbagging",
+      "Sunburn blush", "Latte makeup", "Double wing|Double winged liner", "Reverse contour",
+      "Stippling brush|Stippling", "Angled brush", "Duo-fibre brush|Duo fiber brush", "Siren eyes",
+      "Soft glam", "Douyin makeup|Douyin"
     ],
     "icefrost": [
-      "Powder puff", "Tightlining", "Glass skin", "Clean girl look|Clean girl", "Fox eye", "Halo eye",
-      "Graphic liner", "Setting", "Underpainting", "Sandbagging", "Sunburn blush", "Latte makeup"
+      "E-girl makeup|E-girl", "Igari makeup|Igari", "Primer cocktailing", "Bleached brows", "Foiling",
+      "Packing", "Waterlining", "Glazed donut skin", "Scouse brow", "Stamp liner", "Floating crease",
+      "Puppy liner", "Doe eyes", "Soap brows", "Brow lamination", "Microblading", "Ombré brows",
+      "Feathered brows", "Lash lift|Lash lifting", "Lash tinting", "Airbrushing|Airbrush makeup",
+      "Buffing", "Reverse contouring", "Clean girl makeup", "Gradient lips|Korean gradient lips",
+      "Blurred lips", "Cloud skin", "Dewy skin|Dewy makeup", "Matte skin|Matte makeup", "Spotlighting",
+      "Negative space liner"
     ],
     "brainfreeze": [
-      "Double wing|Double winged liner", "Reverse contour", "Stippling brush|Stippling",
-      "Angled brush", "Duo-fibre brush|Duo fiber brush", "Siren eyes", "Soft glam",
-      "Douyin makeup|Douyin", "E-girl makeup|E-girl", "Igari makeup|Igari", "Primer cocktailing",
-      "Bleached brows", "Foiling", "Packing", "Waterlining", "Glazed donut skin", "Scouse brow",
-      "Stamp liner", "Floating crease"
+      "Reverse cat eye", "Smudged liner", "Kitten flick", "Monochrome makeup", "Bridal makeup",
+      "Stage makeup", "Special effects makeup|SFX makeup", "Sandwich method", "Skin prep", "Lip combo",
+      "90s lip", "Glitter tears", "Fake freckles|Faux freckles", "Cut-crease liner", "Pinching cheeks",
+      "Lip blotting", "Eye bag concealing", "Triangle concealer", "Brow mapping", "Lash stacking",
+      "Bottom lashes", "Lower lash line", "Floating liner", "Banana lid", "Inner corner highlight",
+      "Nose contour", "Jawline contour", "Cheekbone highlight", "Blush blindness", "Wet look",
+      "Glossy lids", "Cut and blend", "Duochrome eye", "Watercolour eyes", "Rhinestone makeup",
+      "Halo highlight", "Undereye blush", "Baby lashes", "Brow stencilling", "Brow tinting",
+      "Sculpting", "Priming", "Tapping", "Patting", "Blending", "Layering", "Spot concealing"
     ],
     "absolutezero": [
       "Smudger brush", "Liner sealant"

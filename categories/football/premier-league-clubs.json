@@ -43,22 +43,24 @@
       "Brentford|Brentford F.C.", "Fulham|Fulham F.C."
     ],
     "icefrost": [
-      "Burnley|Burnley F.C.", "Blackburn Rovers|Blackburn Rovers F.C.|Blackburn",
+      "Coventry City|Coventry City F.C.|Coventry", "Burnley|Burnley F.C.",
+      "Blackburn Rovers|Blackburn Rovers F.C.|Blackburn",
       "Wolverhampton Wanderers|Wolverhampton Wanderers F.C.|Wolves|Wolverhampton",
       "Queens Park Rangers|Queens Park Rangers F.C.|QPR", "Southampton|Southampton F.C.",
       "Middlesbrough|Middlesbrough F.C.|Boro", "Swansea City|Swansea City A.F.C.|Swansea",
       "Sheffield Wednesday|Sheffield Wednesday F.C.",
       "Charlton Athletic|Charlton Athletic F.C.|Charlton",
       "West Bromwich Albion|West Bromwich Albion F.C.|West Brom|WBA",
-      "Bolton Wanderers|Bolton Wanderers F.C.|Bolton", "Coventry City|Coventry City F.C.|Coventry"
+      "Bolton Wanderers|Bolton Wanderers F.C.|Bolton"
     ],
     "brainfreeze": [
-      "Watford|Watford F.C.", "Sheffield United|Sheffield United F.C.|Sheff Utd",
+      "Sheffield United|Sheffield United F.C.|Sheff Utd",
       "Birmingham City|Birmingham City F.C.|Birmingham", "Luton Town|Luton Town F.C.|Luton",
       "Derby County|Derby County F.C.|Derby", "Stoke City|Stoke City F.C.|Stoke",
-      "Norwich City|Norwich City F.C.|Norwich", "Portsmouth|Portsmouth F.C.|Pompey",
-      "Cardiff City|Cardiff City F.C.|Cardiff", "Bradford City|Bradford City A.F.C.|Bradford",
-      "Wimbledon|Wimbledon F.C.", "Wigan Athletic|Wigan Athletic F.C.|Wigan", "Reading|Reading F.C.",
+      "Watford|Watford F.C.", "Norwich City|Norwich City F.C.|Norwich",
+      "Portsmouth|Portsmouth F.C.|Pompey", "Cardiff City|Cardiff City F.C.|Cardiff",
+      "Bradford City|Bradford City A.F.C.|Bradford", "Wimbledon|Wimbledon F.C.",
+      "Wigan Athletic|Wigan Athletic F.C.|Wigan", "Reading|Reading F.C.",
       "Huddersfield Town|Huddersfield Town A.F.C.|Huddersfield", "Barnsley|Barnsley F.C.",
       "Blackpool|Blackpool F.C.", "Bournemouth"
     ],
