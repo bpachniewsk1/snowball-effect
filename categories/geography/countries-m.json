@@ -1,0 +1,49 @@
+{
+  "id": "countries-m",
+  "prompt": "Name a country starting with M",
+  "ranking": {
+    "hints": [
+      "(country)"
+    ],
+    "titles": {
+      "Micronesia": "Federated States of Micronesia"
+    },
+    "expect": "country|state|nation|kingdom|republic|island|archipelago|territory|principality|federation"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 18,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Mexico", "Morocco", "Malta", "Monaco"
+    ],
+    "snowflake": [
+      "Madagascar", "Malaysia", "Mongolia", "Moldova", "Montenegro", "Maldives", "Mali"
+    ],
+    "icefrost": [
+      "Mozambique", "Myanmar|Burma", "Mauritius", "Malawi", "Mauritania"
+    ],
+    "brainfreeze": [
+      "Marshall Islands", "Micronesia|Federated States of Micronesia"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Mexico", "Malta", "Malaysia", "Monaco"
+    ],
+    "snowflake": [
+      "Morocco", "Myanmar|Burma", "Mauritius"
+    ],
+    "icefrost": [
+      "Montenegro", "Mongolia", "Maldives", "Madagascar"
+    ],
+    "brainfreeze": [
+      "Moldova", "Mali", "Mauritania", "Mozambique", "Malawi", "Marshall Islands"
+    ],
+    "absolutezero": [
+      "Micronesia|Federated States of Micronesia"
+    ]
+  }
+}

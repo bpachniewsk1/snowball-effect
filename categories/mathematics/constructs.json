@@ -1,0 +1,167 @@
+{
+  "id": "math-constructs",
+  "prompt": "Name a mathematical operator, constant or construct (e.g. integral, Jacobian matrix)",
+  "ignoreWords": [
+    "the"
+  ],
+  "ranking": {
+    "hints": [
+      "(mathematics)",
+      "(linear algebra)",
+      "(calculus)"
+    ],
+    "titles": {
+      "Integral": "Integral",
+      "Derivative": "Derivative",
+      "Matrix": "Matrix (mathematics)",
+      "Limit": "Limit (mathematics)",
+      "Function": "Function (mathematics)",
+      "Set": "Set (mathematics)",
+      "Graph": "Graph (discrete mathematics)",
+      "Group": "Group (mathematics)",
+      "Ring": "Ring (mathematics)",
+      "Field": "Field (mathematics)",
+      "Series": "Series (mathematics)",
+      "Sequence": "Sequence",
+      "Trace": "Trace (linear algebra)",
+      "Rank": "Rank (linear algebra)",
+      "Basis": "Basis (linear algebra)",
+      "Span": "Linear span",
+      "Kernel": "Kernel (linear algebra)",
+      "Image": "Image (mathematics)",
+      "Residue": "Residue (complex analysis)",
+      "Category": "Category (mathematics)",
+      "Curl": "Curl (mathematics)",
+      "Divergence": "Divergence",
+      "Gradient": "Gradient",
+      "Tangent": "Trigonometric functions",
+      "Sine": "Sine and cosine",
+      "Cosine": "Sine and cosine",
+      "Modulo": "Modulo",
+      "Infinity": "Infinity"
+    },
+    "wikidata": "?item wdt:P31/wdt:P279* wd:Q186509 .",
+    "expect": "mathemat|function|operator|matrix|set|number|constant|theory|space|transform|equation|algebra|geometr|calculus|integral|derivative|vector|group|series|sequence|statistic|probabilit|topolog|distribution|shape|surface|curve|fractal|structure|object|symbol|polynomial|operation"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 201,
+    "coverage": "93%"
+  },
+  "handpicked": {
+    "slush": [
+      "Integral", "Derivative", "Matrix", "Pi|π", "Logarithm|Log", "Vector", "Function", "Limit",
+      "Sine|Sin", "Square root|√"
+    ],
+    "snowflake": [
+      "Infinity|∞", "Determinant", "Factorial", "Euler's number|e", "Golden ratio|Phi|φ",
+      "Imaginary unit|i", "Complex number", "Polynomial", "Sum|Summation|Sigma|Σ", "Cosine|Cos",
+      "Tangent|Tan", "Exponential function|Exponential", "Set", "Graph", "Sequence", "Series",
+      "Fibonacci sequence", "Prime number|Prime", "Probability distribution",
+      "Normal distribution|Gaussian distribution|Bell curve", "Partial derivative",
+      "Differential equation", "Percentage", "Fraction", "Absolute value|Modulus"
+    ],
+    "icefrost": [
+      "Jacobian matrix|Jacobian", "Hessian matrix|Hessian", "Gradient|Grad", "Divergence|Div",
+      "Curl|Rot", "Laplacian|Laplace operator", "Nabla|Del|∇", "Eigenvalue", "Eigenvector", "Tensor",
+      "Fourier transform", "Laplace transform", "Taylor series", "Fourier series",
+      "Binomial coefficient|n choose k", "Dot product|Scalar product|Inner product",
+      "Cross product|Vector product", "Transpose", "Trace", "Identity matrix",
+      "Inverse matrix|Matrix inverse", "Group", "Ring", "Field", "Vector space", "Permutation",
+      "Combination", "Modulo|Mod", "Floor function|Floor", "Ceiling function|Ceiling",
+      "Expected value|Expectation", "Variance", "Standard deviation", "Markov chain",
+      "Random variable", "Quaternion", "Fractal", "Mandelbrot set", "Möbius strip|Mobius strip",
+      "Klein bottle", "Torus", "Riemann zeta function|Zeta function", "Gamma function",
+      "Dirac delta function|Dirac delta", "Kronecker delta",
+      "Euler–Mascheroni constant|Euler-Mascheroni constant", "Line integral", "Double integral",
+      "Convolution", "Isomorphism", "Homomorphism"
+    ],
+    "brainfreeze": [
+      "Levi-Civita symbol", "Christoffel symbols|Christoffel symbol", "Lie group", "Lie algebra",
+      "Galois group", "Hilbert space", "Banach space", "Manifold", "Riemann surface",
+      "Riemann integral", "Lebesgue integral", "Lebesgue measure", "Sigma-algebra|σ-algebra",
+      "Contour integral", "Residue", "Möbius transformation|Mobius transformation", "Z-transform",
+      "Wronskian", "Gram matrix", "Vandermonde matrix", "Toeplitz matrix", "Kernel|Null space",
+      "Image|Range", "Basis", "Span", "Rank", "Cantor set", "Julia set", "Koch snowflake",
+      "Sierpiński triangle|Sierpinski triangle", "Sierpiński carpet|Sierpinski carpet", "Functor",
+      "Category", "Morphism", "Sheaf", "Homology", "Cohomology", "Fundamental group", "Octonion",
+      "Hyperbolic function|Sinh|Cosh", "Legendre polynomials", "Bessel function", "Beta function",
+      "Error function|erf", "Heaviside step function|Heaviside function", "Cartesian product",
+      "Power set", "Empty set|∅", "Quotient group", "Tensor product", "Direct sum",
+      "Exterior derivative", "Hodge star operator|Hodge star", "D'Alembert operator|Box operator",
+      "Dirichlet series", "Abelian group", "Spline"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Pi|π|0.5tau|3.14...|Archimedes' constant|pi number|ratio of circumference to diameter|tau over two",
+      "Sine|Sin", "Logarithm|Log", "Matrix", "Derivative", "Integral", "Fibonacci sequence",
+      "Function", "Normal distribution|Gaussian distribution|Bell curve",
+      "Golden ratio|Phi|φ|Tau|golden section|golden mean|1.618...|1.618033...|2pi|two pi",
+      "Prime number|Prime",
+      "Euler's number|e|base of natural logarithm|Napier's constant|Euler number|Euler's constant|constant e|e constant|e number|Euler constant|natural logarithm base|number e",
+      "Imaginary unit|i|unit imaginary number", "Square root", "Tangent|Tan"
+    ],
+    "snowflake": [
+      "Complex number", "Determinant", "Factorial", "Infinity", "Vector", "Cosine|Cos",
+      "Exponential function|Exponential", "Set", "Differential equation", "Limit", "Polynomial",
+      "Standard deviation", "Shannon number", "Probability distribution",
+      "Square root of 2|root 2|root two|square root of two|sqrt 2", "Fourier transform",
+      "Taylor series", "Mandelbrot set", "Gamma function", "Variance",
+      "Riemann zeta function|Zeta function", "Dot product|Scalar product|Inner product",
+      "Sum|Summation|Sigma|Σ", "Quaternion", "Möbius strip", "Cross product|Vector product",
+      "Partial derivative", "Laplace transform", "Fractal", "Fraction", "Convolution", "Tensor",
+      "Jacobian matrix|Jacobian", "Absolute value|Modulus", "Dirac delta function|Dirac delta",
+      "Sequence", "Catalan's constant", "Gradient|Grad", "Fourier series", "Euler–Mascheroni constant",
+      "Vector space", "Graph", "Percentage", "Torus", "Binomial coefficient|n choose k", "Field"
+    ],
+    "icefrost": [
+      "Laplacian|Laplace operator", "Series", "Klein bottle", "Permutation", "Divergence|Div",
+      "Hessian matrix|Hessian", "Ring", "Group", "Modulo|Mod", "Trace", "Curl|Rot",
+      "Inverse matrix|Matrix inverse",
+      "Square root of 3|root 3|root three|square root of three|Theodorus' constant", "Combination",
+      "Nabla|Del", "Hyperbolic function|Sinh|Cosh", "Silver ratio", "Eigenvalue", "Eigenvector",
+      "Floor function|Floor", "Ceiling function|Ceiling", "Expected value|Expectation", "Markov chain",
+      "Random variable", "Isomorphism", "Transpose", "Plastic ratio|plastic constant",
+      "Square root of 5|root 5|root five|square root of five", "Hilbert space",
+      "Champernowne constant|Champernowne's constant", "Kronecker delta",
+      "Chaitin's constant|Chaitin constant|Chaitin omega number|Chaitin’s Ω|halting probability",
+      "Bessel function", "Gelfond's constant|e^π", "Line integral", "Manifold", "Homomorphism",
+      "Landau–Ramanujan constant", "Error function|erf", "Koch snowflake",
+      "Khinchin's constant|Khintchine constant|2.685...", "Sierpiński triangle", "Legendre's constant",
+      "Identity matrix", "Erdős–Borwein constant", "Legendre polynomials", "Tensor product",
+      "Lie group", "Mills' constant", "Copeland–Erdős constant", "Meissel–Mertens constant",
+      "Cartesian product", "Double integral", "Rank", "Levi-Civita symbol"
+    ],
+    "brainfreeze": [
+      "De Bruijn-Newman constant", "Lie algebra", "Reciprocal Fibonacci constant",
+      "Twelfth root of two", "Magic constant|magic sum", "Sigma-algebra|σ-algebra",
+      "Glaisher–Kinkelin constant", "Heaviside step function|Heaviside function", "Beta function",
+      "Lebesgue integral", "Spline", "Julia set", "Empty set", "Sheaf", "Cantor set", "Abelian group",
+      "Cahen's constant", "Lebesgue measure", "Dottie number", "Banach space", "Z-transform",
+      "Lévy's constant", "Riemann integral", "Basis", "Kernel|Null space", "Power set",
+      "Vandermonde matrix", "Gram matrix", "Galois group", "Laplace limit",
+      "Christoffel symbols|Christoffel symbol", "Golomb–Dickman constant", "Image|Range",
+      "Möbius transformation", "Octonion", "Homology", "Embree–Trefethen constant", "Cohomology",
+      "Contour integral", "Category", "Conway's constant|Conway constant",
+      "Hodge star operator|Hodge star", "Wronskian", "Fransén–Robinson constant", "Direct sum", "Span",
+      "MRB constant", "Kepler–Bouwkamp constant|polygon inscribing constant",
+      "Hafner–Sarnak–McCurley constant", "Quotient group", "Morphism", "Toeplitz matrix",
+      "Exterior derivative", "Prime constant", "Fundamental group", "Residue",
+      "Bernstein's constant|0.2801694990…", "D'Alembert operator|Box operator", "Sierpiński carpet",
+      "Dirichlet series", "Riemann surface", "Functor", "Sierpiński's constant", "Porter's constant",
+      "Gibbs constant|Wilbraham–Gibbs constant", "Prouhet–Thue–Morse constant",
+      "Square root of 7|root 7|root seven|square root of seven", "Niven's constant",
+      "Foias constant|second Foiaș constant", "Universal parabolic constant",
+      "Square root of 6|root 6|root six|square root of six", "Robbins constant",
+      "Backhouse's constant", "Liouville's constant", "Feller–Tornier constant",
+      "Tribonacci ratio|tribonacci constant", "Lieb's square ice constant",
+      "Somos' quadratic recurrence constant", "Heath-Brown–Moroz constant", "Komornik–Loreti constant",
+      "Erdős–Tenenbaum–Ford constant", "Davenport constant",
+      "First Feigenbaum constant|Feigenbaum bifurcation velocity"
+    ],
+    "absolutezero": [
+      "Second Feigenbaum constant|Feigenbaum's alpha constant", "Stephens' constant"
+    ]
+  }
+}

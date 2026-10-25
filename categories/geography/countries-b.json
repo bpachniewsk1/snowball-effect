@@ -1,0 +1,50 @@
+{
+  "id": "countries-b",
+  "prompt": "Name a country starting with B",
+  "ranking": {
+    "hints": [
+      "(country)"
+    ],
+    "titles": {
+      "Bahamas": "The Bahamas"
+    },
+    "expect": "country|state|nation|kingdom|republic|island|archipelago|territory|principality|federation"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 17,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Brazil", "Belgium", "Bulgaria", "Belarus"
+    ],
+    "snowflake": [
+      "Bhutan", "Bolivia", "Bangladesh", "Bosnia and Herzegovina|Bosnia", "Bahamas|The Bahamas",
+      "Barbados"
+    ],
+    "icefrost": [
+      "Bahrain", "Botswana", "Brunei", "Belize", "Burkina Faso"
+    ],
+    "brainfreeze": [
+      "Benin", "Burundi"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Brazil", "Belarus", "Bangladesh"
+    ],
+    "snowflake": [
+      "Belgium", "Bulgaria", "Bosnia and Herzegovina|Bosnia"
+    ],
+    "icefrost": [
+      "Burkina Faso", "Bhutan", "Brunei", "Bahamas"
+    ],
+    "brainfreeze": [
+      "Bahrain", "Bolivia", "Belize", "Barbados", "Botswana", "Benin"
+    ],
+    "absolutezero": [
+      "Burundi"
+    ]
+  }
+}

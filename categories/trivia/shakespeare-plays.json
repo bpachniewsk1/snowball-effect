@@ -1,0 +1,69 @@
+{
+  "id": "shakespeare-plays",
+  "prompt": "Name a play by William Shakespeare",
+  "ignoreWords": [
+    "a"
+  ],
+  "ranking": {
+    "hints": [
+      "(play)"
+    ],
+    "expect": "play|shakespeare|tragedy|comedy|history|drama"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 39,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Romeo and Juliet", "Hamlet", "Macbeth", "Othello"
+    ],
+    "snowflake": [
+      "King Lear", "The Tempest", "A Midsummer Night's Dream", "Julius Caesar",
+      "The Merchant of Venice", "Much Ado About Nothing", "Twelfth Night", "The Taming of the Shrew",
+      "Richard III|Richard 3"
+    ],
+    "icefrost": [
+      "As You Like It", "Henry V|Henry 5", "Antony and Cleopatra", "The Winter's Tale",
+      "Henry IV|Henry 4|Henry IV Part 1|Henry IV Part 2", "Coriolanus", "Titus Andronicus",
+      "The Comedy of Errors", "The Merry Wives of Windsor", "Measure for Measure",
+      "Richard II|Richard 2"
+    ],
+    "brainfreeze": [
+      "Troilus and Cressida", "Timon of Athens", "Cymbeline", "Pericles|Pericles, Prince of Tyre",
+      "All's Well That Ends Well", "The Two Gentlemen of Verona",
+      "Love's Labour's Lost|Love's Labor's Lost", "King John", "Henry VIII|Henry 8",
+      "Henry VI|Henry 6|Henry VI Part 1|Henry VI Part 2|Henry VI Part 3"
+    ],
+    "absolutezero": [
+      "The Two Noble Kinsmen", "Edward III|Edward 3", "Sir Thomas More", "Cardenio",
+      "Love's Labour's Won"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Hamlet", "Romeo and Juliet", "Macbeth", "Othello", "A Midsummer Night's Dream",
+      "The Taming of the Shrew", "King Lear", "Much Ado About Nothing"
+    ],
+    "snowflake": [
+      "The Tempest", "Twelfth Night", "The Merchant of Venice", "Julius Caesar",
+      "Richard III|Richard 3", "As You Like It", "Titus Andronicus", "Coriolanus"
+    ],
+    "icefrost": [
+      "The Winter's Tale", "Antony and Cleopatra", "The Comedy of Errors", "Henry V|Henry 5",
+      "Richard II|Richard 2", "Measure for Measure",
+      "Henry IV|Henry 4|Henry IV Part 1|Henry IV Part 2", "The Merry Wives of Windsor",
+      "Love's Labour's Lost|Love's Labor's Lost"
+    ],
+    "brainfreeze": [
+      "Troilus and Cressida", "Cymbeline", "All's Well That Ends Well", "The Two Gentlemen of Verona",
+      "Pericles|Pericles, Prince of Tyre", "Timon of Athens", "Henry VIII|Henry 8", "King John",
+      "Henry VI|Henry 6|Henry VI Part 1|Henry VI Part 2|Henry VI Part 3", "Edward III|Edward 3",
+      "Cardenio", "The Two Noble Kinsmen", "Sir Thomas More"
+    ],
+    "absolutezero": [
+      "Love's Labour's Won"
+    ]
+  }
+}

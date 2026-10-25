@@ -1,0 +1,146 @@
+{
+  "id": "polish-parties",
+  "prompt": "Name a Polish political party (since 1989)",
+  "ranking": {
+    "wiki": "pl",
+    "hints": [
+      "(partia polityczna)"
+    ],
+    "wikidata": "?item wdt:P31/wdt:P279* wd:Q7278 ; wdt:P17 wd:Q36 . OPTIONAL { ?item wdt:P576 ?end } OPTIONAL { ?item wdt:P571 ?start } FILTER((BOUND(?start) && YEAR(?start) >= 1980) || (BOUND(?end) && YEAR(?end) >= 1989))",
+    "expect": "partia|ugrupowanie|koalicja|stowarzyszenie|ruch|komitet|organizacja|polityczn"
+  },
+  "ranked": {
+    "by": "pl.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 143,
+    "coverage": "99%"
+  },
+  "handpicked": {
+    "slush": [
+      "Prawo i Sprawiedliwość|PiS|Law and Justice", "Platforma Obywatelska|PO|Civic Platform",
+      "Koalicja Obywatelska|KO|Civic Coalition"
+    ],
+    "snowflake": [
+      "Konfederacja|Confederation|Konfederacja Wolność i Niepodległość",
+      "Polskie Stronnictwo Ludowe|PSL|Polish People's Party", "Lewica|The Left",
+      "Polska 2050|Polska 2050 Szymona Hołowni",
+      "Sojusz Lewicy Demokratycznej|SLD|Democratic Left Alliance", "Razem|Partia Razem|Lewica Razem",
+      "Nowa Lewica|New Left", "Trzecia Droga|Third Way"
+    ],
+    "icefrost": [
+      "Samoobrona|Samoobrona RP|Self-Defence", "Liga Polskich Rodzin|LPR|League of Polish Families",
+      "Kukiz'15|Kukiz 15|Kukiz", "Nowoczesna|Modern",
+      "Solidarna Polska|Suwerenna Polska|United Poland|Sovereign Poland",
+      "Ruch Palikota|Twój Ruch|Palikot's Movement", "Unia Wolności|UW|Freedom Union",
+      "Akcja Wyborcza Solidarność|AWS|Solidarity Electoral Action",
+      "Konfederacja Korony Polskiej|Korona|Confederation of the Polish Crown",
+      "Ruch Narodowy|National Movement", "Nowa Nadzieja|New Hope|KORWiN|Wolność"
+    ],
+    "brainfreeze": [
+      "Porozumienie|Porozumienie Jarosława Gowina|Agreement", "Kongres Nowej Prawicy|KNP",
+      "Unia Polityki Realnej|UPR", "Porozumienie Centrum|PC|Centre Agreement",
+      "Kongres Liberalno-Demokratyczny|KLD", "Wiosna|Spring", "Unia Pracy|UP|Labour Union",
+      "Zieloni|Partia Zieloni|The Greens", "Polska Jest Najważniejsza|PJN",
+      "Socjaldemokracja Rzeczypospolitej Polskiej|SdRP"
+    ],
+    "absolutezero": [
+      "Zjednoczenie Chrześcijańsko-Narodowe|ZChN", "Konfederacja Polski Niepodległej|KPN",
+      "Ruch Odbudowy Polski|ROP", "Polska Partia Przyjaciół Piwa|PPPP|Beer Lovers' Party",
+      "Prawica Rzeczypospolitej", "Partia Kobiet", "Bezpartyjni Samorządowcy",
+      "Polska Partia Socjalistyczna|PPS", "Socjaldemokracja Polska|SDPL"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Prawo i Sprawiedliwość|PiS|Law and Justice", "Polska Zjednoczona Partia Robotnicza|PZPR",
+      "Koalicja Obywatelska|KO|Civic Coalition",
+      "Platforma Obywatelska|PO|Civic Platform|Platforma Obywatelska RP|Platforma Obywatelska Rzeczypospolitej Polskiej",
+      "Konfederacja|Confederation|Konfederacja Wolność i Niepodległość|Koalicja Propolska|Konfederacja KORWiN Braun Liroy Narodowcy|KWiN",
+      "Polskie Stronnictwo Ludowe|PSL|Polish People's Party", "Razem|Partia Razem|Lewica Razem",
+      "Sojusz Lewicy Demokratycznej|SLD|Democratic Left Alliance",
+      "Nowa Lewica|New Left|Komitet Wyborczy Nowa Lewica|KW Nowa Lewica",
+      "Polska 2050|Polska 2050 Szymona Hołowni", "Narodowe Odrodzenie Polski|NOP|Zakaz pedałowania",
+      "Partia Demokratyczna – demokraci.pl|Demokraci.pl", "Lewica|The Left", "Trzecia Droga|Third Way",
+      "Unia Demokratyczna"
+    ],
+    "snowflake": [
+      "Zjednoczone Stronnictwo Ludowe|ZSL", "Polska Razem|Polska Razem Jarosława Gowina",
+      "Samoobrona|Samoobrona RP|Self-Defence|Samoobrona Rzeczpospolitej Polskiej|Przymierze Samoobrona|Samoobrona Rzeczypospolitej Polskiej|Nasz Dom Polska – Samoobrona Andrzeja Leppera",
+      "Ruch Palikota|Twój Ruch|Palikot's Movement|Ruch PL|Ruch Poparcia|Ruch Poparcia Janusza Palikota|Ruch Poparcia Palikota",
+      "Komunistyczna Partia Polski|KPP", "Inicjatywa Polska|iPL",
+      "Nowa Nadzieja|New Hope|KORWiN|Wolność|Konfederacja Odnowy Rzeczypospolitej Wolność i Niepodległość",
+      "Liga Polskich Rodzin|LPR|League of Polish Families",
+      "Konfederacja Korony Polskiej|Korona|Confederation of the Polish Crown|Korona Polska|KKP",
+      "Kukiz'15|Kukiz", "Ruch Narodowy|National Movement",
+      "Akcja Wyborcza Solidarność|AWS|Solidarity Electoral Action", "Obóz Narodowo-Radykalny|ONR",
+      "Unia Wolności|UW|Freedom Union", "Nowoczesna|Modern|Nowoczesna Ryszarda Petru|NowoczesnaPL",
+      "Ruch Autonomii Śląska", "Stronnictwo Konserwatywno-Ludowe|SKL|SKL-RNP",
+      "Solidarna Polska|Suwerenna Polska|United Poland|Sovereign Poland|Solidarna Polska Zbigniewa Ziobro",
+      "Unia Europejskich Demokratów|UED", "Centrum dla Polski|CdP",
+      "Partia Republikańska|Republikanie", "Rodacy Kamraci|Cumraci|Kamraci|Kamractwo",
+      "Koalicja Polska", "Zjednoczona Lewica",
+      "Polska Partia Pracy – Sierpień 80|Alternatywa - Partia Pracy|Polska Partia Pracy|PPP-Sierpień 80",
+      "Bezpartyjny Blok Wspierania Reform", "Krajowa Partia Emerytów i Rencistów|KPEiR",
+      "Ruch Obywatelski Akcja Demokratyczna|ROAD", "Wolni i Solidarni",
+      "RACJA Polskiej Lewicy|Antyklerykalna Partia Postępu \"Racja\"|APP \"Racja\"|RACJA PL",
+      "Wolność i Praworządność|PJKM|Platforma Janusza Korwin-Mikke|Platforma JKM",
+      "Partia Centrum|Centrum"
+    ],
+    "icefrost": [
+      "Polskie Stronnictwo Ludowe – Porozumienie Ludowe",
+      "Polska Partia Piratów|Piraci|Partia Piratów", "Unia Pracy|UP|Labour Union",
+      "Zieloni|Partia Zieloni|The Greens", "Unia Polityki Realnej|UPR", "Związek Słowiański",
+      "Porozumienie|Porozumienie Jarosława Gowina|Agreement", "Partia Konserwatywna",
+      "Wolność i Równość|Unia Lewicy|WiR",
+      "Stronnictwo Pracy|ChDSP|Chrześcijańsko-Demokratyczne Stronnictwo Pracy",
+      "Kongres Nowej Prawicy|KNP", "Wiosna|Spring", "Wolnościowcy",
+      "Porozumienie Centrum|PC|Centre Agreement", "Federacja dla Rzeczypospolitej|Federacja|FdR",
+      "Kongres Liberalno-Demokratyczny|KLD",
+      "Ruch Społeczny|RS AWS|Ruch Społeczny Akcji Wyborczej Solidarność|Ruch Społeczny AWS",
+      "Polska Jest Najważniejsza|PJN|Polska jest Najważniejsza，缩写为PJN",
+      "Socjaldemokracja Rzeczypospolitej Polskiej|SdRP", "Partia X|Partia X Patriotów Polskich",
+      "Polska Partia Przyjaciół Piwa|PPPP|Beer Lovers' Party",
+      "Partia Chrześcijańskich Demokratów|PChD", "Zmiana", "KoLiber|Stowarzyszenie KoLiber",
+      "Konfederacja Polski Niepodległej|KPN", "Socjaldemokracja Polska|SDPL",
+      "Forum Prawicy Demokratycznej", "Związek Komunistów Polskich „Proletariat”",
+      "Demokracja Bezpośrednia",
+      "Stronnictwo Ludowo-Chrześcijańskie|Polskie Stronnictwo Ludowe \"Solidarność\"|PSL \"Solidarność\"",
+      "Ruch Odrodzenia Gospodarczego im. Edwarda Gierka", "Europa Plus", "Polska Lewica",
+      "Ruch Sprawiedliwości Społecznej|RSS", "Przymierze Prawicy", "Partia Regionów", "OdNowa RP",
+      "Wyborcza Akcja Katolicka"
+    ],
+    "brainfreeze": [
+      "Naprzód Polsko|Ruch Społeczny Naprzód Polsko", "Polska Partia Narodowa",
+      "Bezpartyjni Samorządowcy", "Ruch Demokratyczno-Społeczny",
+      "Ruch dla Rzeczypospolitej|Koalicja dla Rzeczypospolitej|RdR",
+      "Polski Związek Katolicko-Społeczny|PZKS", "Zjednoczenie Chrześcijańsko-Narodowe|ZChN",
+      "Prawica Rzeczypospolitej|Koło Poselskie Prawicy Rzeczypospolitej|Prawica RP",
+      "Chrześcijańska Demokracja III Rzeczypospolitej Polskiej|ChDRP|Chrześcijańska Demokracja III RP",
+      "Ruch Odbudowy Polski|ROP", "Polska Unia Socjaldemokratyczna", "Porozumienie dla Przyszłości",
+      "Teraz!", "Porozumienie Polskich Chrześcijańskich Demokratów|PPChD", "Śląska Partia Regionalna",
+      "Stronnictwo „Piast”|Polskie Stronnictwo Ludowe „Piast”.|PSL „Piast”.", "Stronnictwo Narodowe",
+      "Ruch Trzeciej Rzeczypospolitej", "Stonoga Partia Polska",
+      "Tak! Dla Polski|„Samorządy dla Polski”|Ruch Samorządowy „TAK! Dla Polski”|Stowarzyszenie „Samorządy dla Polski”",
+      "Ruch Stu", "Partia Kobiet|Inicjatywa Feministyczna", "Libertas Polska", "Polskie Sprawy",
+      "Polskie Stronnictwo Ludowe - Odrodzenie|Polskie Stronnictwe Ludowe Odrodzenie|PSL \"Odrodzenie\"",
+      "Akcja Zawiedzionych Emerytów Rencistów|Zjednoczeni Ponad Podziałami", "Biało-Czerwoni",
+      "Stronnictwo Narodowo-Demokratyczne",
+      "Ruch Patriotyczny|Ruch Patriotyczny Rzeczypospolitej Polskiej",
+      "Samoobrona Ruch Społeczny|Samoobrona Patriotyczna", "Partia Wolności", "Przymierze Społeczne",
+      "Liga Narodowa|RLN|Ruch Ludowo-Narodowy", "Polska Plus",
+      "Konfederacja Polski Niepodległej - Obóz Patriotyczny|Konfederacja Polski Niepodległej - Ojczyzna|KPN - Obóz Patriotyczny|KPN-O|KPN-Ojczyzna|KPN-OP",
+      "Przymierze dla Polski", "Polska Wspólnota Narodowa",
+      "Polski Front Narodowy|Narodowy Front Polski", "Polska Fair Play", "Samoobrona Odrodzenie",
+      "Ruch Społeczny Rzeczypospolitej Polskiej|RS SP",
+      "Stronnictwo Demokracji Polskiej|Polskie Forum Chrześcijańsko-Demokratyczne",
+      "Polska Partia Socjalistyczna|PPS", "Obrona Narodu Polskiego|Samoobrona Narodu Polskiego",
+      "Inicjatywa dla Polski", "Dom Ojczysty", "Organizacja Narodu Polskiego – Liga Polska",
+      "Inicjatywa RP|Inicjatywa Rzeczypospolitej Polskiej", "Federacja Polskiej Przedsiębiorczości",
+      "Liga Obrony Suwerenności", "Stronnictwo Narodowe „Ojczyzna”", "Organizacja Anty-Solidarność",
+      "Stronnictwo Polityki Realnej", "Polska Racja Stanu",
+      "Centrolewica Rzeczypospolitej Polskiej|Centrolewica RP", "Forum Polskie"
+    ],
+    "absolutezero": [
+      "Polska Unia Gospodarcza", "Liberalno-Społeczni"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "sejm-marshals",
+  "prompt": "Name a Marshal of the Sejm since 1989",
+  "matchSurname": true,
+  "ranking": {
+    "wiki": "pl",
+    "expect": "polityk|marszałek|prawnik|działacz"
+  },
+  "ranked": {
+    "by": "pl.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 18,
+    "coverage": "94%"
+  },
+  "handpicked": {
+    "slush": [
+      "Szymon Hołownia", "Elżbieta Witek"
+    ],
+    "snowflake": [
+      "Radosław Sikorski", "Bronisław Komorowski", "Marek Kuchciński", "Ewa Kopacz",
+      "Grzegorz Schetyna", "Włodzimierz Czarzasty"
+    ],
+    "icefrost": [
+      "Małgorzata Kidawa-Błońska|Kidawa", "Marek Jurek", "Ludwik Dorn", "Józef Oleksy",
+      "Włodzimierz Cimoszewicz"
+    ],
+    "brainfreeze": [
+      "Marek Borowski", "Maciej Płażyński", "Józef Zych"
+    ],
+    "absolutezero": [
+      "Wiesław Chrzanowski", "Mikołaj Kozakiewicz"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Szymon Hołownia", "Radosław Sikorski", "Włodzimierz Czarzasty", "Bronisław Komorowski"
+    ],
+    "snowflake": [
+      "Ewa Kopacz", "Grzegorz Schetyna", "Józef Oleksy"
+    ],
+    "icefrost": [
+      "Elżbieta Witek", "Włodzimierz Cimoszewicz", "Małgorzata Kidawa-Błońska|Kidawa",
+      "Marek Kuchciński"
+    ],
+    "brainfreeze": [
+      "Ludwik Dorn", "Marek Borowski", "Maciej Płażyński", "Marek Jurek", "Józef Zych",
+      "Wiesław Chrzanowski"
+    ],
+    "absolutezero": [
+      "Mikołaj Kozakiewicz"
+    ]
+  }
+}

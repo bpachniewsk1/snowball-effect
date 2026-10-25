@@ -1,0 +1,42 @@
+{
+  "id": "sports-pairs",
+  "prompt": "Name a sport or event played in pairs (teams of 2)",
+  "ignoreWords": [
+    "doubles",
+    "pairs"
+  ],
+  "ranking": {
+    "hints": [
+      "(sport)"
+    ],
+    "expect": "sport|game|dance|discipline|event|skating|rowing|sailing|cycling|volleyball|tennis"
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 31
+  },
+  "answers": {
+    "slush": [
+      "Pickleball doubles", "Badminton doubles", "Tennis doubles", "Sepak takraw doubles",
+      "Bridge|Contract bridge", "Table tennis doubles|Ping pong"
+    ],
+    "snowflake": [
+      "Padel", "Ballroom dancing|Dancesport", "Beach volleyball", "Synchronized diving",
+      "Bobsleigh two-man|Two-man bobsleigh|Bobsleigh|Bobsled", "Luge doubles"
+    ],
+    "icefrost": [
+      "Canoe sprint K-2|K-2|Kayak doubles", "Roundnet|Spikeball", "Madison|Madison cycling",
+      "49er sailing|49er", "Tandem cycling|Tandem", "Footvolley",
+      "Artistic swimming duet|Synchronized swimming duet|Synchronised swimming duet"
+    ],
+    "brainfreeze": [
+      "Snooker doubles", "Figure skating pairs|Pair skating", "Ice dance|Ice dancing", "Beach tennis",
+      "Canoe slalom C-2|C-2", "Acrobatic gymnastics pair|Acro pair", "Pairs bowls",
+      "Synchronized trampoline|Synchronised trampoline", "Cycle ball|Radball",
+      "470 sailing|470 dinghy", "Double sculls|Rowing double sculls"
+    ],
+    "absolutezero": [
+      "Coxless pair|Rowing pair"
+    ]
+  }
+}

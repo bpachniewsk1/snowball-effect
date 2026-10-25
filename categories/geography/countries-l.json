@@ -1,0 +1,46 @@
+{
+  "id": "countries-l",
+  "prompt": "Name a country starting with L",
+  "ranking": {
+    "hints": [
+      "(country)"
+    ],
+    "expect": "country|state|nation|kingdom|republic|island|archipelago|territory|principality|federation"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 9,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Lithuania", "Latvia", "Luxembourg"
+    ],
+    "snowflake": [
+      "Liechtenstein", "Lebanon", "Libya", "Laos"
+    ],
+    "icefrost": [
+      "Liberia"
+    ],
+    "brainfreeze": [
+      "Lesotho"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Lithuania", "Liechtenstein"
+    ],
+    "snowflake": [
+      "Luxembourg", "Latvia"
+    ],
+    "icefrost": [
+      "Lebanon", "Laos"
+    ],
+    "brainfreeze": [
+      "Liberia", "Libya"
+    ],
+    "absolutezero": [
+      "Lesotho"
+    ]
+  }
+}

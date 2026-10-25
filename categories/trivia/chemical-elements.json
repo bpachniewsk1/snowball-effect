@@ -1,0 +1,73 @@
+{
+  "id": "chemical-elements",
+  "prompt": "Name a chemical element",
+  "ranking": {
+    "hints": [
+      "(element)"
+    ],
+    "expect": "element"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 118,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Hydrogen", "Oxygen", "Carbon", "Gold", "Iron", "Helium", "Nitrogen", "Silver"
+    ],
+    "snowflake": [
+      "Plutonium", "Uranium", "Copper", "Sodium", "Calcium", "Lithium", "Neon", "Aluminium|Aluminum",
+      "Zinc", "Lead", "Platinum", "Chlorine", "Mercury", "Potassium", "Magnesium", "Sulfur|Sulphur",
+      "Silicon", "Tin", "Titanium", "Phosphorus", "Fluorine", "Nickel", "Iodine", "Radium", "Argon",
+      "Cobalt"
+    ],
+    "icefrost": [
+      "Chromium", "Manganese", "Tungsten|Wolfram", "Arsenic", "Boron", "Bromine", "Krypton", "Xenon",
+      "Radon", "Barium", "Beryllium", "Caesium|Cesium", "Strontium", "Cadmium", "Polonium", "Bismuth",
+      "Selenium", "Germanium", "Gallium", "Antimony", "Osmium", "Iridium", "Palladium", "Thorium",
+      "Vanadium", "Molybdenum", "Rubidium", "Zirconium", "Francium", "Americium", "Einsteinium"
+    ],
+    "brainfreeze": [
+      "Scandium", "Yttrium", "Niobium", "Tantalum", "Hafnium", "Rhenium", "Rhodium", "Ruthenium",
+      "Technetium", "Indium", "Thallium", "Tellurium", "Astatine", "Actinium", "Protactinium",
+      "Neptunium", "Curium", "Berkelium", "Californium", "Fermium", "Mendelevium", "Nobelium",
+      "Lanthanum", "Cerium", "Neodymium", "Europium", "Gadolinium", "Promethium", "Samarium"
+    ],
+    "absolutezero": [
+      "Praseodymium", "Terbium", "Dysprosium", "Holmium", "Erbium", "Thulium", "Ytterbium", "Lutetium",
+      "Lawrencium", "Rutherfordium", "Dubnium", "Seaborgium", "Bohrium", "Hassium", "Meitnerium",
+      "Darmstadtium", "Roentgenium", "Copernicium", "Nihonium", "Flerovium", "Moscovium",
+      "Livermorium", "Tennessine", "Oganesson"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Gold", "Silver", "Hydrogen", "Oxygen", "Iron", "Carbon", "Helium", "Nitrogen",
+      "Aluminium|Aluminum", "Mercury", "Copper", "Sulfur|Sulphur", "Uranium", "Lead", "Plutonium"
+    ],
+    "snowflake": [
+      "Phosphorus", "Platinum", "Silicon", "Potassium", "Lithium", "Sodium", "Tin", "Cobalt",
+      "Titanium", "Chlorine", "Magnesium", "Iodine", "Tungsten|Wolfram", "Zinc", "Nickel", "Radium",
+      "Argon", "Boron", "Neon", "Bismuth", "Fluorine", "Antimony", "Calcium", "Arsenic", "Xenon"
+    ],
+    "icefrost": [
+      "Krypton", "Chromium", "Selenium", "Osmium", "Manganese", "Palladium", "Radon", "Bromine",
+      "Iridium", "Molybdenum", "Beryllium", "Polonium", "Gallium", "Vanadium", "Caesium|Cesium",
+      "Cadmium", "Thorium", "Francium", "Germanium", "Zirconium", "Strontium", "Barium", "Americium",
+      "Oganesson", "Einsteinium", "Rubidium", "Astatine", "Tantalum", "Technetium", "Actinium"
+    ],
+    "brainfreeze": [
+      "Thallium", "Yttrium", "Rhodium", "Niobium", "Californium", "Tellurium", "Neodymium", "Scandium",
+      "Indium", "Promethium", "Ruthenium", "Gadolinium", "Rhenium", "Neptunium", "Samarium",
+      "Lanthanum", "Hafnium", "Curium", "Cerium", "Moscovium", "Tennessine", "Berkelium", "Europium",
+      "Protactinium", "Nobelium", "Fermium", "Nihonium", "Mendelevium", "Ytterbium", "Holmium",
+      "Livermorium", "Lutetium", "Flerovium", "Praseodymium", "Dysprosium", "Copernicium",
+      "Roentgenium", "Lawrencium", "Seaborgium", "Rutherfordium", "Erbium", "Thulium", "Terbium",
+      "Darmstadtium", "Meitnerium", "Hassium"
+    ],
+    "absolutezero": [
+      "Dubnium", "Bohrium"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "flag-green-yellow-red",
+  "prompt": "Name a country whose flag includes green, yellow AND red",
+  "ranking": {
+    "hints": [
+      "(country)"
+    ],
+    "expect": "country|state|nation|kingdom|republic|island|archipelago|territory|principality|federation"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 31,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Ghana", "Senegal", "Cameroon", "Ethiopia", "Lithuania", "Bolivia", "Portugal"
+    ],
+    "snowflake": [
+      "Mali", "Guinea", "South Africa", "Zimbabwe", "Mozambique", "Benin", "Burkina Faso", "Togo",
+      "Guyana", "Sri Lanka", "Myanmar|Burma"
+    ],
+    "icefrost": [
+      "Republic of the Congo|Congo-Brazzaville|Congo", "Guinea-Bissau",
+      "São Tomé and Príncipe|Sao Tome and Principe", "Grenada", "Eritrea", "Mauritius", "Seychelles",
+      "Central African Republic|CAR"
+    ],
+    "brainfreeze": [
+      "Vanuatu", "Dominica", "Saint Kitts and Nevis|St Kitts and Nevis", "Ecuador",
+      "Equatorial Guinea"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Portugal", "Ethiopia", "South Africa", "Myanmar|Burma", "Lithuania", "Sri Lanka"
+    ],
+    "snowflake": [
+      "Burkina Faso", "Ghana", "Guyana", "Bolivia", "Mauritius", "Zimbabwe"
+    ],
+    "icefrost": [
+      "Cameroon", "Eritrea", "Benin", "Senegal", "Mozambique", "Seychelles", "Mali"
+    ],
+    "brainfreeze": [
+      "Guinea", "Equatorial Guinea", "Central African Republic|CAR", "Grenada", "Togo", "Ecuador",
+      "Republic of the Congo|Congo-Brazzaville|Congo", "Vanuatu", "Guinea-Bissau",
+      "São Tomé and Príncipe", "Dominica"
+    ],
+    "absolutezero": [
+      "Saint Kitts and Nevis|St Kitts and Nevis"
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "id": "solar-system-moons",
+  "prompt": "Name a moon in our solar system",
+  "ranking": {
+    "hints": [
+      "(moon)"
+    ],
+    "titles": {
+      "The Moon": "Moon"
+    },
+    "wikidata": "?item wdt:P31/wdt:P279* wd:Q2537 .",
+    "expect": "moon|satellite",
+    "reject": "provisional|unnamed|crater|mare|mountain|valley"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 204,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "snowflake": [
+      "Phobos|Mars I|Phobos (moon)|Mars I Phobos"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Moon|Luna|Lua|Earth I|Sol IIIa", "Titan|Saturn VI", "Europa|Jupiter II", "Ganymede|Jupiter III",
+      "Io|Jupiter I", "Triton|Neptune I", "Enceladus|Saturn II", "Deimos|Mars II|Mars II Deimos",
+      "Callisto|Jupiter IV", "Charon|Pluto I|(134340) Pluto I", "Mimas|Saturn I|Death Star moon",
+      "Titania|Uranus III", "Rhea|Saturn V", "Iapetus|Japetus", "Amalthea|Jupiter V"
+    ],
+    "snowflake": [
+      "Oberon|Uranus IV", "Dione|Saturn IV", "Miranda|Uranus V", "Tethys|Saturn III",
+      "Phobos|Mars I|Phobos (moon)|Mars I Phobos", "Metis|Jupiter XVI", "Hyperion|Saturn VII",
+      "Ariel|Uranus I", "Dysnomia|(136199) Eris I Dysnomia", "Umbriel|Uranus II",
+      "Nix|(134340) Pluto II|Pluto II", "Phoebe|Feba|Saturn IX", "Proteus|Neptune VIII",
+      "Nereid|Neptune II", "Pan|Saturn XVIII", "Adrastea|Jupiter XV",
+      "Hydra|(134340) Pluto III|Pluto III", "Thebe|Jupiter XIV", "Styx|(134340) Pluto V|Pluto V",
+      "Kerberos|(134340) Pluto IV|Pluto IV", "Puck|Uranus XV", "Himalia|Hestia|Jupiter VI",
+      "Elara|Jupiter VII", "Pandora|Saturn XVII", "Atlas|Saturn XV", "Janus|Saturn X",
+      "Galatea|Neptune VI", "Prometheus|Saturn XVI", "Themisto|Jupiter XVIII", "Larissa|Neptune VII",
+      "Epimetheus|Saturn XI", "Naiad|Neptune III", "Daphnis|Saturn XXXV", "Despina|Neptune V",
+      "Helene|Dione B|Saturn XII", "Calypso|Saturn XIV|Tethys C", "Thalassa|Neptune IV",
+      "Leda|Jupiter XIII", "Ophelia|Uranus VII", "Sinope|Jupiter IX", "Lysithea|Jupiter X",
+      "Pasiphae|Jupiter VIII", "Ananke|Jupiter XII", "Cordelia|Uranus VI", "Carme|Jupiter XI",
+      "Hippocamp", "Carpo|Jupiter XLVI"
+    ],
+    "icefrost": [
+      "Telesto|Saturn XIII|Tethys B", "Belinda|Uranus XIV", "Kallichore|Jupiter XLIV",
+      "Portia|Uranus XII", "Cressida|Uranus IX", "Desdemona|Uranus X", "Neso|Neptune XIII",
+      "Cupid|Uranus XXVII", "Juliet|Uranus XI", "Methone|Saturn XXXII", "Bianca|Uranus VIII",
+      "Halimede|Neptune IX", "Black Knight satellite conspiracy theory", "Kore|Jupiter XLIX",
+      "Euporie|Jupiter XXXIV", "Dia|Jupiter LIII", "Rosalind|Uranus XIII", "Praxidike|Jupiter XXVII",
+      "Namaka|Haumea II", "Hiʻiaka|Haumea I|Hi'iaka", "Sycorax|Uranus XVII", "Pallene|Saturn XXXIII",
+      "Aegaeon|Saturn LIII", "Mab|Uranus XXVI", "Caliban|Uranus XVI", "Polydeuces|Saturn XXXIV",
+      "Dimorphos|(65803) Didymos I|(65803) I|Didymoon|Didymos B|Didymos I|Dimorphous",
+      "Iocaste|Jupiter XXIV", "Dactyl|Ida I|(243) Ida I", "Vanth|(90482) Orcus I Vanth|Orcus I",
+      "Helike|Jupiter XLV", "Psamathe|Neptune X", "Callirrhoe|Jupiter XVII", "Anthe|Saturn XLIX",
+      "Eupheme|Jupiter LX", "Sao|Neptune XI", "Margaret|Uranus XXIII", "Cyllene|Jupiter XLVIII",
+      "Xiangliu", "Kiviuq|Saturn XXIV", "Weywot|(50000) Quaoar I Weywot|Quaoar I Weywot",
+      "Ymir|Saturn XIX", "Perdita|Uranus XXV", "Euanthe|Jupiter XXXIII", "Harpalyke|Jupiter XXII",
+      "Kale|Jupiter XXXVII", "Pasithee|Jupiter XXXVIII", "Gǃòʼé ǃHú", "Albiorix|Saturn XXVI",
+      "Laomedeia|Neptune XII", "Thyone|Jupiter XXIX", "Aoede|Jupiter XLI", "Eurydome|Jupiter XXXII",
+      "Chrysalis", "Siarnaq|Saturn XXIX", "Herse|Jupiter L"
+    ],
+    "brainfreeze": [
+      "Megaclite|Jupiter XIX", "Mneme|Jupiter XL", "Valetudo|Jupiter LXII", "Ferdinand|Uranus XXIV",
+      "Orthosie|Jupiter XXXV", "Actaea", "Francisco", "Thelxinoe|Jupiter XLII",
+      "Skathi|Skadi|Saturn XXVII", "Aitne|Jupiter XXXI", "Trinculo|Uranus XXI", "Paha",
+      "Arche|Jupiter XLIII", "Paaliaq|Saturn XX|Saturn XX Paaliaq", "Autonoe|Jupiter XXVIII",
+      "Isonoe|Jupiter XXVI", "Stephano|Uranus XX", "Themis", "Ijiraq|Saturn XXII",
+      "Kalyke|Jupiter XXIII", "Eirene|Jupiter LVII", "Hermippe|Jupiter XXX", "Ersa|Jupiter LXXI",
+      "152830 I Selam|Selam|Dinkinesh I", "Jupiter LII", "Setebos|Uranus XIX",
+      "Queta|(3548) Eurybates I Queta|Eurybates I", "Taygete|Jupiter XX",
+      "Philophrosyne|Jupiter LVIII", "Jarnsaxa|Saturn L", "Chaldene|Jupiter XXI", "Fenrir|Saturn XLI",
+      "Ilmarë|(174567) Varda I Ilmarë|Varda I", "Bebhionn|Saturn XXXVII", "Narvi|Saturn XXXI",
+      "Prospero|Uranus XVIII", "Bestla|Saturn XXXIX", "Fornjot|Saturn XLII", "Tarvos|Saturn XXI",
+      "Aegir|Saturn XXXVI", "Greip|Saturn LI", "Hegemone|Jupiter XXXIX", "Eukelade|Jupiter XLVII",
+      "Echidna|42355 Typhon I Echidna", "Pandia|Jupiter LXV", "Erriapus|Erriapo|Saturn XXVIII",
+      "Jupiter LI", "Sponde|Jupiter XXXVI", "Romulus|(87) Sylvia I Romulus|Sylvia I",
+      "Erinome|Jupiter XXV", "Phorcys|(65489) Ceto I Phorcys|Ceto I", "Jupiter LXXIII",
+      "Zoe|(58534) Logos I|(58534) Logos I Zoe", "Mundilfari|Saturn XXV", "Bergelmir|Saturn XXXVIII",
+      "Thrymr|Thrym|Saturn XXX|Saturn XXX Thrymr|Тхумр", "Pabu|(66652) Borasisi I Pabu|Borasisi I",
+      "Skoll|Saturn XLVII", "Farbauti|Saturn XL", "Remus|(87) Sylvia II Remus|Sylvia II",
+      "Hati|Saturn XLIII", "Hyrrokkin|Saturn XLIV", "Surtur|Saturn XLVIII|Saturn XLVIII Surtur",
+      "Kari|Saturn XLV", "Eggther", "Tarqeq|Saturn LII", "Suttungr|Saturn XXIII|Saturn XXIII Suttungr",
+      "Loge|Saturn XLVI", "Petit-Prince|(45) Eugenia I Petit-Prince|Eugenia I", "Squannit",
+      "Sawiskera|(88611) Teharonhiawako I|(88611) Teharonhiawako I Sawiskera", "Gridr|Saturn LIV",
+      "Angrboda", "Thorondor|385446 Manwë I Thorondor|Manwë I Thorondor", "Skrymir", "Peggy",
+      "Geirrod", "Beli", "Gerd", "Gunnlod", "Thiazzi", "Alvaldi", "Blériot", "Moon of 38628 Huya"
+    ],
+    "absolutezero": [
+      "Earhart", "Santos-Dumont"
+    ]
+  }
+}

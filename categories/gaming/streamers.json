@@ -1,0 +1,61 @@
+{
+  "id": "streamers-750k",
+  "prompt": "Name a streamer with more than 750k followers (Twitch, YouTube or Kick)",
+  "ranking": {
+    "manual": true
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 83
+  },
+  "handpicked": {
+    "slush": [
+      "Ninja", "xQc", "Kai Cenat", "IShowSpeed|Speed", "Pokimane", "Shroud", "Ibai",
+      "Asmongold|Zackrawrr", "TimTheTatman", "DrDisrespect|Dr Disrespect", "Tfue", "Summit1g",
+      "HasanAbi|Hasan Piker", "Caedrel", "Tyler1"
+    ],
+    "snowflake": [
+      "AuronPlay", "TheGrefg", "Rubius|elrubius", "ElSpreen|Spreen", "Gaules", "TommyInnit", "Tubbo",
+      "Ranboo", "Ludwig", "Mizkif", "Sodapoppin", "Lirik", "Valkyrae", "Sykkuno", "Disguised Toast",
+      "Nickmercs", "SypherPK", "Clix", "Bugha", "Dream", "GeorgeNotFound", "Sapnap", "Quackity",
+      "Jynxzi", "Adin Ross", "Amouranth", "MoistCr1TiKaL|penguinz0|Charlie", "Imaqtpie", "Faker",
+      "Izak|Izakooo", "Myth", "Squeezie", "Gotaga", "Juansguarnizo", "Rivers_gg|Rivers",
+      "MontanaBlack", "Papaplatte", "Trymacs", "Gucio"
+    ],
+    "icefrost": [
+      "Mongraal", "Karl Jacobs", "Nightblue3", "Yassuo", "Doublelift", "Trainwreckstv|Trainwrecks",
+      "Zerator", "Kamet0", "Coscu", "Westcol", "Knossi", "Gronkh", "Fanum", "Agent00", "Duke Dennis",
+      "ExtraEmily", "Emiru", "QTCinderella", "Sketch", "CaseOh", "Stable Ronaldo|StableRonaldo",
+      "CohhCarnage", "MOONMOON|Moonmoon", "Forsen"
+    ],
+    "brainfreeze": [
+      "Jerma985|Jerma", "Tarik", "CDawgVA", "Lacy", "Rewinside"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Ninja", "xQc", "Kai Cenat", "IShowSpeed|Speed", "Pokimane", "Shroud", "Ibai",
+      "Asmongold|Zackrawrr", "TimTheTatman", "DrDisrespect", "Tfue", "Summit1g",
+      "HasanAbi|Hasan Piker", "Caedrel", "Tyler1"
+    ],
+    "snowflake": [
+      "AuronPlay", "TheGrefg", "Rubius|elrubius", "ElSpreen|Spreen", "Gaules", "TommyInnit", "Tubbo",
+      "Ranboo", "Ludwig", "Mizkif", "Sodapoppin", "Lirik", "Valkyrae", "Sykkuno", "Disguised Toast",
+      "Nickmercs", "SypherPK"
+    ],
+    "icefrost": [
+      "Clix", "Bugha", "Dream", "GeorgeNotFound", "Sapnap", "Quackity", "Jynxzi", "Adin Ross",
+      "Amouranth", "MoistCr1TiKaL|penguinz0|Charlie", "Imaqtpie", "Faker", "Izak|Izakooo", "Myth",
+      "Squeezie", "Gotaga", "Juansguarnizo", "Rivers_gg|Rivers", "MontanaBlack", "Papaplatte"
+    ],
+    "brainfreeze": [
+      "Trymacs", "Gucio", "Mongraal", "Karl Jacobs", "Nightblue3", "Yassuo", "Doublelift",
+      "Trainwreckstv|Trainwrecks", "Zerator", "Kamet0", "Coscu", "Westcol", "Knossi", "Gronkh",
+      "Fanum", "Agent00", "Duke Dennis", "ExtraEmily", "Emiru", "QTCinderella", "Sketch", "CaseOh",
+      "Stable Ronaldo", "CohhCarnage", "MOONMOON", "Forsen", "Jerma985|Jerma", "Tarik", "CDawgVA"
+    ],
+    "absolutezero": [
+      "Lacy", "Rewinside"
+    ]
+  }
+}

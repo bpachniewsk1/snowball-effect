@@ -1,0 +1,66 @@
+{
+  "id": "constellations",
+  "prompt": "Name one of the 88 official constellations",
+  "ranking": {
+    "hints": [
+      "(constellation)"
+    ],
+    "expect": "constellation"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 88,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Orion", "Ursa Major|Great Bear|Big Dipper", "Ursa Minor|Little Bear|Little Dipper"
+    ],
+    "snowflake": [
+      "Cassiopeia", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpius|Scorpio",
+      "Sagittarius", "Capricornus|Capricorn", "Aquarius", "Pisces", "Andromeda", "Pegasus", "Draco",
+      "Cygnus", "Perseus", "Hercules", "Lyra", "Crux|Southern Cross"
+    ],
+    "icefrost": [
+      "Centaurus", "Canis Major", "Canis Minor", "Aquila", "Ophiuchus", "Boötes", "Auriga", "Cepheus",
+      "Corona Borealis", "Hydra", "Lepus", "Phoenix", "Lupus", "Delphinus", "Cetus", "Eridanus",
+      "Monoceros", "Carina", "Vela", "Puppis", "Corvus"
+    ],
+    "brainfreeze": [
+      "Corona Australis", "Columba", "Camelopardalis", "Canes Venatici", "Coma Berenices", "Crater",
+      "Lynx", "Leo Minor", "Lacerta", "Vulpecula", "Sagitta", "Equuleus", "Serpens", "Scutum",
+      "Triangulum", "Piscis Austrinus", "Grus", "Pavo", "Tucana", "Indus", "Ara", "Musca",
+      "Chamaeleon", "Volans", "Dorado", "Hydrus", "Sextans", "Antlia", "Pyxis"
+    ],
+    "absolutezero": [
+      "Apus", "Caelum", "Circinus", "Fornax", "Horologium", "Mensa", "Microscopium", "Norma", "Octans",
+      "Pictor", "Reticulum", "Sculptor", "Telescopium", "Triangulum Australe"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Orion", "Ursa Major|Great Bear|Big Dipper", "Ursa Minor|Little Bear|Little Dipper",
+      "Cassiopeia", "Sagittarius", "Crux|Southern Cross", "Cygnus", "Draco", "Lyra", "Gemini", "Virgo",
+      "Taurus", "Scorpius|Scorpio", "Andromeda", "Aquarius"
+    ],
+    "snowflake": [
+      "Aries", "Capricornus|Capricorn", "Leo", "Ophiuchus", "Libra", "Pisces", "Cancer", "Pegasus",
+      "Perseus", "Hercules", "Canis Major", "Boötes", "Aquila", "Cetus", "Centaurus", "Hydra",
+      "Cepheus", "Carina"
+    ],
+    "icefrost": [
+      "Corona Borealis", "Auriga", "Corvus", "Canis Minor", "Delphinus", "Phoenix", "Lepus", "Vela",
+      "Monoceros", "Lupus", "Puppis", "Camelopardalis", "Canes Venatici", "Serpens", "Vulpecula",
+      "Coma Berenices", "Triangulum", "Dorado", "Ara", "Scutum", "Sagitta"
+    ],
+    "brainfreeze": [
+      "Lynx", "Pavo", "Lacerta", "Pyxis", "Eridanus", "Piscis Austrinus", "Grus", "Antlia", "Equuleus",
+      "Columba", "Corona Australis", "Sextans", "Musca", "Fornax", "Hydrus", "Caelum", "Crater",
+      "Reticulum", "Tucana", "Horologium", "Leo Minor", "Volans", "Apus", "Chamaeleon", "Indus",
+      "Circinus", "Mensa", "Pictor", "Octans", "Sculptor", "Norma", "Triangulum Australe"
+    ],
+    "absolutezero": [
+      "Telescopium", "Microscopium"
+    ]
+  }
+}

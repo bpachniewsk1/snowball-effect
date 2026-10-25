@@ -1,0 +1,51 @@
+{
+  "id": "polish-presidents",
+  "prompt": "Name a President of Poland (any era, acting and in exile count too)",
+  "matchSurname": true,
+  "ranking": {
+    "wiki": "pl",
+    "expect": "polityk|prezydent|działacz|dyplomata|prawnik|naukowiec|wojskowy"
+  },
+  "ranked": {
+    "by": "pl.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 20,
+    "coverage": "95%"
+  },
+  "handpicked": {
+    "slush": [
+      "Andrzej Duda", "Lech Wałęsa", "Karol Nawrocki"
+    ],
+    "snowflake": [
+      "Wojciech Jaruzelski", "Aleksander Kwaśniewski", "Lech Kaczyński", "Bronisław Komorowski"
+    ],
+    "icefrost": [
+      "Gabriel Narutowicz", "Ignacy Mościcki", "Bolesław Bierut"
+    ],
+    "brainfreeze": [
+      "Stanisław Wojciechowski", "Ryszard Kaczorowski"
+    ],
+    "absolutezero": [
+      "Władysław Raczkiewicz", "August Zaleski", "Stanisław Ostrowski", "Edward Raczyński",
+      "Kazimierz Sabbat", "Maciej Rataj", "Bogdan Borusewicz", "Grzegorz Schetyna"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Karol Nawrocki", "Lech Wałęsa", "Aleksander Kwaśniewski", "Wojciech Jaruzelski"
+    ],
+    "snowflake": [
+      "Andrzej Duda", "Lech Kaczyński", "Bronisław Komorowski", "Bolesław Bierut"
+    ],
+    "icefrost": [
+      "Ignacy Mościcki", "Gabriel Narutowicz", "Ryszard Kaczorowski", "Stanisław Wojciechowski",
+      "Władysław Raczkiewicz"
+    ],
+    "brainfreeze": [
+      "Bogdan Borusewicz", "Grzegorz Schetyna", "August Zaleski", "Maciej Rataj", "Kazimierz Sabbat",
+      "Edward Raczyński"
+    ],
+    "absolutezero": [
+      "Stanisław Ostrowski"
+    ]
+  }
+}

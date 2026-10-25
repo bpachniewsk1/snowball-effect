@@ -1,0 +1,59 @@
+{
+  "id": "sports-one-on-one",
+  "prompt": "Name a sport played one-on-one (1 vs 1)",
+  "ranking": {
+    "hints": [
+      "(sport)",
+      "(game)"
+    ],
+    "expect": "sport|game|martial|racket|ball|discipline|combat|wrestling|boxing|fencing|cue"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 44,
+    "coverage": "95%"
+  },
+  "handpicked": {
+    "slush": [
+      "Tennis", "Boxing", "Chess"
+    ],
+    "snowflake": [
+      "Table tennis|Ping pong|Ping-pong", "Fencing", "Judo", "Wrestling", "Badminton", "Squash",
+      "Karate", "MMA|Mixed martial arts", "Taekwondo", "Snooker", "Darts"
+    ],
+    "icefrost": [
+      "Sumo", "Kickboxing", "Muay Thai", "Pool|Billiards|8-ball", "Jiu-jitsu|Brazilian jiu-jitsu|BJJ",
+      "Racquetball", "Arm wrestling", "Kendo", "Checkers|Draughts", "Go"
+    ],
+    "brainfreeze": [
+      "Sambo", "Savate", "Pétanque|Petanque", "Real tennis", "Pankration", "Capoeira", "Shogi",
+      "Backgammon", "Glíma|Glima", "Speed chess|Blitz chess", "Bowls|Lawn bowls"
+    ],
+    "absolutezero": [
+      "Rackets", "Jai alai|Jai-alai", "Kurash", "Pehlwani", "Schwingen", "Xiangqi", "Fives|Eton fives",
+      "Lethwei", "Kun Khmer"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Chess", "Tennis", "Boxing", "Taekwondo", "Badminton", "MMA|Mixed martial arts", "Go", "Judo",
+      "Muay Thai"
+    ],
+    "snowflake": [
+      "Karate", "Snooker", "Squash", "Fencing", "Table tennis|Ping pong",
+      "Jiu-jitsu|Brazilian jiu-jitsu|BJJ", "Wrestling", "Sumo"
+    ],
+    "icefrost": [
+      "Darts", "Backgammon", "Real tennis", "Checkers|Draughts", "Jai alai", "Kickboxing", "Kendo",
+      "Sambo", "Pool|Billiards|8-ball", "Capoeira"
+    ],
+    "brainfreeze": [
+      "Racquetball", "Shogi", "Arm wrestling", "Pétanque", "Pankration", "Bowls|Lawn bowls",
+      "Speed chess|Blitz chess", "Savate", "Kurash", "Lethwei", "Glíma", "Pehlwani", "Kun Khmer",
+      "Fives|Eton fives", "Rackets"
+    ],
+    "absolutezero": [
+      "Schwingen", "Xiangqi"
+    ]
+  }
+}

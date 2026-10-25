@@ -1,0 +1,49 @@
+{
+  "id": "flag-red-white",
+  "prompt": "Name a country whose flag is only red and white",
+  "ranking": {
+    "hints": [
+      "(country)"
+    ],
+    "titles": {
+      "Georgia": "Georgia (country)"
+    },
+    "expect": "country|state|nation|kingdom|republic|island|archipelago|territory|principality|federation"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 17,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Poland|Polska", "Japan", "Canada", "Switzerland", "Denmark"
+    ],
+    "snowflake": [
+      "Indonesia", "Monaco", "Austria", "Turkey|Türkiye", "Peru", "Singapore", "Latvia"
+    ],
+    "icefrost": [
+      "Tunisia", "Georgia", "Bahrain", "Qatar"
+    ],
+    "brainfreeze": [
+      "Tonga"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Canada", "Japan", "Singapore"
+    ],
+    "snowflake": [
+      "Poland|Polska", "Turkey|Türkiye", "Switzerland"
+    ],
+    "icefrost": [
+      "Indonesia", "Denmark", "Monaco", "Austria"
+    ],
+    "brainfreeze": [
+      "Georgia", "Latvia", "Peru", "Bahrain", "Qatar", "Tunisia"
+    ],
+    "absolutezero": [
+      "Tonga"
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "olympic-sports",
+  "prompt": "Name an Olympic sport (summer or winter)",
+  "ranking": {
+    "hints": [
+      "(sport)"
+    ],
+    "titles": {
+      "Athletics": "Athletics (sport)",
+      "Football": "Association football",
+      "Swimming": "Swimming (sport)",
+      "Cycling": "Cycle sport",
+      "Equestrian": "Equestrianism",
+      "Shooting": "Shooting sport",
+      "Diving": "Diving (sport)",
+      "Sailing": "Sailing (sport)"
+    },
+    "expect": "sport|game|discipline|athletics|skiing|skating|olympic"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 69,
+    "coverage": "80%"
+  },
+  "handpicked": {
+    "slush": [
+      "Swimming", "Athletics|Track and field", "Gymnastics", "Football|Soccer", "Basketball"
+    ],
+    "snowflake": [
+      "Curling", "Breaking|Breakdancing", "Cycling", "Rowing", "Boxing", "Judo", "Tennis",
+      "Volleyball", "Fencing", "Weightlifting", "Wrestling", "Figure skating", "Alpine skiing|Skiing",
+      "Ice hockey", "Snowboarding|Snowboard"
+    ],
+    "icefrost": [
+      "Archery", "Diving", "Equestrian|Horse riding", "Sailing", "Shooting", "Taekwondo", "Triathlon",
+      "Canoeing|Canoe|Kayaking", "Handball", "Badminton", "Table tennis", "Bobsleigh|Bobsled", "Luge",
+      "Biathlon", "Speed skating", "Ski jumping", "Surfing", "Skateboarding",
+      "Sport climbing|Climbing"
+    ],
+    "brainfreeze": [
+      "Modern pentathlon|Pentathlon", "Skeleton", "Nordic combined", "Cross-country skiing",
+      "Freestyle skiing", "Short track|Short track speed skating", "Water polo", "Golf",
+      "Rugby sevens|Rugby", "Trampoline|Trampolining", "Artistic swimming|Synchronized swimming",
+      "Field hockey|Hockey", "Karate", "BMX", "Marathon swimming|Open water swimming"
+    ],
+    "absolutezero": [
+      "Ski mountaineering|Skimo", "Baseball|Softball", "Lacrosse", "Squash", "Cricket",
+      "Flag football", "Tug of war", "Art competitions", "Rackets", "Jeu de paume", "Polo", "Roque",
+      "Motorboating|Powerboating", "Pelota|Basque pelota", "Croquet"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Football|Soccer", "Basketball", "Volleyball", "Tennis", "Ice hockey", "Boxing", "Judo",
+      "Athletics|Track and field", "Gymnastics", "Fencing", "Breaking|Breakdancing", "Badminton",
+      "Wrestling", "Figure skating"
+    ],
+    "snowflake": [
+      "Swimming", "Curling", "Rowing", "Table tennis", "Weightlifting", "Equestrian|Horse riding",
+      "Handball", "Snowboarding|Snowboard", "Cricket", "Archery", "Taekwondo", "Triathlon",
+      "Canoeing|Canoe|Kayaking"
+    ],
+    "icefrost": [
+      "Sport climbing|Climbing", "Golf", "Surfing", "Field hockey|Hockey", "Baseball|Softball",
+      "Skateboarding", "Alpine skiing|Skiing", "Cycling", "Shooting", "Lacrosse", "Biathlon", "Polo",
+      "Modern pentathlon|Pentathlon", "Diving", "Squash", "Bobsleigh|Bobsled"
+    ],
+    "brainfreeze": [
+      "Luge", "Water polo", "Sailing", "Speed skating", "Ski jumping", "Skeleton", "Croquet", "BMX",
+      "Pelota|Basque pelota", "Rugby sevens|Rugby", "Artistic swimming|Synchronized swimming",
+      "Karate", "Tug of war", "Cross-country skiing", "Marathon swimming|Open water swimming",
+      "Trampoline|Trampolining", "Freestyle skiing", "Nordic combined",
+      "Short track|Short track speed skating", "Rackets", "Ski mountaineering|Skimo", "Flag football",
+      "Art competitions", "Jeu de paume"
+    ],
+    "absolutezero": [
+      "Roque", "Motorboating|Powerboating"
+    ]
+  }
+}

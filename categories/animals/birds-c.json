@@ -1,0 +1,52 @@
+{
+  "id": "birds-c",
+  "prompt": "Name a bird starting with C",
+  "ranking": {
+    "hints": [
+      "(bird)"
+    ],
+    "expect": "mammal|species|genus|family|animal|primate|rodent|whale|dolphin|bear|cat|deer|antelope|bat|carnivor|ungulate|marsupial|subspecies|bird|fish|shark|ray|reptile|breed|order"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 34,
+    "coverage": "88%"
+  },
+  "handpicked": {
+    "slush": [
+      "Chicken", "Crow", "Canary", "Cockatoo", "Condor"
+    ],
+    "snowflake": [
+      "Cassowary", "Cardinal|Northern cardinal", "Crane", "Cuckoo", "Cormorant", "Cockatiel", "Coot",
+      "Chickadee"
+    ],
+    "icefrost": [
+      "Curlew", "Chaffinch", "Capercaillie", "Caracara", "Chough", "Conure", "Cowbird", "Crossbill",
+      "Corncrake", "Cock-of-the-rock"
+    ],
+    "brainfreeze": [
+      "Chiffchaff", "Coucal", "Courser", "Chukar|Chukar partridge", "Cotinga", "Currawong",
+      "Cisticola", "Crested caracara", "Crowned crane|Grey crowned crane", "Collared dove",
+      "Common swift"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Chicken", "Crow", "Canary", "Cockatoo", "Cassowary", "Condor", "Cormorant"
+    ],
+    "snowflake": [
+      "Cuckoo", "Cockatiel", "Crane", "Coot", "Capercaillie", "Chickadee", "Curlew"
+    ],
+    "icefrost": [
+      "Caracara", "Conure", "Cardinal|Northern cardinal", "Chough", "Cock-of-the-rock", "Corncrake",
+      "Crested caracara", "Chaffinch"
+    ],
+    "brainfreeze": [
+      "Chukar|Chukar partridge", "Cowbird", "Common swift", "Currawong", "Crossbill", "Collared dove",
+      "Chiffchaff", "Coucal", "Cotinga", "Cisticola", "Courser"
+    ],
+    "absolutezero": [
+      "Crowned crane|Grey crowned crane"
+    ]
+  }
+}

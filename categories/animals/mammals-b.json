@@ -1,0 +1,58 @@
+{
+  "id": "mammals-b",
+  "prompt": "Name a mammal starting with B",
+  "ranking": {
+    "hints": [
+      "(animal)",
+      "(mammal)"
+    ],
+    "expect": "mammal|species|genus|family|animal|primate|rodent|whale|dolphin|bear|cat|deer|antelope|bat|carnivor|ungulate|marsupial|subspecies|bird|fish|shark|ray|reptile|breed|order"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 48,
+    "coverage": "92%"
+  },
+  "handpicked": {
+    "slush": [
+      "Bear", "Beaver", "Bat", "Bison", "Badger", "Buffalo", "Baboon", "Bull"
+    ],
+    "snowflake": [
+      "Blue whale", "Bobcat", "Boar|Wild boar", "Bonobo", "Beluga|Beluga whale", "Brown bear",
+      "Black bear", "Bottlenose dolphin", "Bactrian camel", "Bighorn sheep|Bighorn"
+    ],
+    "icefrost": [
+      "Bandicoot", "Binturong", "Bilby", "Bongo", "Bowhead whale", "Blackbuck", "Babirusa",
+      "Bushbaby|Bush baby|Galago", "Banded mongoose", "Black rhinoceros|Black rhino", "Brown rat",
+      "Bush dog", "Bornean orangutan"
+    ],
+    "brainfreeze": [
+      "Bontebok", "Bushbuck", "Bushpig", "Banteng", "Bharal|Blue sheep", "Blesbok", "Bettong",
+      "Bank vole", "Barbastelle", "Brushtail possum|Common brushtail possum", "Bonnet macaque",
+      "Black-footed ferret", "Bryde's whale", "Bearded seal", "Bat-eared fox", "Barbary macaque",
+      "Bornean pygmy elephant"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Bear", "Bat", "Buffalo", "Beaver", "Blue whale", "Badger", "Brown bear", "Bison", "Bobcat",
+      "Baboon"
+    ],
+    "snowflake": [
+      "Bonobo", "Boar|Wild boar", "Bull", "Beluga|Beluga whale", "Black bear", "Bactrian camel",
+      "Binturong", "Bighorn sheep|Bighorn", "Brown rat"
+    ],
+    "icefrost": [
+      "Blackbuck", "Bowhead whale", "Bottlenose dolphin", "Black rhinoceros|Black rhino", "Bandicoot",
+      "Bushbaby|Galago", "Bornean orangutan", "Bush dog", "Babirusa", "Bongo", "Bilby"
+    ],
+    "brainfreeze": [
+      "Black-footed ferret", "Banded mongoose", "Barbary macaque", "Bat-eared fox", "Banteng",
+      "Bryde's whale", "Bearded seal", "Bharal|Blue sheep", "Bushpig", "Bushbuck",
+      "Bornean pygmy elephant", "Bonnet macaque", "Bank vole", "Bettong", "Blesbok", "Bontebok"
+    ],
+    "absolutezero": [
+      "Brushtail possum|Common brushtail possum", "Barbastelle"
+    ]
+  }
+}

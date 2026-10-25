@@ -1,0 +1,108 @@
+{
+  "id": "spirits",
+  "prompt": "Name a spirit / hard liquor (any type or brand)",
+  "ranking": {
+    "hints": [
+      "(drink)",
+      "(liquor)",
+      "(beverage)"
+    ],
+    "wikidata": "?item wdt:P279+ wd:Q56139 .",
+    "expect": "spirit|liquor|drink|beverage|brandy|whisk|vodka|rum|gin|alcohol|distill|liqueur"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 236,
+    "coverage": "95%"
+  },
+  "handpicked": {
+    "slush": [
+      "Bourbon|bourbon whiskey|whiskey bourbon", "Rum", "Scotch|Scotch whisky|Scotch whiskey"
+    ],
+    "snowflake": [
+      "Absinthe", "Schnapps", "Aquavit|Akvavit", "Rye|Rye whiskey", "Awamori"
+    ],
+    "icefrost": [
+      "Calvados", "Feni", "Okowita", "Tiquira", "Singani"
+    ],
+    "brainfreeze": [
+      "Mahua"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Vodka", "Brandy", "Cognac|french brandy", "Whisky", "Gin", "Tequila",
+      "Bourbon|bourbon whiskey|whiskey bourbon", "Rum", "Soju", "Scotch|Scotch whisky|Scotch whiskey",
+      "Rakı|Turkish raki", "Moonshine|mountain dew|Tennessee white whiskey|white lightning", "Ouzo",
+      "Rakia", "Arak"
+    ],
+    "snowflake": [
+      "Grappa", "Mezcal", "Absolut Vodka|Absolut", "Cachaça", "Pisco", "Absinthe", "Armagnac",
+      "Slivovitz|Šljivovica|plum brandy|Schlivowitz|șliboviță|śliwowica|traditional plum spirit",
+      "Kirsch|Kirschwasser", "Shōchū", "Smirnoff|Smirnoff Vodka|Smirnov vodka", "Irish whiskey",
+      "Schnapps", "Mastika", "Maotai|Moutai", "Aquavit|Akvavit",
+      "Aguardiente|burning water|fiery water", "Jenever|Dutch gin|Holland gin|genièvre", "Pálinka",
+      "Arrack", "Bombay Sapphire|Bombay Gin|Bombay Sapphire gin|Bombay Spirits Company", "Poitín",
+      "Grey Goose", "Applejack|apple brandy", "Metaxa", "Tsipouro", "Rye|Rye whiskey", "Brennivín",
+      "Chacha", "Stolichnaya|Stoli", "Tanqueray", "Tennessee whiskey|Tennessee whisky",
+      "Canadian whisky", "Japanese whisky|Japanese whiskey", "Single malt whisky|single malt", "Ţuică",
+      "Kaoliang wine|Baijiu|Gaoliang chiew|Gaoliang jiu|Gaoliang liquor|Gaoliang wine|Kaoliang chiew|Kaoliang jiu|Kaoliang liquor|Sorghum liquor|Sorghum wine",
+      "Awamori", "Wild Turkey", "Fenny", "Orujo",
+      "Gordon's London Dry Gin|Alexander Gordon & Co.|Gordon's Gin", "Cîroc|Cîroc Vodka",
+      "Speyside single malt whisky|Speyside Scotch|Speyside single malt Scotch|Speyside single malts|Speyside whisky",
+      "Cutty Sark", "Brännvin", "Belvedere", "Sotol",
+      "Islay single malt whisky|Islay Scotch|Islay single malt Scotch|Islay whisky", "Zivania",
+      "Patrón|Patrón Tequila|Tequila Patrón", "Finlandia Vodka", "Corn whiskey|Corn Squeezin’s",
+      "Jeppson's Malört|Malort", "Blended whiskey|blended whisky"
+    ],
+    "icefrost": [
+      "American whiskey", "Tsikoudia", "Korn|Doppelkorn|Kornbrand", "Horilka|Pertsivka",
+      "Canadian Club", "Pomace brandy|grape marc|grape marc spirit", "Dewar's", "Malt whisky",
+      "Caol Ila Distillery|Caol Ila|Caol Ìle|Ruadhphort", "Borovička", "Grain whisky",
+      "Boukha|Tunisia", "Desi daru", "Russian Standard", "Black & White", "Skyy Vodka",
+      "Fruit brandy|fruit spirit", "Four Roses",
+      "Koskenkorva Viina|Koskenkorva|Koskenkorvan viina|Kossu", "Raksi",
+      "Single malt Scotch|Single Malt Scotch Whisky", "Mount Gay Rum|Mount Gay", "Rakomelo", "Starka",
+      "Chopin Vodka", "Beluga Vodka|Beluga|Beluga Noble Vodka", "Calvados", "Feni", "Okowita",
+      "Tiquira", "Kümmel|caraway-flavoured spirit drink", "Lambig|Fine Bretagne|eau de vie",
+      "Campbeltown single malt whisky|Campbeltown|Campbeltown Scotch|Campbeltown single malt Scotch|Campbeltown Single Malts|Campbeltown whisky",
+      "Brandy de Jerez", "Wyborowa", "Allasch", "Hibiki|Hibiki Harmony Whisky", "English whisky",
+      "Gentian|Gentian schnapps|Gentian spirit", "Bäsk|bäsk brännvin",
+      "Tuzemák|Čajni|Domači|Inländer-Rum|rum tuzemský|tuzemský rum", "Akpeteshie|Ogogoro", "Haig",
+      "Highland single malt whisky|Highland Distillers|Highland Scotch|Highland single malt Scotch|Highland whisky|list of Highland Single Malts",
+      "Waragi", "Moskovskaya vodka", "Singani", "Mahia",
+      "Lowland single malt whisky|Lowland Scotch|Lowland single malt Scotch|Lowland Single Malts|Lowland whisky",
+      "Blended malt whisky|blended malt|pure malt|vatted malt", "Lao-Lao", "Knob Creek",
+      "Don Papa Rum", "Guaro|soft vodka", "Trump Vodka", "Single pot still whiskey", "Changaa",
+      "The Botanist|The Botanist Gin", "Himbeergeist", "Clairin|Kleren|Klerin", "Bottled in bond",
+      "Plymouth Gin", "Bacanora", "Insamju|ginseng liquor|ginseng wine", "Old Tom Gin", "Bathtub gin"
+    ],
+    "brainfreeze": [
+      "Cocoroco", "Raicilla", "Straight whiskey", "Bierbrand|eau-de-vie de bière", "Luksusowa vodka",
+      "Cacique|Cacique Guaro", "Apricot schnappes", "Pox",
+      "Island single malt whisky|Island Scotch|Island single malt Scotch|Island Single Malts|Island whisky",
+      "Cocuy", "Milagro Tequila", "Peket|Péquet", "Geist", "Single barrel whiskey|single cask whiskey",
+      "Svedka", "Jaloviina", "William Lawson's", "Early Times", "Araqi", "Basil Hayden's",
+      "Siwucha vodka", "Barack", "Peruvian Pisco", "Kizlyarka", "Marillenschnaps", "Chinggis vodka",
+      "Buckwheat whisky", "Popov", "Damassine", "Poliakov", "Vodka soda", "Avion tequila",
+      "George T. Stagg", "Bacon vodka", "Törkölypálinka", "Munbaeju|문배주", "Pendleton Whisky",
+      "Belaya Rus", "Komovica", "Flavored liquor|infused liquor", "Sweet potato shōchū|imojōchū",
+      "Cork Dry Gin", "Ursus|Ursus Vodka", "Finnish whisky", "Fine", "Sawdust brandy",
+      "Whitley Neill Gin", "Label 5", "Pearl vodka", "Acerum",
+      "Khlibnyi Dar|Bread Gift|Hlebny Dar|Hlebnyi Dar|Hlibny Dar|Khlebny Dar", "Absolwent",
+      "Wheat whiskey", "Black Bottle", "Frysk Hynder", "Tobermory Single Malt",
+      "Rock Hill Farms Single-Barrel", "Booth's Gin", "Jefferson's Bourbon", "Pinnacle vodka", "Mahua",
+      "Mexican whisky", "Té Bheag", "Fine champagne", "Sulai", "Tungi Spirit", "Fleischmann's vodka",
+      "Vodka Villa Lobos", "Three Olives Vodka", "Kumi Kumi", "New world whisky", "Nikolai",
+      "Kors Vodka", "Coconut brandy", "Broker's Gin|Broker’s London Dry Gin", "Killyloch",
+      "White Oak distillery", "Zhumir", "Dubra", "Gilpin's Westmorland Extra Dry Gin",
+      "Hancock's President's Reserve", "ManX spirit", "Cristal", "Gold Symphony Vodka",
+      "Cracovia vodka", "Dragon Bleu", "English single malt", "Pinky Vodka", "Old St Andrews",
+      "Ultimat Vodka", "Beija Cachaça", "SinFire Cinnamon Whisky", "Polonaise", "Yazi Ginger Vodka",
+      "Padlamanggan", "Tropinovec", "ROCK'N Vodka", "Absolut Citron"
+    ],
+    "absolutezero": [
+      "Trail's End Kentucky Straight Bourbon Whiskey", "Cut brandy"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "makeup-brands",
+  "prompt": "Name a make-up / cosmetics brand",
+  "ignoreWords": [
+    "cosmetics",
+    "beauty",
+    "makeup"
+  ],
+  "ranking": {
+    "hints": [
+      "(cosmetics)",
+      "(brand)",
+      "(company)",
+      "(cosmetics brand)"
+    ],
+    "expect": "cosmetic|beauty|make-?up|brand|company|fashion|perfume|skincare|luxury|retail|fragrance"
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 74
+  },
+  "answers": {
+    "slush": [
+      "Maybelline", "L'Oréal", "MAC", "Chanel", "Dior", "NYX", "Rimmel", "Max Factor", "Clinique",
+      "Estée Lauder", "Lancôme", "Benefit", "NARS", "Revlon", "e.l.f."
+    ],
+    "snowflake": [
+      "Fenty Beauty", "Essence", "Sephora Collection|Sephora", "Rare Beauty", "Huda Beauty",
+      "Urban Decay", "Too Faced", "Charlotte Tilbury", "Catrice", "Bourjois", "Glossier",
+      "Bobbi Brown", "Yves Saint Laurent|YSL", "Giorgio Armani|Armani Beauty"
+    ],
+    "icefrost": [
+      "Kylie Cosmetics", "Morphe", "CoverGirl", "Inglot", "Eveline", "Wibo", "KIKO Milano|Kiko",
+      "Makeup Revolution", "Tarte", "Anastasia Beverly Hills|ABH", "Pat McGrath Labs|Pat McGrath",
+      "Natasha Denona", "Hourglass", "Laura Mercier", "bareMinerals", "Smashbox", "Milani"
+    ],
+    "brainfreeze": [
+      "Wet n Wild", "Bell", "Golden Rose", "Shiseido", "Tom Ford Beauty", "Givenchy", "Guerlain",
+      "Physicians Formula", "Pupa", "Collistar", "Sisley", "Kevyn Aucoin", "Danessa Myricks", "Kosas",
+      "Westman Atelier", "Surratt", "Viseart", "Hindash", "Juvia's Place",
+      "Make Up For Ever|Makeup Forever", "Byredo", "Lisa Eldridge", "Ilia", "Victoria Beckham Beauty",
+      "Clé de Peau", "Paese"
+    ],
+    "absolutezero": [
+      "Ingrid", "Joko"
+    ]
+  }
+}

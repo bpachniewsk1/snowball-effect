@@ -1,0 +1,54 @@
+{
+  "id": "team-sports",
+  "prompt": "Name a team sport (3 or more players per side)",
+  "ranking": {
+    "hints": [
+      "(sport)"
+    ],
+    "expect": "sport|game|ball|hockey|football"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 37,
+    "coverage": "92%"
+  },
+  "handpicked": {
+    "slush": [
+      "Cricket", "Basketball", "Australian rules football|Aussie rules|AFL", "Baseball", "Volleyball",
+      "Kabaddi", "Lacrosse", "Sepak takraw", "Futsal", "Polo", "Hurling"
+    ],
+    "snowflake": [
+      "Curling", "Netball", "Rowing eight|Eights", "Handball", "Buzkashi", "Softball",
+      "Football|Soccer|Canadian football|gridiron football|association football|association soccer",
+      "Water polo", "Shinty", "Roller derby", "Korfball", "Ultimate|Ultimate frisbee", "Floorball",
+      "Dodgeball", "Camogie", "Tug of war", "Pesäpallo", "Quadball|Quidditch", "3x3 basketball|3x3",
+      "Underwater hockey", "Lapta", "Elephant polo"
+    ],
+    "icefrost": [
+      "Rink hockey|Roller hockey", "Bossaball", "Underwater rugby", "Chinlone"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Cricket", "Basketball", "Australian rules football|Aussie rules|AFL", "Baseball", "Volleyball",
+      "Kabaddi", "Lacrosse"
+    ],
+    "snowflake": [
+      "Sepak takraw", "Futsal", "Polo",
+      "Football|Soccer|Canadian football|gridiron football|association football|association soccer",
+      "Hurling", "Rowing eight|Eights", "Lapta"
+    ],
+    "icefrost": [
+      "Elephant polo", "Netball", "Handball", "Buzkashi", "Softball", "Curling", "Water polo",
+      "Shinty", "Roller derby"
+    ],
+    "brainfreeze": [
+      "Korfball", "Ultimate|Ultimate frisbee", "Floorball", "Dodgeball", "Camogie", "Tug of war",
+      "Pesäpallo", "Quadball|Quidditch", "3x3 basketball|3x3", "Underwater hockey",
+      "Rink hockey|Roller hockey", "Bossaball", "Underwater rugby"
+    ],
+    "absolutezero": [
+      "Chinlone"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "http-status-codes",
+  "prompt": "Name an HTTP status code (number or name)",
+  "ignoreWords": [
+    "http",
+    "status",
+    "code"
+  ],
+  "ranking": {
+    "manual": true
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 62
+  },
+  "answers": {
+    "slush": [
+      "404|Not Found", "200|OK", "500|Internal Server Error", "403|Forbidden", "401|Unauthorized",
+      "301|Moved Permanently", "201|Created", "302|Found", "400|Bad Request", "502|Bad Gateway",
+      "503|Service Unavailable", "204|No Content"
+    ],
+    "snowflake": [
+      "418|I'm a teapot|Teapot", "304|Not Modified", "429|Too Many Requests", "504|Gateway Timeout",
+      "409|Conflict", "405|Method Not Allowed", "422|Unprocessable Entity|Unprocessable Content",
+      "307|Temporary Redirect", "308|Permanent Redirect", "100|Continue", "101|Switching Protocols",
+      "202|Accepted"
+    ],
+    "icefrost": [
+      "206|Partial Content", "303|See Other", "408|Request Timeout", "410|Gone",
+      "413|Payload Too Large|Content Too Large", "415|Unsupported Media Type", "501|Not Implemented",
+      "451|Unavailable For Legal Reasons", "402|Payment Required", "406|Not Acceptable",
+      "411|Length Required", "412|Precondition Failed", "414|URI Too Long",
+      "505|HTTP Version Not Supported"
+    ],
+    "brainfreeze": [
+      "102|Processing", "103|Early Hints", "203|Non-Authoritative Information", "205|Reset Content",
+      "207|Multi-Status", "208|Already Reported", "226|IM Used", "300|Multiple Choices",
+      "305|Use Proxy", "407|Proxy Authentication Required", "416|Range Not Satisfiable",
+      "417|Expectation Failed", "421|Misdirected Request", "423|Locked", "424|Failed Dependency",
+      "425|Too Early", "426|Upgrade Required", "428|Precondition Required",
+      "431|Request Header Fields Too Large", "506|Variant Also Negotiates", "507|Insufficient Storage",
+      "508|Loop Detected"
+    ],
+    "absolutezero": [
+      "510|Not Extended", "511|Network Authentication Required"
+    ]
+  }
+}

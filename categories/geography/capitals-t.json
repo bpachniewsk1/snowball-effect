@@ -1,0 +1,49 @@
+{
+  "id": "capitals-t",
+  "prompt": "Name a national capital starting with T",
+  "ranking": {
+    "hints": [
+      "(city)"
+    ],
+    "titles": {
+      "Tripoli": "Tripoli, Libya"
+    },
+    "expect": "capital|city|town|municipality|largest"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 12,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Tokyo", "Tallinn", "Tirana", "Tehran"
+    ],
+    "snowflake": [
+      "Tbilisi", "Tashkent", "Taipei", "Tunis", "Tripoli"
+    ],
+    "icefrost": [
+      "Tegucigalpa", "Thimphu"
+    ],
+    "brainfreeze": [
+      "Tarawa|South Tarawa"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Tokyo", "Tbilisi"
+    ],
+    "snowflake": [
+      "Taipei", "Tehran"
+    ],
+    "icefrost": [
+      "Tashkent", "Tallinn", "Tirana"
+    ],
+    "brainfreeze": [
+      "Tripoli", "Tunis", "Tegucigalpa", "Tarawa|South Tarawa"
+    ],
+    "absolutezero": [
+      "Thimphu"
+    ]
+  }
+}

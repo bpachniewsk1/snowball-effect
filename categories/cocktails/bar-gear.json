@@ -1,0 +1,45 @@
+{
+  "id": "bar-gear",
+  "prompt": "Name a piece of bar equipment or a type of cocktail glass",
+  "ignoreWords": [
+    "glass",
+    "cocktail"
+  ],
+  "ranking": {
+    "hints": [
+      "(bartending)",
+      "(glass)",
+      "(glassware)"
+    ],
+    "expect": "glass|tool|bar|drink|vessel|cocktail|device|utensil|mug|cup|knife|strainer|kitchen|container|wine|beer"
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 57
+  },
+  "answers": {
+    "slush": [
+      "Shaker", "Shot glass", "Martini glass", "Jigger", "Strainer", "Wine glass", "Highball",
+      "Champagne flute|Flute", "Bottle opener", "Corkscrew", "Ice bucket"
+    ],
+    "snowflake": [
+      "Muddler", "Straw", "Bar spoon", "Rocks glass|Lowball|Old fashioned glass", "Coupe", "Collins",
+      "Margarita glass", "Hawthorne strainer|Hawthorne", "Mixing glass", "Boston shaker",
+      "Cobbler shaker"
+    ],
+    "icefrost": [
+      "Citrus press|Juicer", "Ice tongs", "Copper mug", "Tiki mug", "Pint glass",
+      "Snifter|Brandy snifter", "Speed pourer|Pourer", "Julep strainer", "Fine strainer|Tea strainer",
+      "Channel knife", "Zester", "Nick & Nora", "Hurricane glass"
+    ],
+    "brainfreeze": [
+      "Glencairn", "Ice pick", "Lewis bag", "Bar mat", "Speed rail", "Atomizer", "Japanese jigger",
+      "Absinthe spoon", "Wine key", "Julep cup", "Sour glass", "Poco grande", "Fizz glass",
+      "Cordial glass", "Punch bowl", "Swizzle stick", "Bar caddy", "Ice mold",
+      "Cocktail smoker|Smoking gun", "Dasher bottle|Bitters bottle"
+    ],
+    "absolutezero": [
+      "Yarai mixing glass|Yarai", "Fish bowl"
+    ]
+  }
+}

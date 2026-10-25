@@ -1,0 +1,75 @@
+{
+  "id": "fine-dining-vegetables",
+  "prompt": "Name a vegetable you might find on a fine-dining menu",
+  "ranking": {
+    "hints": [
+      "(vegetable)",
+      "(plant)"
+    ],
+    "expect": "vegetable|plant|root|cultivar|species|leaf|herb|fungus|mushroom|edible|crop|cabbage|bean|onion|squash|food|garlic|genus|seaweed|sprout"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 89,
+    "coverage": "79%"
+  },
+  "handpicked": {
+    "slush": [
+      "Asparagus", "Artichoke", "Beetroot|Beet", "Carrot", "Spinach", "Mushroom", "Truffle", "Leek",
+      "Fennel", "Cauliflower", "Zucchini|Courgette", "Eggplant|Aubergine", "Shallot"
+    ],
+    "snowflake": [
+      "Microgreens", "White asparagus", "Celeriac", "Parsnip", "Brussels sprouts", "Kale", "Radicchio",
+      "Endive|Chicory", "Watercress", "Pea|Peas|Petit pois", "Broad beans|Fava beans", "Romanesco",
+      "Kohlrabi", "Butternut squash", "Pumpkin", "Radish", "Swiss chard|Chard", "Pak choi|Bok choy",
+      "Morel|Morels", "Porcini", "Chanterelle|Chanterelles"
+    ],
+    "icefrost": [
+      "Jerusalem artichoke|Sunchoke", "Salsify", "Black salsify|Scorzonera", "Samphire|Sea asparagus",
+      "Ramps|Wild garlic|Ramsons", "Cavolo nero|Lacinato kale", "Broccolini|Tenderstem broccoli",
+      "Heirloom tomato|Heirloom tomatoes", "Baby carrots|Heritage carrots",
+      "Golden beet|Golden beetroot", "Daikon", "Lotus root", "Okra", "Cardoon", "Puntarelle", "Turnip",
+      "Rutabaga|Swede", "Celery root", "Sorrel", "Purslane", "Nettle|Stinging nettle",
+      "Fiddlehead|Fiddleheads|Fiddlehead fern", "Chervil root", "Parsley root", "Edamame"
+    ],
+    "brainfreeze": [
+      "Crosnes|Chinese artichoke", "Oca", "Yacón|Yacon", "Burdock|Gobo", "Agretti", "Sea beet",
+      "Ice plant", "Oyster leaf", "Nasturtium", "Borage", "Hop shoots", "Salsola", "Mizuna", "Tatsoi",
+      "Chayote", "Kalettes", "Kai lan|Chinese broccoli", "Romanesco broccoli", "Shiitake", "Enoki",
+      "Maitake|Hen-of-the-woods", "Lion's mane", "Black garlic", "Spring onion|Scallion", "Celtuce",
+      "Cime di rapa|Rapini|Broccoli rabe", "Sea kale", "Alexanders", "Wasabi", "Bamboo shoots"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Eggplant|Aubergine", "Asparagus", "Truffle", "Mushroom", "Zucchini|Courgette", "Artichoke",
+      "Pumpkin", "Fennel", "Beetroot|Beet", "Carrot", "Butternut squash", "Leek", "Pak choi|Bok choy",
+      "Cauliflower", "Edamame"
+    ],
+    "snowflake": [
+      "Porcini", "Okra", "White asparagus", "Celeriac", "Romanesco", "Broad beans|Fava beans",
+      "Brussels sprouts", "Kohlrabi", "Spinach", "Kale", "Rutabaga|Swede", "Pea|Peas|Petit pois",
+      "Jerusalem artichoke|Sunchoke", "Lotus root", "Shallot", "Chanterelle|Chanterelles", "Parsnip",
+      "Swiss chard|Chard"
+    ],
+    "icefrost": [
+      "Turnip", "Radish", "Watercress", "Chayote", "Wasabi", "Parsley root", "Sorrel",
+      "Endive|Chicory", "Morel|Morels", "Radicchio", "Salsify", "Cavolo nero|Lacinato kale",
+      "Baby carrots|Heritage carrots", "Golden beet|Golden beetroot", "Puntarelle", "Celery root",
+      "Nettle|Stinging nettle", "Fiddlehead|Fiddleheads|Fiddlehead fern", "Chervil root", "Daikon",
+      "Broccolini|Tenderstem broccoli", "Microgreens"
+    ],
+    "brainfreeze": [
+      "Spring onion|Scallion", "Cime di rapa|Rapini|Broccoli rabe",
+      "Heirloom tomato|Heirloom tomatoes", "Samphire|Sea asparagus", "Black garlic",
+      "Ramps|Wild garlic|Ramsons", "Cardoon", "Maitake|Hen-of-the-woods", "Black salsify|Scorzonera",
+      "Romanesco broccoli", "Enoki", "Shiitake", "Borage", "Purslane", "Kai lan|Chinese broccoli",
+      "Burdock|Gobo", "Bamboo shoots", "Yacón", "Ice plant", "Oyster leaf", "Nasturtium", "Hop shoots",
+      "Tatsoi", "Lion's mane", "Celtuce", "Mizuna", "Oca", "Sea beet", "Alexanders", "Sea kale",
+      "Salsola", "Kalettes"
+    ],
+    "absolutezero": [
+      "Crosnes|Chinese artichoke", "Agretti"
+    ]
+  }
+}

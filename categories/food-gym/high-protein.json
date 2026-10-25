@@ -1,0 +1,71 @@
+{
+  "id": "high-protein-food",
+  "prompt": "Name a high-protein food or snack",
+  "ranking": {
+    "hints": [
+      "(food)"
+    ],
+    "expect": "food|dish|meat|cheese|dairy|fish|legume|bean|seed|nut|protein|snack|soy|egg|poultry|product|supplement|yogurt|milk|species|pasta|bread|seafood|crustacean|mollus"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 96,
+    "coverage": "75%"
+  },
+  "handpicked": {
+    "slush": [
+      "Chicken breast|Chicken", "Eggs|Egg", "Greek yogurt|Greek yoghurt", "Tuna", "Protein bar",
+      "Beef|Steak", "Salmon", "Cottage cheese", "Whey protein|Whey|Protein shake", "Tofu", "Turkey"
+    ],
+    "snowflake": [
+      "Peanut butter", "Beef jerky|Jerky", "Lentils", "Chickpeas", "Skyr", "Quark|Twaróg|Twarog",
+      "Shrimp|Prawns", "Tempeh", "Edamame", "Almonds", "Black beans", "Egg whites", "Parmesan",
+      "Pumpkin seeds", "Cod", "Milk", "Lean ground beef|Lean mince", "Pork loin", "Sardines", "Seitan"
+    ],
+    "icefrost": [
+      "Hemp seeds", "Quinoa", "Mackerel", "Casein", "Soy milk", "Halloumi", "Mozzarella", "Ricotta",
+      "Kefir", "Biltong", "Octopus", "Scallops", "Crab", "Lobster", "Mussels", "Anchovies", "Tilapia",
+      "Halibut", "Trout", "Duck breast", "Lamb", "Bison", "Venison", "Pistachios", "Peanuts",
+      "Sunflower seeds", "Chia seeds", "Spirulina", "Lentil pasta", "Pea protein", "Protein pudding",
+      "Protein pancakes", "Roasted chickpeas", "String cheese", "Chicken thigh", "Soy beans|Soybeans"
+    ],
+    "brainfreeze": [
+      "Lupini beans|Lupin beans", "Nutritional yeast", "Pemmican", "Mycoprotein|Quorn",
+      "Liver|Beef liver", "Pollock", "Sea bass", "Cashews", "Collagen", "Egg white protein",
+      "Protein chips", "Black bean pasta", "Ezekiel bread", "Kangaroo meat", "Emu meat",
+      "Ostrich meat", "Cricket flour|Cricket protein", "Sprouted lentils", "Hemp protein",
+      "Rice protein", "Bone broth", "Kidney beans", "Navy beans", "Split peas", "Mung beans", "Natto",
+      "Paneer", "Gruyère|Gruyere", "Pecorino"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Tofu", "Chicken breast|Chicken", "Edamame", "Tuna", "Chickpeas", "Cottage cheese", "Lentils",
+      "Milk", "Almonds", "Tempeh", "Greek yogurt|Greek yoghurt", "Quark|Twaróg", "Beef|Steak", "Kefir",
+      "Seitan"
+    ],
+    "snowflake": [
+      "Chia seeds", "Black beans", "Lean ground beef|Lean mince", "Parmesan", "Eggs|Egg", "Soy beans",
+      "Scallops", "Skyr", "Peanut butter", "Halloumi", "Tilapia", "Lamb",
+      "Whey protein|Whey|Protein shake", "Lobster", "Pumpkin seeds", "Halibut", "Salmon", "Anchovies",
+      "Beef jerky|Jerky", "Turkey"
+    ],
+    "icefrost": [
+      "Trout", "Shrimp|Prawns", "Mussels", "Mozzarella", "Hemp seeds", "Quinoa", "Duck breast",
+      "Bison", "Pistachios", "Peanuts", "Spirulina", "Lentil pasta", "Protein pudding",
+      "Protein pancakes", "Chicken thigh", "Egg whites", "Protein bar", "Sardines", "Biltong",
+      "Ricotta", "Pork loin", "Venison", "Paneer", "Mung beans"
+    ],
+    "brainfreeze": [
+      "Natto", "Soy milk", "Casein", "Collagen", "Sunflower seeds", "Cod", "Pemmican", "String cheese",
+      "Pollock", "Lupini beans|Lupin beans", "Crab", "Gruyère", "Mackerel", "Navy beans",
+      "Pea protein", "Octopus", "Kidney beans", "Roasted chickpeas", "Pecorino", "Kangaroo meat",
+      "Split peas", "Nutritional yeast", "Sea bass", "Cashews", "Egg white protein", "Protein chips",
+      "Black bean pasta", "Emu meat", "Ostrich meat", "Sprouted lentils", "Bone broth",
+      "Ezekiel bread", "Mycoprotein|Quorn", "Liver|Beef liver", "Cricket flour|Cricket protein"
+    ],
+    "absolutezero": [
+      "Rice protein", "Hemp protein"
+    ]
+  }
+}

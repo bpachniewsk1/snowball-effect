@@ -1,0 +1,70 @@
+{
+  "id": "shell-commands",
+  "prompt": "Name a Unix/Linux terminal command",
+  "exactOnly": true,
+  "ranking": {
+    "hints": [
+      "(Unix)",
+      "(command)"
+    ],
+    "wikidata": "?item wdt:P31 wd:Q18343316 .",
+    "expect": "unix|command|utility|program|software|shell|editor|linux|tool|posix"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 180,
+    "coverage": "85%"
+  },
+  "handpicked": {
+    "slush": [
+      "ping", "gzip", "curl", "tar", "nc|netcat", "grep", "man", "rsync"
+    ],
+    "snowflake": [
+      "sudo", "chroot", "cowsay", "wget", "lsof", "ssh", "vim", "nano", "less"
+    ],
+    "icefrost": [
+      "htop", "yes", "strace", "column", "xxd", "hexdump", "mkfifo", "renice", "stat", "tac", "rev",
+      "stty", "sl", "ldd"
+    ],
+    "brainfreeze": [
+      "scp", "export", "zip", "unzip", "free", "shuf", "history"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "cat", "ping", "gzip", "curl", "tar", "nc|netcat", "grep", "make", "man", "AWK", "chmod",
+      "rsync", "Sed", "cron|UNIX cron", "Bourne shell"
+    ],
+    "snowflake": [
+      "ls", "diff", "dd", "cd|change directory|CHDIR", "sudo", "rm", "chroot", "ed|UNIX ed",
+      "mount|mount command|Unix mount command", "cowsay", "df|disk free", "wget", "lsof", "pwd", "ssh",
+      "vim", "nano", "echo", "fsck|Filesystem check",
+      "UUCP|Unix to Unix Copy|Unix-to-Unix Copy Protocol|Unix UUCP", "mkdir|Make directory", "tr|tr.1",
+      "cp", "top|table of processes", "mv", "bc|Basic Calculator|UNIX bc", "head", "less", "ln", "env",
+      "find|UNIX find", "chown", "uname", "su|substitute user", "kill", "touch", "whoami", "ps", "tee",
+      "wc|W_ord c_ount", "setgid"
+    ],
+    "icefrost": [
+      "passwd|passwd command|passwd utility", "file|libmagic|file command", "ex", "patch|UNIX patch",
+      "xargs|UNIX xargs", "cal|Unix cal", "at", "tail", "du", "cksum", "nohup", "htop", "ar|archiver",
+      "more", "alias|unalias", "umask", "tty", "yes", "strace", "sort", "chgrp", "column", "xxd",
+      "hexdump", "mkfifo", "renice", "tac", "rev", "stty", "sl", "rmdir", "nice", "cut", "sleep",
+      "set", "pax", "dmesg", "time|UNIX time", "Date", "basename", "stat", "uniq", "cmp", "test",
+      "ctags|ctags.1|ectags", "talk", "killall", "iconv", "ldd"
+    ],
+    "brainfreeze": [
+      "pkill", "nm", "split", "comm", "id", "eval", "wall", "EXIT|exit command", "locate|UNIX locate",
+      "od", "expr", "who", "watch", "dirname", "join", "wait", "compress|uncompress", "strip", "fg",
+      "fuser", "which|UNIX which", "paste", "w", "clear", "mailx", "fc|fix command", "bg", "mail",
+      "write", "read", "nl", "mesg", "mii-tool", "logname", "tput", "dot|source", "umount", "pstree",
+      "host", "type", "shuf", "scp", "export", "zip", "unzip", "free",
+      "Berkeley Yacc|yacc|byacc|yacc.1", "Crontab", "unlink", "getopts", "install", "tsort",
+      "chsh|change shell", "history", "lp", "fold", "dump", "csplit", "iostat", "printf", "disown",
+      "sar|System Activity Report", "seq", "pr", "hash", "unexpand", "command", "expand", "pg", "ipcs",
+      "factor", "link", "asa|asa command"
+    ],
+    "absolutezero": [
+      "qsub|condor_qsub", "ipcrm"
+    ]
+  }
+}

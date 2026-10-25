@@ -1,0 +1,49 @@
+{
+  "id": "countries-p",
+  "prompt": "Name a country starting with P",
+  "ranking": {
+    "hints": [
+      "(country)"
+    ],
+    "titles": {
+      "Palestine": "State of Palestine"
+    },
+    "expect": "country|state|nation|kingdom|republic|island|archipelago|territory|principality|federation"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 10,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Poland|Polska", "Portugal", "Peru"
+    ],
+    "snowflake": [
+      "Panama", "Pakistan", "Philippines", "Paraguay"
+    ],
+    "icefrost": [
+      "Papua New Guinea|PNG", "Palestine"
+    ],
+    "brainfreeze": [
+      "Palau"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Philippines", "Poland|Polska"
+    ],
+    "snowflake": [
+      "Pakistan", "Portugal"
+    ],
+    "icefrost": [
+      "Palestine", "Peru"
+    ],
+    "brainfreeze": [
+      "Papua New Guinea|PNG", "Panama", "Paraguay"
+    ],
+    "absolutezero": [
+      "Palau"
+    ]
+  }
+}

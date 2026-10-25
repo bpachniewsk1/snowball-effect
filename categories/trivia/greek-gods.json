@@ -1,0 +1,128 @@
+{
+  "id": "greek-gods",
+  "prompt": "Name a Greek god, goddess or titan",
+  "ranking": {
+    "hints": [
+      "(mythology)",
+      "(god)",
+      "(goddess)",
+      "(deity)"
+    ],
+    "wikidata": "?item wdt:P31/wdt:P279* wd:Q22989102 .",
+    "expect": "god|goddess|deity|titan|mytholog|greek|personification|daimon|nymph|primordial|hero|figure"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 501,
+    "coverage": "98%"
+  },
+  "handpicked": {
+    "snowflake": [
+      "Nike", "Ganymede", "Priapus", "Erebus|Erebos", "Iapetus|Iapetos", "Crius|Kreios|Krios",
+      "Eosphorus|Phosphorus|Lucifer|Heosphoros", "Hymenaeus|Hymen"
+    ],
+    "icefrost": [
+      "Eurus|Euros", "Palaemon|Melicertes"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Athena|Athina", "Zeus|Jupiter|Dias|Jove", "Apollo|Apollon|Phoebus|Apeilōn|Apellōn|Aploun",
+      "Artemis", "Aphrodite|Cytherea|Erycina", "Hermes", "Dionysus", "Poseidon|Posidon", "Prometheus",
+      "Hades|Pluton|Plouton", "Hera", "Heracles|Alcaeus|Alcides|Herakles|Hercules", "Persephone|Kore",
+      "Cronus|Cronos|Kronos", "Ares"
+    ],
+    "snowflake": [
+      "Hephaestus|Hephaestos", "Demeter|Deo", "Circe|Kirke|Κίρκη", "Perseus", "Uranus|Ouranos|Uranos",
+      "Hecate|Hekate|Hecat", "Gaia|Gaea", "Atlas", "Hestia|Histia, Vesta|ΕΣΤΙΑ", "Eros|Cupid",
+      "Helios|Helius", "Nyx", "Rhea|Rheia", "Asclepius|Aesculapius|Asklēpiós|Ἀσκληπιός", "Selene",
+      "Tartarus|Tartaros", "Pan", "Calypso", "Oceanus|Okeanos", "Adonis", "Scylla", "Styx",
+      "Charon|Kharon", "Typhon|Typhoeus", "Eos|Rhododactylos|Erigeneia", "Themis", "Leto", "Chaos",
+      "Orion", "Charybdis|Kharybdis", "Eris|Strife|Goddess of Discord", "Thanatos",
+      "Nemesis|Rhamnousia|Rhamnusia", "Hyperion", "Mnemosyne", "Triton", "Echidna|Mother of Monsters",
+      "Nike", "Amphitrite", "Tethys|Parthenope", "Theia|Basileia", "Ganymede",
+      "Cybele|Kibele|Kybele|Cibeles|Cybebe|Kuvava|Kybebe|Matar Kubileya|Turrigera|Meter Megale",
+      "Priapus", "Hebe", "Metis", "Erebus|Erebos", "Aether", "Phoebe", "Io|Phoronis|Io and Zeus",
+      "Iris", "Astarte|Ashtoreth|Ashtaroth|ʿAṯtart", "Hermaphroditus|Hermaphroditos",
+      "Chronos|Khronos|Chronus", "Morpheus", "Proteus", "Iapetus|Iapetos", "Pontus|Pontos", "Hypnos",
+      "Psyche", "Eurydice", "Daphne", "Coeus|Polus|Polos", "Phobos|Timor", "Serapis|Sarapis",
+      "Crius|Kreios|Krios", "Nereus", "Callisto|Kallisto", "Tyche", "Kratos|Potestas|Cratos|Cratus",
+      "Zephyrus|Zephyr", "Epimetheus", "Lethe|Lemosyne", "Maia", "Ananke|Anagke|Anance|Anangke|Ἀνάγκη",
+      "Deimos", "Aeolus|Eolus", "Phorcys|Phorcus", "Harmonia|Harmony", "Hemera", "Amalthea",
+      "Hymenaeus|Hymen", "Eileithyia|Eilithyia|Ilithyia|Ilithia", "Ceto|Kētō", "Dione",
+      "Hygieia|Hygeia|Hygiea", "Echo", "Pallas", "Astraea|Astrea", "Boreas", "Astraeus|Astraios",
+      "Plutus|Ploutos", "Aristaeus|Aristaios", "Eosphorus|Phosphorus|Lucifer|Heosphoros", "Dike|Dicea",
+      "Atropos", "Achelous|Acheloos|Achilaos", "Aegina", "Enyo", "Perse|Persa|Perseis", "Zagreus",
+      "Momus", "Aglaea|Aglaia", "Eirene|Irene", "Clotho|Klotho", "Panacea|Panakeia", "Bia",
+      "Glaucus|Glaukos|Marine Glaucus", "Harpocrates", "Briareus|Obriareus", "Anteros",
+      "Perses|Persaios|Persaeus", "Despoina|Despina|Despoena", "Pleione", "Thalassa", "Nephele|Nebula",
+      "Doris", "Atë|Ruin|Disaster", "Thoosa", "Moros|Morus", "Menoetius"
+    ],
+    "icefrost": [
+      "Salmacis", "Arete", "Aion", "Sabazius|Sabazios", "Eurybia", "Lachesis|Lakhesis", "Thaumas",
+      "Euphrosyne", "Melinoe", "Apate|Deceit", "Peitho", "Rhodos|Rhode", "Phlegethon|Pyriphlegethon",
+      "Britomartis", "Asopus", "Arethusa", "Phthonus|Zelus", "Inachus|Inachos",
+      "Scamander|Xanthus|Xanthos|Karamenderes|Scamandrus|Skamandros", "Eurynome", "Syrinx",
+      "Oenone|Enone|Oinone", "Oizys|Oezys", "Enceladus", "Elpis", "Helle|Ellie|Athamantis",
+      "Notus|Notos", "Glycon|Glicó", "Pasithea", "Asia", "Ourea", "Philotes|Friendship", "Lyssa",
+      "Minthe|Mentha|Mint|Menthe|Mintha", "Clytie", "Pheme|Ossa", "Himeros|Himerus", "Electra",
+      "Klymene|Clymene", "Geras", "Agave|Agaue", "Eunomia", "Caïssa", "Philyra", "Agdistis", "Aura",
+      "Iacchus|Iachus|Iakchos", "Artemis of Ephesus|Ephesia", "Nerites",
+      "Agathodaemon|Agathodaimon|Agathos daemon", "Alpheus", "Phoroneus", "Eurus|Euros", "Phobetor",
+      "Achlys|Akhlys", "Aletheia", "Old Man of the Sea", "Merope", "Porphyrion",
+      "Alcyoneus|Alkyoneus|Ἀλκυονεύς", "Alala", "Nilus|Nile", "Chloris|Flora", "Palaemon|Melicertes",
+      "Bendis", "Peneus", "Sophrosyne", "Castalia", "Eridanos", "Aphaea", "Mimas",
+      "Penelope|Penelopeia", "Alcyone", "Limos", "Sterope", "Dysnomia", "Paean|Paian",
+      "Telesphorus|Telesphoros", "Sparta|Sparte", "Eidyia", "Ponos", "Thaleia|Thalia",
+      "Enyalius|Enyalios", "Aidos", "Comus|Komos", "Aceso", "Celaeno", "Polybotes", "Pandia",
+      "Leuce|Leuke", "Porus", "Eleos|Mercy|Pity", "Aergia", "Bellum|Polemos", "Arke|Arce",
+      "Ḫepat|Khepat", "Halie|Halia|Halia of Rhodes", "Lampetia|Lampeto", "Ersa", "Caerus|Kairos",
+      "Dolos", "Astris|Asteria", "Sinope", "Hybris", "Orithyia|Oreithya|Oreithyia", "Lotis", "Adikia",
+      "Simoeis|Simois", "Poena|Poene|Poine|Poenae|Poina|Poinai", "Adephagia", "Meander|Maeandros",
+      "Penia", "Cotys|Kotys|Cotytto|Kotyto", "Kourotrophos", "Larissa|Larisa", "Phaethusa",
+      "Aetna|Aitne", "Anchiroe|Anchinoë", "Chelone", "Ida|Ide", "Praxidice|Praxidike", "Athos|Athus",
+      "Cyane", "Lysithea", "Neikea", "Adranus|Adranos", "Kakia", "Brizo", "Pitys",
+      "Philomelus|Bootes|Philomenus", "Eleutheria", "Metope", "Crotus|Krotos", "Epiales|Epialos",
+      "Crataeis|Krataiis", "Thyia", "Borysthenes", "Cyllene", "Enodia|Ennodia", "Liriope", "Daeira",
+      "Orseis", "Adamanthea|Adamantae", "Beroe", "Orphne"
+    ],
+    "brainfreeze": [
+      "Angelos|Angelus", "Sardus", "Eucleia", "Heimarmene", "Telesto", "Anytos", "Koalemos",
+      "Euthenia", "Sosipolis", "Himalia", "Adrasteia|Adrasteya", "Gelos", "Kydoimos|Cydoemu", "Carme",
+      "Opora", "Strymon", "Nana", "Calu", "Enipeus", "Nomos", "Pirene|Peirene", "Asterius|Asterion",
+      "Sangarius|Sangarios", "Penthus|Pentos|Penthos", "Corcyra|Korkyra", "Algos", "Melaena|Melaina",
+      "Harpina", "Damysos|Damysus", "Philophrosyne", "Cebren", "Methe", "Acantha", "Salamis",
+      "Homonoia", "Chrysopeleia", "Melia", "Aganippe", "Atlantia|Atlanteia", "Stilbon",
+      "Keltos|Celtus", "Hippothoe", "Callirhoe|Callirrhoe", "Ceroessa|Keroessa", "Nemea", "Idaea",
+      "Anaideia", "Cabeiro|Kabeiro", "Ianthe", "Epiphron", "Melite", "Amechania", "Thrace|Θράκη",
+      "Ioke", "Hedylogos", "Aba", "Crinisus|Crimissus", "Corycia", "Admete", "Alea|Athena Alea",
+      "Anax", "Horme|Hormes", "Hydaspes", "Hesione", "Meilichius|Milichius|Meilichios", "Plouto|Pluto",
+      "Thisbe", "Nomia", "Hylates", "Athis", "Keuthonymos|Ceuthonymus", "Ekecheiria", "Angelia",
+      "Acaste", "Proioxis", "Prophasis", "Tychon", "Chione", "Erato", "Zeuxo", "Anapos",
+      "Dyssebeia|Dyssebia", "Chrysus", "Eupraxia", "Palioxis", "Acmon", "Orthanes|Orthannes",
+      "Osiris-Dionysus", "Pyroeis", "Soter", "Neaera|Neera|Néère", "Phaenna", "Homados|Homadus",
+      "Apheleia", "Aphrodite of the Gardens", "Cleocharia", "Chaldean Hekate|Chaldean Hecate",
+      "Bolina", "Caystrus|Cayster|Caystros", "Teledice", "Smilax", "Bolbe", "Cleta", "Mise|Misatis",
+      "Phasis", "Itonia", "Lilaea", "Corus", "Deipneus", "Abarbarea", "Creusa", "Carystus", "Thespia",
+      "Clitumnus|Clitunno", "Axius", "Galaxaura", "Thrasos", "Hagno", "Capheira", "Hegetoria",
+      "Athena Areia", "Cleone", "Othreis", "Peitharchia", "Alpos", "Adrestia", "Theandrios",
+      "Ptocheia", "Caanthus", "Clonia", "Axioche", "Auxesia|Avxesia", "Apollonis", "Thrassa",
+      "Dexithea", "Hypate", "Rhene|Rini|Rhena", "Combe", "Mese", "Calybe", "Echemeia",
+      "Eunostus|Promylaea", "Phrike", "Staphylus", "Eulabeia", "Nete", "Aea", "Amphiro|Amphirho",
+      "Plataea|Plataia", "Argyra", "Cerceis|Kerkeis", "Pegasis", "Apotropaei|Apotropaios", "Cnossia",
+      "Ceraon|Keraon", "Chalcis", "Prymno", "Ornea|Ornia", "Pepromene", "Aegiale", "Paregoros",
+      "Satyrion", "Camarina", "Glaucia", "Cephisso", "Selemnos", "Moria", "Anippe", "Psalacantha",
+      "Hamadryas", "Ismenis", "Cassotis|Kassotis", "Strophia", "Genetyllides", "Tithorea",
+      "Callichore", "Tiasa", "Chlidanope", "Olganos", "Atabyrius", "Evenus|Euenos", "Hera Alexandros",
+      "Aegaeus", "Planē", "Semystra", "Bistonis", "Dercetis", "Eurryroe|Euryrrhoe",
+      "Erasinos|Erasinus", "Diopatra", "Euryte", "Phaeno", "Ithome", "Epidotes", "Ascus|Askos",
+      "Samia", "Syllis|Hyllis", "Artemis Tauropolos|Tauropolus", "Peloreus", "Daulis", "Macelo",
+      "Phyllis|Philleis", "Haliacmon", "Antianeira", "Kallone", "Drosera", "Melobosis", "Messeis",
+      "Pasikrata", "Myrtoessa", "Phoenissa", "Coryphe", "Celusa|Ceglusa|Kelousa", "Pitane",
+      "Anthracia", "Menestho", "Calliphaea", "Chesias"
+    ],
+    "absolutezero": [
+      "Brettia", "Pyrrhichos|Pyrrichus|Pyrrhichus"
+    ]
+  }
+}

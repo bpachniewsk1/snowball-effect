@@ -1,0 +1,63 @@
+{
+  "id": "big-non-capitals",
+  "prompt": "Name a city with over 5 million people (metro area) that is NOT its country's capital",
+  "ranking": {
+    "hints": [
+      "(city)"
+    ],
+    "titles": {
+      "Hyderabad": "Hyderabad",
+      "Suzhou": "Suzhou"
+    },
+    "expect": "city|metropol|municipality|capital of|largest|province|state|town|megacity"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 58,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "New York City|New York|NYC", "Shanghai", "Mumbai|Bombay", "São Paulo|Sao Paulo", "Istanbul",
+      "Los Angeles|LA", "Sydney", "Rio de Janeiro|Rio"
+    ],
+    "snowflake": [
+      "Toronto", "Barcelona", "Karachi", "Lagos", "Osaka", "Chicago", "Saint Petersburg|St Petersburg",
+      "Melbourne", "Guangzhou|Canton", "Shenzhen", "Ho Chi Minh City|Saigon", "Kolkata|Calcutta",
+      "Bangalore|Bengaluru", "Chennai|Madras", "Houston", "Miami", "Johannesburg", "Dallas",
+      "Philadelphia"
+    ],
+    "icefrost": [
+      "Chongqing", "Chengdu", "Tianjin", "Wuhan", "Xi'an|Xian", "Hangzhou", "Nanjing", "Lahore",
+      "Hyderabad", "Ahmedabad", "Pune", "Alexandria", "Atlanta", "Nagoya", "Guadalajara", "Monterrey",
+      "Belo Horizonte", "Yangon|Rangoon", "Abidjan", "Dar es Salaam"
+    ],
+    "brainfreeze": [
+      "Shenyang", "Dongguan", "Foshan", "Suzhou", "Zhengzhou", "Qingdao", "Harbin", "Surat", "Bandung",
+      "Surabaya", "Chittagong|Chattogram"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "New York City|New York|NYC", "Los Angeles|LA", "Istanbul", "Mumbai|Bombay", "Shanghai",
+      "Sydney", "Chicago", "Toronto", "Philadelphia", "Rio de Janeiro|Rio", "Melbourne",
+      "Saint Petersburg|St Petersburg"
+    ],
+    "snowflake": [
+      "São Paulo", "Barcelona", "Miami", "Guangzhou|Canton", "Houston", "Atlanta",
+      "Ho Chi Minh City|Saigon", "Bangalore|Bengaluru", "Chongqing", "Dallas", "Shenzhen"
+    ],
+    "icefrost": [
+      "Kolkata|Calcutta", "Chennai|Madras", "Lagos", "Johannesburg", "Karachi", "Osaka", "Hyderabad",
+      "Alexandria", "Chengdu", "Lahore", "Nanjing", "Nagoya", "Xi'an"
+    ],
+    "brainfreeze": [
+      "Hangzhou", "Guadalajara", "Ahmedabad", "Pune", "Dar es Salaam", "Wuhan", "Tianjin", "Monterrey",
+      "Yangon|Rangoon", "Abidjan", "Belo Horizonte", "Harbin", "Qingdao", "Shenyang", "Suzhou",
+      "Surabaya", "Surat", "Zhengzhou", "Chittagong|Chattogram", "Bandung"
+    ],
+    "absolutezero": [
+      "Dongguan", "Foshan"
+    ]
+  }
+}

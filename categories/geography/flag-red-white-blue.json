@@ -1,0 +1,49 @@
+{
+  "id": "flag-red-white-blue",
+  "prompt": "Name a country whose flag uses only red, white and blue",
+  "ranking": {
+    "hints": [
+      "(country)"
+    ],
+    "expect": "country|state|nation|kingdom|republic|island|archipelago|territory|principality|federation"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 23,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "France", "United Kingdom|UK|Great Britain|Britain", "United States|USA|US|America",
+      "Netherlands|Holland", "Russia"
+    ],
+    "snowflake": [
+      "Norway", "Iceland", "Czechia|Czech Republic", "Slovakia", "Australia", "New Zealand", "Chile",
+      "Cuba", "Thailand", "Luxembourg"
+    ],
+    "icefrost": [
+      "Panama", "Costa Rica", "North Korea", "Taiwan", "Laos", "Nepal"
+    ],
+    "brainfreeze": [
+      "Samoa", "Liberia"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "United States|USA|US|America", "United Kingdom|UK|Great Britain|Britain", "Russia", "France",
+      "Australia"
+    ],
+    "snowflake": [
+      "Netherlands|Holland", "Nepal", "Norway", "New Zealand"
+    ],
+    "icefrost": [
+      "Taiwan", "Czechia|Czech Republic", "Iceland", "Thailand", "Luxembourg"
+    ],
+    "brainfreeze": [
+      "North Korea", "Slovakia", "Cuba", "Chile", "Laos", "Costa Rica", "Panama", "Liberia"
+    ],
+    "absolutezero": [
+      "Samoa"
+    ]
+  }
+}

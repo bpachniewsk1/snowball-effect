@@ -1,0 +1,59 @@
+{
+  "id": "penguin-species",
+  "prompt": "Name a species of penguin (the ones in the background are asking)",
+  "ignoreWords": [
+    "penguin",
+    "penguins"
+  ],
+  "ranking": {
+    "title": "{name} penguin",
+    "titles": {
+      "Little": "Little penguin",
+      "Adélie": "Adélie penguin",
+      "Waitaha": "Waitaha penguin"
+    },
+    "expect": "penguin"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 22,
+    "coverage": "82%"
+  },
+  "handpicked": {
+    "slush": [
+      "Emperor"
+    ],
+    "snowflake": [
+      "King", "Adélie", "Macaroni", "Little|Little blue|Blue|Fairy",
+      "African|Jackass|Black-footed|Cape"
+    ],
+    "icefrost": [
+      "Gentoo", "Chinstrap", "Rockhopper", "Humboldt|Peruvian", "Magellanic", "Galápagos"
+    ],
+    "brainfreeze": [
+      "Royal", "Yellow-eyed|Hoiho", "Fiordland|Fiordland crested|Tawaki", "Snares|Snares crested",
+      "Southern rockhopper", "Northern rockhopper"
+    ],
+    "absolutezero": [
+      "Erect-crested", "Eastern rockhopper", "White-flippered", "Waitaha"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Emperor", "Adélie", "African|Jackass|Black-footed|Cape", "King"
+    ],
+    "snowflake": [
+      "Gentoo", "Little|Little blue|Blue|Fairy", "Macaroni", "Chinstrap"
+    ],
+    "icefrost": [
+      "Galápagos", "Rockhopper", "Magellanic", "Humboldt|Peruvian", "Northern rockhopper"
+    ],
+    "brainfreeze": [
+      "Royal", "Yellow-eyed|Hoiho", "Fiordland|Fiordland crested|Tawaki", "Southern rockhopper",
+      "Snares|Snares crested", "Eastern rockhopper", "White-flippered", "Waitaha"
+    ],
+    "absolutezero": [
+      "Erect-crested"
+    ]
+  }
+}

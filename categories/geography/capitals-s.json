@@ -1,0 +1,53 @@
+{
+  "id": "capitals-s",
+  "prompt": "Name a national capital starting with S",
+  "ranking": {
+    "hints": [
+      "(city)"
+    ],
+    "titles": {
+      "Santiago": "Santiago",
+      "San José": "San José, Costa Rica",
+      "São Tomé": "São Tomé",
+      "Singapore": "Singapore",
+      "Monaco": "Monaco"
+    },
+    "expect": "capital|city|town|municipality|largest|country|state"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 16,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Stockholm", "Sofia", "Seoul", "Santiago", "Sarajevo", "Singapore"
+    ],
+    "snowflake": [
+      "San Marino", "Skopje", "San José|San Jose", "Santo Domingo", "Sanaa|Sana'a", "San Salvador"
+    ],
+    "icefrost": [
+      "Sucre", "Suva", "São Tomé|Sao Tome"
+    ],
+    "brainfreeze": [
+      "Sri Jayawardenepura Kotte|Kotte"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Singapore", "Seoul", "Stockholm"
+    ],
+    "snowflake": [
+      "Sarajevo", "Sofia", "Sanaa"
+    ],
+    "icefrost": [
+      "Santiago", "Skopje", "Santo Domingo", "San Salvador"
+    ],
+    "brainfreeze": [
+      "San José", "Suva", "San Marino", "Sucre", "São Tomé"
+    ],
+    "absolutezero": [
+      "Sri Jayawardenepura Kotte|Kotte"
+    ]
+  }
+}

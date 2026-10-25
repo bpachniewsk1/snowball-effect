@@ -1,0 +1,56 @@
+{
+  "id": "heavy-land-animals",
+  "prompt": "Name a land animal that usually weighs more than 500 kg (a grand piano)",
+  "ranking": {
+    "hints": [
+      "(animal)"
+    ],
+    "expect": "mammal|species|genus|family|animal|primate|rodent|whale|dolphin|bear|cat|deer|antelope|bat|carnivor|ungulate|marsupial|subspecies|bird|fish|shark|ray|reptile|breed|order"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 36,
+    "coverage": "92%"
+  },
+  "handpicked": {
+    "slush": [
+      "Elephant", "Hippopotamus|Hippo", "Rhinoceros|Rhino", "Giraffe", "Cow|Cattle", "Horse"
+    ],
+    "snowflake": [
+      "Polar bear", "African elephant", "Asian elephant", "Bison", "Moose|Elk", "Camel",
+      "Water buffalo", "White rhinoceros|White rhino", "Saltwater crocodile"
+    ],
+    "icefrost": [
+      "Black rhinoceros|Black rhino", "Indian rhinoceros|Indian rhino", "Yak", "Gaur",
+      "Cape buffalo|African buffalo", "Kodiak bear", "Dromedary", "Bactrian camel",
+      "European bison|Wisent", "American bison"
+    ],
+    "brainfreeze": [
+      "Giant eland", "Common eland|Eland", "Banteng", "Sumatran rhinoceros", "Javan rhinoceros",
+      "African forest elephant|Forest elephant", "Clydesdale", "Shire horse",
+      "Belgian draft horse|Brabant", "Wild yak", "Gayal|Mithun"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Horse", "Elephant", "Cow|Cattle", "Hippopotamus|Hippo", "Giraffe", "Polar bear", "Moose|Elk"
+    ],
+    "snowflake": [
+      "Rhinoceros|Rhino", "Saltwater crocodile", "Camel", "Bison", "Water buffalo", "American bison",
+      "White rhinoceros|White rhino"
+    ],
+    "icefrost": [
+      "Asian elephant", "Kodiak bear", "Gaur", "Yak", "African elephant", "Dromedary",
+      "Bactrian camel", "European bison|Wisent"
+    ],
+    "brainfreeze": [
+      "Cape buffalo|African buffalo", "Black rhinoceros|Black rhino", "Indian rhinoceros|Indian rhino",
+      "African forest elephant|Forest elephant", "Common eland|Eland", "Clydesdale",
+      "Belgian draft horse|Brabant", "Javan rhinoceros", "Shire horse", "Sumatran rhinoceros",
+      "Banteng", "Wild yak", "Gayal|Mithun"
+    ],
+    "absolutezero": [
+      "Giant eland"
+    ]
+  }
+}

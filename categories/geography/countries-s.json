@@ -1,0 +1,50 @@
+{
+  "id": "countries-s",
+  "prompt": "Name a country starting with S",
+  "ranking": {
+    "hints": [
+      "(country)"
+    ],
+    "expect": "country|state|nation|kingdom|republic|island|archipelago|territory|principality|federation"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 26,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Spain", "Sweden", "Switzerland", "Slovakia", "Slovenia", "Serbia"
+    ],
+    "snowflake": [
+      "San Marino", "Saudi Arabia", "South Africa", "South Korea|Korea", "Singapore", "Syria",
+      "Sri Lanka", "Senegal", "Somalia", "Sudan"
+    ],
+    "icefrost": [
+      "South Sudan", "Sierra Leone", "Suriname", "Seychelles", "Samoa", "Solomon Islands"
+    ],
+    "brainfreeze": [
+      "São Tomé and Príncipe|Sao Tome and Principe", "Saint Lucia|St Lucia",
+      "Saint Kitts and Nevis|St Kitts and Nevis",
+      "Saint Vincent and the Grenadines|St Vincent and the Grenadines"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Spain", "Switzerland", "Singapore", "Sweden", "Saudi Arabia"
+    ],
+    "snowflake": [
+      "South Africa", "Serbia", "Slovenia", "Sri Lanka", "Slovakia"
+    ],
+    "icefrost": [
+      "South Korea|Korea", "Syria", "Somalia", "San Marino", "Sudan", "Suriname"
+    ],
+    "brainfreeze": [
+      "Senegal", "Seychelles", "Sierra Leone", "South Sudan", "Samoa", "Solomon Islands",
+      "Saint Lucia|St Lucia", "São Tomé and Príncipe", "Saint Kitts and Nevis|St Kitts and Nevis"
+    ],
+    "absolutezero": [
+      "Saint Vincent and the Grenadines|St Vincent and the Grenadines"
+    ]
+  }
+}

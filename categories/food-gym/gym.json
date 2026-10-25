@@ -1,0 +1,102 @@
+{
+  "id": "gym-terms",
+  "prompt": "Name a gym term or piece of gym equipment",
+  "ranking": {
+    "hints": [
+      "(exercise)",
+      "(fitness)",
+      "(weight training)"
+    ],
+    "expect": "exercise|training|gym|weight|fitness|strength|equipment|muscle|lift|bodybuilding|nutrition|supplement|cardio|sport|machine|bar|movement|workout|physical"
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 153
+  },
+  "handpicked": {
+    "slush": [
+      "Dumbbell", "Barbell", "Kettlebell", "Treadmill", "Bench press", "Squat", "Deadlift",
+      "Pull-up|Pull up|Chin-up", "Push-up|Push up", "Rep|Reps|Repetition", "Set", "Cardio", "Plank"
+    ],
+    "snowflake": [
+      "Leg day", "Squat rack|Power rack", "Rowing machine|Rower|Erg",
+      "Exercise bike|Stationary bike|Spin bike", "Elliptical|Cross trainer", "Cable machine",
+      "Lat pulldown", "Leg press", "Smith machine", "Resistance band", "Foam roller", "Medicine ball",
+      "Battle ropes", "Plyo box|Plyometric box", "Weight plates|Plates", "Bicep curl|Biceps curl",
+      "Lunge", "Burpee", "HIIT", "PR|PB|Personal record|Personal best", "Superset", "Drop set",
+      "Bulking|Bulk", "Cutting|Cut", "Protein", "Creatine", "Pre-workout", "Warm-up|Warm up", "Gains",
+      "Spotter"
+    ],
+    "icefrost": [
+      "Trap bar|Hex bar", "EZ bar|EZ curl bar", "Pec deck", "Leg extension", "Leg curl", "Hack squat",
+      "Preacher curl", "Hip thrust", "Glute bridge", "Romanian deadlift|RDL",
+      "Overhead press|OHP|Military press", "Clean and jerk", "Snatch", "Farmer's walk|Farmer's carry",
+      "Sled push|Prowler", "Assault bike|Air bike", "Stair climber|StairMaster", "Ab wheel|Ab roller",
+      "TRX|Suspension trainer", "Slam ball", "Lifting belt|Weightlifting belt", "Wrist wraps",
+      "Lifting straps", "Chalk", "AMRAP", "EMOM", "DOMS", "Progressive overload", "Hypertrophy",
+      "Deload", "1RM|One-rep max|One rep max", "Failure|Training to failure",
+      "Compound exercise|Compound lift", "Isolation exercise", "PPL|Push pull legs", "Bro split",
+      "Macros", "BCAA", "Calisthenics", "CrossFit", "Powerlifting", "Bodybuilding",
+      "Olympic weightlifting|Olympic lifting", "Strongman", "Tricep pushdown", "Skull crusher",
+      "Face pull", "Bulgarian split squat", "Mountain climber", "Box jump", "Kettlebell swing"
+    ],
+    "brainfreeze": [
+      "Landmine", "GHD|Glute-ham developer", "Reverse hyper", "Belt squat", "Sissy squat",
+      "Good morning", "Arnold press", "Zercher squat", "Jefferson curl", "Pallof press",
+      "Copenhagen plank", "Nordic curl|Nordic hamstring curl", "Turkish get-up", "RPE",
+      "RIR|Reps in reserve", "Periodization", "Time under tension|TUT", "Rest-pause", "Cluster set",
+      "Giant set", "Pyramid set", "Mind-muscle connection", "Eccentric", "Concentric", "Isometric",
+      "Negatives", "LISS", "VO2 max", "Mobility", "Knee sleeves", "Collars|Barbell collars",
+      "Dip belt", "Dip station", "Parallettes", "Gymnastic rings|Rings", "Bosu ball|BOSU",
+      "Vibration plate", "Cable crossover", "Seated row", "T-bar row", "Pendlay row", "Meadows row",
+      "Seal row", "Spoto press", "Pin press", "Deficit deadlift", "Rack pull",
+      "Paused squat|Pause squat", "Front squat", "Goblet squat", "Hip abductor|Abductor machine",
+      "Hip adductor|Adductor machine", "Calf raise", "Hammer curl", "Shrug", "Dragon flag",
+      "Muscle-up|Muscle up", "Front lever", "Human flag"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Dumbbell", "Barbell", "Kettlebell", "Treadmill", "Bench press", "Squat", "Deadlift",
+      "Pull-up|Chin-up", "Push-up", "Rep|Reps|Repetition", "Set", "Cardio", "Plank", "Leg day",
+      "Squat rack|Power rack"
+    ],
+    "snowflake": [
+      "Rowing machine|Rower|Erg", "Exercise bike|Stationary bike|Spin bike",
+      "Elliptical|Cross trainer", "Cable machine", "Lat pulldown", "Leg press", "Smith machine",
+      "Resistance band", "Foam roller", "Medicine ball", "Battle ropes", "Plyo box|Plyometric box",
+      "Weight plates|Plates", "Bicep curl|Biceps curl", "Lunge", "Burpee", "HIIT",
+      "PR|PB|Personal record|Personal best", "Superset", "Drop set", "Bulking|Bulk", "Cutting|Cut",
+      "Protein", "Creatine", "Pre-workout", "Warm-up", "Gains", "Spotter", "Trap bar|Hex bar",
+      "EZ bar|EZ curl bar", "Pec deck", "Leg extension", "Leg curl", "Hack squat"
+    ],
+    "icefrost": [
+      "Preacher curl", "Hip thrust", "Glute bridge", "Romanian deadlift|RDL",
+      "Overhead press|OHP|Military press", "Clean and jerk", "Snatch", "Farmer's walk|Farmer's carry",
+      "Sled push|Prowler", "Assault bike|Air bike", "Stair climber|StairMaster", "Ab wheel|Ab roller",
+      "TRX|Suspension trainer", "Slam ball", "Lifting belt|Weightlifting belt", "Wrist wraps",
+      "Lifting straps", "Chalk", "AMRAP", "EMOM", "DOMS", "Progressive overload", "Hypertrophy",
+      "Deload", "1RM|One-rep max", "Failure|Training to failure", "Compound exercise|Compound lift",
+      "Isolation exercise", "PPL|Push pull legs", "Bro split", "Macros", "BCAA", "Calisthenics",
+      "CrossFit", "Powerlifting", "Bodybuilding", "Olympic weightlifting|Olympic lifting", "Strongman",
+      "Tricep pushdown", "Skull crusher", "Face pull"
+    ],
+    "brainfreeze": [
+      "Bulgarian split squat", "Mountain climber", "Box jump", "Kettlebell swing", "Landmine",
+      "GHD|Glute-ham developer", "Reverse hyper", "Belt squat", "Sissy squat", "Good morning",
+      "Arnold press", "Zercher squat", "Jefferson curl", "Pallof press", "Copenhagen plank",
+      "Nordic curl|Nordic hamstring curl", "Turkish get-up", "RPE", "RIR|Reps in reserve",
+      "Periodization", "Time under tension|TUT", "Rest-pause", "Cluster set", "Giant set",
+      "Pyramid set", "Mind-muscle connection", "Eccentric", "Concentric", "Isometric", "Negatives",
+      "LISS", "VO2 max", "Mobility", "Knee sleeves", "Collars|Barbell collars", "Dip belt",
+      "Dip station", "Parallettes", "Gymnastic rings|Rings", "Bosu ball|BOSU", "Vibration plate",
+      "Cable crossover", "Seated row", "T-bar row", "Pendlay row", "Meadows row", "Seal row",
+      "Spoto press", "Pin press", "Deficit deadlift", "Rack pull", "Paused squat|Pause squat",
+      "Front squat", "Goblet squat", "Hip abductor|Abductor machine", "Hip adductor|Adductor machine",
+      "Calf raise", "Hammer curl", "Shrug", "Dragon flag", "Muscle-up"
+    ],
+    "absolutezero": [
+      "Front lever", "Human flag"
+    ]
+  }
+}

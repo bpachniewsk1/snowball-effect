@@ -1,0 +1,46 @@
+{
+  "id": "capitals-a",
+  "prompt": "Name a national capital starting with A",
+  "ranking": {
+    "hints": [
+      "(city)"
+    ],
+    "expect": "capital|city|town|municipality|largest"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 16,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Amsterdam", "Athens", "Ankara", "Abu Dhabi"
+    ],
+    "snowflake": [
+      "Addis Ababa", "Algiers", "Amman", "Accra", "Abuja", "Astana|Nur-Sultan"
+    ],
+    "icefrost": [
+      "Asunción|Asuncion", "Antananarivo", "Ashgabat", "Andorra la Vella"
+    ],
+    "brainfreeze": [
+      "Asmara", "Apia"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Amsterdam", "Athens", "Abu Dhabi"
+    ],
+    "snowflake": [
+      "Ankara", "Addis Ababa", "Astana|Nur-Sultan"
+    ],
+    "icefrost": [
+      "Algiers", "Amman", "Abuja", "Accra"
+    ],
+    "brainfreeze": [
+      "Ashgabat", "Antananarivo", "Asunción", "Andorra la Vella", "Asmara"
+    ],
+    "absolutezero": [
+      "Apia"
+    ]
+  }
+}

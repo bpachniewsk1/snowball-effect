@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <title>Snowball Effect</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☃️</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DotGothic16&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <canvas id="scene" aria-hidden="true"></canvas>
+    <header id="hud" class="hidden">
+      <div id="hud-day"></div>
+      <div id="hud-rank"></div>
+      <div id="hud-size"></div>
+    </header>
+    <div id="corner">
+      <div class="toggles">
+        <button id="toggle-sfx" class="menu small" data-silent aria-label="Toggle sound effects"></button>
+        <button id="toggle-music" class="menu small" aria-label="Toggle music"></button>
+      </div>
+      <button id="mascot" data-silent aria-label="Spin the penguin"><img id="mascot-img" alt="" width="54" height="54" /></button>
+      <div id="mascot-say" class="hidden" role="status"></div>
+    </div>
+    <main id="panel" aria-live="polite"></main>
+    <div id="dev-tools" class="hidden">
+      <button id="dev-clear" class="menu small" title="Dev only: wipes localStorage and reloads">CLEAR ALL DATA</button>
+      <button id="dev-unlock" class="menu small" title="Dev only: treat every snowman as unlocked">UNLOCK ALL: OFF</button>
+    </div>
+    <dialog id="howto"></dialog>
+    <dialog id="profile"></dialog>
+    <dialog id="categories"></dialog>
+    <div id="toast" role="status"></div>
+    <div id="unlock" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

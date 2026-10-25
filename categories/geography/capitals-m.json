@@ -1,0 +1,46 @@
+{
+  "id": "capitals-m",
+  "prompt": "Name a national capital starting with M",
+  "ranking": {
+    "hints": [
+      "(city)"
+    ],
+    "expect": "capital|city|town|municipality|largest"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 19,
+    "coverage": "95%"
+  },
+  "handpicked": {
+    "slush": [
+      "Madrid", "Moscow", "Mexico City", "Manila", "Minsk"
+    ],
+    "snowflake": [
+      "Monaco", "Montevideo", "Muscat", "Mogadishu", "Maputo", "Managua", "Manama"
+    ],
+    "icefrost": [
+      "Monrovia", "Malé|Male", "Malabo", "Maseru", "Mbabane"
+    ],
+    "brainfreeze": [
+      "Moroni", "Majuro"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Mexico City", "Moscow", "Madrid", "Manila"
+    ],
+    "snowflake": [
+      "Minsk", "Mogadishu", "Muscat", "Montevideo"
+    ],
+    "icefrost": [
+      "Maputo", "Monrovia", "Manama", "Malé"
+    ],
+    "brainfreeze": [
+      "Mbabane", "Managua", "Malabo", "Monaco", "Maseru", "Moroni"
+    ],
+    "absolutezero": [
+      "Majuro"
+    ]
+  }
+}

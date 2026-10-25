@@ -1,0 +1,72 @@
+{
+  "id": "js-frameworks",
+  "prompt": "Name a JavaScript framework or library",
+  "ignoreWords": [
+    "js"
+  ],
+  "ranking": {
+    "hints": [
+      "(JavaScript library)",
+      "(web framework)",
+      "(software)",
+      "(JavaScript framework)"
+    ],
+    "wikidata": "{ ?item wdt:P31/wdt:P279* wd:Q29165 } UNION { ?item wdt:P31/wdt:P279* wd:Q1330336 . ?item wdt:P277 wd:Q2005 }",
+    "expect": "javascript|library|framework|software|web|typescript|testing|runtime"
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 96
+  },
+  "handpicked": {
+    "slush": [
+      "React|ReactJS", "Angular|AngularJS", "Redux", "D3", "Lodash", "Backbone", "Solid|SolidJS",
+      "Preact"
+    ],
+    "snowflake": [
+      "jQuery", "Remix|React Router", "Astro", "NestJS|Nest", "Alpine|AlpineJS", "Underscore",
+      "Moment", "Axios", "Chart.js", "RxJS", "Electron", "Jest", "Mocha", "Socket.IO", "Lit", "Qwik",
+      "Knockout", "Mithril", "Stencil", "Aurelia"
+    ],
+    "icefrost": [
+      "Polymer", "Koa", "Hono", "SvelteKit", "Inferno", "Hapi", "Zustand", "MobX", "Immer", "Ramda",
+      "Phaser", "PixiJS|Pixi", "p5.js", "Anime.js", "GSAP", "Framer Motion", "Playwright", "Puppeteer",
+      "Cypress", "Stimulus", "Dojo"
+    ],
+    "brainfreeze": [
+      "MooTools", "Prototype", "Scriptaculous", "YUI", "Ext JS|ExtJS|Sencha", "Marko", "Riot",
+      "Hyperapp", "Cycle.js|CycleJS", "Vanilla JS|VanillaJS", "Enyo", "Batman.js|BatmanJS", "CanJS",
+      "Ractive", "Choo", "Fresh", "Durandal", "Spine"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "React|ReactJS", "Angular|AngularJS", "Redux", "D3", "Lodash", "Backbone", "Solid|SolidJS",
+      "Preact", "jQuery", "Remix|React Router", "Astro", "NestJS|Nest", "Alpine|AlpineJS",
+      "Underscore", "Moment"
+    ],
+    "snowflake": [
+      "Axios", "Chart.js", "RxJS", "Electron", "Jest", "Mocha", "Socket.IO", "Lit", "Qwik", "Knockout",
+      "Mithril", "Stencil", "Aurelia", "Polymer", "Koa", "Hono", "SvelteKit", "Inferno", "Hapi",
+      "Zustand"
+    ],
+    "icefrost": [
+      "MobX", "Immer", "Ramda", "Phaser", "PixiJS|Pixi", "p5.js", "Anime.js", "GSAP", "Framer Motion",
+      "Playwright", "Puppeteer", "Cypress", "Stimulus", "Dojo", "MooTools", "Prototype",
+      "Scriptaculous", "YUI", "Ext JS|ExtJS|Sencha", "Marko", "Riot", "Hyperapp", "Cycle.js|CycleJS",
+      "Vanilla JS|VanillaJS"
+    ],
+    "brainfreeze": [
+      "Enyo", "Batman.js|BatmanJS", "CanJS", "Ractive", "Choo", "Fresh", "Durandal", "Spine",
+      "Nuxt|NuxtJS", "Next.js|NextJS", "Gatsby", "Eleventy", "Htmx", "Google Web Toolkit|GWT",
+      "TYPO3|Typo3 CMS", "Horde|Horde groupware|Horde mail", "Three.js|ThreeJS",
+      "Direct Web Remoting|DWR", "Meteor|Matador", "Svelte", "Express.js|Expressjs", "Ionic|ionic 2",
+      "OpenUI5|UI Development Toolkit for HTML5|UI5", "Vue.js|VueJS", "Echo", "JQuery Mobile",
+      "Lively Kernel", "OSG.JS", "XPages", "Ember.js", "Crypton", "Blend4Web", "Babylon.js",
+      "Sails.js", "A-Frame"
+    ],
+    "absolutezero": [
+      "Verge3D", "Fastify"
+    ]
+  }
+}

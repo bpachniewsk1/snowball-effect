@@ -1,0 +1,77 @@
+{
+  "id": "lol-pros",
+  "prompt": "Name a League of Legends pro player (current or former)",
+  "ranking": {
+    "manual": true,
+    "notRarest": [
+      "Baby",
+      "Velja",
+      "Nemesis",
+      "Crownie",
+      "Rekkles"
+    ]
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 150
+  },
+  "handpicked": {
+    "slush": [
+      "Faker", "Uzi", "Caps", "Rekkles", "Doublelift", "Bjergsen", "Perkz", "Chovy", "Deft", "Keria",
+      "ShowMaker", "Jankos", "TheShy", "Ruler", "Peanut"
+    ],
+    "snowflake": [
+      "Caedrel", "Gumayusi", "Oner", "Zeus", "Canyon", "Knight", "Bin", "Rookie", "Mikyx",
+      "Hans Sama|Hans sama", "Upset", "Hylissang", "Bwipo", "Wunder", "Nemesis", "Crownie", "Velja",
+      "Baby", "Selfmade", "Elk", "JackeyLove|Jackeylove", "Ming", "Score", "Bang", "Wolf", "CoreJJ",
+      "Impact", "Sneaky", "xPeke", "Froggen", "Kiin", "Viper", "Scout"
+    ],
+    "icefrost": [
+      "Lehends", "Canna", "Pyosik", "Smeb", "Clid", "Kanavi", "Doinb", "Tian", "Xiaohu", "Meiko",
+      "Alphari", "Inspired", "Razork", "Humanoid", "Larssen", "Comp", "Labrov", "BrokenBlade", "Yike",
+      "Elyoya", "Vetheo", "Nisqy", "Kaiser", "Odoamne", "Cabochard", "Trymbi", "Kobbe", "Jiizuke",
+      "Hjarnan", "Kikis", "YellOwStaR|Yellowstar", "Zven", "Mithy", "Patrik", "Carzzy", "Flakked",
+      "Ignar", "369", "Crisp", "Ning", "GALA", "Pray", "GorillA|Gorilla", "Marin", "Dyrus", "Meteos",
+      "Ocelote", "Jensen", "Svenskeren", "Broxah", "Licorice"
+    ],
+    "brainfreeze": [
+      "Vander", "Woolite", "Kubon", "Czekolad", "Agresivoo", "Shook", "Sencux", "Febiven", "Soaz",
+      "Trick", "Wickd", "Diamondprox", "Darien", "Gilius", "Exileh", "Nukeduck", "Promisq", "Lwx",
+      "Baolan", "Tarzan", "Lucid", "Delight", "Kingen", "Zeka", "Deokdam", "Peyz", "Aiming", "Rascal",
+      "Khan", "Teddy", "Effort", "Beryl", "Mata", "Ambition", "Crown", "Cuzz", "Duke", "Huni",
+      "Reignover", "Kakao", "Hai", "Balls", "Imaqtpie", "Scarra", "Voyboy", "Shiphtur", "Pobelter",
+      "Xmithie", "Aphromoo", "Hauntzer", "Zionspartan"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Faker", "Uzi", "Caps", "Rekkles", "Doublelift", "Bjergsen", "Perkz", "Chovy", "Deft", "Keria",
+      "ShowMaker", "Jankos", "TheShy", "Ruler", "Peanut"
+    ],
+    "snowflake": [
+      "Caedrel", "Gumayusi", "Oner", "Zeus", "Canyon", "Knight", "Bin", "Rookie", "Mikyx", "Hans Sama",
+      "Upset", "Hylissang", "Bwipo", "Wunder", "Nemesis", "Crownie", "Velja", "Baby", "Selfmade",
+      "Elk", "JackeyLove", "Ming", "Score", "Bang", "Wolf", "CoreJJ", "Impact", "Sneaky", "xPeke",
+      "Froggen", "Kiin", "Viper", "Scout"
+    ],
+    "icefrost": [
+      "Lehends", "Canna", "Pyosik", "Smeb", "Clid", "Kanavi", "Doinb", "Tian", "Xiaohu", "Meiko",
+      "Alphari", "Inspired", "Razork", "Humanoid", "Larssen", "Comp", "Labrov", "BrokenBlade", "Yike",
+      "Elyoya", "Vetheo", "Nisqy", "Kaiser", "Odoamne", "Cabochard", "Trymbi", "Kobbe", "Jiizuke",
+      "Hjarnan", "Kikis", "YellOwStaR", "Zven", "Mithy", "Patrik", "Carzzy", "Flakked", "Ignar", "369",
+      "Crisp", "Ning"
+    ],
+    "brainfreeze": [
+      "GALA", "Pray", "GorillA", "Marin", "Dyrus", "Meteos", "Ocelote", "Jensen", "Svenskeren",
+      "Broxah", "Licorice", "Vander", "Woolite", "Kubon", "Czekolad", "Agresivoo", "Shook", "Sencux",
+      "Febiven", "Soaz", "Trick", "Wickd", "Diamondprox", "Darien", "Gilius", "Exileh", "Nukeduck",
+      "Promisq", "Lwx", "Baolan", "Tarzan", "Lucid", "Delight", "Kingen", "Zeka", "Deokdam", "Peyz",
+      "Aiming", "Rascal", "Khan", "Teddy", "Effort", "Beryl", "Mata", "Ambition", "Crown", "Cuzz",
+      "Duke", "Huni", "Reignover", "Kakao", "Hai", "Balls", "Imaqtpie", "Scarra", "Voyboy", "Shiphtur",
+      "Pobelter", "Xmithie", "Aphromoo"
+    ],
+    "absolutezero": [
+      "Hauntzer", "Zionspartan"
+    ]
+  }
+}

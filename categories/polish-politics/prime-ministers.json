@@ -1,0 +1,51 @@
+{
+  "id": "polish-prime-ministers",
+  "prompt": "Name a Polish Prime Minister since 1989",
+  "matchSurname": true,
+  "ranking": {
+    "wiki": "pl",
+    "expect": "polityk|premier|ekonomista|prawnik|działacz"
+  },
+  "ranked": {
+    "by": "pl.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 17,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Donald Tusk", "Mateusz Morawiecki"
+    ],
+    "snowflake": [
+      "Jarosław Kaczyński", "Beata Szydło", "Ewa Kopacz", "Tadeusz Mazowiecki", "Leszek Miller",
+      "Jerzy Buzek"
+    ],
+    "icefrost": [
+      "Kazimierz Marcinkiewicz", "Marek Belka", "Hanna Suchocka", "Waldemar Pawlak",
+      "Włodzimierz Cimoszewicz"
+    ],
+    "brainfreeze": [
+      "Józef Oleksy", "Jan Olszewski"
+    ],
+    "absolutezero": [
+      "Jan Krzysztof Bielecki", "Mieczysław Rakowski"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Donald Tusk", "Jerzy Buzek", "Mateusz Morawiecki"
+    ],
+    "snowflake": [
+      "Jarosław Kaczyński", "Leszek Miller", "Tadeusz Mazowiecki"
+    ],
+    "icefrost": [
+      "Beata Szydło", "Hanna Suchocka", "Waldemar Pawlak", "Ewa Kopacz"
+    ],
+    "brainfreeze": [
+      "Kazimierz Marcinkiewicz", "Jan Olszewski", "Włodzimierz Cimoszewicz", "Marek Belka",
+      "Józef Oleksy", "Mieczysław Rakowski"
+    ],
+    "absolutezero": [
+      "Jan Krzysztof Bielecki"
+    ]
+  }
+}

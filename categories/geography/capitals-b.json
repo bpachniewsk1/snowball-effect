@@ -1,0 +1,51 @@
+{
+  "id": "capitals-b",
+  "prompt": "Name a national capital starting with B",
+  "ranking": {
+    "hints": [
+      "(city)"
+    ],
+    "titles": {
+      "Bern": "Bern"
+    },
+    "expect": "capital|city|town|municipality|largest"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 25,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Berlin", "Budapest", "Brussels", "Bucharest", "Beijing|Peking", "Bern|Berne", "Bangkok",
+      "Buenos Aires"
+    ],
+    "snowflake": [
+      "Bratislava", "Belgrade", "Baghdad", "Beirut", "Bogotá|Bogota", "Brasília|Brasilia", "Baku"
+    ],
+    "icefrost": [
+      "Bishkek", "Bamako", "Bandar Seri Begawan", "Brazzaville", "Bridgetown", "Belmopan"
+    ],
+    "brainfreeze": [
+      "Bangui", "Banjul", "Bissau", "Basseterre"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Berlin", "Beijing|Peking", "Budapest", "Bangkok", "Buenos Aires"
+    ],
+    "snowflake": [
+      "Bucharest", "Baku", "Belgrade", "Bratislava", "Baghdad"
+    ],
+    "icefrost": [
+      "Bern|Berne", "Bogotá", "Brussels", "Brasília", "Beirut", "Bishkek"
+    ],
+    "brainfreeze": [
+      "Brazzaville", "Bamako", "Bandar Seri Begawan", "Bridgetown", "Belmopan", "Bangui", "Banjul",
+      "Basseterre"
+    ],
+    "absolutezero": [
+      "Bissau"
+    ]
+  }
+}

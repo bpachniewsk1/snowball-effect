@@ -1,0 +1,43 @@
+{
+  "id": "makeup-products",
+  "prompt": "Name a make-up product",
+  "ranking": {
+    "hints": [
+      "(cosmetics)",
+      "(makeup)",
+      "(cosmetic)"
+    ],
+    "expect": "cosmetic|make-?up|nail|lip|eye|skin|face|beauty|lash|brow"
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 61
+  },
+  "answers": {
+    "slush": [
+      "Lipstick", "Mascara", "Foundation", "Eyeliner", "Eyeshadow", "Blush|Blusher", "Concealer",
+      "Bronzer", "Lip gloss|Gloss", "Primer", "Highlighter", "Powder|Face powder"
+    ],
+    "snowflake": [
+      "Contour", "Nail polish|Nail varnish", "Lip liner", "BB cream", "Setting spray",
+      "Eyebrow pencil|Brow pencil", "CC cream", "Setting powder|Translucent powder",
+      "False eyelashes|False lashes|Fake lashes", "Brow gel|Eyebrow gel",
+      "Tinted moisturiser|Tinted moisturizer", "Lip stain"
+    ],
+    "icefrost": [
+      "Lip oil", "Kohl", "Eye primer", "Brow pomade", "Color corrector|Colour corrector",
+      "Liquid blush", "Cream blush", "Lip balm", "Glitter", "Lip plumper",
+      "Cushion foundation|Cushion compact|Cushion", "Skin tint", "Illuminator", "Brow powder"
+    ],
+    "brainfreeze": [
+      "Tinted brow gel", "Eyeshadow base", "Lash primer", "Colored mascara|Coloured mascara",
+      "Highlighting stick", "Cheek tint", "Lip and cheek tint", "Liquid lipstick",
+      "Brow lamination gel", "Blurring powder", "Water-based primer", "Lash serum",
+      "Lash glue|Eyelash glue", "Pigment|Loose pigment", "Gel liner", "Cake eyeliner", "Mixing medium",
+      "Glitter glue", "Kajal", "Tear-off lip tint|Peel-off lip tint", "Grease paint"
+    ],
+    "absolutezero": [
+      "Pancake makeup|Pan-cake", "Body shimmer"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "fish-s",
+  "prompt": "Name a fish starting with S",
+  "ranking": {
+    "hints": [
+      "(fish)"
+    ],
+    "expect": "mammal|species|genus|family|animal|primate|rodent|whale|dolphin|bear|cat|deer|antelope|bat|carnivor|ungulate|marsupial|subspecies|bird|fish|shark|ray|reptile|breed|order"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 41,
+    "coverage": "93%"
+  },
+  "handpicked": {
+    "slush": [
+      "Salmon", "Shark", "Sardine", "Swordfish", "Sturgeon", "Stingray"
+    ],
+    "snowflake": [
+      "Seahorse", "Sole", "Snapper", "Sunfish|Ocean sunfish|Mola", "Sailfish", "Sea bass", "Sprat",
+      "Skate", "Smelt"
+    ],
+    "icefrost": [
+      "Stonefish", "Scorpionfish", "Surgeonfish", "Stickleback", "Snakehead", "Sawfish", "Shad",
+      "Sockeye salmon", "Siamese fighting fish|Betta", "Swordtail", "Steelhead"
+    ],
+    "brainfreeze": [
+      "Sculpin", "Squirrelfish", "Sablefish", "Saury", "Snook", "Sheepshead", "Sweetlips", "Spadefish",
+      "Skipjack tuna", "Snailfish", "Stargazer", "Sea robin", "Sheatfish|Wels catfish",
+      "Sweetfish|Ayu", "Sand lance|Sand eel"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Shark", "Salmon", "Sturgeon", "Stingray", "Swordfish", "Sardine", "Sunfish|Ocean sunfish|Mola",
+      "Seahorse"
+    ],
+    "snowflake": [
+      "Snapper", "Sailfish", "Siamese fighting fish|Betta", "Skate", "Sea bass", "Sockeye salmon",
+      "Sole", "Sawfish"
+    ],
+    "icefrost": [
+      "Stonefish", "Smelt", "Sprat", "Snakehead", "Steelhead", "Skipjack tuna",
+      "Sheatfish|Wels catfish", "Scorpionfish", "Stickleback"
+    ],
+    "brainfreeze": [
+      "Surgeonfish", "Sablefish", "Swordtail", "Shad", "Snailfish", "Stargazer", "Sculpin",
+      "Sweetfish|Ayu", "Snook", "Sheepshead", "Sand lance|Sand eel", "Saury", "Spadefish",
+      "Squirrelfish"
+    ],
+    "absolutezero": [
+      "Sea robin", "Sweetlips"
+    ]
+  }
+}

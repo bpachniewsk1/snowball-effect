@@ -1,0 +1,62 @@
+{
+  "id": "voivodeships",
+  "prompt": "Name a Polish voivodeship (województwo)",
+  "ignoreWords": [
+    "voivodeship",
+    "wojewodztwo",
+    "province"
+  ],
+  "ranking": {
+    "wiki": "pl",
+    "title": "Województwo {lower}",
+    "expect": "województwo|jednostka"
+  },
+  "ranked": {
+    "by": "pl.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 16,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Mazowieckie|Masovian|Mazowsze", "Małopolskie|Lesser Poland|Małopolska",
+      "Śląskie|Silesian|Śląsk"
+    ],
+    "snowflake": [
+      "Świętokrzyskie|Holy Cross", "Wielkopolskie|Greater Poland|Wielkopolska",
+      "Pomorskie|Pomeranian|Pomorze", "Dolnośląskie|Lower Silesian|Dolny Śląsk", "Łódzkie|Łódź",
+      "Podkarpackie|Subcarpathian|Podkarpacie", "Lubelskie|Lublin"
+    ],
+    "icefrost": [
+      "Zachodniopomorskie|West Pomeranian", "Kujawsko-Pomorskie|Kuyavian-Pomeranian",
+      "Warmińsko-Mazurskie|Warmian-Masurian|Warmia i Mazury", "Podlaskie|Podlasie"
+    ],
+    "brainfreeze": [
+      "Opolskie|Opole"
+    ],
+    "absolutezero": [
+      "Lubuskie|Lubusz"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Mazowieckie|Masovian|Mazowsze", "Śląskie|Silesian|Śląsk",
+      "Podkarpackie|Subcarpathian|Podkarpacie"
+    ],
+    "snowflake": [
+      "Dolnośląskie|Lower Silesian|Dolny Śląsk", "Małopolskie|Lesser Poland|Małopolska",
+      "Lubelskie|Lublin"
+    ],
+    "icefrost": [
+      "Podlaskie|Podlasie", "Wielkopolskie|Greater Poland|Wielkopolska",
+      "Kujawsko-Pomorskie|Kuyavian-Pomeranian", "Pomorskie|Pomeranian|Pomorze"
+    ],
+    "brainfreeze": [
+      "Lubuskie|Lubusz", "Świętokrzyskie|Holy Cross",
+      "Warmińsko-Mazurskie|Warmian-Masurian|Warmia i Mazury", "Łódzkie|Łódź",
+      "Zachodniopomorskie|West Pomeranian"
+    ],
+    "absolutezero": [
+      "Opolskie|Opole"
+    ]
+  }
+}

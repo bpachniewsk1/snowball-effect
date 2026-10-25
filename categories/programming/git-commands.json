@@ -1,0 +1,38 @@
+{
+  "id": "git-commands",
+  "prompt": "Name a git command (e.g. git ___)",
+  "ignoreWords": [
+    "git"
+  ],
+  "exactOnly": true,
+  "ranking": {
+    "manual": true
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 74
+  },
+  "answers": {
+    "slush": [
+      "commit", "push", "pull", "clone", "add", "status", "checkout", "branch", "merge", "log", "diff",
+      "fetch", "init", "reset", "rebase"
+    ],
+    "snowflake": [
+      "stash", "cherry-pick", "revert", "tag", "switch", "restore", "remote", "show", "blame", "rm",
+      "mv", "config", "bisect", "reflog"
+    ],
+    "icefrost": [
+      "worktree", "submodule", "grep", "clean", "describe", "shortlog", "apply", "archive", "gc",
+      "help", "mergetool", "difftool", "rerere", "fsck", "filter-branch", "bundle", "sparse-checkout"
+    ],
+    "brainfreeze": [
+      "range-diff", "am", "format-patch", "request-pull", "maintenance", "prune", "repack", "ls-files",
+      "ls-tree", "cat-file", "rev-parse", "hash-object", "update-index", "send-email", "instaweb",
+      "fast-import", "rev-list", "symbolic-ref", "update-ref", "for-each-ref", "merge-base",
+      "whatchanged", "notes", "replace", "count-objects", "verify-commit"
+    ],
+    "absolutezero": [
+      "daemon", "svn"
+    ]
+  }
+}

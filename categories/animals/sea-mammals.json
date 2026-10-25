@@ -1,0 +1,140 @@
+{
+  "id": "sea-mammals",
+  "prompt": "Name a mammal that lives in the sea",
+  "ranking": {
+    "hints": [
+      "(animal)"
+    ],
+    "titles": {
+      "Seal": "Pinniped",
+      "Whale": "Whale",
+      "Dolphin": "Dolphin",
+      "Otter": "Sea otter",
+      "Right whale": "Right whale",
+      "Beaked whale": "Beaked whale",
+      "Fur seal": "Fur seal",
+      "Monk seal": "Monk seal"
+    },
+    "wikidata": "{ ?item wdt:P171+ wd:Q160 } UNION { ?item wdt:P171+ wd:Q25504 } UNION { ?item wdt:P171+ wd:Q168756 } ?item wdt:P105 wd:Q7432 . FILTER NOT EXISTS { ?item wdt:P31 wd:Q23038290 } FILTER NOT EXISTS { ?item wdt:P141 wd:Q237350 }",
+    "expect": "whale|dolphin|seal|mammal|porpoise|otter|bear|manatee|dugong|sea lion|walrus|cetacean|pinniped|sirenian|species|marine",
+    "reject": "extinct|fossil|prehistoric"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 129,
+    "coverage": "98%"
+  },
+  "handpicked": {
+    "slush": [
+      "Orca|Killer whale|Orcinus orca|dwarf killer whale|Orca gladiator|orca whale", "Polar bear",
+      "Blue whale|Balaenoptera musculus|Sibbold’s Rorqual,|Sulphur-bottom whale|Pygmy Blue Whale",
+      "Seal", "Walrus", "Dolphin", "Leopard seal", "Sea otter|Otter", "Manatee|Sea cow", "Whale",
+      "Beluga|Beluga whale|Delphinapterus leucas|sea canary|white wahle|white whale", "Dugong"
+    ],
+    "snowflake": [
+      "Narwhal", "Sea lion", "Porpoise", "Pilot whale", "Elephant seal",
+      "Harbour seal|Harbor seal|Common seal", "Right whale", "California sea lion",
+      "Grey whale|Gray whale|Agaphelus glaucus|Balaena gibbosa|Eschrichtius glaucus|devil fish|Atlantic gray whale|California gray whale|Eschrichtius gibbosus|Eschrichtius robustus|Gray back whale|Pacific gray whale|Rhachianectes glaucus",
+      "Steller sea lion", "Harp seal", "Fur seal", "Ringed seal", "Sei whale|Balaenoptera borealis",
+      "Beaked whale", "Harbour porpoise|Harbor porpoise|Phocoena phocoena"
+    ],
+    "icefrost": [
+      "Hawaiian monk seal",
+      "Bottlenose dolphin|common bottlenose dolphin|Atlantic bottlenose dolphin|Bottle-Nosed Dolphin",
+      "Crabeater seal", "Weddell seal", "Hooded seal", "Bearded seal", "Monk seal", "Ross seal",
+      "Galápagos sea lion", "Spinner dolphin|Stenella longirostris", "Marine otter"
+    ],
+    "brainfreeze": [
+      "Sowerby's beaked whale|Mesoplodon bidens"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Sperm whale|Physeter macrocephalus|spermaceti whale",
+      "Orca|Killer whale|Orcinus orca|dwarf killer whale|Orca gladiator|orca whale", "Polar bear",
+      "Blue whale|Balaenoptera musculus|Sibbold’s Rorqual,|Sulphur-bottom whale|Pygmy Blue Whale",
+      "Humpback whale|Megaptera novaeangliae", "Seal", "Walrus", "Dolphin", "Leopard seal",
+      "Beluga|Beluga whale|Delphinapterus leucas|sea canary|white wahle|white whale",
+      "Sea otter|Otter", "Manatee|Sea cow", "Whale", "Dugong",
+      "Fin whale|Balaenoptera physalus|common rorqual|finback whale|herring whale"
+    ],
+    "snowflake": [
+      "Short-beaked Common Dolphin|Delphinus delphis",
+      "Bowhead whale|Arctic whale|Balaena mysticetus|Greenland right whale", "Narwhal",
+      "Baiji|Chinese river dolphin|Lipotes vexillifer|Whitefin dolphin|Yangtze dolphin|Yangtze river dolphin",
+      "Amazon river dolphin|Inia geoffrensis|pink river dolphin", "Sea lion",
+      "Ganges river dolphin|Platanista gangetica|South Asian river dolphin", "Porpoise",
+      "False killer whale|Phocaena crassidens|Pseudorca crassidens",
+      "Grey whale|Gray whale|Agaphelus glaucus|Balaena gibbosa|Eschrichtius glaucus|devil fish|Atlantic gray whale|California gray whale|Eschrichtius gibbosus|Eschrichtius robustus|Gray back whale|Pacific gray whale|Rhachianectes glaucus",
+      "Pilot whale",
+      "Vaquita|Desert porpoise|Gulf of California porpoise|Gulf porpoise|Phocoena sinus|Vaquita porpoise",
+      "Harbour seal|Harbor seal|Common seal", "Right whale", "California sea lion",
+      "North Atlantic right whale|Eubalaena glacialis", "Sei whale|Balaenoptera borealis",
+      "Elephant seal", "Harbour porpoise|Harbor porpoise|Phocoena phocoena", "Steller sea lion",
+      "Cuvier's Beaked Whale|goose-beaked whale|Ziphius cavirostris", "Harp seal", "Fur seal",
+      "Ringed seal", "Southern right whale|Eubalaena australis", "Risso's Dolphin|Grampus griseus",
+      "Beaked whale",
+      "Bryde's Whale|Balaenoptera brydei|Balaenoptera edeni|Eden's whale|Sittang whale"
+    ],
+    "icefrost": [
+      "Irrawaddy dolphin|Orcaella brevirostris",
+      "Minke whale|Balaenoptera acutorostrata|Common minke whale", "Omura's whale|Balaenoptera omurai",
+      "Bottlenose dolphin|common bottlenose dolphin|Atlantic bottlenose dolphin|Bottle-Nosed Dolphin",
+      "Long-finned pilot whale|Blackfish|Globicephala melas|Northern Pilot Whale",
+      "North Pacific right whale|Eubalaena japonica", "Hawaiian monk seal",
+      "Pygmy right whale|Caperea marginata", "Hector's dolphin|Cephalorhynchus hectori",
+      "Crabeater seal", "Weddell seal", "Hooded seal", "Stenella coeruleoalba|Striped Dolphin",
+      "Pygmy killer whale|Feresa attenuata", "Spade-toothed whale|Mesoplodon traversii",
+      "Dwarf sperm whale|Kogia sima", "Pygmy sperm whale|Kogia breviceps",
+      "Spinner dolphin|Stenella longirostris", "Bearded seal",
+      "Northern bottlenose whale|Hyperoodon ampullatus", "Monk seal", "Ross seal",
+      "Atlantic white-sided dolphin|Lagenorhynchus acutus", "Galápagos sea lion",
+      "Commerson's dolphin|Cephalorhynchus commersonii",
+      "White-beaked dolphin|Lagenorhynchus albirostris",
+      "Melon-headed whale|electra dolphin|little killer whale|many-toothed blackfish|Peponocephala electra",
+      "Marine otter", "La Plata dolphin|Franciscana|Pontoporia blainvillei",
+      "Short-finned pilot whale|Globicephala macrorhynchus",
+      "Chinese white dolphin|Indo-Pacific humpbacked dolphin|Sousa chinensis chinensis|Indo-Pacific humpback dolphin|Sousa chinensis",
+      "Tucuxi|Sotalia fluviatilis|Tucuxi dolphin", "Rough-toothed dolphin|Steno bredanensis",
+      "Pantropical spotted dolphin|Stenella attenuata"
+    ],
+    "brainfreeze": [
+      "Platanista minor|Indus river dolphin",
+      "Indo-Pacific bottlenose dolphin|Indian Ocean bottlenose dolphin|Tursiops aduncus",
+      "Finless porpoise|Indo-Pacific finless porpoise|Neophocaena phocaenoides",
+      "Antarctic minke whale|Balaenoptera bonaerensis",
+      "Pacific white-sided dolphin|Lagenorhynchus obliquidens",
+      "Dusky dolphin|Lagenorhynchus obscurus", "Mesoplodon ginkgodens|Ginkgo-toothed beaked whale",
+      "Dall's porpoise|Phocoenoides dalli", "Blainville's beaked whale|Mesoplodon densirostris",
+      "Atlantic spotted dolphin|Stenella frontalis", "Hourglass dolphin|Lagenorhynchus cruciger",
+      "Wholphin", "Fraser's dolphin|Lagenodelphis hosei",
+      "Rice's whale|B. ricei|Balaenoptera ricei|Gulf of Mexico Bryde's whale|Gulf of Mexico whale",
+      "Sowerby's beaked whale|Mesoplodon bidens",
+      "Strap-toothed whale|Layard's beaked whale|Mesoplodon layardii",
+      "Chilean dolphin|Cephalorhynchus eutropia",
+      "Haviside's dolphin|Cephalorhynchus heavisidii|Heaviside’s dolphin",
+      "Berardius bairdii|Baird's beaked whale", "Delphinus capensis|Long-beaked common dolphin",
+      "Spectacled porpoise|Phocoena dioptrica",
+      "Narrow-ridged finless porpoise|Neophocaena asiaeorientalis|Neophocaena asiaorientalis",
+      "Clymene dolphin|Stenella clymene", "Southern bottlenose whale|Hyperoodon planifrons",
+      "Southern right whale dolphin|Lissodelphis peronii",
+      "Burmeister's porpoise|Phocoena spinipinnis", "True's beaked whale|Mesoplodon mirus",
+      "Peale's dolphin|Lagenorhynchus australis", "Australian snubfin dolphin|Orcaella heinsohni",
+      "Northern right whale dolphin|Lissodelphis borealis", "Gray's beaked whale|Mesoplodon grayi",
+      "Berardius arnuxii|Arnoux's beaked whale", "Inia araguaiaensis|Araguaian river dolphin",
+      "Guiana dolphin|Sotalia guianensis", "Gervais' beaked whale|Mesoplodon europaeus",
+      "Sousa teuszii|Atlantic humpbacked dolphin", "Andrews' beaked whale|Mesoplodon bowdoini",
+      "Indian Ocean humpback dolphin|Sousa plumbea", "Stejneger's beaked whale|Mesoplodon stejnegeri",
+      "Shepherd's beaked whale|Tasmacetus shepherdi", "Pygmy beaked whale|Mesoplodon peruvianus",
+      "Hector's beaked whale|Mesoplodon hectori",
+      "Burrunan dolphin|southern Australian bottlenose dolphin|Tursiops aduncus australis|Tursiops australis",
+      "Indopacetus pacificus|Tropical bottlenose whale", "Mesoplodon hotaula",
+      "Hubbs' beaked whale|Mesoplodon carlhubbsi", "Tursiops erebennus|Tamanend's bottlenose dolphin",
+      "Perrin's beaked whale|Mesoplodon perrini", "Neophocaena sunameri",
+      "Australian humpback dolphin|Sousa sahulensis"
+    ],
+    "absolutezero": [
+      "Berardius minimus", "Ramari's beaked whale|Mesoplodon eueu"
+    ]
+  }
+}
