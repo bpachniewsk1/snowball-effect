@@ -1,0 +1,68 @@
+{
+  "id": "goalkeepers-portugal",
+  "prompt": "Name a goalkeeper from Portugal's national team (any era)",
+  "matchSurname": true,
+  "ranking": {
+    "hints": [
+      "(footballer)",
+      "(goalkeeper)"
+    ],
+    "expect": "footballer|goalkeeper|football|soccer|manager|coach",
+    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q267245 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
+    "max": 150
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 56,
+    "coverage": "98%"
+  },
+  "handpicked": {
+    "slush": [
+      "Diogo Costa"
+    ],
+    "snowflake": [
+      "Anthony Lopes|Anthony Lopez", "Eduardo|Eduardo Carvalho"
+    ],
+    "icefrost": [
+      "Rui Silva", "Damas|Vítor Damas|Vitor Damas"
+    ],
+    "brainfreeze": [
+      "Costa Pereira|Alberto da Costa Pereira"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Rui Patrício|Rui Pedro dos Santos Patrício", "Vítor Baía|Vitor Manuel Martins Baia",
+      "Diogo Costa", "Ricardo|Ricardo Alexandre Martins Soares Pereira",
+      "Beto|António Alberto Bastos Pimparel",
+      "Henrique Hilário|Hilário|Henrique Hilario Meireles Alves Sampaio", "Quim",
+      "Eduardo|Eduardo Carvalho|Eduardo dos Reis Carvalho", "Daniel Fernandes|Daniel Marcio Fernandes",
+      "José Moreira|Jose Filipe da Silva Moreira", "José Manuel Mourinho Félix|Felix Mourinho"
+    ],
+    "snowflake": [
+      "Anthony Lopes|Anthony Lopez", "Manuel Bento|Manuel Galrinho Bento", "Nélson Pereira",
+      "Paulo Santos", "Silvino Louro|Silvino de Almeida Louro", "Bruno Vale|Bruno Miguel Esteves Vale",
+      "José Henrique", "Damas|Vítor Damas", "Neno|Adelino Augusto Graça Barbosa Barros",
+      "Américo Lopes", "José Pereira"
+    ],
+    "icefrost": [
+      "Joaquim Carvalho", "Pedro Espinha", "António Amaral",
+      "Zé Beto|José Alberto Teixeira Ferreirinha", "Rui Correia|Rui Manuel da Silva Correia",
+      "Alfredo Castro", "Rui Silva", "Costa Pereira|Alberto da Costa Pereira", "António Botelho",
+      "Carlos António Gomes|Carlos António do Carmo Costa Gomes", "João Azevedo",
+      "Acúrsio Carrelo|Acurcio Carrelo", "António Roquete|António Fernandes Roquete"
+    ],
+    "brainfreeze": [
+      "João Fonseca", "Ernesto Oliveira|Ernesto Nogueira do Oliveira", "Tibi",
+      "Dinis Vital|Dinis Martins Vital", "Manuel Capela|Manuel Maria Nogueira Capela",
+      "António Martins", "António Jesus Pereira", "Frederico Barrigana", "Jorge Soares da Silva",
+      "Artur Dyson|Artur Dyson dos Santos", "Carlos Guimarães",
+      "Cipriano Santos|Cipriano Nunes dos Santos", "Manuel Soares dos Reis", "Francisco Vieira",
+      "Eduardo Lúcio Esteves Pereira", "Augusto Amaro|Augusto Marques Rodrigues Amaro",
+      "José Matos Reis", "Carlos Silva", "José Sério"
+    ],
+    "absolutezero": [
+      "Artur Camolas", "Sebastião Loureiro da Silva"
+    ]
+  }
+}

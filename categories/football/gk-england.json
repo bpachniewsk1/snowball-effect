@@ -8,7 +8,7 @@
       "(goalkeeper)"
     ],
     "expect": "footballer|goalkeeper|football|soccer|manager|coach",
-    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q47762 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . ?o rdfs:label ?ol . FILTER(?ol IN (\"midfielder\"@en, \"forward\"@en)) }",
+    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q47762 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
     "max": 150
   },
   "ranked": {
@@ -32,7 +32,7 @@
       "Peter Shilton|Peter Leslie Shilton", "Joe Hart|Charles Joseph John Hart",
       "David Seaman|David Andrew Seaman", "Jordan Pickford|Pickford",
       "James Trafford|James Harrington Trafford", "David James|David Benjamin James",
-      "Robert Green|Robert Paul Green", "Ben Foster|Ben Anthony Foster",
+      "Ben Foster|Ben Anthony Foster", "Robert Green|Robert Paul Green",
       "Sam Johnstone|Samuel Luke Johnstone", "Gordon Banks", "Scott Carson|Scott Paul Carson",
       "Dean Henderson|Dean Bradley Henderson", "Jack Butland", "Tom Heaton|Thomas David Heaton",
       "Aaron Ramsdale"
@@ -54,33 +54,33 @@
       "Ray Wood|Raymond Ernest Wood", "Sam Hardy", "Jimmy Ashcroft|James Ashcroft",
       "Ted Sagar|Edward Sagar", "Alexander Morten|Alec Morten", "Robert Barker",
       "Harry Hibbs|Henry Edward Hibbs", "Horace Bailey|Horace Peter Bailey",
-      "Jack Alderson|John Thomas Alderson", "Dick Pym|Richard Henry Pym",
+      "Dick Pym|Richard Henry Pym", "Jack Alderson|John Thomas Alderson",
       "Jack Robinson|John Robinson|John William Robinson", "Benjamin Howard Baker",
       "John Willie Sutcliffe|John William Sutcliffe", "Vic Woodley|Victor Robert Woodley",
-      "Frank Moss", "Teddy Davison|John Edward Davison", "Tim Williamson",
+      "Frank Moss", "Tim Williamson", "Teddy Davison|John Edward Davison",
       "Rupert Anderson|Rupert Darnley Anderson", "Reginald Courtenay Welch",
-      "Herby Arthur|William John Herbert Arthur", "Reg Matthews|Reginald Derrick Matthews",
-      "Leslie Gay|Leslie Hewitt Gay"
+      "Ron Baynham|Ronald Baynham|Ronald Leslie Baynham", "Herby Arthur|William John Herbert Arthur",
+      "Reg Matthews|Reginald Derrick Matthews"
     ],
     "brainfreeze": [
-      "Ted Hufton|Arthur Edward Hufton", "Ron Baynham|Ronald Baynham|Ronald Leslie Baynham",
-      "Billy Moon|William Robert Moon", "Jerry Dawson|Jeremiah Dawson",
-      "Harry Linacre|James Henry Linacre", "Tom Baddeley|Thomas Baddeley",
-      "Billy George|William George", "William Rose|William Crisp Rose|William Crispin Rose",
-      "William Maynard|William John Maynard", "Ted Taylor|Edward Taylor",
-      "James Mitchell|Fred Mitchell|Jim Mitchell|James Frederick Mitchell", "Bert Coleman",
-      "Jack Mew|John William Mew", "William Carr|William Henry Carr", "Jack Brown|John Henry Brown",
-      "Bob Roberts|Robert John Roberts", "Percival Parr|Percival Chase Parr", "Bill Rowley",
+      "Leslie Gay|Leslie Hewitt Gay", "Ted Hufton|Arthur Edward Hufton",
+      "Harry Linacre|James Henry Linacre", "Jerry Dawson|Jeremiah Dawson",
+      "Billy Moon|William Robert Moon", "Tom Baddeley|Thomas Baddeley", "Billy George|William George",
+      "William Rose|William Crisp Rose|William Crispin Rose", "William Maynard|William John Maynard",
+      "Ted Taylor|Edward Taylor", "James Mitchell|Fred Mitchell|Jim Mitchell|James Frederick Mitchell",
+      "William Carr|William Henry Carr", "Bert Coleman", "Jack Brown|John Henry Brown",
+      "Bob Roberts|Robert John Roberts", "Jack Hacking|John Hacking", "Bill Rowley",
+      "Jack Mew|John William Mew", "Percival Parr|Percival Chase Parr",
       "John Rawlinson|John Frederick Peel Rawlinson", "Jack Hillman|William John Hillman",
-      "Jack Hacking|John Hacking", "Harry Hardy", "Ernest Williamson|Ernest Clarke Williamson",
-      "John Hawtrey|John Purvis Hawtrey", "George Ashmore|George Samuel Austin Ashmore",
-      "Harold Pearson|Harold Frederick Pearson", "Freddie Fox|Frederick Samuel Fox", "Albert McInroy",
-      "Matt Kingsley|Matthew Kingsley", "Chris Charsley|Charles Christopher Charsley",
-      "Ernald Scattergood", "George Tweedy|George Jacob Tweedy", "Conrad Warner",
-      "Harry Swepstone|Harry Albemarle Swepstone", "Joe Reader", "Hugh Turner", "George Holdcroft",
-      "Leonard Wilkinson|Leonard Rodwell Wilkinson", "Harry Maskrey|Harry Mart Maskrey",
-      "Dan Tremelling|Richard Daniel Tremelling", "Bernard Streten|Bernard Reginald Streten",
-      "George Toone", "John Sands", "Arthur Savage"
+      "Harry Hardy", "Ernest Williamson|Ernest Clarke Williamson",
+      "Chris Charsley|Charles Christopher Charsley", "Freddie Fox|Frederick Samuel Fox",
+      "George Ashmore|George Samuel Austin Ashmore", "John Hawtrey|John Purvis Hawtrey",
+      "Harold Pearson|Harold Frederick Pearson", "Albert McInroy", "Ernald Scattergood",
+      "George Tweedy|George Jacob Tweedy", "Conrad Warner",
+      "Harry Swepstone|Harry Albemarle Swepstone", "Leonard Wilkinson|Leonard Rodwell Wilkinson",
+      "Matt Kingsley|Matthew Kingsley", "Joe Reader", "Hugh Turner", "George Holdcroft",
+      "Dan Tremelling|Richard Daniel Tremelling", "Harry Maskrey|Harry Mart Maskrey",
+      "Bernard Streten|Bernard Reginald Streten", "George Toone", "John Sands", "Arthur Savage"
     ],
     "absolutezero": [
       "Harold Gough", "Ben Olney|Benjamin Albert Olney"

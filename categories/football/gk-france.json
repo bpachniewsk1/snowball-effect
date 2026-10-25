@@ -1,0 +1,66 @@
+{
+  "id": "goalkeepers-france",
+  "prompt": "Name a goalkeeper from France's national team (any era)",
+  "matchSurname": true,
+  "ranking": {
+    "hints": [
+      "(footballer)",
+      "(goalkeeper)"
+    ],
+    "expect": "footballer|goalkeeper|football|soccer|manager|coach",
+    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q47774 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
+    "max": 150
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 76,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Hugo Lloris|Lloris", "Mike Maignan|Maignan"
+    ],
+    "snowflake": [
+      "Alphonse Areola|Areola"
+    ],
+    "icefrost": [
+      "Brice Samba"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Fabien Barthez|Fabien Alain Barthez", "Steve Mandanda|Steve Mandanda Mpidi",
+      "Hugo Lloris|Lloris", "Mickaël Landreau|Mickael Vincent Andre-Marie Landreau",
+      "Mike Maignan|Maignan", "Grégory Coupet", "Sébastien Frey",
+      "Bernard Lama|Bernard Pascal Maurice Lama", "Stéphane Ruffier",
+      "Cédric Carrasso|Cedric Pascal Regis Carrasso", "Joël Bats",
+      "Benoît Costil|Benoit Guy Robert Costil", "Lionel Charbonnier|Lionel Andre Michel Charbonnier",
+      "Ulrich Ramé|Ulrich Jean Eugene Rame", "Alphonse Areola|Areola"
+    ],
+    "snowflake": [
+      "Jean-Luc Ettori", "Bruno Martini", "Albert Rust|Albert Marcel Henri Rust", "Dominique Dropsy",
+      "François Remetter", "Brice Samba", "Dominique Baratelli",
+      "Richard Dutruel|Richard Philippe Dutruel", "Dominique Colonna", "René Llense",
+      "Jean-Paul Bertrand-Demanes|Jean-Paul Fernand Gabriel Bertrand-Demanes", "Lionel Letizi",
+      "Philippe Bergeroo", "Claude Abbes|Claude Jean Jules César Abbes", "Jean Castaneda"
+    ],
+    "icefrost": [
+      "Alex Thépot", "Georges Carnus", "Julien Darui", "Marcel Aubour", "Marcel Domingo",
+      "Gilles Rousset", "André Tassin", "Stéphane Porato|Stephane Patrick Porato",
+      "Rudi Hiden|Rodolphe Hiden", "Paul Sinibaldi", "César Ruminski", "Pierre Chayriguès",
+      "Georges Lamia", "Pierre Bernard", "Laurent Di Lorto", "René Vignal", "Robert Défossé",
+      "Jean Taillandier"
+    ],
+    "brainfreeze": [
+      "Abderrahman Ibrir", "Pierrick Hiard", "André Rey", "Yves Chauveau", "Georges Crozier",
+      "Maurice Tillette", "Maurice Cottenet", "Fernand Desrousseaux", "Daniel Eon",
+      "Jean-Pierre Tempet", "Laurent Henric", "Albert Parsys|Albert Parsis", "René Charrier",
+      "Charles Allé", "Charles Berthelot", "Gaston Rouxel|Guy Rouxel", "Maurice Baudier",
+      "Stéphan Dakowski", "Henri Beau", "Jean-Pierre Kress", "Jérémy Sopalski", "André Renaux",
+      "Zacharie Baton", "Raoul Chaisaz", "Bruno Ferrero", "Raymond Frémont"
+    ],
+    "absolutezero": [
+      "Jacques Dhur", "Alfred Dambach"
+    ]
+  }
+}

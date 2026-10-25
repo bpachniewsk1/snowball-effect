@@ -1,0 +1,38 @@
+{
+  "id": "f1-world-champions",
+  "prompt": "Name a Formula 1 World Drivers' Champion",
+  "matchSurname": true,
+  "ranking": {
+    "hints": [
+      "(racing driver)"
+    ],
+    "expect": "racing driver|Formula One|motor racing|racer|driver"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 35,
+    "coverage": "100%"
+  },
+  "answers": {
+    "slush": [
+      "Lewis Hamilton|Hamilton", "Max Verstappen|Verstappen", "Michael Schumacher",
+      "Ayrton Senna|Senna", "Lando Norris|Norris", "Fernando Alonso|Alonso", "Sebastian Vettel|Vettel"
+    ],
+    "snowflake": [
+      "Niki Lauda|Lauda", "Kimi Räikkönen|Raikkonen", "James Hunt", "Jenson Button", "Nico Rosberg",
+      "Nigel Mansell|Mansell", "Mika Häkkinen|Hakkinen"
+    ],
+    "icefrost": [
+      "Jacques Villeneuve", "Nelson Piquet", "Mario Andretti|Andretti", "Damon Hill",
+      "Alain Prost|Prost", "Jackie Stewart", "Emerson Fittipaldi|Fittipaldi", "Jim Clark"
+    ],
+    "brainfreeze": [
+      "Juan Manuel Fangio|Fangio", "Graham Hill", "Keke Rosberg", "Jody Scheckter|Scheckter",
+      "Jochen Rindt|Rindt", "Jack Brabham|Brabham", "Alberto Ascari|Ascari", "John Surtees|Surtees",
+      "Denny Hulme|Hulme", "Mike Hawthorn|Hawthorn", "Phil Hill", "Alan Jones"
+    ],
+    "absolutezero": [
+      "Giuseppe Farina|Nino Farina|Farina"
+    ]
+  }
+}

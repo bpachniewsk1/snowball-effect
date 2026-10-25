@@ -12,6 +12,8 @@ npm run check-categories
 ## How it plays
 
 - **Daily Roll**: 7 prompts per day, the same for everyone (picked from the date). 25 s per prompt; the clock starts once the prompt has typed itself out.
+- **Daily Roll** rolls over at local midnight; an open menu refreshes itself, and the title shows a countdown once today's roll is done.
+- **Archive**: every past Daily Roll since launch, **locked until you finish today's Daily Roll**. Archive rolls don't touch your streak.
 - **Custom Roll**: pick which categories are on (the page shows how many answers each category has per tier), choose 3/5/7/10 prompts, play as often as you like. Custom rolls don't touch Daily stats.
 - **Wrong answers don't end the round** — they buzz and you keep guessing until you're right or time runs out. Only a timeout scores 0. Wrong guesses can be suggested for the list.
 - Every correct answer grows the snowball; growth roughly doubles per tier, so rare answers make big jumps. 1 point = 1 cm, starting from 10 cm; a perfect day (7 × Absolute Zero) is a **17.60 m** snowball.
@@ -114,14 +116,26 @@ Players can press **Suggest it** on a rejected answer. Suggestions are stored in
 | Buttons | start |
 | Classic | finish your first roll |
 | Meh | run out of time once |
-| Winky | get an Icefrost (or colder) answer |
+| Scarf | get a Snowflake answer |
+| Winky | get an Icefrost answer |
+| Pointy | get a Brain Freeze answer |
+| Pirate | get an Absolute Zero answer |
+| Beanie | get 10 Slush answers |
+| Viking | get 5 Brain Freeze answers |
+| King | get 3 Absolute Zero answers |
+| Footy | get a Brain Freeze answer in a Football prompt |
+| Shades | answer correctly within 3 seconds |
+| Ninja | answer correctly with 2 seconds or less left |
+| Party | finish a roll with no wrong guesses and no timeouts |
 | Cap | finish 3 custom rolls |
+| Scholar | finish a roll from the archive |
 | Top Hat | 3-day daily streak |
-| Pointy | get a Brain Freeze (or colder) answer |
+| Mustache | 7-day daily streak |
+| Santa | finish 10 rolls |
 | Tall Boi | roll a 5 m+ snowball |
 | Melty | run out of time 5 times |
-| Mustache | 7-day daily streak |
-| Pirate | get an Absolute Zero |
+
+Tier unlocks need **exactly** that tier: an Absolute Zero doesn't unlock Winky (Icefrost).
 
 - Lifetime progress (answers per tier, timeouts, rolls finished, best snowball, best streak) is kept in `localStorage` (`snowball:v2:progress`).
 - Sound effects are synthesized with Web Audio in [src/audio/sfx.ts](src/audio/sfx.ts), so there are no audio files: text blips, typing ticks, button clicks, snow crunch, a sound per tier that gets bigger the colder it is (Slush splat → Snowflake chime → Icefrost crack → Brain Freeze whoomp → Absolute Zero fanfare), a buzzer for wrong guesses, ticking for the last 5 seconds, and a "wheee" for spins.
@@ -152,7 +166,7 @@ See [docs/HOSTING.md](docs/HOSTING.md): Cloudflare Pages for the static game now
 ## Roadmap
 
 1. ~~Daily Roll~~
-2. Archive + unlimited practice (any day / any pack)
+2. ~~Archive~~ + unlimited practice (any day / any pack)
 3. ~~Lava Bucket, local pass-and-play~~
 4. Online Lava Bucket rooms (Workers + Durable Objects, 4-letter room codes)
 5. Leaderboards and rarity from real players' answers

@@ -41,17 +41,17 @@
       "Bristol City|Bristol City F.C.", "Bologna|Bologna FC 1909", "Blackpool|Blackpool F.C."
     ],
     "icefrost": [
-      "Bradford City|Bradford City A.F.C.|Bradford", "Basel", "Barnsley|Barnsley F.C.",
-      "Braga|S.C. Braga|Sporting Braga", "Bristol Rovers|Bristol Rovers F.C.", "Brøndby|Brøndby IF",
-      "Boavista|Boavista F.C.", "Brest|Stade Brestois 29|Stade Brestois", "Bury|Bury F.C.",
-      "Botafogo|Botafogo de Futebol e Regatas", "Bromley|Bromley F.C."
+      "Bradford City|Bradford City A.F.C.|Bradford", "Bury|Bury F.C.", "Bromley|Bromley F.C.", "Basel",
+      "Barnsley|Barnsley F.C.", "Braga|S.C. Braga|Sporting Braga",
+      "Bristol Rovers|Bristol Rovers F.C.", "Brøndby|Brøndby IF", "Boavista|Boavista F.C.",
+      "Brest|Stade Brestois 29|Stade Brestois", "Botafogo|Botafogo de Futebol e Regatas"
     ],
     "brainfreeze": [
-      "Barnet|Barnet F.C.", "Burton Albion|Burton Albion F.C.", "Bournemouth",
-      "Brighton|Brighton & Hove Albion F.C.|Brighton and Hove Albion", "Bursaspor",
+      "Barnet|Barnet F.C.", "Burton Albion|Burton Albion F.C.", "Bursaspor",
       "Bahia|Esporte Clube Bahia", "Brescia", "Benevento", "Brann", "Bastia", "Bochum|VfL Bochum",
       "Brisbane Roar", "Beitar Jerusalem|Beitar Jerusalem F.C.|Beitar", "Bari|SSC Bari",
-      "Banfield|Club Atlético Banfield", "Belgrano|Club Atlético Belgrano", "BATE Borisov|BATE"
+      "Banfield|Club Atlético Banfield", "Belgrano|Club Atlético Belgrano", "BATE Borisov|BATE",
+      "Bournemouth", "Brighton|Brighton & Hove Albion F.C.|Brighton and Hove Albion"
     ],
     "absolutezero": [
       "Budućnost Podgorica|Buducnost", "Bolívar"

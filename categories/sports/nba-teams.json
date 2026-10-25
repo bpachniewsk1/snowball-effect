@@ -1,0 +1,41 @@
+{
+  "id": "nba-teams",
+  "prompt": "Name a current NBA team (the nickname is enough)",
+  "ignoreWords": [
+    "the"
+  ],
+  "ranking": {
+    "expect": "basketball|NBA"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 30,
+    "coverage": "100%"
+  },
+  "answers": {
+    "slush": [
+      "Los Angeles Lakers|Lakers|LA Lakers", "New York Knicks|Knicks",
+      "Golden State Warriors|Warriors|Golden State", "Boston Celtics|Celtics", "Chicago Bulls|Bulls",
+      "Miami Heat|Heat"
+    ],
+    "snowflake": [
+      "Philadelphia 76ers|76ers|Sixers", "LA Clippers|Clippers|Los Angeles Clippers",
+      "Toronto Raptors|Raptors", "San Antonio Spurs|Spurs", "Dallas Mavericks|Mavericks|Mavs",
+      "Brooklyn Nets|Nets"
+    ],
+    "icefrost": [
+      "Charlotte Hornets|Hornets", "Minnesota Timberwolves|Timberwolves|Wolves",
+      "Portland Trail Blazers|Trail Blazers|Blazers", "Oklahoma City Thunder|Thunder|OKC",
+      "Milwaukee Bucks|Bucks", "Denver Nuggets|Nuggets", "Sacramento Kings|Kings"
+    ],
+    "brainfreeze": [
+      "Houston Rockets|Rockets", "Washington Wizards|Wizards", "Atlanta Hawks|Hawks",
+      "Detroit Pistons|Pistons", "Cleveland Cavaliers|Cavaliers|Cavs", "Utah Jazz|Jazz",
+      "New Orleans Pelicans|Pelicans", "Memphis Grizzlies|Grizzlies", "Orlando Magic|Magic",
+      "Phoenix Suns|Suns"
+    ],
+    "absolutezero": [
+      "Indiana Pacers|Pacers"
+    ]
+  }
+}

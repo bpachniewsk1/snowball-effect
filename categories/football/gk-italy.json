@@ -8,7 +8,7 @@
       "(goalkeeper)"
     ],
     "expect": "footballer|goalkeeper|football|soccer|manager|coach",
-    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q676899 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . ?o rdfs:label ?ol . FILTER(?ol IN (\"midfielder\"@en, \"forward\"@en)) }",
+    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q676899 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
     "max": 150
   },
   "ranked": {
@@ -52,8 +52,8 @@
       "Giovanni De Prà", "Ottavio Bugatti", "Bruno Venturini", "Giuseppe Vavassori", "Piero Campelli",
       "Leonardo Costagliola", "Gianluca Spinelli", "Giuseppe Peruchetti", "Franco Superchi",
       "William Negri", "Giuseppe Giacone|Giovanni Giacone|Giuseppe Antonio Giacone", "Ugo Amoretti",
-      "Giampiero Combi", "Angelo Franzosi", "Attilio Trerè", "Vittorio Faroppa|Faroppa II",
-      "Ezio Sclavi", "Roberto Lovati|Bob Lovati", "Giovanni Costa", "Luigi Griffanti",
+      "Giampiero Combi", "Attilio Trerè", "Angelo Franzosi", "Ezio Sclavi",
+      "Roberto Lovati|Bob Lovati", "Vittorio Faroppa|Faroppa II", "Giovanni Costa", "Luigi Griffanti",
       "Mario De Simoni", "Giovanni Innocenti", "Cesare Gallea",
       "Angelo Cameroni|Angelo Arturo Cameroni", "Pietro Ferrari"
     ],

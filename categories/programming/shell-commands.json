@@ -42,18 +42,18 @@
       "UUCP|Unix to Unix Copy|Unix-to-Unix Copy Protocol|Unix UUCP", "mkdir|Make directory", "cp",
       "top|table of processes", "mv", "tr|tr.1", "bc|Basic Calculator|UNIX bc", "head", "less", "ln",
       "env", "find|UNIX find", "chown", "uname", "su|substitute user", "kill", "touch", "ps", "tee",
-      "whoami", "wc|W_ord c_ount", "setgid"
+      "wc|W_ord c_ount", "whoami", "setgid"
     ],
     "icefrost": [
       "passwd|passwd command|passwd utility", "file|libmagic|file command", "ex", "patch|UNIX patch",
       "xargs|UNIX xargs", "cal|Unix cal", "at", "tail", "du", "cksum", "nohup", "htop", "ar|archiver",
       "more", "alias|unalias", "umask", "tty", "yes", "strace", "sort", "chgrp", "rmdir", "column",
       "xxd", "hexdump", "mkfifo", "renice", "tac", "rev", "stty", "sl", "nice", "cut", "sleep", "set",
-      "pax", "dmesg", "time|UNIX time", "Date", "basename", "stat", "uniq", "test", "cmp",
+      "pax", "dmesg", "Date", "time|UNIX time", "basename", "stat", "uniq", "test", "cmp",
       "ctags|ctags.1|ectags", "talk", "killall", "iconv", "ldd"
     ],
     "brainfreeze": [
-      "pkill", "nm", "split", "comm", "id", "eval", "wall", "EXIT|exit command", "locate|UNIX locate",
+      "pkill", "nm", "split", "comm", "id", "eval", "EXIT|exit command", "wall", "locate|UNIX locate",
       "od", "expr", "who", "watch", "dirname", "join", "wait", "strip", "compress|uncompress", "fg",
       "fuser", "which|UNIX which", "paste", "w", "clear", "mailx", "fc|fix command", "bg", "mail",
       "write", "read", "nl", "mesg", "mii-tool", "logname", "tput", "dot|source", "umount", "pstree",

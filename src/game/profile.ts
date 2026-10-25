@@ -11,6 +11,16 @@ export interface Progress {
   bestPoints: number;
   /** Best daily streak ever. */
   bestStreak: number;
+  /** Correct answers within 3 s of the clock starting. */
+  fastAnswers: number;
+  /** Correct answers with 2 s or less left. */
+  clutchAnswers: number;
+  /** Rolls finished without a wrong guess or timeout. */
+  cleanRolls: number;
+  /** Past days finished from the archive. */
+  archiveFinished: number;
+  /** Answers per tier, per pack id. */
+  packTiers: Record<string, Partial<Record<TierId, number>>>;
   /** Avatars already announced as unlocked. */
   unlocked: string[];
 }
@@ -25,23 +35,31 @@ export interface Avatar {
 }
 
 const base = import.meta.env.BASE_URL;
-const colder = (p: Progress, from: TierId) => {
-  const order: TierId[] = ['icefrost', 'brainfreeze', 'absolutezero'];
-  return order.slice(order.indexOf(from)).reduce((n, t) => n + p.tierCounts[t], 0);
-};
+// Unlocks need exactly the named tier — a colder answer doesn't count.
+const got = (p: Progress, tier: TierId) => p.tierCounts[tier];
 
 export const AVATARS: Avatar[] = [
   { id: 'buttons', name: 'Buttons', hint: '', isUnlocked: () => true },
   { id: 'classic', name: 'Classic', hint: 'Finish your first roll', isUnlocked: (p: Progress) => p.rollsFinished >= 1 },
   { id: 'meh', name: 'Meh', hint: 'Run out of time once', isUnlocked: (p: Progress) => p.timeouts >= 1 },
-  { id: 'winking', name: 'Winky', hint: 'Get an Icefrost (or colder) answer', isUnlocked: (p: Progress) => colder(p, 'icefrost') >= 1 },
+  { id: 'scarf', name: 'Scarf', hint: 'Get a Snowflake answer', isUnlocked: (p: Progress) => got(p, 'snowflake') >= 1 },
+  { id: 'winking', name: 'Winky', hint: 'Get an Icefrost answer', isUnlocked: (p: Progress) => got(p, 'icefrost') >= 1 },
+  { id: 'pointy', name: 'Pointy', hint: 'Get a Brain Freeze answer', isUnlocked: (p: Progress) => got(p, 'brainfreeze') >= 1 },
+  { id: 'pirate', name: 'Pirate', hint: 'Get an Absolute Zero answer', isUnlocked: (p: Progress) => got(p, 'absolutezero') >= 1 },
+  { id: 'beanie', name: 'Beanie', hint: 'Get 10 Slush answers', isUnlocked: (p: Progress) => got(p, 'slush') >= 10 },
+  { id: 'viking', name: 'Viking', hint: 'Get 5 Brain Freeze answers', isUnlocked: (p: Progress) => got(p, 'brainfreeze') >= 5 },
+  { id: 'crown', name: 'King', hint: 'Get 3 Absolute Zero answers', isUnlocked: (p: Progress) => got(p, 'absolutezero') >= 3 },
+  { id: 'footy', name: 'Footy', hint: 'Get a Brain Freeze answer in a Football prompt', isUnlocked: (p: Progress) => (p.packTiers.football?.brainfreeze ?? 0) >= 1 },
+  { id: 'shades', name: 'Shades', hint: 'Answer correctly within 3 seconds', isUnlocked: (p: Progress) => p.fastAnswers >= 1 },
+  { id: 'ninja', name: 'Ninja', hint: 'Answer correctly with 2 seconds or less left', isUnlocked: (p: Progress) => p.clutchAnswers >= 1 },
+  { id: 'party', name: 'Party', hint: 'Finish a roll with no wrong guesses and no timeouts', isUnlocked: (p: Progress) => p.cleanRolls >= 1 },
   { id: 'cap', name: 'Cap', hint: 'Finish 3 custom rolls', isUnlocked: (p: Progress) => p.customFinished >= 3 },
+  { id: 'scholar', name: 'Scholar', hint: 'Finish a roll from the archive', isUnlocked: (p: Progress) => p.archiveFinished >= 1 },
   { id: 'tophat', name: 'Top Hat', hint: 'Reach a 3-day daily streak', isUnlocked: (p: Progress) => p.bestStreak >= 3 },
-  { id: 'pointy', name: 'Pointy', hint: 'Get a Brain Freeze (or colder) answer', isUnlocked: (p: Progress) => colder(p, 'brainfreeze') >= 1 },
+  { id: 'mustache', name: 'Mustache', hint: 'Reach a 7-day daily streak', isUnlocked: (p: Progress) => p.bestStreak >= 7 },
+  { id: 'santa', name: 'Santa', hint: 'Finish 10 rolls', isUnlocked: (p: Progress) => p.rollsFinished >= 10 },
   { id: 'tallboi', name: 'Tall Boi', hint: 'Roll a snowball of 5 m or more', isUnlocked: (p: Progress) => p.bestPoints >= 490 },
   { id: 'melty', name: 'Melty', hint: 'Run out of time 5 times', isUnlocked: (p: Progress) => p.timeouts >= 5 },
-  { id: 'mustache', name: 'Mustache', hint: 'Reach a 7-day daily streak', isUnlocked: (p: Progress) => p.bestStreak >= 7 },
-  { id: 'pirate', name: 'Pirate', hint: 'Get an Absolute Zero answer', isUnlocked: (p: Progress) => colder(p, 'absolutezero') >= 1 },
 ].map((a) => ({ ...a, src: `${base}avatars/${a.id}.png` }));
 
 export const STARTER = AVATARS[0];
@@ -78,6 +96,11 @@ export function loadProgress(): Progress {
     customFinished: p.customFinished ?? 0,
     bestPoints: p.bestPoints ?? 0,
     bestStreak: p.bestStreak ?? 0,
+    fastAnswers: p.fastAnswers ?? 0,
+    clutchAnswers: p.clutchAnswers ?? 0,
+    cleanRolls: p.cleanRolls ?? 0,
+    archiveFinished: p.archiveFinished ?? 0,
+    packTiers: p.packTiers ?? {},
     unlocked: p.unlocked ?? [STARTER.id],
   };
 }

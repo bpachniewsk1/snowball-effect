@@ -33,4 +33,13 @@ describe('Roll', () => {
     expect(rec.points).toBe(0);
     expect(rec.misses).toEqual(['nope nope']);
   });
+
+  it('plays past days as archive rolls', () => {
+    const past = Roll.daily('2026-10-25', '2026-10-27');
+    expect(past.archive).toBe(true);
+    expect(past.label).toBe('Archive Roll #1');
+    expect(Roll.daily('2026-10-27', '2026-10-27').archive).toBe(false);
+    expect(Roll.archiveDates('2026-10-27')).toEqual(['2026-10-26', '2026-10-25']);
+    expect(Roll.archiveDates('2026-10-25')).toEqual([]);
+  });
 });

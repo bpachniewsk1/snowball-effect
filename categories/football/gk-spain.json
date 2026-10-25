@@ -8,7 +8,7 @@
       "(goalkeeper)"
     ],
     "expect": "footballer|goalkeeper|football|soccer|manager|coach",
-    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q42267 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . ?o rdfs:label ?ol . FILTER(?ol IN (\"midfielder\"@en, \"forward\"@en)) }",
+    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q42267 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
     "max": 150
   },
   "ranked": {
@@ -32,40 +32,40 @@
       "Iker Casillas|Iker Casillas Fernández", "David de Gea|De Gea",
       "Pepe Reina|Jose Manuel Reina Paez", "Unai Simón", "Víctor Valdés",
       "Julen Lopetegui|Julen Lopetegui Argote",
-      "Andoni Zubizarreta|Zubizarreta|Andoni Zubizarreta Urreta", "Santiago Cañizares",
+      "Andoni Zubizarreta|Andoni Zubizarreta Urreta|Zubizarreta", "Santiago Cañizares",
       "David Raya|Raya", "Diego López|Diego López Rodríguez", "Robert Sánchez",
       "Kiko Casilla|Francisco Casilla Cortés"
     ],
     "snowflake": [
       "Kepa Arrizabalaga|Kepa", "Ricardo Zamora|Ricardo Zamora Martinez",
-      "Andrés Palop|Andres Palop Cervera", "Josep Martínez|Josep Martinez Riera",
-      "César Sánchez|Cesar", "Sergio Asenjo|El Estuche", "Antoni Ramallets|Antonio Ramallets",
-      "José Ángel Iribar", "Luis Arconada|Luis Miguel Arconada Etxarri",
+      "Andrés Palop|Andres Palop Cervera", "César Sánchez|Cesar", "Sergio Asenjo|El Estuche",
+      "Josep Martínez|Josep Martinez Riera", "Luis Arconada|Luis Miguel Arconada Etxarri",
+      "Antoni Ramallets|Antonio Ramallets", "José Ángel Iribar",
       "Álvaro Fernández|Álvaro Fernández Llorente|Alvaro Ferllo",
       "Álex Remiro|Remiro|Alejandro Remiro|Alejandro \"Álex\" Remiro Gargallo",
       "Dani Aranzubia|Daniel Aranzubia|Daniel Aranzubia Aguado"
     ],
     "icefrost": [
-      "Molina|José Francisco Molina", "Ricardo", "Miguel Reina|Miguel Reina Santos",
-      "Javier Urruticoechea", "José Manuel Ochotorena|Jose Manuel Ochotorena Santacruz",
-      "Miguel Ángel González Suárez", "Salvador Sadurní", "Abel Resino", "Mariano García Remón",
+      "Molina|José Francisco Molina", "Ricardo", "Javier Urruticoechea",
+      "José Manuel Ochotorena|Jose Manuel Ochotorena Santacruz", "Miguel Reina|Miguel Reina Santos",
+      "Miguel Ángel González Suárez", "Salvador Sadurní", "Mariano García Remón", "Abel Resino",
       "Francisco Buyo|Francisco 'Paco' Buyo Sánchez|Francisco Buyo Sanchez|Paco Buyo",
-      "Pedro Contreras", "Toni Jiménez|Antonio Jimenez Sistachs",
-      "José Araquistáin|José Araquistáin Arrieta", "Juan Alonso|Juanito Alonso"
+      "Pedro Contreras", "José Araquistáin|José Araquistáin Arrieta",
+      "Toni Jiménez|Antonio Jimenez Sistachs", "Juan Carlos Ablanedo|Juan Carlos Ablanedo Iglesias"
     ],
     "brainfreeze": [
-      "Juan José Nogués", "Juan Carlos Ablanedo|Juan Carlos Ablanedo Iglesias", "Carmelo Cedrún",
+      "Juan Alonso|Juanito Alonso", "Juan José Nogués", "Carmelo Cedrún",
       "Pedro María Artola|Pedro Artola|Pello Artola", "Ignacio Eizaguirre|Ignacio Eizaguirre Arregui",
       "Antonio Betancort|Antonio Rodrigo Betancort Barrera", "José Vicente Train", "Juanmi García",
       "Guillermo Eizaguirre|Guillermo Eizaguierre|Guillermo Eizaguirre Olmos", "Juan Zambudio Velasco",
-      "Gregorio Blasco", "José Manuel Pesudo|José Manuel Pesudo Soler",
-      "Pedro Valentín Mora|Pere Valentí Mora Mariné", "Jesús Castro González",
-      "Raimundo Pérez Lezama|Lezama", "Agustín Eizaguirre", "Pepín|Jose Casas Gris",
-      "Fernando Argila|Fernando de Argila Pazzaglia", "José Manuel Sempere|José Sempere",
-      "José María Jauregi|José María Jáuregui", "Manuel Vidal Hermosa", "Juan Antonio Deusto"
+      "Gregorio Blasco", "Jesús Castro González", "José Manuel Pesudo|José Manuel Pesudo Soler",
+      "Raimundo Pérez Lezama|Lezama", "Pedro Valentín Mora|Pere Valentí Mora Mariné",
+      "Pepín|Jose Casas Gris", "Agustín Eizaguirre", "Fernando Argila|Fernando de Argila Pazzaglia",
+      "José Manuel Sempere|José Sempere", "Manuel Vidal Hermosa",
+      "José María Echevarría|José María Etxebarria", "José María Jauregi|José María Jáuregui"
     ],
     "absolutezero": [
-      "José María Echevarría|José María Etxebarria", "Alberto Martorell|Alberto Martorell Otzet"
+      "Juan Antonio Deusto", "Alberto Martorell|Alberto Martorell Otzet"
     ]
   }
 }

@@ -8,7 +8,7 @@
       "(goalkeeper)"
     ],
     "expect": "footballer|goalkeeper|football|soccer|manager|coach",
-    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q43310 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . ?o rdfs:label ?ol . FILTER(?ol IN (\"midfielder\"@en, \"forward\"@en)) }",
+    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q43310 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) }",
     "max": 150
   },
   "ranked": {
@@ -49,7 +49,7 @@
     ],
     "brainfreeze": [
       "Karl Bögelein", "Karl Adam", "Helmut Jahn", "Georg Ertl", "Albert Weber",
-      "Theodor Lohrmann|Teddy|Theodor Robert Lohrmann", "Christian Schmidt", "Willy Jürissen",
+      "Theodor Lohrmann|Theodor Robert Lohrmann|Teddy", "Christian Schmidt", "Willy Jürissen",
       "Johannes Schneider", "Fritz Baumgarten", "Hans Klodt", "Walter Borck", "Robert Faas",
       "Carl Zörner", "Georg Köhl", "Heinz Flotho", "Paul Gehlhaar", "Ludwig Hofmeister",
       "Paul Eichelmann", "Heinrich Sonnrein", "Hans Riso", "Erwin Deyhle", "Alexander Martinek",

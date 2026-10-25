@@ -1,6 +1,6 @@
 import { ALL_CATEGORIES, PACKS, packById } from '../core/categories';
 import { dateKey } from '../core/daily';
-import { TIERS, TIER_IDS, formatSize } from '../core/tiers';
+import { MISS_EMOJI, TIERS, TIER_IDS, formatSize } from '../core/tiers';
 import type { Category } from '../core/types';
 import { Roll, rankAt } from '../game/roll';
 import {
@@ -51,7 +51,13 @@ export class App {
   private panel = $<HTMLElement>('#panel');
   private hud = $<HTMLElement>('#hud');
   private timer: number | null = null;
+  /** performance.now() when the current prompt's clock started / will end. */
+  private clockStart = 0;
+  private clockEnd = 0;
   private typing: number | null = null;
+  /** Which menu screen is up, so a new day can refresh it. */
+  private screen: 'title' | 'archive' | 'other' = 'other';
+  private day = rollDate();
   private spins = 0;
   private lava = new LavaScreen({
     render: (html) => this.render(html),
@@ -72,6 +78,7 @@ export class App {
     this.buildMascot();
     this.buildDevTools();
     this.tickHud();
+    this.watchDay();
     initMusic();
 
     // Audio can only start after a user gesture.
@@ -117,8 +124,10 @@ export class App {
     this.scene.setRolling(false);
     this.scene.setMood(null);
 
+    this.screen = 'title';
     const stats = loadStats();
     const daily = Roll.daily(rollDate());
+    const archiveOpen = daily.finished || isUnlockAllOn();
     const custom = Roll.resumeCustom();
     const dailyLabel = daily.finished
       ? "TODAY'S RESULT"
@@ -136,6 +145,7 @@ export class App {
           <div class="menu-list">
             <button class="menu big" id="daily" data-silent>${dailyLabel}</button>
             <button class="menu big" id="custom">CUSTOM ROLL</button>
+            <button class="menu big${archiveOpen ? '' : ' locked'}" id="archive" data-silent>${archiveOpen ? 'ARCHIVE' : '🔒 ARCHIVE'}</button>
             ${LAVA_ENABLED ? '<button class="menu big lava-btn" id="lava">LAVA BUCKET</button>' : ''}
             ${customOpen ? `<button class="menu" id="continue-custom" data-silent>CONTINUE CUSTOM · ${custom.roundIndex}/${custom.categories.length}</button>` : ''}
           </div>
@@ -144,11 +154,23 @@ export class App {
           <button class="link" id="how">How to play</button>
           ${stats.played ? `<span class="muted">streak ${stats.streak} · biggest ${formatSize(stats.bestPoints)}</span>` : ''}
         </div>
+        ${daily.finished ? `<p class="muted small">Next daily roll in <span id="countdown" class="num">${this.countdown()}</span></p>` : ''}
       </div>`);
+    this.runCountdown();
 
     $('#daily').addEventListener('click', () => this.play(daily));
     $('#custom').addEventListener('click', () => this.openCategories());
+    $('#archive').addEventListener('click', () => {
+      if (archiveOpen) {
+        sfx.click();
+        this.showArchive();
+      } else {
+        sfx.nope();
+        this.toast("Finish today's Daily Roll to unlock the archive");
+      }
+    });
     document.querySelector('#lava')?.addEventListener('click', () => {
+      this.screen = 'other';
       this.hud.classList.add('hidden');
       this.lava.showSetup();
     });
@@ -159,8 +181,73 @@ export class App {
     $<HTMLButtonElement>('#daily').focus({ preventScroll: true });
   }
 
+  /** Past days' rolls. Opens once today's Daily Roll is done. */
+  private showArchive(): void {
+    this.screen = 'archive';
+    this.onEnter = null;
+    const today = rollDate();
+    const days = Roll.archiveDates(today);
+    const rows = days
+      .map((date) => {
+        const r = Roll.daily(date, today);
+        const status = r.finished
+          ? `<span class="num">${formatSize(r.points)}</span> ${r.rounds.map((x) => (x.tier ? TIERS[x.tier].emoji : MISS_EMOJI)).join('')}`
+          : r.started
+            ? `<span class="muted">in progress · ${r.roundIndex}/${r.categories.length}</span>`
+            : '<span class="muted">not played</span>';
+        return `<li><button class="archive-day" data-date="${date}" data-silent>
+            <span class="num">#${r.number}</span><span>${esc(this.prettyDate(date))}</span><span class="archive-status">${status}</span>
+          </button></li>`;
+      })
+      .join('');
+    this.render(`
+      <div class="stack">
+        <h2 class="center">ARCHIVE</h2>
+        ${say(days.length ? "Every past Daily Roll. Playing one doesn't touch your streak." : "Nothing here yet — each Daily Roll lands in the archive the day after. Come back tomorrow!")}
+        ${days.length ? `<ul class="archive-list">${rows}</ul>` : ''}
+        <div class="row center-row"><button class="menu big" id="back">BACK</button></div>
+      </div>`);
+    this.panel.querySelectorAll<HTMLButtonElement>('.archive-day').forEach((b) =>
+      b.addEventListener('click', () => {
+        sfx.crunch();
+        this.play(Roll.daily(b.dataset.date!, today));
+      }),
+    );
+    $('#back').addEventListener('click', () => this.showTitle());
+    this.onEnter = () => this.showTitle();
+  }
+
+  /** A new day while the menu is open: refresh it so the new Daily Roll shows up. */
+  private watchDay(): void {
+    const check = () => {
+      const now = rollDate();
+      if (now === this.day) return;
+      this.day = now;
+      if (document.querySelector('dialog[open]')) return;
+      if (this.screen === 'title') this.showTitle();
+      else if (this.screen === 'archive') this.showArchive();
+    };
+    window.setInterval(check, 15_000);
+    document.addEventListener('visibilitychange', () => !document.hidden && check());
+  }
+
+  private runCountdown(): void {
+    const cd = window.setInterval(() => {
+      const el = document.getElementById('countdown');
+      if (!el) return window.clearInterval(cd);
+      const left = this.countdown();
+      el.textContent = left;
+      if (left === '00:00:00') {
+        window.clearInterval(cd);
+        el.parentElement!.innerHTML = 'A new Daily Roll is out! <button class="link" id="go-new">play it</button>';
+        document.getElementById('go-new')?.addEventListener('click', () => this.showTitle());
+      }
+    }, 1000);
+  }
+
   /** Enter a roll: finished ones show results, others continue at the current prompt. */
   private play(roll: Roll): void {
+    this.screen = 'other';
     this.onEnter = null;
     this.roll = roll;
     this.hud.classList.remove('hidden');
@@ -219,7 +306,9 @@ export class App {
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const outcome = roll.submit(input.value);
+      const now = performance.now();
+      const timing = this.timer !== null ? { elapsed: (now - this.clockStart) / 1000, left: (this.clockEnd - now) / 1000 } : undefined;
+      const outcome = roll.submit(input.value, timing);
       switch (outcome.kind) {
         case 'empty':
           sfx.nope();
@@ -369,6 +458,7 @@ export class App {
 
   private showResults(fresh = false): void {
     const r = this.roll!;
+    this.screen = 'other';
     this.scene.setState(r.points, r.progress);
     this.scene.setMood(null);
     if (fresh) sfx.results();
@@ -390,7 +480,7 @@ export class App {
       .join('');
 
     const statsHtml =
-      r.mode === 'daily'
+      r.mode === 'daily' && !r.archive
         ? `<div class="stats">
             <div><b>${stats.played}</b><span>played</span></div>
             <div><b>${stats.streak}</b><span>streak</span></div>
@@ -414,9 +504,10 @@ export class App {
           <div class="row center-row">
             <button class="menu big" id="share" data-silent>SHARE</button>
             ${r.mode === 'custom' ? '<button class="menu big" id="again" data-silent>ROLL AGAIN</button>' : ''}
+            ${r.archive ? '<button class="menu big" id="to-archive">ARCHIVE</button>' : ''}
             <button class="menu big" id="menu">MENU</button>
           </div>
-          ${r.mode === 'daily' ? `<p class="muted">Next daily roll in <span id="countdown" class="num">${this.countdown()}</span></p>` : ''}
+          ${r.mode === 'daily' && !r.archive ? `<p class="muted">Next daily roll in <span id="countdown" class="num">${this.countdown()}</span></p>` : ''}
           <div class="row center-row">
             <button class="link" id="how">How to play</button>
             ${suggestions.length ? `<button class="link" id="sugg">Copy ${suggestions.length} suggested answer(s)</button>` : ''}
@@ -428,6 +519,7 @@ export class App {
     $('#share').addEventListener('click', () => this.share());
     $('#menu').addEventListener('click', () => this.showTitle());
     $('#again')?.addEventListener('click', () => this.startCustom());
+    $('#to-archive')?.addEventListener('click', () => this.showArchive());
     $('#how').addEventListener('click', () => $<HTMLDialogElement>('#howto').showModal());
     $('#profile-chip').addEventListener('click', () => this.openProfile(() => this.showResults()));
     $('#sugg')?.addEventListener('click', () => this.copy(JSON.stringify(loadSuggestions(), null, 2), 'Copied suggestions'));
@@ -438,13 +530,7 @@ export class App {
     this.onEnter = () => this.share();
     this.announceUnlocks();
 
-    if (r.mode === 'daily') {
-      const cd = window.setInterval(() => {
-        const el = document.getElementById('countdown');
-        if (!el) return window.clearInterval(cd);
-        el.textContent = this.countdown();
-      }, 1000);
-    }
+    if (r.mode === 'daily' && !r.archive) this.runCountdown();
   }
 
   // ---------- custom mode ----------
@@ -813,6 +899,8 @@ export class App {
   private runTimer(seconds: number, onDone: () => void): void {
     this.stopTimer();
     const end = performance.now() + seconds * 1000;
+    this.clockStart = performance.now();
+    this.clockEnd = end;
     const fill = $<HTMLElement>('#timer-fill');
     const secs = $<HTMLElement>('#timer-secs');
     const box = $<HTMLElement>('#timer');
@@ -849,7 +937,8 @@ export class App {
       if (roll) {
         const pts = this.scene.displayPoints;
         const round = Math.min(roll.roundIndex + (roll.finished ? 0 : 1), roll.categories.length);
-        dayEl.textContent = `${roll.mode === 'daily' ? `DAILY #${roll.number}` : 'CUSTOM'} · ${round}/${roll.categories.length}`;
+        const label = roll.mode === 'custom' ? 'CUSTOM' : `${roll.archive ? 'ARCHIVE' : 'DAILY'} #${roll.number}`;
+        dayEl.textContent = `${label} · ${round}/${roll.categories.length}`;
         sizeEl.textContent = formatSize(pts);
         rankEl.textContent = rankAt(pts).name.toUpperCase();
       }

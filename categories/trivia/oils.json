@@ -1,0 +1,50 @@
+{
+  "id": "oil-types",
+  "prompt": "Name a type of oil (cooking, essential, motor… any kind)",
+  "ignoreWords": [
+    "oil",
+    "essential",
+    "the"
+  ],
+  "ranking": {
+    "expect": "oil|fuel|lubricant|petroleum|fat|extract|plant|tree|seed"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 86,
+    "coverage": "77%"
+  },
+  "answers": {
+    "slush": [
+      "Diesel oil|Diesel fuel", "Rosemary oil", "Castor oil", "Crude oil|Petroleum", "Baby oil",
+      "Cod liver oil", "Canola oil|Rapeseed oil", "Palm oil", "Olive oil", "Cashew oil",
+      "Brazil nut oil", "Vegetable oil", "Argan oil", "Frankincense oil",
+      "Linseed oil|Flaxseed oil|Flax oil"
+    ],
+    "snowflake": [
+      "Motor oil|Engine oil", "Coconut oil", "Hazelnut oil", "Patchouli oil", "Sunflower oil",
+      "Mineral oil", "Safflower oil", "Almond oil", "Ylang-ylang oil", "Whale oil",
+      "Black seed oil|Nigella oil|Black cumin oil", "Oregano oil", "Tea tree oil", "Jojoba oil",
+      "Sesame oil", "Avocado oil", "Grapeseed oil"
+    ],
+    "icefrost": [
+      "Evening primrose oil", "Soybean oil|Soy oil", "Fish oil", "Heating oil", "Neem oil",
+      "Mustard oil", "Tung oil", "Rice bran oil", "Bergamot oil", "Chili oil|Chilli oil", "Lemon oil",
+      "Cinnamon oil", "Hydraulic oil|Hydraulic fluid", "Silicone oil", "Peanut oil|Groundnut oil",
+      "Citronella oil", "Cottonseed oil", "Truffle oil", "Corn oil|Maize oil", "Eucalyptus oil",
+      "Lavender oil"
+    ],
+    "brainfreeze": [
+      "Neroli oil", "MCT oil", "Shale oil", "Transformer oil", "Perilla oil", "Palm kernel oil",
+      "Clove oil", "Hemp seed oil|Hemp oil", "Pumpkin seed oil", "Rosehip oil", "Baobab oil",
+      "Thyme oil", "Cajeput oil", "Sperm whale oil|Spermaceti", "Wintergreen oil", "Vetiver oil",
+      "Pine oil", "Camphor oil", "Kerosene oil|Paraffin oil", "Sandalwood oil",
+      "Camellia oil|Tea seed oil", "Marula oil", "Krill oil", "Peppermint oil",
+      "Cedarwood oil|Cedar oil", "Sea buckthorn oil", "Gear oil", "Orange oil", "Walnut oil",
+      "Macadamia oil", "Borage oil"
+    ],
+    "absolutezero": [
+      "Pistachio oil", "Poppyseed oil"
+    ]
+  }
+}

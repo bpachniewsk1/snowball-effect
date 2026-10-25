@@ -1,0 +1,69 @@
+{
+  "id": "premier-league-clubs",
+  "prompt": "Name a club that has played in the Premier League (1992–today)",
+  "ignoreWords": [
+    "fc",
+    "afc",
+    "cf",
+    "ac",
+    "sc",
+    "club",
+    "fk",
+    "sk",
+    "kv",
+    "sl",
+    "calcio",
+    "the"
+  ],
+  "ranking": {
+    "hints": [
+      "F.C."
+    ],
+    "expect": "football|soccer|club|futebol|fútbol|calcio"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 51,
+    "coverage": "100%"
+  },
+  "answers": {
+    "slush": [
+      "Manchester City|Manchester City F.C.|Man City", "Chelsea|Chelsea F.C.",
+      "Manchester United|Manchester United F.C.|Man United|Man Utd", "Arsenal|Arsenal F.C.",
+      "Liverpool|Liverpool F.C.", "Tottenham Hotspur|Tottenham Hotspur F.C.|Tottenham|Spurs",
+      "Aston Villa|Aston Villa F.C.|Villa", "Everton|Everton F.C.",
+      "Newcastle United|Newcastle United F.C.|Newcastle",
+      "West Ham United|West Ham United F.C.|West Ham"
+    ],
+    "snowflake": [
+      "Brighton & Hove Albion|Brighton & Hove Albion F.C.|Brighton", "Hull City|Hull City A.F.C.|Hull",
+      "Crystal Palace|Crystal Palace F.C.|Palace", "Leicester City|Leicester City F.C.|Leicester",
+      "Leeds United|Leeds United F.C.|Leeds", "Ipswich Town|Ipswich Town F.C.|Ipswich",
+      "Nottingham Forest|Nottingham Forest F.C.|Forest", "Sunderland|Sunderland A.F.C.",
+      "Brentford|Brentford F.C.", "Fulham|Fulham F.C."
+    ],
+    "icefrost": [
+      "Burnley|Burnley F.C.", "Blackburn Rovers|Blackburn Rovers F.C.|Blackburn",
+      "Wolverhampton Wanderers|Wolverhampton Wanderers F.C.|Wolves|Wolverhampton",
+      "Queens Park Rangers|Queens Park Rangers F.C.|QPR", "Southampton|Southampton F.C.",
+      "Middlesbrough|Middlesbrough F.C.|Boro", "Swansea City|Swansea City A.F.C.|Swansea",
+      "Sheffield Wednesday|Sheffield Wednesday F.C.",
+      "Charlton Athletic|Charlton Athletic F.C.|Charlton",
+      "West Bromwich Albion|West Bromwich Albion F.C.|West Brom|WBA",
+      "Bolton Wanderers|Bolton Wanderers F.C.|Bolton", "Coventry City|Coventry City F.C.|Coventry"
+    ],
+    "brainfreeze": [
+      "Watford|Watford F.C.", "Sheffield United|Sheffield United F.C.|Sheff Utd",
+      "Birmingham City|Birmingham City F.C.|Birmingham", "Luton Town|Luton Town F.C.|Luton",
+      "Derby County|Derby County F.C.|Derby", "Stoke City|Stoke City F.C.|Stoke",
+      "Norwich City|Norwich City F.C.|Norwich", "Portsmouth|Portsmouth F.C.|Pompey",
+      "Cardiff City|Cardiff City F.C.|Cardiff", "Bradford City|Bradford City A.F.C.|Bradford",
+      "Wimbledon|Wimbledon F.C.", "Wigan Athletic|Wigan Athletic F.C.|Wigan", "Reading|Reading F.C.",
+      "Huddersfield Town|Huddersfield Town A.F.C.|Huddersfield", "Barnsley|Barnsley F.C.",
+      "Blackpool|Blackpool F.C.", "Bournemouth"
+    ],
+    "absolutezero": [
+      "Swindon Town|Swindon Town F.C.|Swindon", "Oldham Athletic|Oldham Athletic A.F.C.|Oldham"
+    ]
+  }
+}

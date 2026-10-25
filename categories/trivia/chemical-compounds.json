@@ -1,0 +1,60 @@
+{
+  "id": "chemical-compounds",
+  "prompt": "Name a chemical compound by name (water, salt… no formulas, no pure elements)",
+  "ranking": {
+    "expect": "compound|acid|chemical|molecule|salt|gas|drug|sugar|hormone|alkane|alcohol|mineral|solvent|oxide|substance|hydrocarbon|explosive|polymer|organic|inorganic|base|vitamin|neurotransmitter|alkaloid|medication|sweetener|ketone|ester|amine"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 140,
+    "coverage": "89%"
+  },
+  "answers": {
+    "slush": [
+      "Water|Dihydrogen monoxide", "Paracetamol|Acetaminophen", "Ethanol|Alcohol|Ethyl alcohol",
+      "Ibuprofen", "Sodium bicarbonate|Baking soda|Bicarbonate of soda", "Glucose", "Caffeine",
+      "Aspirin|Acetylsalicylic acid", "Hydrogen peroxide", "Ammonia", "Morphine",
+      "Nitrous oxide|Laughing gas", "Carbon dioxide", "Sulfuric acid|Sulphuric acid",
+      "Sodium chloride|Salt|Table salt"
+    ],
+    "snowflake": [
+      "Cocaine", "LSD|Lysergic acid diethylamide", "Acetic acid|Vinegar|Ethanoic acid",
+      "Potassium nitrate|Saltpeter|Saltpetre", "Nicotine", "Urea", "Dopamine", "Benzene",
+      "Hydrogen sulfide|Hydrogen sulphide", "Formaldehyde", "Sucrose|Sugar|Table sugar",
+      "Hydrochloric acid", "Fructose", "Lactose", "Cholesterol", "Penicillin",
+      "Nitroglycerin|Nitroglycerine", "Diethyl ether|Ether", "Chloroform", "Methanol|Methyl alcohol",
+      "Acetone|Propanone", "Testosterone", "Methane", "Creatine", "TNT|Trinitrotoluene", "Citric acid",
+      "Calcium carbonate|Chalk|Limestone", "Carbon monoxide", "Quinine", "Serotonin",
+      "Sodium hydroxide|Lye|Caustic soda"
+    ],
+    "icefrost": [
+      "Isopropyl alcohol|Isopropanol|Rubbing alcohol", "Silicon dioxide|Silica|Quartz", "Sarin",
+      "Sodium hypochlorite|Bleach", "Oxytocin", "Xylitol", "RDX", "Glycerol|Glycerin|Glycerine",
+      "Borax|Sodium borate", "Capsaicin", "Aspartame", "Teflon|Polytetrafluoroethylene|PTFE",
+      "Cortisol", "Insulin", "Hydrogen cyanide|Prussic acid", "Monosodium glutamate|MSG",
+      "Chlorophyll", "Melanin", "THC|Tetrahydrocannabinol", "Hemoglobin|Haemoglobin",
+      "Hydrofluoric acid", "Toluene", "PVC|Polyvinyl chloride", "Adrenaline|Epinephrine", "Ozone",
+      "Starch", "Nitric acid", "Nylon", "Polyethylene|Polythene", "Calcium oxide|Quicklime",
+      "Magnesium sulfate|Epsom salt", "Cellulose", "Lactic acid", "Calcium hydroxide|Slaked lime",
+      "Potassium cyanide", "Potassium chloride", "Propane"
+    ],
+    "brainfreeze": [
+      "Salicylic acid", "Dimethyl sulfoxide|DMSO", "Strychnine", "Phenol|Carbolic acid", "Taurine",
+      "Atropine", "Ethylene glycol|Antifreeze", "Butane", "Melatonin", "Thermite", "Sodium nitrite",
+      "Ammonium nitrate", "Oxalic acid", "Potassium permanganate", "Menthol",
+      "Sulfur dioxide|Sulphur dioxide", "Acetylcholine", "Boric acid", "Estradiol|Oestradiol",
+      "Phosphoric acid", "Formic acid", "Aluminium oxide|Aluminum oxide|Alumina|Corundum",
+      "Calcium chloride", "Titanium dioxide", "Ammonium chloride|Sal ammoniac", "Ethylene|Ethene",
+      "Naphthalene|Mothballs", "Acetaldehyde|Ethanal", "Saccharin", "Histamine",
+      "Silicon carbide|Carborundum", "Zinc oxide", "Potassium iodide", "Acetylene|Ethyne",
+      "Freon|Chlorofluorocarbon|CFC", "Theobromine", "Benzoic acid", "Nitrogen dioxide",
+      "Bisphenol A|BPA", "Hexane", "Vanillin", "Tartaric acid", "Silver nitrate", "Malic acid",
+      "Sodium thiosulfate", "Styrene", "Iron oxide|Rust", "Cyclohexane", "Octane",
+      "Calcium sulfate|Gypsum", "Calcium carbide", "Vitamin C|Ascorbic acid", "Sodium fluoride",
+      "Arsenic trioxide", "Copper sulfate|Copper sulphate|Blue vitriol"
+    ],
+    "absolutezero": [
+      "Mercury(II) chloride|Mercuric chloride", "Lead(II) acetate|Lead acetate|Sugar of lead"
+    ]
+  }
+}

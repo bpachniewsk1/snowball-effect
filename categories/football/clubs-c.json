@@ -1,0 +1,59 @@
+{
+  "id": "football-clubs-c",
+  "prompt": "Name a football club starting with C (FC, AC, CF… don't count)",
+  "ignoreWords": [
+    "fc",
+    "afc",
+    "cf",
+    "ac",
+    "sc",
+    "club",
+    "fk",
+    "sk",
+    "kv",
+    "sl",
+    "calcio",
+    "the"
+  ],
+  "ranking": {
+    "hints": [
+      "F.C."
+    ],
+    "expect": "football|soccer|club|futebol|fútbol|calcio"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 40,
+    "coverage": "98%"
+  },
+  "answers": {
+    "slush": [
+      "Chelsea|Chelsea F.C.", "Como|Como 1907", "Crystal Palace|Crystal Palace F.C.|Palace",
+      "Celtic|Celtic F.C.", "Coventry City|Coventry City F.C.|Coventry",
+      "Charlton Athletic|Charlton Athletic F.C.|Charlton", "Celta Vigo|RC Celta de Vigo|Celta",
+      "Cardiff City|Cardiff City F.C.|Cardiff"
+    ],
+    "snowflake": [
+      "Chicago Fire", "Cremonese|U.S. Cremonese", "Cagliari", "Colo-Colo",
+      "Copenhagen|F.C. Copenhagen|København", "Cruz Azul", "Columbus Crew",
+      "CSKA Sofia|PFC CSKA Sofia"
+    ],
+    "icefrost": [
+      "Colorado Rapids", "Carlisle United|Carlisle United F.C.|Carlisle",
+      "Cambridge United|Cambridge United F.C.", "Charlotte FC", "Cádiz",
+      "Cercle Brugge|Cercle Brugge K.S.V.", "Cruzeiro|Cruzeiro Esporte Clube", "Cracovia|KS Cracovia",
+      "Chesterfield|Chesterfield F.C."
+    ],
+    "brainfreeze": [
+      "Crewe Alexandra|Crewe Alexandra F.C.|Crewe", "Crawley Town|Crawley Town F.C.|Crawley",
+      "Colchester United|Colchester United F.C.|Colchester",
+      "Corinthians|Sport Club Corinthians Paulista", "Cheltenham Town|Cheltenham Town F.C.|Cheltenham",
+      "Central Coast Mariners", "Chievo|A.C. ChievoVerona|Chievo Verona", "Caen|Stade Malherbe Caen",
+      "Cesena", "Catania", "Clermont|Clermont Foot", "Charleroi|R. Charleroi S.C.",
+      "CSKA Moscow|PFC CSKA Moscow"
+    ],
+    "absolutezero": [
+      "Cork City|Cork City F.C.", "Cliftonville|Cliftonville F.C."
+    ]
+  }
+}

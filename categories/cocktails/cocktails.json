@@ -46,7 +46,7 @@
       "Daiquiri", "Manhattan", "Moscow mule", "Gin and tonic|G and T|gin tonic", "Irish coffee",
       "Cuba libre|Rum and Coke", "Sex on the Beach", "Singapore Sling|gin sling", "Tequila Sunrise",
       "Long Island Iced Tea|Long Island|Long Island Ice Tea", "Bellini",
-      "Espresso martini|Vodka espresso", "French 75", "Vesper|Vesper Martini", "Hugo|Hugo Spritz",
+      "Espresso martini|Vodka espresso", "Vesper|Vesper Martini", "French 75", "Hugo|Hugo Spritz",
       "Gimlet", "Sazerac", "Screwdriver", "Brandy Alexander", "Mimosa", "Appletini|Apple Martini",
       "Michelada", "Mudslide", "Kalimotxo", "Sidecar", "Whiskey Sour", "Black Russian",
       "B-52|Bifi|Bifty", "Paloma",
@@ -57,36 +57,35 @@
     ],
     "icefrost": [
       "Kamikaze", "White Lady", "Godfather", "Kir Royale|Kir", "Russian Spring Punch", "Orgasm",
-      "Bramble", "Painkiller", "French Martini", "Hurricane", "Alexander|Princess Mary", "Paper Plane",
+      "Bramble", "Painkiller", "Paper Plane", "French Martini", "Hurricane", "Alexander|Princess Mary",
       "Clover Club Cocktail", "Corpse Reviver|Corpse Reviver No. 2", "Bee's Knees", "Vieux Carré",
       "Stinger", "Gin Fizz", "Martinez", "Hemingway Daiquiri|Papa Doble|Hemingway Special", "Saturn",
       "Oaxaca Old Fashioned", "Bobby Burns", "Scofflaw", "Ward Eight|Ward 8", "Japanese Cocktail",
       "Planter's Punch", "Salty Dog", "John Collins", "Bijou", "Greyhound", "Hanky-Panky cocktail",
-      "Cape Codder", "Sea Breeze", "Horse's Neck", "Monkey Gland", "BuzzBallz", "Angel Face",
-      "Between the Sheets", "Jack Rose", "Penicillin", "Crusta|Brandy Crusta", "Blood and Sand",
-      "Champagne Cocktail", "Fernet and Coke|Fernando|Fernandito|Fernet con coca", "Queen Mary",
-      "Jello shot|Gelatin shot|Jelly shot", "Amaretto sour", "Bacardi", "Trinidad Sour", "Paradise",
-      "Brooklyn", "New York Sour", "Spaghett|Spagett", "Blue Hawaii"
+      "Cape Codder", "Sea Breeze", "Horse's Neck", "Monkey Gland", "Angel Face", "Between the Sheets",
+      "Jack Rose", "Penicillin", "Crusta|Brandy Crusta", "Blood and Sand", "Champagne Cocktail",
+      "Fernet and Coke|Fernando|Fernandito|Fernet con coca", "Queen Mary", "Amaretto sour",
+      "Jello shot|Gelatin shot|Jelly shot", "BuzzBallz", "Bacardi", "Trinidad Sour", "New York Sour",
+      "Paradise", "Brooklyn", "Blue Hawaii", "Spaghett|Spagett"
     ],
     "brainfreeze": [
-      "Yellow Bird", "Mary Pickford", "Casino", "Krambambuli", "Suffering Bastard", "Golden Dream",
-      "Vampiro", "Tuxedo", "Tommy's Margarita", "Gin Basil Smash|Gin Pesto", "Adios Motherfucker|AMF",
-      "Naked and Famous", "Porto flip", "Hand Grenade", "Pickleback", "Old Cuban",
-      "Chartreuse swizzle", "Torpedo juice", "Rose", "South Side", "Derby", "Piscola", "Canchanchara",
-      "Vodka tonic", "Toronto", "Gin and juice", "Remember the Maine", "Bronx", "Illegal",
-      "Ranch water", "Gatorwine", "Sherry cobbler", "Moose Milk", "Atomic", "Spicy Fifty", "Batanga",
-      "VE.N.TO", "Bloody Margaret", "Pegu Club", "Rabo de Galo", "Borgoña", "Poktanju", "Trumptini",
-      "Jungle Bird", "Negroni Sbagliato|Sbagliato", "El Diablo", "Ramos Gin Fizz|Ramos Fizz",
-      "Fog Cutter", "Q.B. Cooler", "Hirezake", "Creamsicle", "Hummer", "Cloister", "Diki-Diki",
-      "Ancient Mariner", "Horsefeather", "Roffignac cocktail", "Cobra's Fang", "Sumatra Kula",
-      "Royal Bermuda Yacht Club", "Test Pilot", "Cowboy", "Black Nail", "Blackthorn", "Chrysanthemum",
-      "PB2Y|B-17 Gremlin|P-40 Gremlin", "Mr. Bali Hai", "Cuban Sunset", "White Cargo",
-      "Arsenic and Old Lace", "Water Lily", "Cooperstown Cocktail", "Doctor", "Brown Derby",
-      "Boomerang", "Platinum Blonde", "Barbary coast", "Sunflower", "Blue bird", "Cat's Eye",
-      "Desert Healer", "Tailspin", "Naga"
+      "Yellow Bird", "Mary Pickford", "Casino", "Krambambuli", "Golden Dream", "Naked and Famous",
+      "Vampiro", "Suffering Bastard", "Tuxedo", "Tommy's Margarita", "Gin Basil Smash|Gin Pesto",
+      "Adios Motherfucker|AMF", "Porto flip", "Old Cuban", "Chartreuse swizzle", "Pickleback", "Rose",
+      "Torpedo juice", "Hand Grenade", "South Side", "Derby", "Canchanchara", "Piscola", "Ranch water",
+      "Gin and juice", "Remember the Maine", "Vodka tonic", "Toronto", "Bronx", "Gatorwine", "Illegal",
+      "Batanga", "Sherry cobbler", "Spicy Fifty", "VE.N.TO", "Rabo de Galo", "Pegu Club", "Moose Milk",
+      "Atomic", "Creamsicle", "Borgoña", "Trumptini", "Poktanju", "Bloody Margaret", "Jungle Bird",
+      "Negroni Sbagliato|Sbagliato", "El Diablo", "Ramos Gin Fizz|Ramos Fizz", "Hummer",
+      "Chrysanthemum", "Hirezake", "Royal Bermuda Yacht Club", "Cowboy", "Roffignac cocktail",
+      "Arsenic and Old Lace", "Water Lily", "Fog Cutter", "Diki-Diki", "Q.B. Cooler", "White Cargo",
+      "PB2Y|B-17 Gremlin|P-40 Gremlin", "Brown Derby", "Cloister", "Ancient Mariner", "Horsefeather",
+      "Platinum Blonde", "Barbary coast", "Cobra's Fang", "Sumatra Kula", "Test Pilot", "Sunflower",
+      "Black Nail", "Blackthorn", "Blue bird", "Cat's Eye", "Mr. Bali Hai", "Cuban Sunset",
+      "Desert Healer", "Tailspin", "Cooperstown Cocktail", "Doctor", "Naga", "Esoteric Solipsist"
     ],
     "absolutezero": [
-      "Esoteric Solipsist", "Green Cow"
+      "Green Cow", "Boomerang"
     ]
   }
 }

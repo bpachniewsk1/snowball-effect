@@ -1,0 +1,60 @@
+{
+  "id": "football-clubs-s",
+  "prompt": "Name a football club starting with S (FC, AC, CF… don't count)",
+  "ignoreWords": [
+    "fc",
+    "afc",
+    "cf",
+    "ac",
+    "sc",
+    "club",
+    "fk",
+    "sk",
+    "kv",
+    "sl",
+    "calcio",
+    "the"
+  ],
+  "ranking": {
+    "hints": [
+      "F.C."
+    ],
+    "expect": "football|soccer|club|futebol|fútbol|calcio"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 44,
+    "coverage": "89%"
+  },
+  "answers": {
+    "slush": [
+      "Sunderland|Sunderland A.F.C.",
+      "Sporting CP|Sporting Lisbon|Sporting|Sporting Clube de Portugal",
+      "Southampton|Southampton F.C.", "Swansea City|Swansea City A.F.C.|Swansea",
+      "Shakhtar Donetsk|Shakhtar", "Sevilla", "Schalke 04|Schalke",
+      "Sheffield United|Sheffield United F.C.|Sheff Utd", "Santos"
+    ],
+    "snowflake": [
+      "Sheffield Wednesday|Sheffield Wednesday F.C.", "Stoke City|Stoke City F.C.|Stoke",
+      "Strasbourg|RC Strasbourg Alsace", "St. Pauli|Sankt Pauli", "Stuttgart|VfB Stuttgart",
+      "Sassuolo|U.S. Sassuolo Calcio", "Slavia Prague|Slavia Praha|Slavia",
+      "Saint-Étienne|AS Saint-Étienne|St Etienne"
+    ],
+    "icefrost": [
+      "Stade Rennais|Stade Rennais F.C.", "Sampdoria|U.C. Sampdoria",
+      "Steaua București|FCSB|Steaua Bucharest|Steaua", "Slovan Bratislava", "Spartak Moscow|Spartak",
+      "Sparta Prague|Sparta Praha", "Seattle Sounders", "São Paulo",
+      "Shamrock Rovers|Shamrock Rovers F.C.", "Sturm Graz"
+    ],
+    "brainfreeze": [
+      "Swindon Town|Swindon Town F.C.|Swindon", "St Mirren|St Mirren F.C.", "San Jose Earthquakes",
+      "Stevenage|Stevenage F.C.", "Standard Liège|Standard", "St Johnstone|St Johnstone F.C.", "Sion",
+      "Spezia", "Shrewsbury Town|Shrewsbury Town F.C.|Shrewsbury", "Sydney FC", "Servette",
+      "Samsunspor", "Salernitana|U.S. Salernitana 1919", "Śląsk Wrocław|Śląsk",
+      "San Lorenzo|San Lorenzo de Almagro"
+    ],
+    "absolutezero": [
+      "Sivasspor", "Stal Mielec|FKS Stal Mielec"
+    ]
+  }
+}

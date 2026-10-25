@@ -1,0 +1,30 @@
+{
+  "id": "world-cup-hosts",
+  "prompt": "Name a country that has hosted the men's FIFA World Cup (1930–2022)",
+  "ranking": {
+    "title": "{name} national football team"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 18,
+    "coverage": "100%"
+  },
+  "answers": {
+    "slush": [
+      "United States|USA|US|America|United States of America", "England", "France",
+      "Germany|West Germany"
+    ],
+    "snowflake": [
+      "Argentina", "Spain", "Sweden"
+    ],
+    "icefrost": [
+      "Brazil", "Italy", "Mexico", "Russia"
+    ],
+    "brainfreeze": [
+      "Japan", "Uruguay", "South Korea|Korea Republic|Korea", "Switzerland", "South Africa", "Qatar"
+    ],
+    "absolutezero": [
+      "Chile"
+    ]
+  }
+}

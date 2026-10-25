@@ -50,7 +50,7 @@
   },
   "answers": {
     "slush": [
-      "Sperm whale|Physeter macrocephalus|spermaceti whale",
+      "Sperm whale|spermaceti whale|Physeter macrocephalus",
       "Orca|Killer whale|Orcinus orca|dwarf killer whale|Orca gladiator|orca whale", "Polar bear",
       "Blue whale|Balaenoptera musculus|Sibbold’s Rorqual,|Sulphur-bottom whale|Pygmy Blue Whale",
       "Humpback whale|Megaptera novaeangliae", "Seal", "Walrus", "Dolphin", "Leopard seal",
@@ -62,7 +62,7 @@
       "Short-beaked Common Dolphin|Delphinus delphis",
       "Bowhead whale|Arctic whale|Balaena mysticetus|Greenland right whale", "Narwhal",
       "Baiji|Chinese river dolphin|Lipotes vexillifer|Whitefin dolphin|Yangtze dolphin|Yangtze river dolphin",
-      "Amazon river dolphin|Inia geoffrensis|pink river dolphin", "Sea lion",
+      "Amazon river dolphin|pink river dolphin|Inia geoffrensis", "Sea lion",
       "Ganges river dolphin|Platanista gangetica|South Asian river dolphin", "Porpoise",
       "False killer whale|Phocaena crassidens|Pseudorca crassidens",
       "Grey whale|Gray whale|Agaphelus glaucus|Balaena gibbosa|Eschrichtius glaucus|devil fish|Atlantic gray whale|California gray whale|Eschrichtius gibbosus|Eschrichtius robustus|Gray back whale|Pacific gray whale|Rhachianectes glaucus",
@@ -95,7 +95,7 @@
       "Marine otter", "La Plata dolphin|Franciscana|Pontoporia blainvillei",
       "Short-finned pilot whale|Globicephala macrorhynchus",
       "Chinese white dolphin|Indo-Pacific humpbacked dolphin|Sousa chinensis chinensis|Indo-Pacific humpback dolphin|Sousa chinensis",
-      "Tucuxi|Sotalia fluviatilis|Tucuxi dolphin", "Rough-toothed dolphin|Steno bredanensis",
+      "Rough-toothed dolphin|Steno bredanensis", "Tucuxi|Sotalia fluviatilis|Tucuxi dolphin",
       "Pantropical spotted dolphin|Stenella attenuata"
     ],
     "brainfreeze": [

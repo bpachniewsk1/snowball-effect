@@ -1,0 +1,62 @@
+{
+  "id": "goalkeepers-netherlands",
+  "prompt": "Name a goalkeeper from the Netherlands' national team (any era)",
+  "matchSurname": true,
+  "ranking": {
+    "hints": [
+      "(footballer)",
+      "(goalkeeper)"
+    ],
+    "expect": "footballer|goalkeeper|football|soccer|manager|coach",
+    "wikidata": "?item wdt:P413 wd:Q201330 ; wdt:P54 wd:Q47050 ; wikibase:sitelinks ?sl . FILTER(?sl >= 4) FILTER NOT EXISTS { ?item wdt:P413 ?o . FILTER(?o != wd:Q201330) } FILTER(?item != wd:Q287815)",
+    "max": 150
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 58,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "slush": [
+      "Bart Verbruggen|Verbruggen", "Jasper Cillessen|Cillessen"
+    ],
+    "icefrost": [
+      "Justin Bijlow|Bijlow", "Mark Flekken|Flekken"
+    ],
+    "brainfreeze": [
+      "Remko Pasveer|Pasveer"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "Edwin van der Sar", "Tim Krul|Timothy Michael Krul", "Bart Verbruggen|Verbruggen",
+      "Maarten Stekelenburg", "Marco Bizot|Marco Remon Bizot", "Michel Vorm|Michel Armand Vorm",
+      "Jasper Cillessen|Cillessen", "Hans van Breukelen", "Sander Westerveld", "Andries Noppert",
+      "Ed de Goey|Ed de Goeij", "Jan Jongbloed"
+    ],
+    "snowflake": [
+      "Sander Boschker|Sander Bernard Jozef Boschker", "Stanley Menzo", "Kenneth Vermeer",
+      "Henk Timmer|Hendrik Timmer", "Mark Flekken|Flekken", "Piet Schrijvers", "Ronald Waterreus",
+      "Pim Doesburg|Willem Doesburg", "Justin Bijlow|Bijlow", "Theo Snelders",
+      "Piet Velthuizen|Piet Hubertus Velthuizen"
+    ],
+    "icefrost": [
+      "Eddy Treijtel|Eduard Willem Treijtel", "Jan van Beveren", "Eddy Pieters Graafland",
+      "Joop Hiele", "Gejus van der Meulen", "Remko Pasveer|Pasveer", "Jan Ruiter", "Adri van Male",
+      "Reinier Beeuwkes|Reinier Bertus Beeuwkes", "Leo Halle|Leonard Herman Gerrit Halle",
+      "Just Göbel", "Frans de Munck", "Jan de Boer"
+    ],
+    "brainfreeze": [
+      "Oscar Moens", "Edward Metgod", "Piet Kraak|Peter Kraak|Pieter Cornelis Kraak",
+      "Niek Michel|Nicolaas Johannes Michel", "Dick MacNeill|Richard MacNeill", "Piet Bouman",
+      "Peter van de Merwe", "Hans Venneker", "Lo La Chapelle|Eloi Hubert la Chapelle",
+      "Tonny van Leeuwen|Teunis Pieter van Leeuwen", "Wim Landman", "Lieuwe Steiger",
+      "Herman van Raalte", "Joop Wille", "Jan Schindeler", "Barend van Hemert",
+      "Fred van der Poel|F.C.G. van der Poel", "Dré Saris|André Saris|Andries Johannes Saris",
+      "Piet Lagarde", "Jan Schoemaker|Jacobus Schoemaker"
+    ],
+    "absolutezero": [
+      "Ton van Engelen", "Kees Quax"
+    ]
+  }
+}

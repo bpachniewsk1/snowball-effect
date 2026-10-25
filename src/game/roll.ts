@@ -7,6 +7,14 @@ import type { Answer, Category } from '../core/types';
 import { clearRoll, loadRoll, recordFinishedRoll, saveRoll, type RollMode, type RollSave, type RoundRecord } from './storage';
 import { updateProgress } from './profile';
 
+/** Timing of an answer, for the speed-based snowmen. */
+export interface AnswerTiming {
+  /** Seconds since the clock started. */
+  elapsed: number;
+  /** Seconds left on the clock. */
+  left: number;
+}
+
 export type SubmitOutcome =
   | { kind: 'empty' }
   /** Already guessed this wrong answer — no new penalty, just a nudge. */
@@ -46,11 +54,14 @@ export class Roll {
   readonly date: string;
   readonly number: number;
   readonly categories: Category[];
+  /** A past day's daily roll, played from the archive — doesn't touch the streak. */
+  readonly archive: boolean;
   private save: RollSave;
 
-  private constructor(mode: RollMode, date: string, categories: Category[], save: RollSave) {
+  private constructor(mode: RollMode, date: string, categories: Category[], save: RollSave, archive = false) {
     this.mode = mode;
     this.date = date;
+    this.archive = archive;
     this.number = dayNumber(date);
     this.categories = categories;
     this.save = save;
@@ -61,11 +72,23 @@ export class Roll {
     }
   }
 
-  /** Today's (or a dev-chosen day's) roll — the same for everyone. */
-  static daily(date = dateKey()): Roll {
+  /** A day's roll — the same for everyone. Days before `today` are archive rolls. */
+  static daily(date = dateKey(), today = date): Roll {
     const categories = pickDailyCategories(PACKS, date);
     const save = loadRoll('daily', date) ?? { mode: 'daily', date, rounds: [], inProgress: null, finished: false };
-    return new Roll('daily', date, categories, save);
+    return new Roll('daily', date, categories, save, date < today);
+  }
+
+  /** Past days that have a roll (newest first), from launch day up to the day before `today`. */
+  static archiveDates(today: string, limit = 90): string[] {
+    const out: string[] = [];
+    const [y, m, d] = today.split('-').map(Number);
+    for (let i = 1; out.length < limit; i++) {
+      const key = dateKey(new Date(y, m - 1, d - i));
+      if (dayNumber(key) < 1) break;
+      out.push(key);
+    }
+    return out;
   }
 
   /** The custom roll in progress (or finished, still showing results), if any. */
@@ -125,7 +148,8 @@ export class Roll {
     return this.save.pendingMisses ?? [];
   }
   get label(): string {
-    return this.mode === 'daily' ? `Daily Roll #${this.number}` : 'Custom Roll';
+    if (this.mode === 'custom') return 'Custom Roll';
+    return this.archive ? `Archive Roll #${this.number}` : `Daily Roll #${this.number}`;
   }
 
   /** Call when the prompt appears and the timer starts. */
@@ -136,7 +160,7 @@ export class Roll {
   }
 
   /** Wrong answers don't end the round — keep guessing until right or out of time. */
-  submit(input: string): SubmitOutcome {
+  submit(input: string, timing?: AnswerTiming): SubmitOutcome {
     const cat = this.current;
     if (!cat) return { kind: 'empty' };
     const result = matchAnswer(cat, input);
@@ -163,7 +187,7 @@ export class Roll {
       timedOut: false,
       misses: [...this.misses],
     };
-    this.commit(record);
+    this.commit(record, cat, timing);
     return { kind: 'scored', record, typo: result.typo };
   }
 
@@ -192,7 +216,10 @@ export class Roll {
 
   shareText(): string {
     const marks = this.save.rounds.map((r) => (r.tier ? TIERS[r.tier].emoji : MISS_EMOJI)).join('');
-    const title = this.mode === 'daily' ? `Snowball Effect #${this.number}` : 'Snowball Effect (custom)';
+    const title =
+      this.mode === 'custom'
+        ? 'Snowball Effect (custom)'
+        : `Snowball Effect #${this.number}${this.archive ? ' (archive)' : ''}`;
     return `${title} ☃️\n${formatSize(this.points)} · ${rankAt(this.points).name}\n${marks}`;
   }
 
@@ -205,7 +232,7 @@ export class Roll {
     clearRoll(this.mode, this.date);
   }
 
-  private commit(record: RoundRecord): void {
+  private commit(record: RoundRecord, cat?: Category, timing?: AnswerTiming): void {
     this.save.rounds.push(record);
     this.save.inProgress = null;
     this.save.pendingMisses = [];
@@ -213,18 +240,32 @@ export class Roll {
     let streak = 0;
     if (finishing) {
       this.save.finished = true;
-      if (this.mode === 'daily') streak = recordFinishedRoll(this.date, this.points, yesterdayOf(this.date)).bestStreak;
+      if (this.mode === 'daily' && !this.archive) {
+        streak = recordFinishedRoll(this.date, this.points, yesterdayOf(this.date)).bestStreak;
+      }
     }
     saveRoll(this.save);
 
     // Lifetime progress (unlocks snowmen).
     updateProgress((p) => {
-      if (record.tier) p.tierCounts[record.tier]++;
+      if (record.tier) {
+        p.tierCounts[record.tier]++;
+        if (cat) {
+          const pack = (p.packTiers[cat.pack] ??= {});
+          pack[record.tier] = (pack[record.tier] ?? 0) + 1;
+        }
+      }
+      if (timing && record.tier) {
+        if (timing.elapsed <= 3) p.fastAnswers++;
+        if (timing.left <= 2) p.clutchAnswers++;
+      }
       if (record.timedOut) p.timeouts++;
       p.bestPoints = Math.max(p.bestPoints, this.points);
       if (finishing) {
         p.rollsFinished++;
         if (this.mode === 'custom') p.customFinished++;
+        if (this.archive) p.archiveFinished++;
+        if (this.save.rounds.every((r) => !r.timedOut && !r.misses?.length)) p.cleanRolls++;
         p.bestStreak = Math.max(p.bestStreak, streak);
       }
     });

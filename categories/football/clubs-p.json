@@ -1,0 +1,55 @@
+{
+  "id": "football-clubs-p",
+  "prompt": "Name a football club starting with P (FC, AC, CF… don't count)",
+  "ignoreWords": [
+    "fc",
+    "afc",
+    "cf",
+    "ac",
+    "sc",
+    "club",
+    "fk",
+    "sk",
+    "kv",
+    "sl",
+    "calcio",
+    "the"
+  ],
+  "ranking": {
+    "hints": [
+      "F.C."
+    ],
+    "expect": "football|soccer|club|futebol|fútbol|calcio"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-25",
+    "answers": 33,
+    "coverage": "94%"
+  },
+  "answers": {
+    "slush": [
+      "Paris Saint-Germain|Paris Saint-Germain F.C.|PSG|Paris SG", "PSV Eindhoven|PSV",
+      "Panathinaikos|Panathinaikos F.C.", "Porto", "Preston North End|Preston North End F.C.|Preston",
+      "Parma|Parma Calcio 1913", "Paris FC"
+    ],
+    "snowflake": [
+      "Palmeiras|Sociedade Esportiva Palmeiras", "Portsmouth|Portsmouth F.C.|Pompey", "PAOK",
+      "Peterborough United|Peterborough United F.C.|Peterborough",
+      "Plymouth Argyle|Plymouth Argyle F.C.|Plymouth", "Palermo"
+    ],
+    "icefrost": [
+      "Port Vale|Port Vale F.C.", "Philadelphia Union", "Pumas UNAM|Club Universidad Nacional|Pumas",
+      "Paderborn|SC Paderborn 07", "Persepolis|Persepolis F.C.", "Pachuca|C.F. Pachuca",
+      "Peñarol|Club Atlético Peñarol", "Pogoń Szczecin|Pogoń"
+    ],
+    "brainfreeze": [
+      "Portland Timbers", "Partick Thistle|Partick Thistle F.C.", "Pyramids", "Perth Glory", "Pisa",
+      "Perugia", "Portimonense|Portimonense S.C.", "Pescara|Delfino Pescara 1936",
+      "Paços de Ferreira|F.C. Paços de Ferreira", "Piast Gliwice|Piast",
+      "Partizan Belgrade|FK Partizan"
+    ],
+    "absolutezero": [
+      "Puskás Akadémia"
+    ]
+  }
+}
