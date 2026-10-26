@@ -19,6 +19,7 @@ import { initMusic, isMusicOff, setMusicOff } from '../audio/music';
 import { PENGUIN, spriteCanvas } from '../render/sprites';
 import { nextFact } from '../game/facts';
 import { TEST_MODE } from '../core/testmode';
+import { initTelemetry, track } from '../net/telemetry';
 import type { Scene } from '../render/scene';
 import { $, esc, say } from './util';
 import { LavaScreen } from './lava';
@@ -69,6 +70,8 @@ export class App {
     },
     editCategories: () => this.openCategories('lava'),
   });
+  /** How long the last answer took (ms), for stats. */
+  private answerMs: number | null = null;
   /** Dev climb simulation timers. */
   private simTimers: number[] = [];
   /** Called by the global Enter handler on screens with a primary action. */
@@ -79,6 +82,10 @@ export class App {
     this.scene.onRoll = (level, size) => setRollSound(level, size);
     this.scene.onSummit = () => sfx.summit();
     this.scene.onSlip = () => sfx.slip();
+    initTelemetry(() => {
+      const prof = loadProfile();
+      return { name: prof.name, avatar: prof.avatar, progress: loadProgress(), stats: loadStats() };
+    });
     this.buildHowTo();
     this.buildToggles();
     this.buildMascot();
@@ -160,6 +167,7 @@ export class App {
         </div>
         <div class="row center-row">
           <button class="link" id="how">How to play</button>
+          <a class="link" href="./privacy.html">Privacy</a>
           ${stats.played ? `<span class="muted">streak ${stats.streak} · highest ${formatAltitude(stats.bestPoints)}</span>` : ''}
         </div>
         ${daily.finished ? `<p class="muted small">Next daily roll in <span id="countdown" class="num">${this.countdown()}</span></p>` : ''}
@@ -261,6 +269,7 @@ export class App {
     this.hud.classList.remove('hidden');
     this.scene.setState(roll.points, roll.maxPoints, true);
     if (roll.finished) return this.showResults();
+    track('roll_start', { rollId: roll.id, mode: roll.mode, date: roll.date, number: roll.number, archive: roll.archive, prompts: roll.categories.length });
     this.render('');
     if (!roll.started) sfx.crunch();
     else sfx.click();
@@ -322,6 +331,7 @@ export class App {
       const now = performance.now();
       const timing = this.timer !== null ? { elapsed: (now - this.clockStart) / 1000, left: (this.clockEnd - now) / 1000 } : undefined;
       const outcome = roll.submit(input.value, timing);
+      if (outcome.kind === 'scored') this.answerMs = timing ? Math.round(timing.elapsed * 1000) : null;
       switch (outcome.kind) {
         case 'empty':
           sfx.nope();
@@ -341,6 +351,7 @@ export class App {
             this.triesHtml(roll.misses);
           $('#suggest-now')?.addEventListener('click', (ev) => {
             addSuggestion({ categoryId: cat.id, input: outcome.input, date: roll.date });
+            track('suggest', { categoryId: cat.id, input: outcome.input });
             (ev.target as HTMLElement).replaceWith(document.createTextNode('(noted!)'));
             input.focus({ preventScroll: true });
           });
@@ -360,6 +371,7 @@ export class App {
       b.addEventListener('click', () => {
         if (b.dataset.tier === 'timeout') {
           this.stopTimer();
+          this.answerMs = null;
           this.showReveal(cat, roll.timeout(input.value), false);
           return;
         }
@@ -374,6 +386,7 @@ export class App {
     this.typeOut($('#prompt'), cat.prompt, () =>
       this.runTimer(cat.timeLimit, () => {
         const record = roll.timeout(input.value);
+        this.answerMs = cat.timeLimit * 1000;
         this.showReveal(cat, record, false);
       }),
     );
@@ -409,6 +422,20 @@ export class App {
 
   private showReveal(cat: Category, record: RoundRecord, typo: boolean): void {
     const roll = this.roll!;
+    track('round', {
+      rollId: roll.id,
+      idx: roll.roundIndex - 1,
+      categoryId: cat.id,
+      pack: cat.pack,
+      answer: record.answerDisplay,
+      input: record.input,
+      tier: record.tier,
+      points: record.points,
+      misses: record.misses ?? [],
+      timedOut: record.timedOut,
+      timeMs: this.answerMs,
+    });
+    this.answerMs = null;
     this.stopTyping();
     this.scene.setRolling(false);
     this.scene.setState(roll.points, roll.maxPoints);
@@ -496,7 +523,10 @@ export class App {
       this.scene.setState(r.points, r.maxPoints, true);
     }
     this.scene.setMood(null);
-    if (fresh) sfx.results();
+    if (fresh) {
+      sfx.results();
+      track('roll_finish', { rollId: r.id, points: r.points });
+    }
     const stats = loadStats();
     const rank = rankAt(r.points);
     const suggestions = loadSuggestions();
@@ -716,7 +746,9 @@ export class App {
 
   /** Shows a popup (one at a time) for every snowman unlocked since the last check. */
   private announceUnlocks(): void {
-    this.unlockQueue.push(...takeNewUnlocks());
+    const fresh = takeNewUnlocks();
+    for (const a of fresh) track('unlock', { id: a.id });
+    this.unlockQueue.push(...fresh);
     if (!this.unlockShowing) this.showNextUnlock();
   }
 

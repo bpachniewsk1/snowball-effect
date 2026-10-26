@@ -2,6 +2,7 @@ import { ALL_CATEGORIES, PACKS } from '../core/categories';
 import { dateKey, dayNumber, pickDailyCategories } from '../core/daily';
 import { matchAnswer } from '../core/matcher';
 import { TEST_MODE } from '../core/testmode';
+import { uuid } from '../net/telemetry';
 import { hashString, mulberry32, shuffle } from '../core/rng';
 import { MISS_EMOJI, TIERS, formatAltitude } from '../core/tiers';
 import type { Answer, Category } from '../core/types';
@@ -119,6 +120,15 @@ export class Roll {
     };
     saveRoll(save);
     return new Roll('custom', save.date, categories, save);
+  }
+
+  /** Stable random id for this roll (created on first use). */
+  get id(): string {
+    if (!this.save.id) {
+      this.save.id = uuid();
+      saveRoll(this.save);
+    }
+    return this.save.id;
   }
 
   get rounds(): readonly RoundRecord[] {

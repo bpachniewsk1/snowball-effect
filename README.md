@@ -141,6 +141,13 @@ Tier unlocks need **exactly** that tier: an Absolute Zero doesn't unlock Winky (
 - Sound effects are synthesized with Web Audio in [src/audio/sfx.ts](src/audio/sfx.ts), so there are no audio files: text blips, typing ticks, button clicks, snow crunch, a sound per tier that gets bigger the colder it is (Slush splat → Snowflake chime → Icefrost crack → Brain Freeze whoomp → Absolute Zero fanfare), a buzzer for wrong guesses, ticking for the last 5 seconds, and a "wheee" for spins.
 - Background music is an original music-box loop generated live in [src/audio/music.ts](src/audio/music.ts) (chords, arpeggio, melody are plain arrays — easy to rewrite). SFX and MUSIC toggles are separate and remembered.
 
+## Saving & stats
+
+Anonymous gameplay stats (visits, rolls, answers, answer times, wrong guesses, unlocks) go to a Supabase
+PostgreSQL database; `admin.html` is a password-protected dashboard (preview with `admin.html?demo`).
+IPs are only stored as a salted hash that rotates daily. Setup: [supabase/README.md](supabase/README.md).
+Nothing is sent until the Supabase keys are configured; players can opt out on `privacy.html`.
+
 ## Dev tricks
 
 - **Test mode: add `?test` to the URL** (works on the live site too). Every prompt gets a TEST bar that answers with a real answer of any tier (Slush … Absolute Zero) or forces a timeout. Seven Absolute Zero clicks is a real 700/700 with the summit and slip. Test mode saves separately (`snowball:test:*`), so your real streak, stats and unlocks are untouched; the results screen has a *reset this roll* link so you can replay the daily.

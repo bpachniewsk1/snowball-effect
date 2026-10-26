@@ -20,6 +20,8 @@ export interface RoundRecord {
 export type RollMode = 'daily' | 'custom';
 
 export interface RollSave {
+  /** Random id, so stats can tie rounds to their roll. */
+  id?: string;
   mode?: RollMode;
   date: string;
   /** Custom rolls store their (random) categories; daily ones are derived from the date. */

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy · Snowball Effect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  </head>
+  <body class="admin">
+    <main id="admin">
+      <section class="box">
+        <h1>PRIVACY</h1>
+        <p class="muted">Datenschutzerklärung · last updated 26 Oct 2026</p>
+
+        <h2>Who runs this</h2>
+        <p>Snowball Effect is a non-commercial hobby game run by <b>[YOUR NAME]</b>, contact: <b>[CONTACT EMAIL]</b>.</p>
+
+        <h2>What is stored on your device</h2>
+        <p>Your progress (rolls, streak, unlocked snowmen, nickname, settings) is kept in your browser's local storage so the game works. It never leaves your device unless anonymous statistics are on (below).</p>
+
+        <h2>Anonymous statistics</h2>
+        <p>To improve the game (which answers people try, how hard categories are), the game sends gameplay events to our database: a random player ID created in your browser, your nickname and snowman, the answers you give with their tier and how long you took, wrong guesses, finished rolls, unlocks, rough device type, language, screen size, the referring site's domain, and your country (from the network, not GPS).</p>
+        <p><b>We do not store your IP address.</b> It is turned into a one-way hash mixed with a secret that changes every day, so a visit can be counted as unique for that day but cannot be traced back to you or linked across days.</p>
+        <p>Data is stored with Supabase (database hosting) in the EU. It is kept for up to 24 months and then deleted. Legal basis: legitimate interest in running and improving the game (Art. 6(1)(f) GDPR).</p>
+
+        <h2>Your choices</h2>
+        <p>Anonymous statistics are currently: <b id="state">…</b></p>
+        <p><button class="btn small" id="toggle">TURN OFF</button></p>
+        <p class="muted">Browsers that send the Global Privacy Control signal are never tracked. You can ask for your data to be deleted by sending us your player ID: <code id="pid">—</code></p>
+        <p class="muted">You have the right to access, correct, delete and restrict your data, and to complain to a data protection authority.</p>
+
+        <p><a class="btn small" href="./">BACK TO THE GAME</a></p>
+      </section>
+    </main>
+    <script type="module" src="/src/privacy.ts"></script>
+  </body>
+</html>
