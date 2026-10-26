@@ -98,6 +98,40 @@ function noise(dur: number, vol: number, filter: number, delay = 0, sweepTo?: nu
   src.start(t0);
 }
 
+// Rolling snowball: a looped, low-passed brown-noise rumble whose loudness follows the ball's speed.
+let roll: { gain: GainNode; filter: BiquadFilterNode } | null = null;
+
+/** level 0..1 = how fast the ball rolls; size 0..1 = bigger balls rumble lower. */
+export function setRollSound(level: number, size = 0.3): void {
+  if (!ctx || !master) return;
+  const target = muted ? 0 : Math.max(0, Math.min(1, level));
+  if (!roll) {
+    if (target < 0.01) return;
+    const len = ctx.sampleRate * 2;
+    const buf = ctx.createBuffer(1, len, ctx.sampleRate);
+    const data = buf.getChannelData(0);
+    let last = 0;
+    for (let i = 0; i < len; i++) {
+      last = (last + 0.02 * (Math.random() * 2 - 1)) / 1.02;
+      data[i] = last * 3.5;
+    }
+    const src = ctx.createBufferSource();
+    src.buffer = buf;
+    src.loop = true;
+    const filter = ctx.createBiquadFilter();
+    filter.type = 'lowpass';
+    filter.Q.value = 0.8;
+    const gain = ctx.createGain();
+    gain.gain.value = 0;
+    src.connect(filter).connect(gain).connect(master);
+    src.start();
+    roll = { gain, filter };
+  }
+  const now = ctx.currentTime;
+  roll.gain.gain.setTargetAtTime(target * 0.9, now, 0.08);
+  roll.filter.frequency.setTargetAtTime(170 + target * 560 - size * 70, now, 0.1);
+}
+
 const NOTE = (semi: number) => 440 * Math.pow(2, semi / 12);
 const C5 = NOTE(3);
 
@@ -238,6 +272,19 @@ export const sfx = {
   victory: () => {
     [0, 4, 7, 12, 7, 12, 16].forEach((st, i) => tone({ freq: NOTE(st), type: i % 2 ? 'triangle' : 'square', dur: 0.14, vol: 0.24, delay: i * 0.11 }));
     tone({ freq: NOTE(19), type: 'triangle', dur: 0.6, vol: 0.28, delay: 0.8 });
+  },
+
+  /** Reached the top of the world. */
+  summit: () => {
+    [0, 4, 7, 12, 16, 19, 24].forEach((st, i) => tone({ freq: NOTE(3 + st), type: i % 2 ? 'triangle' : 'square', dur: 0.13, vol: 0.24, delay: i * 0.09 }));
+    [12, 16, 19, 24].forEach((st) => tone({ freq: NOTE(3 + st), type: 'triangle', dur: 1.4, vol: 0.13, delay: 0.7 }));
+    for (let i = 0; i < 12; i++) tone({ freq: 2200 + Math.random() * 2200, type: 'sine', dur: 0.06, vol: 0.1, delay: 0.7 + i * 0.09 });
+  },
+
+  /** …and off it goes. A slipping "uh-oh" slide. */
+  slip: () => {
+    tone({ freq: 520, to: 470, type: 'triangle', dur: 0.14, vol: 0.22 });
+    tone({ freq: 470, to: 140, type: 'triangle', dur: 0.7, vol: 0.2, delay: 0.16 });
   },
 
   /** Picked an avatar — squeaky snow. */

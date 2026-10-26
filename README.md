@@ -16,23 +16,24 @@ npm run check-categories
 - **Archive**: every past Daily Roll since launch, **locked until you finish today's Daily Roll**. Archive rolls don't touch your streak.
 - **Custom Roll**: pick which categories are on (the page shows how many answers each category has per tier), choose 3/5/7/10 prompts, play as often as you like. Custom rolls don't touch Daily stats.
 - **Wrong answers don't end the round** — they buzz and you keep guessing until you're right or time runs out. Only a timeout scores 0. Wrong guesses can be suggested for the list.
-- Every correct answer grows the snowball; growth roughly doubles per tier, so rare answers make big jumps. 1 point = 1 cm, starting from 10 cm; a perfect day (7 × Absolute Zero) is a **17.60 m** snowball.
-- A correct answer gets a ~0.8 s drumroll (the snowball rolls on while the badge flicks through the tiers) before its tier is revealed. Each tier has its own sound, and the colder the answer, the darker the sky gets and the more stars come out: Icefrost brings a starry dusk, Brain Freeze adds shooting stars, Absolute Zero flashes into a full night with an aurora. The sky clears again for the next prompt.
-- The day passes as you play: morning → sunset → aurora night.
+- **Sisyphus on ice:** your snowman pushes its snowball up an icy slope. Every correct answer pushes it higher (1 point = 1 m, Krillion's 10 / 30 / 60 / 85 / 100) and the ball grows a little faster than linearly. Pennants mark every 100 m (the most one answer can climb) with penguins cheering beside them. Climbing takes you through the clouds into the stars: a perfect day (7 × Absolute Zero) is **700 m: space**, with the moon up close and astronaut penguins in fishbowl helmets around the iceberg summit.
+- **Every roll ends with the slip:** the ball teeters, rolls all the way back to the valley (the snowman leaps out of the way), bursts, and a fresh little snowball appears. *One must imagine the snowman happy.* At 700 m the snowman first plants a flag and holds the summit for 2 seconds. The HUD and results keep the height you reached.
+- A timeout makes the ball slide back a little before the snowman catches it (no height lost). The rolling sound follows the ball's speed; there are no footsteps.
+- A correct answer gets a ~0.8 s drumroll (the snowman strains against the ball while the badge flicks through the tiers) before its tier is revealed. Each tier has its own sound, and the colder the answer, the darker the sky gets and the more stars come out: Icefrost brings a starry dusk, Brain Freeze adds shooting stars, Absolute Zero flashes into a full night with an aurora. The sky clears again for the next prompt.
 - Closing the tab mid-prompt counts as a timeout (no rerolls).
 - **Lava Bucket** (parked for the first public release: hidden from the menu, open `/?lava` to test it) (party mode, pass-and-play on one device, 2–8 players): a boiling bucket of lava goes round. Name an answer nobody has used yet to pass it on; every pass makes it boil faster (12 s → 3 s, or pick Chill/Spicy). Holding it when it erupts costs a heart; last snowman standing wins, cold answers earn party points as tiebreak. Rules live in `src/game/lava.ts` (pure logic, ready to run on a server for online rooms — see [docs/HOSTING.md](docs/HOSTING.md)).
 - Click the penguin in the corner, or your snowman in the scene. The penguin waddles while idle and drops one of **1,005 fun facts** (geography, animals, plants, food, space, the body, Earth, history, languages) every ~40 s or when clicked — never while a prompt's clock is running. Facts live in `src/data/facts/*.json`.
 - Quiet music-box music plays in the background (MUSIC toggle).
 
-| Tier | Temp | +cm | How many per category |
+| Tier | Temp | +m | How many per category |
 | --- | --- | --- | --- |
 | Slush | 0 °C | 10 | the 20% most popular, max 15 (Krillion's Plankton) |
 | Snowflake | −15 °C | 30 | 25% of the rest (Schooler) |
 | Icefrost | −40 °C | 60 | 30% of the rest (Rare) |
-| Brain Freeze | −89 °C | 120 | 45% of the rest — lots of deep cuts (Deep Cut) |
-| Absolute Zero | −273.15 °C | 250 | **only 1–2**: the least-viewed answers (Krillion) |
+| Brain Freeze | −89 °C | 85 | 45% of the rest — lots of deep cuts (Deep Cut) |
+| Absolute Zero | −273.15 °C | 100 | **only 1–2**: the least-viewed answers (Krillion) |
 
-Snowball ranks: Snowpea → Snowball → Snowboulder → Avalanche → Snowmageddon → Glacier → Iceberg → Absolute Unit (perfect day).
+Ranks by height: Snowpea (0 m) → Snowball (35) → Snowboulder (100, Big Ben) → Avalanche (200) → Snowmageddon (320, Eiffel Tower) → Glacier (440, Empire State) → Iceberg (560, CN Tower) → Absolute Unit (700, space).
 
 ## How rarity is decided
 
@@ -130,7 +131,7 @@ Players can press **Suggest it** on a rejected answer. Suggestions are stored in
 | Top Hat | 3-day daily streak |
 | Mustache | 7-day daily streak |
 | Santa | finish 10 rolls |
-| Tall Boi | roll a 5 m+ snowball |
+| Tall Boi | climb 400 m or higher in one roll |
 | Melty | run out of time 5 times |
 
 Tier unlocks need **exactly** that tier: an Absolute Zero doesn't unlock Winky (Icefrost).
@@ -141,6 +142,7 @@ Tier unlocks need **exactly** that tier: an Absolute Zero doesn't unlock Winky (
 
 ## Dev tricks
 
+- **SIM 700 M** / **SIM RANDOM** replay a whole 7-answer climb in the scene (drumroll, pushes, rarity mood, then the summit and slip) without touching any saves.
 - **CLEAR ALL DATA** (top-left, red) wipes localStorage and reloads. It shows on the dev server (`npm run dev`) or with `?dev`, never in a normal production build.
 - `/?dev&date=2026-11-02` plays any day. On the results screen in dev mode there's a **reset this roll** button.
 

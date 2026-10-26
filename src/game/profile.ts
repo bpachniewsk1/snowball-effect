@@ -56,7 +56,7 @@ export const AVATARS: Avatar[] = [
   { id: 'tophat', name: 'Top Hat', hint: 'Reach a 3-day daily streak', isUnlocked: (p: Progress) => p.bestStreak >= 3 },
   { id: 'mustache', name: 'Mustache', hint: 'Reach a 7-day daily streak', isUnlocked: (p: Progress) => p.bestStreak >= 7 },
   { id: 'santa', name: 'Santa', hint: 'Finish 10 rolls', isUnlocked: (p: Progress) => p.rollsFinished >= 10 },
-  { id: 'tallboi', name: 'Tall Boi', hint: 'Roll a snowball of 5 m or more', isUnlocked: (p: Progress) => p.bestPoints >= 490 },
+  { id: 'tallboi', name: 'Tall Boi', hint: 'Climb 400 m or higher in one roll', isUnlocked: (p: Progress) => p.bestPoints >= 400 },
   { id: 'melty', name: 'Melty', hint: 'Run out of time 5 times', isUnlocked: (p: Progress) => p.timeouts >= 5 },
 ].map((a) => ({ ...a, src: `${base}avatars/${a.id}.png` }));
 
@@ -92,7 +92,8 @@ export function loadProgress(): Progress {
     wrongGuesses: p.wrongGuesses ?? 0,
     rollsFinished: p.rollsFinished ?? 0,
     customFinished: p.customFinished ?? 0,
-    bestPoints: p.bestPoints ?? 0,
+    // Older saves used a bigger points scale; a 10-prompt custom roll tops out at 1000 m now.
+    bestPoints: Math.min(p.bestPoints ?? 0, 1000),
     bestStreak: p.bestStreak ?? 0,
     fastAnswers: p.fastAnswers ?? 0,
     clutchAnswers: p.clutchAnswers ?? 0,

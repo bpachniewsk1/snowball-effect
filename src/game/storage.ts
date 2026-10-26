@@ -84,7 +84,12 @@ export const saveRoll = (save: RollSave) => write(saveKey(save.mode ?? 'daily', 
 export const clearRoll = (mode: RollMode, date: string) => remove(saveKey(mode, date));
 
 const EMPTY_STATS: Stats = { played: 0, streak: 0, bestStreak: 0, bestPoints: 0, lastDate: null, history: {} };
-export const loadStats = () => ({ ...EMPTY_STATS, ...read<Partial<Stats>>('stats', {}) });
+export function loadStats(): Stats {
+  const s = { ...EMPTY_STATS, ...read<Partial<Stats>>('stats', {}) };
+  // Older saves used a bigger points scale; a daily tops out at 700 m now.
+  s.bestPoints = Math.min(s.bestPoints, 700);
+  return s;
+}
 
 export function recordFinishedRoll(date: string, points: number, previousDate: string): Stats {
   const stats = loadStats();

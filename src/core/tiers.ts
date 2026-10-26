@@ -10,10 +10,7 @@ export interface TierInfo {
   /** Flavour temperature shown on the badge. */
   temp: string;
   blurb: string;
-  /**
-   * Snowball growth in cm. Roughly doubles per tier, so rare answers grow the ball far more than
-   * common ones (a single Absolute Zero is worth 25 Slush).
-   */
+  /** Metres the snowball is pushed up the slope (Krillion's 10 / 30 / 60 / 85 / 100). */
   points: number;
   /** Multiplayer points — reserved for the party mode. */
   partyPoints: number;
@@ -62,7 +59,7 @@ export const TIERS: Record<TierId, TierInfo> = {
     label: 'Brain Freeze',
     temp: '−89 °C',
     blurb: "A deep cut. You froze everyone's brain.",
-    points: 120,
+    points: 85,
     partyPoints: 3,
     color: '#f7a8cf',
     emoji: '🍧',
@@ -73,7 +70,7 @@ export const TIERS: Record<TierId, TierInfo> = {
     label: 'Absolute Zero',
     temp: '−273.15 °C',
     blurb: 'Nothing in the universe is colder than this answer.',
-    points: 250,
+    points: 100,
     partyPoints: 4,
     color: '#e0d4ff',
     emoji: '🥶',
@@ -82,13 +79,7 @@ export const TIERS: Record<TierId, TierInfo> = {
 };
 
 export const MISS_EMOJI = '🫠';
-/** Snowball diameter before the first answer, in cm. */
-export const START_CM = 10;
-export const CM_PER_POINT = 1;
 export const isTierId = (s: string): s is TierId => (TIER_IDS as readonly string[]).includes(s);
 
-/** "85 cm" / "2.45 m" */
-export function formatSize(points: number): string {
-  const cm = START_CM + points * CM_PER_POINT;
-  return cm < 100 ? `${Math.round(cm)} cm` : `${(cm / 100).toFixed(2)} m`;
-}
+/** Points are metres climbed: "420 m". */
+export const formatAltitude = (points: number) => `${Math.round(points)} m`;

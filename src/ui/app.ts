@@ -1,6 +1,6 @@
 import { ALL_CATEGORIES, PACKS, packById } from '../core/categories';
 import { dateKey } from '../core/daily';
-import { MISS_EMOJI, TIERS, TIER_IDS, formatSize } from '../core/tiers';
+import { MISS_EMOJI, TIERS, TIER_IDS, formatAltitude, type TierId } from '../core/tiers';
 import type { Category } from '../core/types';
 import { Roll, rankAt } from '../game/roll';
 import {
@@ -14,7 +14,7 @@ import {
   type RoundRecord,
 } from '../game/storage';
 import { AVATARS, NAME_MAX, avatarById, displayName, isAvatarUnlocked, isUnlockAllOn, loadProfile, loadProgress, saveProfile, setUnlockAll, takeNewUnlocks, type Avatar } from '../game/profile';
-import { isMuted, setMuted, sfx, unlockAudio } from '../audio/sfx';
+import { isMuted, setMuted, setRollSound, sfx, unlockAudio } from '../audio/sfx';
 import { initMusic, isMusicOff, setMusicOff } from '../audio/music';
 import { PENGUIN, spriteCanvas } from '../render/sprites';
 import { nextFact } from '../game/facts';
@@ -68,11 +68,16 @@ export class App {
     },
     editCategories: () => this.openCategories('lava'),
   });
+  /** Dev climb simulation timers. */
+  private simTimers: number[] = [];
   /** Called by the global Enter handler on screens with a primary action. */
   private onEnter: (() => void) | null = null;
 
   constructor(private scene: Scene) {
     this.scene.setAvatar(avatarById(loadProfile().avatar).src);
+    this.scene.onRoll = (level, size) => setRollSound(level, size);
+    this.scene.onSummit = () => sfx.summit();
+    this.scene.onSlip = () => sfx.slip();
     this.buildHowTo();
     this.buildToggles();
     this.buildMascot();
@@ -116,11 +121,12 @@ export class App {
   // ---------- screens ----------
 
   private showTitle(): void {
+    this.stopSim();
     this.stopTimer();
     this.lava.stop();
     this.roll = null;
     this.hud.classList.add('hidden');
-    this.scene.setState(0, 0, true);
+    this.scene.setState(0, 700, true);
     this.scene.setRolling(false);
     this.scene.setMood(null);
 
@@ -139,7 +145,7 @@ export class App {
     this.render(`
       <div class="stack center">
         <h1>SNOWBALL EFFECT</h1>
-        ${say('Answer prompts. The <em>colder</em> (rarer) your answer, the bigger your snowball grows. Wrong? Keep trying until time runs out.')}
+        ${say('Answer prompts. The <em>colder</em> (rarer) your answer, the higher your snowman pushes its snowball up the mountain. Wrong? Keep trying until time runs out.')}
         <div class="title-grid">
           ${this.profileChip()}
           <div class="menu-list">
@@ -152,7 +158,7 @@ export class App {
         </div>
         <div class="row center-row">
           <button class="link" id="how">How to play</button>
-          ${stats.played ? `<span class="muted">streak ${stats.streak} · biggest ${formatSize(stats.bestPoints)}</span>` : ''}
+          ${stats.played ? `<span class="muted">streak ${stats.streak} · highest ${formatAltitude(stats.bestPoints)}</span>` : ''}
         </div>
         ${daily.finished ? `<p class="muted small">Next daily roll in <span id="countdown" class="num">${this.countdown()}</span></p>` : ''}
       </div>`);
@@ -191,7 +197,7 @@ export class App {
       .map((date) => {
         const r = Roll.daily(date, today);
         const status = r.finished
-          ? `<span class="num">${formatSize(r.points)}</span> ${r.rounds.map((x) => (x.tier ? TIERS[x.tier].emoji : MISS_EMOJI)).join('')}`
+          ? `<span class="num">${formatAltitude(r.points)}</span> ${r.rounds.map((x) => (x.tier ? TIERS[x.tier].emoji : MISS_EMOJI)).join('')}`
           : r.started
             ? `<span class="muted">in progress · ${r.roundIndex}/${r.categories.length}</span>`
             : '<span class="muted">not played</span>';
@@ -251,7 +257,7 @@ export class App {
     this.onEnter = null;
     this.roll = roll;
     this.hud.classList.remove('hidden');
-    this.scene.setState(roll.points, roll.progress, true);
+    this.scene.setState(roll.points, roll.maxPoints, true);
     if (roll.finished) return this.showResults();
     this.render('');
     if (!roll.started) sfx.crunch();
@@ -383,7 +389,7 @@ export class App {
     const roll = this.roll!;
     this.stopTyping();
     this.scene.setRolling(false);
-    this.scene.setState(roll.points, roll.progress);
+    this.scene.setState(roll.points, roll.maxPoints);
     const tier = record.tier ? TIERS[record.tier] : null;
     this.scene.setMood(tier ? tier.level : null, tier?.color);
     if (tier) {
@@ -391,6 +397,7 @@ export class App {
       sfx.tier(tier.id);
     } else {
       this.scene.puff();
+      this.scene.wobble();
       sfx.timeout();
     }
 
@@ -401,10 +408,10 @@ export class App {
         <div class="tier-badge ${tier.id}" style="--tier:${tier.color}">
           <span>${esc(tier.label)}</span><small>${esc(tier.temp)}</small>
         </div>
-        <div class="points">+${tier.points} cm</div>
+        <div class="points">+${tier.points} m</div>
         ${say(`You said <b>${esc(record.answerDisplay ?? '')}</b>.${typo ? ` <span class="muted">(you typed “${esc(record.input)}”)</span>` : ''}${misses.length ? ` <span class="muted">(after ${misses.length} wrong ${misses.length === 1 ? 'guess' : 'guesses'})</span>` : ''}`)}
         ${say(esc(tier.blurb))}
-        ${say(`The snowball grows to <b class="num">${formatSize(roll.points)}</b>.`)}`;
+        ${say(`The snowball climbs to <b class="num">${formatAltitude(roll.points)}</b>.`)}`;
     } else {
       head = `
         <div class="tier-badge miss">TIME'S UP</div>
@@ -459,7 +466,13 @@ export class App {
   private showResults(fresh = false): void {
     const r = this.roll!;
     this.screen = 'other';
-    this.scene.setState(r.points, r.progress);
+    // Every roll ends like Sisyphus: the ball slips back to the valley (after a summit moment at 700 m).
+    if (fresh) {
+      this.scene.setState(r.points, r.maxPoints);
+      this.scene.slip(() => this.mascotSay('One must imagine the snowman happy.', 5000));
+    } else {
+      this.scene.setState(r.points, r.maxPoints, true);
+    }
     this.scene.setMood(null);
     if (fresh) sfx.results();
     const stats = loadStats();
@@ -485,7 +498,7 @@ export class App {
             <div><b>${stats.played}</b><span>played</span></div>
             <div><b>${stats.streak}</b><span>streak</span></div>
             <div><b>${stats.bestStreak}</b><span>best streak</span></div>
-            <div><b>${formatSize(stats.bestPoints)}</b><span>biggest</span></div>
+            <div><b>${formatAltitude(stats.bestPoints)}</b><span>highest</span></div>
           </div>`
         : '';
 
@@ -494,9 +507,9 @@ export class App {
         <div class="center stack">
           ${this.profileChip()}
           <p class="muted">${esc(r.label)}${r.mode === 'daily' ? ` · ${esc(this.prettyDate(r.date))}` : ''}</p>
-          <div class="result-size">${formatSize(r.points)}</div>
+          <div class="result-size">${formatAltitude(r.points)}</div>
           <h2>${esc(rank.name)}</h2>
-          ${say(`About the size of ${esc(rank.like)}. (<span class="num">${r.points} / ${r.maxPoints}</span> cm grown)`)}
+          ${say(`As high as ${esc(rank.like)}. (<span class="num">${r.points} / ${r.maxPoints}</span> m climbed)`)}
         </div>
         <ul class="rounds">${rows}</ul>
         ${statsHtml}
@@ -862,6 +875,61 @@ export class App {
       this.toast(isUnlockAllOn() ? 'All snowmen unlocked' : 'Back to earned snowmen');
     });
     paint();
+
+    $('#dev-sim700').addEventListener('click', () => this.devSimulate(Array(7).fill('absolutezero')));
+    $('#dev-simrand').addEventListener('click', () =>
+      this.devSimulate(Array.from({ length: 7 }, () => TIER_IDS[Math.floor(Math.random() * TIER_IDS.length)])),
+    );
+  }
+
+  /** Dev: play a whole climb in the scene — drumroll, push, mood — then the slip. Touches no saves. */
+  private devSimulate(tiers: TierId[]): void {
+    this.stopSim();
+    this.stopTimer();
+    this.roll = null;
+    this.onEnter = null;
+    this.hud.classList.add('hidden');
+    this.render(`
+      <div class="stack center">
+        ${say(`Simulating a climb: ${tiers.map((t) => TIERS[t].emoji).join('')} = <b class="num">${tiers.reduce((n, t) => n + TIERS[t].points, 0)} m</b>`)}
+        <button class="menu" id="sim-stop">MENU</button>
+      </div>`);
+    $('#sim-stop').addEventListener('click', () => this.showTitle());
+    const summit = tiers.length * 100;
+    this.scene.setState(0, summit, true);
+    this.scene.setMood(null);
+    const STEP = 2400;
+    let pts = 0;
+    tiers.forEach((id, i) => {
+      this.simTimers.push(
+        window.setTimeout(() => {
+          this.scene.setMood(null);
+          this.scene.setRolling(true);
+          sfx.hype();
+        }, i * STEP),
+        window.setTimeout(() => {
+          const t = TIERS[id];
+          pts += t.points;
+          this.scene.setRolling(false);
+          this.scene.setState(pts, summit);
+          this.scene.setMood(t.level, t.color);
+          this.scene.celebrate(t.color, 10 + t.points / 2);
+          sfx.tier(id);
+        }, i * STEP + 800),
+      );
+    });
+    this.simTimers.push(
+      window.setTimeout(() => {
+        this.scene.setMood(null);
+        sfx.results();
+        this.scene.slip(() => this.mascotSay('One must imagine the snowman happy.', 5000));
+      }, tiers.length * STEP + 700),
+    );
+  }
+
+  private stopSim(): void {
+    this.simTimers.forEach((id) => window.clearTimeout(id));
+    this.simTimers = [];
   }
 
   // ---------- helpers ----------
@@ -935,11 +1003,12 @@ export class App {
     const loop = () => {
       const roll = this.roll;
       if (roll) {
-        const pts = this.scene.displayPoints;
+        // Once a roll is done the ball slips back down, but the HUD keeps the height you reached.
+        const pts = roll.finished ? roll.points : this.scene.displayPoints;
         const round = Math.min(roll.roundIndex + (roll.finished ? 0 : 1), roll.categories.length);
         const label = roll.mode === 'custom' ? 'CUSTOM' : `${roll.archive ? 'ARCHIVE' : 'DAILY'} #${roll.number}`;
         dayEl.textContent = `${label} · ${round}/${roll.categories.length}`;
-        sizeEl.textContent = formatSize(pts);
+        sizeEl.textContent = formatAltitude(pts);
         rankEl.textContent = rankAt(pts).name.toUpperCase();
       }
       requestAnimationFrame(loop);
@@ -995,7 +1064,7 @@ export class App {
     const rows = TIER_IDS.map((id) => {
       const t = TIERS[id];
       return `<tr><td><span class="swatch" style="--tier:${t.color}">${esc(t.label)}</span><small>${esc(t.temp)}</small></td>
-        <td>${esc(t.blurb)}</td><td class="pts">+${t.points} cm</td></tr>`;
+        <td>${esc(t.blurb)}</td><td class="pts">+${t.points} m</td></tr>`;
     }).join('');
     const dlg = $<HTMLDialogElement>('#howto');
     dlg.innerHTML = `
@@ -1003,7 +1072,7 @@ export class App {
         <h2>How to play</h2>
         ${say('<b>Daily Roll</b>: 7 prompts a day, the same for everyone. <b>Custom Roll</b>: you pick the categories, play as often as you like.')}
         ${say('Type an answer before time runs out (25 s). Wrong answers just buzz — keep trying until you get one or the clock hits zero.')}
-        ${say('Every right answer grows your snowball, but <b>rarer answers are colder</b> and grow it more. Growth roughly doubles per tier, so one Absolute Zero (only 1–2 exist per category!) beats a pile of Slush. A perfect roll is a <b>17.60 m</b> snowball.')}
+        ${say('Every right answer pushes your snowball up the mountain, and <b>rarer (colder) answers push it further</b>: up to 100 m for an Absolute Zero (only 1–2 exist per category!). Seven perfect answers reach <b>700 m — space</b>. Like Sisyphus, the ball always slips back down at the end. One must imagine the snowman happy.')}
         <table class="tier-table">${rows}</table>
         ${say('Small typos are fine. Click the penguin. Click your snowman. You know you want to.', 'muted')}
         <div class="center"><button class="menu" id="close-howto">GOT IT</button></div>

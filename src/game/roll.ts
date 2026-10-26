@@ -2,7 +2,7 @@ import { ALL_CATEGORIES, PACKS } from '../core/categories';
 import { dateKey, dayNumber, pickDailyCategories } from '../core/daily';
 import { matchAnswer } from '../core/matcher';
 import { hashString, mulberry32, shuffle } from '../core/rng';
-import { MISS_EMOJI, TIERS, formatSize } from '../core/tiers';
+import { MISS_EMOJI, TIERS, formatAltitude } from '../core/tiers';
 import type { Answer, Category } from '../core/types';
 import { clearRoll, loadRoll, recordFinishedRoll, saveRoll, type RollMode, type RollSave, type RoundRecord } from './storage';
 import { updateProgress } from './profile';
@@ -26,20 +26,20 @@ export interface Rank {
   name: string;
   /** Minimum points to reach this rank. */
   from: number;
-  /** "About the size of …" */
+  /** "As high as …" */
   like: string;
 }
 
-/** Snowball size classes, by points (cm of growth). */
+/** Ranks by metres climbed (a perfect daily is 700 m — space). */
 export const RANKS: Rank[] = [
-  { name: 'Snowpea', from: 0, like: 'a frozen pea' },
-  { name: 'Snowball', from: 50, like: 'a beach ball' },
-  { name: 'Snowboulder', from: 150, like: 'a small car' },
-  { name: 'Avalanche', from: 300, like: 'a double-decker bus' },
-  { name: 'Snowmageddon', from: 550, like: 'a house' },
-  { name: 'Glacier', from: 900, like: 'a blue whale' },
-  { name: 'Iceberg', from: 1300, like: 'a lighthouse' },
-  { name: 'Absolute Unit', from: 1750, like: 'a small moon' },
+  { name: 'Snowpea', from: 0, like: 'a molehill' },
+  { name: 'Snowball', from: 35, like: 'a ten-storey building' },
+  { name: 'Snowboulder', from: 100, like: 'Big Ben' },
+  { name: 'Avalanche', from: 200, like: 'a skyscraper' },
+  { name: 'Snowmageddon', from: 320, like: 'the Eiffel Tower' },
+  { name: 'Glacier', from: 440, like: 'the Empire State Building' },
+  { name: 'Iceberg', from: 560, like: 'the CN Tower' },
+  { name: 'Absolute Unit', from: 700, like: 'outer space (snowman physics)' },
 ];
 
 export const rankAt = (points: number) => [...RANKS].reverse().find((r) => points >= r.from) ?? RANKS[0];
@@ -65,6 +65,8 @@ export class Roll {
     this.number = dayNumber(date);
     this.categories = categories;
     this.save = save;
+    // Points come from the tier table, so older saves follow any rescoring.
+    for (const r of save.rounds) r.points = r.tier ? TIERS[r.tier].points : 0;
 
     // A round that was started and then abandoned (reload, closed tab) counts as running out of time.
     if (save.inProgress !== null && save.rounds.length === save.inProgress && this.current) {
@@ -220,7 +222,7 @@ export class Roll {
       this.mode === 'custom'
         ? 'Snowball Effect (custom)'
         : `Snowball Effect #${this.number}${this.archive ? ' (archive)' : ''}`;
-    return `${title} ☃️\n${formatSize(this.points)} · ${rankAt(this.points).name}\n${marks}`;
+    return `${title} ☃️\n${formatAltitude(this.points)} · ${rankAt(this.points).name}\n${marks}`;
   }
 
   categoryFor(record: RoundRecord): Category | undefined {
