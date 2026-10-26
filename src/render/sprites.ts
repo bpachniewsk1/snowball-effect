@@ -19,6 +19,11 @@ export const PALETTE: Record<string, string> = {
   c: '#b4e6fa', // ice
   C: '#6eb4dc', // ice edge
   f: '#ff8c3c', // fish orange
+  n: '#c8945a', // light leather (boot cuff)
+  e: '#3a2418', // boot sole
+  m: '#c4c8d4', // metal
+  M: '#7a7e8c', // metal, dark
+  h: '#ffffff', // shine
 };
 
 export type Sprite = string[];
@@ -104,92 +109,129 @@ export function spriteCanvas(sprite: Sprite, flip = false): HTMLCanvasElement {
 
 // ---------- artifacts on the climb (one beside every 100 m pennant) ----------
 
-/** An old boot with a hole in the toe. */
+/** An old boot: fold-over cuff, buckle, heel — and a hole in the toe. */
 export const BOOT: Sprite = [
-  '...BBBB.......',
-  '...BbbB.......',
-  '...BbbB.......',
-  '...BbbB.......',
-  '...BbbbBBBB...',
-  '..BbbbbbbbbB..',
-  '..BbbbbbbkkbB.',
-  '..BbbbbbbkpkbB',
-  '..BbbbbbbbkbbB',
-  '..kkkkkkkkkkkk',
-  '...k.k.k.k.k..',
+  '....kkkkkkkkkkkkk..',
+  '...knnnnbnnnnnBBBk.',
+  '...knnnbbnnnnbBBBk.',
+  '...knnbbnnnnbbBBBk.',
+  '...kkkkkkkkkkkkkkk.',
+  '....kbbbbbbbbBBBk..',
+  '....kbbnbbbbbBBBk..',
+  '....kbbnbbkkkkBBk..',
+  '....kbbbbkmmmmkBk..',
+  '....kbbbkmMkkmMkk..',
+  '...kkbbbkmkhhkmMk..',
+  '.kkbbbbbkmMkkmMBk..',
+  'kbbbbbbbbkmmmMBBk..',
+  'kbnnbkpkbbkkkkBBBk.',
+  'kbbbbbkbbbbbbbBBBk.',
+  'kBBBBBBBBBBBBBBBBk.',
+  'keeeeeeeeeeekeeeek.',
+  '.kkkkkkkkkkk.kkkk..',
 ];
 
 /** A dried-out tree. */
 export const DEAD_TREE: Sprite = [
-  '.d.......d...',
-  '..d..d..d..d.',
-  '...d.d.d..d..',
-  '.d..dd.d.d...',
-  '..d..ddd.d...',
-  '...d..dddd...',
-  '....d.ddd....',
-  '.....dDd.....',
-  '......Dd.....',
-  '......DD.....',
-  '......DD.....',
-  '.....DDDD....',
+  '.d............d....d.',
+  '..d.....d....d....d..',
+  '...d....d...d..d.d...',
+  '.d..d...d..d....d....',
+  '..d..d..d.d....d..d..',
+  '...d..d.ddd...d..d...',
+  '....d..dddd..d..d....',
+  '.....d..ddd.d..d.....',
+  '......d.ddddd.d......',
+  '.......dddddDd.......',
+  '........ddDDd........',
+  '........dDDd.........',
+  '........dDDd.........',
+  '........dDDd.........',
+  '........DDDd.........',
+  '........DDDD.........',
+  '.......DDDDDD........',
+  '......DD.DD.DD.......',
 ];
 
-/** A flower that smiles and winks at you. */
+/** A flower with a big face that smiles and winks at you. */
 export const WINK_FLOWER: Sprite = [
-  '..ppppppp..',
-  '.ppyyyyypp.',
-  '.pyykyyyyp.',
-  '.pyyyyykkp.',
-  '.pykyyykyp.',
-  '.ppykkkypp.',
-  '..ppppppp..',
-  '.....g.....',
-  '..gg.g.....',
-  '...ggg.....',
-  '.....g.gg..',
-  '.....ggg...',
-  '.....g.....',
+  '......ppppp......',
+  '....ppppppppp....',
+  '...ppyyyyyyypp...',
+  '..ppyyyyyyyyypp..',
+  '.ppyykkyyyyyyypp.',
+  '.ppyykkyyykkkypp.',
+  '.ppypyyyyyyyypyp.',
+  '.ppykyyyyyyykypp.',
+  '..ppykkkkkkkypp..',
+  '..ppyyyyyyyyypp..',
+  '...ppppppppppp...',
+  '.....ppppppp.....',
+  '........g........',
+  '...ggg..g........',
+  '..ggggg.g........',
+  '...gggggg........',
+  '........g..ggg...',
+  '........gggggg...',
+  '........g.ggg....',
+  '........g........',
+  '........g........',
 ];
 
 /** A small igloo. */
 export const IGLOO: Sprite = [
-  '....SSSSS....',
-  '..SSwwwwwSS..',
-  '.SwwSwwwSwwS.',
-  '.SSSSSSSSSSS.',
-  'SwwSwwwwSwwwS',
-  'SwwSwkkkSwwwS',
-  'SSSSkkkkkSSSS',
+  '.......SSSSSSS.......',
+  '....SSSwwwwwwwSSS....',
+  '...SwwwSwwwwwSwwwS...',
+  '..SwwwwSwwwwwSwwwwS..',
+  '..SSSSSSSSSSSSSSSSS..',
+  '.SwwwwSwwwwwwSwwwwwS.',
+  '.SwwwwSwwkkkwwSwwwwS.',
+  'SSSSSSSSkkkkkSSSSSSSS',
+  'SwwwwSwwkkkkkwwSwwwwS',
+  'SwwwwSwkkkkkkkwSwwwwS',
+  'SSSSSSSkkkkkkkSSSSSSS',
 ];
 
 /** Penguin Caesar: laurel wreath and a red toga. */
 export const CAESAR_PENGUIN: Sprite = [
-  '..l.lll.l..',
-  '.l.kkkkk.l.',
-  '..kkwkwkk..',
-  '..kkkookk..',
-  '.kkwwwwwkk.',
-  '.kkrrwwwkk.',
-  '..kwrrwwk..',
-  '..kwwrrwk..',
-  '..kwwwrrk..',
-  '...kwwwk...',
-  '...oo.oo...',
+  '....l.l.l.l.l....',
+  '...l.lllllll.l...',
+  '..l.kkkkkkkkk.l..',
+  '...kkkkkkkkkkk...',
+  '..kkkwwkkkwwkkk..',
+  '..kkkwkkkkkwkkk..',
+  '..kkkkkoooookkk..',
+  '..kkkkkkookkkkk..',
+  '.kkkwwwwwwwwwkkk.',
+  '.kkrrrwwwwwwwwkk.',
+  '.kkwrrrwwwwwwwkk.',
+  '.kkwwrrrwwwwwwkk.',
+  '..kwwwrrrwwwwwk..',
+  '..kwwwwrrrwwwwk..',
+  '...kwwwwrrrwwk...',
+  '....kwwwwwrrk....',
+  '....ooo...ooo....',
 ];
 
 /** A fish frozen in a block of ice. */
 export const FROZEN_FISH: Sprite = [
-  'CCCCCCCCCCCCC',
-  'CcWcccccccccC',
-  'CcccccccccccC',
-  'CccffffcccfcC',
-  'CcfffkffcffcC',
-  'CcfffffffffcC',
-  'CccffffcccfcC',
-  'CcccccccccccC',
-  'CcccccccccWcC',
-  'CCCCCCCCCCCCC',
+  'CCCCCCCCCCCCCCCCCCCCC',
+  'CcccccccccccccccccccC',
+  'CcWWccccccccccccccccC',
+  'CcWcccccccccccccccccC',
+  'CcccccccccccccccfcccC',
+  'CccccccfffcccccffcccC',
+  'CcccfffffffffcfffcccC',
+  'CccffkfffffffffffcccC',
+  'CccffffffffffffffcccC',
+  'CccffffffffffffffcccC',
+  'CcccfffffffffcfffcccC',
+  'CccccccfffcccccffcWcC',
+  'CccccccccccccccccWWcC',
+  'CcccccccccccccccccccC',
+  'CcccccccccccccccccccC',
+  'CCCCCCCCCCCCCCCCCCCCC',
 ];
 
 /** In order: 100 m, 200 m, … (repeats past 600 m on longer rolls). */

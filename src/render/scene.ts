@@ -1080,7 +1080,7 @@ export class Scene {
       ctx.drawImage(p, X + 6, this.sy(this.groundAt(wx + 10)) - p.height - hop + 1);
       // Something odd left on the mountain every 100 m (boot, dead tree, winking flower, …).
       const art = spriteCanvas(ARTIFACTS[i % ARTIFACTS.length]);
-      const ax = wx - 26;
+      const ax = wx - 32;
       const sway = i % ARTIFACTS.length === 2 ? Math.round(Math.sin(this.t * 2 + i)) : 0; // the flower sways
       const bob = i % ARTIFACTS.length === 4 ? Math.floor(this.t * 2) % 2 : 0; // Caesar shifts its weight
       ctx.drawImage(art, this.sx(ax) - (art.width >> 1) + sway, this.sy(this.groundAt(ax)) - art.height + 2 - bob);
