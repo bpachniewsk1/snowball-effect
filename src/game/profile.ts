@@ -18,6 +18,8 @@ export interface Progress {
   clutchAnswers: number;
   /** Rolls finished without a wrong guess or timeout. */
   cleanRolls: number;
+  /** Rolls of 7+ prompts where every answer was Absolute Zero. */
+  perfectRolls: number;
   /** Past days finished from the archive. */
   archiveFinished: number;
   /** Answers per tier, per pack id. */
@@ -48,6 +50,7 @@ export const AVATARS: Avatar[] = [
   { id: 'pirate', name: 'Pirate', hint: 'Get an Absolute Zero answer', isUnlocked: (p: Progress) => got(p, 'absolutezero') >= 1 },
   { id: 'beanie', name: 'Beanie', hint: 'Get 10 Slush answers', isUnlocked: (p: Progress) => got(p, 'slush') >= 10 },
   { id: 'viking', name: 'Viking', hint: 'Get 5 Brain Freeze answers', isUnlocked: (p: Progress) => got(p, 'brainfreeze') >= 5 },
+  { id: 'icecrown', name: 'Ice Crown', hint: 'Score 7 out of 7 Absolute Zeros in one roll (and claim the crown on the summit)', isUnlocked: (p: Progress) => p.perfectRolls >= 1 },
   { id: 'crown', name: 'King', hint: 'Get 3 Absolute Zero answers', isUnlocked: (p: Progress) => got(p, 'absolutezero') >= 3 },
   { id: 'shades', name: 'Shades', hint: 'Answer correctly within 3 seconds', isUnlocked: (p: Progress) => p.fastAnswers >= 1 },
   { id: 'ninja', name: 'Ninja', hint: 'Answer correctly with 2 seconds or less left', isUnlocked: (p: Progress) => p.clutchAnswers >= 1 },
@@ -99,6 +102,7 @@ export function loadProgress(): Progress {
     fastAnswers: p.fastAnswers ?? 0,
     clutchAnswers: p.clutchAnswers ?? 0,
     cleanRolls: p.cleanRolls ?? 0,
+    perfectRolls: p.perfectRolls ?? 0,
     archiveFinished: p.archiveFinished ?? 0,
     packTiers: p.packTiers ?? {},
     unlocked: p.unlocked ?? [STARTER.id],

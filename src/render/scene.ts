@@ -55,31 +55,27 @@ const OBSIDIAN = { top: [104, 126, 196] as RGB, body: [16, 20, 44] as RGB, shade
 const GLOW_A: RGB = [127, 232, 255];
 const GLOW_B: RGB = [184, 140, 255];
 
-/** Pixel line (Bresenham) — keeps thin details crisp at low resolution. */
-function pixelLine(ctx: CanvasRenderingContext2D, x0: number, y0: number, x1: number, y1: number): void {
-  x0 = Math.round(x0);
-  y0 = Math.round(y0);
-  x1 = Math.round(x1);
-  y1 = Math.round(y1);
-  const dx = Math.abs(x1 - x0);
-  const dy = -Math.abs(y1 - y0);
-  const sx = x0 < x1 ? 1 : -1;
-  const sy = y0 < y1 ? 1 : -1;
-  let err = dx + dy;
-  for (let guard = 0; guard < 2000; guard++) {
-    ctx.fillRect(x0, y0, 1, 1);
-    if (x0 === x1 && y0 === y1) break;
-    const e2 = 2 * err;
-    if (e2 >= dy) {
-      err += dy;
-      x0 += sx;
-    }
-    if (e2 <= dx) {
-      err += dx;
-      y0 += sy;
-    }
-  }
-}
+/** The Ice Crown that waits on the summit (one character = one pixel). */
+const ICE_CROWN = [
+  '........w........',
+  '.......wcw.......',
+  '..w....cbc....w..',
+  '.wcw...cbc...wcw.',
+  '.cbc..wcbcw..cbc.',
+  '.cbc.wcbbbcw.cbc.',
+  '.cbbccbbbbbccbbc.',
+  '.cbbbbbgbgbbbbbc.',
+  'occccccccccccccco',
+  'owwwwwwwwwwwwwwwo',
+  '.ooooooooooooooo.',
+];
+const ICE_CROWN_COLORS: Record<string, string> = {
+  o: '#183260',
+  c: '#7fe8ff',
+  b: '#46a0dc',
+  w: '#f0fcff',
+  g: '#b88cff',
+};
 
 /** Draws a filled pixel circle, optionally clipped to another circle. */
 function fillCircle(
@@ -165,6 +161,8 @@ export class Scene {
   private flagRise = 0;
   private fade = 0;
   private faceLeft = false;
+  /** 0 = Ice Crown hovering over the summit … 1 = on the snowman's head. */
+  private crownLand = 0;
   private jumped = false;
 
   private avatar: HTMLImageElement | null = null;
@@ -198,7 +196,7 @@ export class Scene {
     this.resize();
     window.addEventListener('resize', () => this.resize());
     const rand = mulberry32(hashString('snow'));
-    for (let i = 0; i < 320; i++) {
+    for (let i = 0; i < 520; i++) {
       const back = i % 2 === 0;
       this.flakes.push({ x: rand(), y: rand(), speed: 0.03 + rand() * 0.06, drift: rand() * 6, size: !back && rand() < 0.25 ? 2 : 1, back });
     }
@@ -230,6 +228,7 @@ export class Scene {
       this.ballHidden = false;
       this.fade = 0;
       this.flagRise = 0;
+      this.crownLand = 0;
       this.faceLeft = false;
       this.wobbleT = -1;
       this.placeBall(points, true);
@@ -536,6 +535,7 @@ export class Scene {
         break;
       case 'summit':
         this.flagRise = clamp01(s.t / 0.6);
+        this.crownLand = clamp01((s.t - 0.2) / 1.3);
         if (s.t > SUMMIT_HOLD) this.go('teeter');
         break;
       case 'teeter':
@@ -575,6 +575,7 @@ export class Scene {
           // Back to the valley with a fresh little snowball.
           this.ballHidden = false;
           this.flagRise = 0;
+          this.crownLand = 0;
           this.faceLeft = false;
           this.mood = this.targetMood = 0;
           this.placeBall(0, true);
@@ -635,6 +636,14 @@ export class Scene {
     return this.ballX - r * 0.85 - AV_RIGHT + 3 + this.wobbleOffset();
   }
 
+  /** How high the snowman is off the ground: a small hop when clicked, a big leap out of a runaway ball's way. */
+  private hop(): number {
+    if (this.spin <= 0) return 0;
+    const falling = this.seq && ['fall', 'burst', 'fade'].includes(this.seq.phase);
+    const height = falling && this.jumped ? this.radiusFor(this.shownPoints) + 14 : 6;
+    return Math.round(Math.sin((this.spin / 0.7) * Math.PI) * height);
+  }
+
   /** Ball slides back and gets caught (timeout), or teeters on the edge before falling. */
   private wobbleOffset(): number {
     if (this.wobbleT >= 0) return -10 * Math.sin(Math.PI * (this.wobbleT / 0.9));
@@ -653,13 +662,13 @@ export class Scene {
     this.drawRidges(a);
     this.drawClouds();
     this.drawSnowfall(a, true);
-    this.drawSpire();
     this.drawTerrain();
     this.drawBaseCamp();
     this.drawFlags();
     this.drawSpacePenguins(a);
     this.drawMist(a);
     this.drawRoller();
+    this.drawCrown();
     this.drawParticles();
     this.drawSnowfall(a, false);
     this.drawVignette(a);
@@ -836,50 +845,58 @@ export class Scene {
     }
   }
 
-  /** The summit crown: black glacier shards, moonlit edges, veins of cold light. */
-  private drawSpire(): void {
+  /**
+   * The Ice Crown hovers over the summit, glowing. When the ball makes it to the top it floats down
+   * onto the snowman's head (the Ice Crown skin is the reward for 7/7 Absolute Zeros).
+   */
+  private drawCrown(): void {
     const { ctx } = this;
-    const xs = this.summitX;
-    if (this.sx(xs - 20) > this.W + 10 || this.sx(xs + 120) < -10) return;
-    const base = this.sy(this.topPx);
-    const pulse = 0.5 + 0.5 * Math.sin(this.t * 1.3);
-    // Left base, right base, tip and a shoulder, relative to the summit (dx right, dy up).
-    const shards: { l: number; r: number; tip: [number, number]; sh: [number, number] }[] = [
-      { l: -18, r: 10, tip: [-6, 30], sh: [2, 14] },
-      { l: 2, r: 40, tip: [20, 64], sh: [32, 30] },
-      { l: 60, r: 112, tip: [86, 92], sh: [100, 40] },
-      { l: 28, r: 84, tip: [52, 138], sh: [66, 70] },
-    ];
-    const poly = (pts: number[][], color: string) => {
-      ctx.fillStyle = color;
-      ctx.beginPath();
-      pts.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)));
-      ctx.closePath();
-      ctx.fill();
-    };
-    for (const s of shards) {
-      const L = [this.sx(xs + s.l), base];
-      const R = [this.sx(xs + s.r), base];
-      const T = [this.sx(xs + s.tip[0]), base - s.tip[1]];
-      const S = [this.sx(xs + s.sh[0]), base - s.sh[1]];
-      poly([L, T, S, R], css([12, 15, 34]));
-      poly([T, S, R, [T[0] + 2, base]], css([26, 33, 70]));
-      // Moonlight catches the right-hand edges.
-      ctx.fillStyle = css([118, 146, 226]);
-      pixelLine(ctx, T[0], T[1], S[0], S[1]);
-      ctx.fillStyle = css([70, 90, 160]);
-      pixelLine(ctx, S[0], S[1], R[0], R[1]);
-      // A vein of cold light up the middle, breathing slowly.
-      ctx.fillStyle = css(mix(GLOW_A, GLOW_B, pulse), 0.35 + 0.45 * pulse);
-      pixelLine(ctx, (L[0] + R[0]) / 2, base - 2, T[0] + (S[0] - T[0]) * 0.25, T[1] + (S[1] - T[1]) * 0.25 + 3);
+    const pulse = 0.5 + 0.5 * Math.sin(this.t * 1.6);
+    // Resting spot: high above the summit, clear of even the biggest snowball.
+    const restX = this.sx(this.summitX + PLATEAU / 2);
+    // Kept on screen so it reads as the goal while you push the last stretch.
+    const restY = Math.max(18, this.sy(this.topPx + this.rMax * 2 + 22)) + Math.round(Math.sin(this.t * 1.2) * 3);
+    // On the head: the snowman's head top, following its lean.
+    const feetWX = this.manX() + 32;
+    const feetX = this.sx(feetWX);
+    const feetY = this.sy(this.groundAt(feetWX));
+    const falling = this.seq && ['fall', 'burst', 'fade'].includes(this.seq.phase);
+    const lean = this.isFlat(feetWX) || falling ? 0 : -SLOPE * 0.55;
+    const headX = feetX + 50 * Math.sin(lean);
+    const headY = feetY - 50 * Math.cos(lean) - this.hop();
+    const k = easeInOut(this.crownLand);
+    const cx = Math.round(restX + (headX - restX) * k);
+    const cy = Math.round(restY + (headY - restY) * k);
+    if (cx < -20 || cx > this.W + 20 || cy < -20 || cy > this.H + 20) return;
+    // Cold halo.
+    for (let r = 13; r >= 3; r -= 3) fillCircle(ctx, cx, cy - 5, r, css(GLOW_A, (0.04 + 0.05 * pulse) * (1 - r / 16)));
+    const w = ICE_CROWN[0].length;
+    const h = ICE_CROWN.length;
+    for (let y = 0; y < h; y++) {
+      for (let x = 0; x < w; x++) {
+        const c = ICE_CROWN_COLORS[ICE_CROWN[y][x]];
+        if (!c) continue;
+        ctx.fillStyle = c;
+        ctx.fillRect(cx - (w >> 1) + x, cy - h + y, 1, 1);
+      }
     }
-    // Something glows at the very top.
-    const tip = shards[3].tip;
-    const tx = this.sx(xs + tip[0]);
-    const ty = base - tip[1];
-    for (let r = 7; r >= 1; r -= 2) fillCircle(ctx, tx, ty, r, css(GLOW_B, (0.05 + 0.06 * pulse) * (8 - r) * 0.5));
-    ctx.fillStyle = css([230, 240, 255], 0.6 + 0.4 * pulse);
-    ctx.fillRect(tx, ty, 1, 1);
+    // A glint that travels along the spikes.
+    const gx = cx - (w >> 1) + Math.floor(((this.t * 6) % (w + 10))) - 5;
+    if (gx >= cx - (w >> 1) && gx < cx + (w >> 1)) {
+      ctx.fillStyle = 'rgba(255,255,255,0.9)';
+      ctx.fillRect(gx, cy - h + 4, 1, 3);
+    }
+    if (Math.random() < 0.15) {
+      this.particles.push({
+        x: cx + (Math.random() - 0.5) * 18,
+        y: cy - 6 + (Math.random() - 0.5) * 10,
+        vx: (Math.random() - 0.5) * 8,
+        vy: -4 - Math.random() * 6,
+        life: 0.9,
+        color: Math.random() < 0.5 ? '#ffffff' : css(GLOW_A),
+        gravity: 0,
+      });
+    }
   }
 
   private drawTerrain(): void {
@@ -1052,14 +1069,11 @@ export class Scene {
       ctx.translate(feetX, feetY);
       ctx.rotate(lean);
       let sxScale = this.faceLeft ? -1 : 1;
-      let hop = 0;
+      const hop = this.hop();
       if (this.spin > 0) {
         const angle = (1 - this.spin / 0.7) * Math.PI * 4;
         const c = Math.cos(angle);
         sxScale *= Math.abs(c) < 0.08 ? 0.08 * Math.sign(c || 1) : c;
-        // A small hop when clicked; a big leap out of the way of a runaway snowball.
-        const height = falling && this.jumped ? r + 14 : 6;
-        hop = Math.round(Math.sin((this.spin / 0.7) * Math.PI) * height);
       }
       ctx.scale(sxScale, 1);
       ctx.drawImage(this.avatar, -32, -AV_FEET - bob - hop);
@@ -1114,17 +1128,22 @@ export class Scene {
     ctx.globalAlpha = 1;
   }
 
-  /** Background snow thickens the higher you climb; the wind picks up and it turns icy blue up top. */
+  /** Snow thickens the higher you climb: a light dusting in the valley, a blizzard at the summit. */
   private drawSnowfall(a: number, back: boolean): void {
     const { ctx, W, H } = this;
-    const share = 0.25 + 0.75 * smooth(0, 0.9, a);
+    const share = 0.06 + 0.94 * smooth(0.05, 0.85, a);
     const count = Math.floor(this.flakes.length * share);
-    const tint = mix([255, 255, 255], [190, 214, 255], smooth(0.75, 1, a));
-    ctx.fillStyle = css(tint, back ? 0.45 : 0.85);
+    const tint = mix([255, 255, 255], [196, 220, 255], smooth(0.75, 1, a));
+    ctx.fillStyle = css(tint, back ? 0.5 : 0.9);
+    // Higher up the wind drives the flakes sideways into short streaks.
+    const streak = !back && a > 0.55 ? 1 + Math.round(smooth(0.55, 1, a) * 2) : 0;
     for (let i = 0; i < count; i++) {
       const f = this.flakes[i];
       if (f.back !== back) continue;
-      ctx.fillRect(Math.round(f.x * W), Math.round(f.y * H), f.size, f.size);
+      const x = Math.round(f.x * W);
+      const y = Math.round(f.y * H);
+      ctx.fillRect(x, y, f.size + (f.size === 2 ? streak : 0), f.size);
+      if (streak && f.size === 1 && i % 3 === 0) ctx.fillRect(x + 1, y, streak, 1);
     }
   }
 

@@ -269,6 +269,7 @@ export class Roll {
         if (this.mode === 'custom') p.customFinished++;
         if (this.archive) p.archiveFinished++;
         if (this.save.rounds.every((r) => !r.timedOut && !r.misses?.length)) p.cleanRolls++;
+        if (this.save.rounds.length >= 7 && this.save.rounds.every((r) => r.tier === 'absolutezero')) p.perfectRolls++;
         p.bestStreak = Math.max(p.bestStreak, streak);
       }
     });

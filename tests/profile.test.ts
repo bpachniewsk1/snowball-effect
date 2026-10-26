@@ -24,6 +24,6 @@ describe('snowman unlocks', () => {
 
   it('every avatar has a picture and a unique id', () => {
     expect(new Set(AVATARS.map((a) => a.id)).size).toBe(AVATARS.length);
-    expect(AVATARS.length).toBe(19);
+    expect(AVATARS.length).toBe(20);
   });
 });
