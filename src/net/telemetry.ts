@@ -105,7 +105,12 @@ function flush(keepalive = false): void {
   void fetch(`${SB_URL}/rest/v1/rpc/track`, {
     method: 'POST',
     keepalive,
-    headers: { apikey: SB_KEY!, Authorization: `Bearer ${SB_KEY}`, 'Content-Type': 'application/json' },
+    headers: {
+      apikey: SB_KEY!,
+      'Content-Type': 'application/json',
+      // Legacy anon keys are JWTs and go in Authorization too; new sb_publishable_ keys must not.
+      ...(SB_KEY!.startsWith('eyJ') ? { Authorization: `Bearer ${SB_KEY}` } : {}),
+    },
     body: JSON.stringify({ payload }),
   }).catch(() => {
     /* offline or blocked — stats are best-effort */
