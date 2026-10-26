@@ -1,5 +1,5 @@
 import { hashString, mulberry32 } from '../core/rng';
-import { PENGUIN, POLAR_BEAR, spriteCanvas } from './sprites';
+import { ARTIFACTS, PENGUIN, POLAR_BEAR, spriteCanvas } from './sprites';
 
 // The snowman pushes its snowball up an endless icy slope, Sisyphus-style. Points are metres
 // climbed: the higher you get, the further the valley drops away — clouds, then stars, then space,
@@ -174,6 +174,8 @@ export class Scene {
   private clouds: { alt: number; x: number; w: number }[] = [];
   private ballCache = new Map<number, HTMLCanvasElement>();
   private nebula: HTMLCanvasElement;
+  /** Rocks, dirt and sand embedded in the mountain, regenerated when the summit height changes. */
+  private features: { summit: number; list: { x: number; kind: 'rock' | 'dirt' | 'pebbles' | 'sand'; size: number; depth: number; seed: number }[] } | null = null;
 
   // Rarity mood (rare answers darken the sky and bring out stars).
   private moodStars: { x: number; y: number; tw: number; big: boolean; tint: boolean }[] = [];
@@ -663,6 +665,7 @@ export class Scene {
     this.drawClouds();
     this.drawSnowfall(a, true);
     this.drawTerrain();
+    this.drawTerrainFeatures();
     this.drawBaseCamp();
     this.drawFlags();
     this.drawSpacePenguins(a);
@@ -921,6 +924,14 @@ export class Scene {
       for (let d = 7 + ((((wxi * 7) % 5) + 5) % 5); d < H - y; d += 9) {
         if (((wxi + d) & 3) === 0) ctx.fillRect(x, y + d, 1, 1);
       }
+      // Frozen layers: faint bands that follow the slope through the ice.
+      if (ice > 0.25) {
+        ctx.fillStyle = this.dim(mix(mix(SNOW.shade, ICE.shade, ice), OBSIDIAN.shade, ob));
+        for (const depth of [12, 27, 45]) {
+          const wob = Math.round(Math.sin(wx * 0.045 + depth) * 2 + Math.sin(wx * 0.013) * 3);
+          if (((wxi + depth) % 9) !== 0) ctx.fillRect(x, y + depth + wob, 1, 1);
+        }
+      }
       if (ob > 0.3 && (wxi % 17 === 0 || wxi % 29 === 0 || wxi % 41 === 0)) {
         // Glowing fissures in the black ice.
         const glow = 0.25 + 0.45 * (0.5 + 0.5 * Math.sin(this.t * 1.4 + wxi * 0.7));
@@ -931,6 +942,77 @@ export class Scene {
       } else if (ice > 0.4 && ob < 0.5 && (wxi % 23 === 0 || wxi % 37 === 0)) {
         ctx.fillStyle = this.dim([110, 170, 210]);
         ctx.fillRect(x, y + 3, 1, 5);
+      }
+    }
+  }
+
+  private terrainFeatures() {
+    if (this.features?.summit === this.summit) return this.features.list;
+    const rand = mulberry32(hashString(`rocks:${this.summit}`));
+    const list: { x: number; kind: 'rock' | 'dirt' | 'pebbles' | 'sand'; size: number; depth: number; seed: number }[] = [];
+    for (let x = -220; x < this.summitX + 160; x += 16 + Math.floor(rand() * 34)) {
+      const r = rand();
+      const kind = r < 0.32 ? 'rock' : r < 0.55 ? 'dirt' : r < 0.8 ? 'pebbles' : 'sand';
+      const exposed = kind === 'rock' && rand() < 0.45;
+      list.push({ x, kind, size: 3 + Math.floor(rand() * 6), depth: exposed ? -2 : 3 + Math.floor(rand() * 16), seed: Math.floor(rand() * 1e6) });
+    }
+    this.features = { summit: this.summit, list };
+    return list;
+  }
+
+  /** Irregular bits in the snow and ice: rocks (some poking out), dirt, pebbles, streaks of sand. */
+  private drawTerrainFeatures(): void {
+    const { ctx } = this;
+    const top = this.topPx;
+    for (const f of this.terrainFeatures()) {
+      const X = this.sx(f.x);
+      if (X < -20 || X > this.W + 20) continue;
+      const h = this.groundAt(f.x);
+      const Y = this.sy(h) + f.depth;
+      if (Y > this.H) continue;
+      const rand = mulberry32(f.seed);
+      // Higher up everything is darker and frostier.
+      const cold = smooth(0.55, 0.95, h / top);
+      const tint = (c: RGB) => this.dim(mix(c, [70, 90, 130], cold * 0.6));
+      if (f.kind === 'rock') {
+        const r = f.size;
+        for (let dy = -r; dy <= r; dy++) {
+          const half = Math.floor(Math.sqrt(Math.max(0, r * r - dy * dy)) * (0.85 + rand() * 0.3));
+          for (let dx = -half; dx <= half; dx++) {
+            const edge = dx === -half || dx === half || dy === -r || dy === r;
+            const lit = dy < -r * 0.3 && dx < 0;
+            ctx.fillStyle = tint(edge ? [78, 82, 94] : lit ? [176, 180, 190] : (dx + dy) & 1 ? [124, 128, 140] : [138, 142, 152]);
+            ctx.fillRect(X + dx, Y + dy, 1, 1);
+          }
+        }
+        // A cap of snow on rocks that stick out.
+        if (f.depth < 0) {
+          ctx.fillStyle = this.dim(mix(SNOW.top, ICE.top, cold));
+          ctx.fillRect(X - Math.floor(r * 0.6), Y - r, Math.floor(r * 1.2) + 1, 1);
+        }
+      } else if (f.kind === 'dirt') {
+        const w = f.size * 2 + 4;
+        for (let n = 0; n < f.size * 5; n++) {
+          const dx = Math.round((rand() - 0.5) * w);
+          const dy = Math.round((rand() - 0.5) * (f.size * 0.8 + 2));
+          ctx.fillStyle = tint(rand() < 0.5 ? [120, 92, 64] : [96, 72, 50]);
+          ctx.fillRect(X + dx, Y + dy, 1 + (rand() < 0.2 ? 1 : 0), 1);
+        }
+      } else if (f.kind === 'pebbles') {
+        for (let n = 0; n < f.size; n++) {
+          ctx.fillStyle = tint(rand() < 0.5 ? [110, 114, 126] : [132, 104, 80]);
+          const sz = rand() < 0.3 ? 2 : 1;
+          ctx.fillRect(X + Math.round((rand() - 0.5) * 16), Y + Math.round(rand() * 5), sz, sz);
+        }
+      } else {
+        // A streak of sand following the slope.
+        const len = 14 + f.size * 4;
+        for (let dx = 0; dx < len; dx++) {
+          if (rand() < 0.25) continue;
+          const wx = f.x + dx;
+          ctx.fillStyle = tint(rand() < 0.6 ? [214, 196, 150] : [190, 168, 120]);
+          ctx.fillRect(this.sx(wx), this.sy(this.groundAt(wx)) + f.depth + Math.round(Math.sin(dx * 0.3) * 0.6), 1, 1);
+        }
       }
     }
   }
@@ -992,6 +1074,12 @@ export class Scene {
       const hop = near ? Math.round(Math.abs(Math.sin(this.t * 9 + i)) * 3) : 0;
       const p = spriteCanvas(PENGUIN[Math.floor(this.t * 3 + i) % 2]);
       ctx.drawImage(p, X + 6, this.sy(this.groundAt(wx + 10)) - p.height - hop + 1);
+      // Something odd left on the mountain every 100 m (boot, dead tree, winking flower, …).
+      const art = spriteCanvas(ARTIFACTS[i % ARTIFACTS.length]);
+      const ax = wx - 26;
+      const sway = i % ARTIFACTS.length === 2 ? Math.round(Math.sin(this.t * 2 + i)) : 0; // the flower sways
+      const bob = i % ARTIFACTS.length === 4 ? Math.floor(this.t * 2) % 2 : 0; // Caesar shifts its weight
+      ctx.drawImage(art, this.sx(ax) - (art.width >> 1) + sway, this.sy(this.groundAt(ax)) - art.height + 2 - bob);
     }
     // The snowman's own flag on the summit.
     if (this.flagRise > 0) {
