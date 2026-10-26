@@ -40,7 +40,21 @@ function buildCycle(packs: Pack[], cycle: number): Category[] {
   return out;
 }
 
+/** Pre-built schedule (scripts/build-schedule.ts): fixed per date, so past days never change. */
+import schedule from '../data/daily-schedule.json';
+
 export function pickDailyCategories(packs: Pack[], key: string, count = PROMPTS_PER_DAY): Category[] {
+  const fixed = (schedule.days as Record<string, string[]>)[key];
+  if (fixed) {
+    const all = new Map(packs.flatMap((p) => p.categories).map((c) => [c.id, c]));
+    const cats = fixed.map((id) => all.get(id)).filter((c): c is Category => !!c);
+    if (cats.length >= Math.min(count, fixed.length)) return cats.slice(0, count);
+  }
+  return pickByCycle(packs, key, count);
+}
+
+/** Fallback for dates beyond the schedule: cycles through every category before repeating. */
+function pickByCycle(packs: Pack[], key: string, count = PROMPTS_PER_DAY): Category[] {
   const daily = packs.filter((p) => p.daily && p.categories.length);
   const total = daily.reduce((n, p) => n + p.categories.length, 0);
   if (total === 0) return [];

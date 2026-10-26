@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "check-categories": "vitest run tests/categories.test.ts",
-    "rank-answers": "node scripts/rank-answers.ts"
+    "rank-answers": "node scripts/rank-answers.ts",
+    "schedule": "node scripts/build-schedule.ts"
   },
   "devDependencies": {
     "typescript": "^5.6.3",
