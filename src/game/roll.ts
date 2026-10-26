@@ -1,5 +1,5 @@
 import { ALL_CATEGORIES, PACKS } from '../core/categories';
-import { dateKey, dayNumber, pickDailyCategories } from '../core/daily';
+import { LAUNCH_DATE, dateKey, dayNumber, pickDailyCategories } from '../core/daily';
 import { matchAnswer } from '../core/matcher';
 import { TEST_MODE } from '../core/testmode';
 import { uuid } from '../net/telemetry';
@@ -15,6 +15,13 @@ export interface AnswerTiming {
   elapsed: number;
   /** Seconds left on the clock. */
   left: number;
+}
+
+/** A day in the archive calendar. */
+export interface CalendarDay {
+  date: string;
+  number: number;
+  when: 'past' | 'today' | 'future';
 }
 
 export type SubmitOutcome =
@@ -91,6 +98,20 @@ export class Roll {
       const key = dateKey(new Date(y, m - 1, d - i));
       if (dayNumber(key) < 1) break;
       out.push(key);
+    }
+    return out;
+  }
+
+  /** Every Daily Roll from launch day (#1) to `ahead` days after today, oldest first. */
+  static calendar(today: string, ahead = 7): CalendarDay[] {
+    const out: CalendarDay[] = [];
+    const [y, m, d] = LAUNCH_DATE.split('-').map(Number);
+    for (let i = 0; ; i++) {
+      const date = dateKey(new Date(y, m - 1, d + i));
+      const when = date < today ? 'past' : date === today ? 'today' : 'future';
+      if (when === 'future' && dayNumber(date) > dayNumber(today) + ahead) break;
+      out.push({ date, number: dayNumber(date), when });
+      if (i > 20000) break;
     }
     return out;
   }

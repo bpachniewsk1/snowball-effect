@@ -211,39 +211,69 @@ export class App {
   }
 
   /** Past days' rolls. Opens once today's Daily Roll is done. */
-  private showArchive(): void {
+  /**
+   * The archive: every Daily Roll since launch (#1, oldest first), today highlighted, the next week
+   * locked as "coming soon". 50 per page; opens on the page with today.
+   */
+  private showArchive(page?: number): void {
     this.screen = 'archive';
     this.onEnter = null;
+    const PER_PAGE = 50;
     const today = rollDate();
-    const days = Roll.archiveDates(today);
+    const days = Roll.calendar(today);
+    const pages = Math.max(1, Math.ceil(days.length / PER_PAGE));
+    const todayIdx = days.findIndex((d) => d.when === 'today');
+    const current = Math.min(pages - 1, Math.max(0, page ?? Math.floor(Math.max(0, todayIdx) / PER_PAGE)));
+    const status = (r: Roll) =>
+      r.finished
+        ? `<span class="num">${formatAltitude(r.points)}</span> ${r.rounds.map((x) => (x.tier ? TIERS[x.tier].emoji : MISS_EMOJI)).join('')}`
+        : r.started
+          ? `<span class="muted">in progress · ${r.roundIndex}/${r.categories.length}</span>`
+          : '<span class="muted">not played</span>';
     const rows = days
-      .map((date) => {
-        const r = Roll.daily(date, today);
-        const status = r.finished
-          ? `<span class="num">${formatAltitude(r.points)}</span> ${r.rounds.map((x) => (x.tier ? TIERS[x.tier].emoji : MISS_EMOJI)).join('')}`
-          : r.started
-            ? `<span class="muted">in progress · ${r.roundIndex}/${r.categories.length}</span>`
-            : '<span class="muted">not played</span>';
-        return `<li><button class="archive-day" data-date="${date}" data-silent>
-            <span class="num">#${r.number}</span><span>${esc(this.prettyDate(date))}</span><span class="archive-status">${status}</span>
+      .slice(current * PER_PAGE, (current + 1) * PER_PAGE)
+      .map((d) => {
+        const head = `<span class="num">#${d.number}</span><span>${esc(this.prettyDate(d.date))}</span>`;
+        if (d.when === 'future') {
+          return `<li><div class="archive-day future" aria-disabled="true">${head}<span class="archive-status">🔒 coming soon</span></div></li>`;
+        }
+        const r = Roll.daily(d.date, today);
+        const tag = d.when === 'today' ? '<span class="today-tag">TODAY</span> ' : '';
+        return `<li><button class="archive-day ${d.when}" data-date="${d.date}" data-silent>
+            ${head}<span class="archive-status">${tag}${status(r)}</span>
           </button></li>`;
       })
       .join('');
+    const pager =
+      pages > 1
+        ? `<div class="row center-row pager">
+            <button class="menu small" id="arch-prev" ${current === 0 ? 'disabled' : ''}>◀ PREV</button>
+            <span class="muted num">${current + 1} / ${pages}</span>
+            <button class="menu small" id="arch-next" ${current >= pages - 1 ? 'disabled' : ''}>NEXT ▶</button>
+          </div>`
+        : '';
     this.render(`
       <div class="stack">
         <h2 class="center">ARCHIVE</h2>
-        ${say(days.length ? "Every past Daily Roll. Playing one doesn't touch your streak." : "Nothing here yet — each Daily Roll lands in the archive the day after. Come back tomorrow!")}
-        ${days.length ? `<ul class="archive-list">${rows}</ul>` : ''}
+        ${say("Every Daily Roll since launch. Past days don't touch your streak; new ones unlock at midnight.")}
+        <ul class="archive-list" id="archive-list">${rows}</ul>
+        ${pager}
         <div class="row center-row"><button class="menu big" id="back">BACK</button></div>
       </div>`);
-    this.panel.querySelectorAll<HTMLButtonElement>('.archive-day').forEach((b) =>
+    this.panel.querySelectorAll<HTMLButtonElement>('button.archive-day').forEach((b) =>
       b.addEventListener('click', () => {
         sfx.crunch();
         this.play(Roll.daily(b.dataset.date!, today));
       }),
     );
+    document.getElementById('arch-prev')?.addEventListener('click', () => this.showArchive(current - 1));
+    document.getElementById('arch-next')?.addEventListener('click', () => this.showArchive(current + 1));
     $('#back').addEventListener('click', () => this.showTitle());
     this.onEnter = () => this.showTitle();
+    // Bring today into view inside the list.
+    const list = document.getElementById('archive-list');
+    const todayRow = list?.querySelector<HTMLElement>('.archive-day.today');
+    if (list && todayRow) list.scrollTop = Math.max(0, todayRow.parentElement!.offsetTop - list.offsetTop - list.clientHeight / 2);
   }
 
   /** A new day while the menu is open: refresh it so the new Daily Roll shows up. */

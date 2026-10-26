@@ -1258,3 +1258,29 @@ button.menu.locked {
 .test-tier:focus-visible {
   outline: 2px solid var(--yellow);
 }
+
+.archive-day.today {
+  background: #1a1608;
+  outline: 3px solid var(--yellow);
+  outline-offset: -3px;
+}
+.today-tag {
+  font-family: var(--head);
+  font-size: 9px;
+  color: var(--black);
+  background: var(--yellow);
+  padding: 3px 5px;
+  margin-right: 6px;
+}
+.archive-day.future {
+  opacity: 0.45;
+  cursor: default;
+}
+.archive-day.future:hover {
+  color: inherit;
+  background: none;
+}
+.pager {
+  align-items: center;
+  gap: 12px;
+}

@@ -42,4 +42,12 @@ describe('Roll', () => {
     expect(Roll.archiveDates('2026-10-27')).toEqual(['2026-10-26', '2026-10-25']);
     expect(Roll.archiveDates('2026-10-25')).toEqual([]);
   });
+
+  it('lays out the archive calendar from launch day, with today and a locked week ahead', () => {
+    const cal = Roll.calendar('2026-10-26');
+    expect(cal[0]).toEqual({ date: '2026-10-25', number: 1, when: 'past' });
+    expect(cal[1]).toEqual({ date: '2026-10-26', number: 2, when: 'today' });
+    expect(cal.filter((d) => d.when === 'future')).toHaveLength(7);
+    expect(cal.at(-1)).toEqual({ date: '2026-11-02', number: 9, when: 'future' });
+  });
 });
