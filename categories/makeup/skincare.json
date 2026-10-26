@@ -1,0 +1,79 @@
+{
+  "id": "skincare",
+  "prompt": "Name a skincare product or skincare brand",
+  "ranking": {
+    "hints": [
+      "(skin care)",
+      "(brand)",
+      "(company)",
+      "(cosmetics)"
+    ],
+    "expect": "skin|cosmetic|beauty|brand|company|cream|acid|dermatolog|care|lotion|oil|cleans|moistur|sunscreen|vitamin|retino|personal care|pharmaceutical|retail|product"
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 255
+  },
+  "answers": {
+    "slush": [
+      "Moisturiser|Moisturizer|Face cream", "Sunscreen|SPF|Sunblock", "Serum", "Cleanser|Face wash",
+      "Toner", "Retinol", "Vitamin C serum|Vitamin C", "Hyaluronic acid", "Niacinamide", "CeraVe",
+      "The Ordinary", "La Roche-Posay", "Nivea", "Cetaphil", "Neutrogena"
+    ],
+    "snowflake": [
+      "Exfoliator", "Face mask", "Sheet mask", "Clay mask", "Eye cream", "Night cream", "Day cream",
+      "Micellar water", "Cleansing balm", "Cleansing oil", "Face oil", "Lip balm",
+      "Salicylic acid|BHA", "Glycolic acid|AHA", "Pimple patch|Acne patch", "Body lotion",
+      "Hand cream", "Scrub|Face scrub", "Clinique", "Kiehl's", "Drunk Elephant", "Paula's Choice",
+      "Olay", "Eucerin", "Vichy", "Avène", "Bioderma", "Garnier", "L'Oréal Paris|L'Oreal",
+      "Estée Lauder", "Lancôme", "Clarins", "Shiseido", "SK-II", "Laneige", "COSRX", "Innisfree",
+      "Glow Recipe", "Tatcha", "Simple", "Aveeno", "Dove", "Glossier", "Rhode",
+      "La Mer|Crème de la Mer", "Essence", "Ampoule", "Emulsion", "Gel moisturiser|Gel cream",
+      "Sleeping mask|Overnight mask", "Spot treatment", "Chemical peel|Peeling", "Face mist",
+      "Barrier cream", "Ceramide cream|Ceramides", "Peptide serum|Peptides", "Azelaic acid",
+      "Benzoyl peroxide", "Tretinoin", "Bakuchiol"
+    ],
+    "icefrost": [
+      "Snail mucin|Snail essence", "Centella|Cica|Centella asiatica", "Squalane", "Rosehip oil",
+      "Aloe vera gel|Aloe vera", "After-sun|After sun lotion", "Tinted sunscreen|Tinted SPF",
+      "Body butter", "Foot cream", "Sugar scrub", "Toner pads|Exfoliating pads", "Mineral sunscreen",
+      "Eye patches|Under-eye patches", "Lip mask", "Lactic acid", "Mandelic acid", "PHA", "Urea cream",
+      "Zinc oxide", "Vitamin E oil", "Collagen cream", "Retinal", "Sunday Riley", "Beauty of Joseon",
+      "Anua", "Skin1004", "Round Lab", "Torriden", "Isntree", "Some By Mi", "Klairs|Dear Klairs",
+      "Dr. Jart+|Dr Jart", "Missha", "Etude|Etude House", "Purito", "Medicube", "Bioré", "Hada Labo",
+      "Anessa", "Uriage", "Caudalie", "Nuxe", "Weleda", "First Aid Beauty", "Youth to the People",
+      "Summer Fridays", "Fresh", "Origins", "Murad", "Dermalogica", "Peter Thomas Roth",
+      "Kate Somerville", "Dr. Dennis Gross", "SkinCeuticals", "Obagi", "ZO Skin Health",
+      "Augustinus Bader", "Sisley", "Clé de Peau Beauté|Cle de Peau", "The Inkey List", "Naturium",
+      "Good Molecules", "Byoma", "Bubble", "Starface", "Mighty Patch|Hero Cosmetics", "Krave Beauty",
+      "Versed", "Supergoop!", "EltaMD", "Skin Aqua"
+    ],
+    "brainfreeze": [
+      "Sebamed", "Dr. Hauschka", "Medik8", "Pixi", "REN|REN Clean Skincare", "Elemis", "Liz Earle",
+      "No7", "Sukin", "Ziaja", "Iwostin", "Pharmaceris", "Bielenda", "Tołpa", "Mixa", "Balea",
+      "Alverde", "Isana", "Lavera", "Sulwhasoo", "Biologique Recherche", "Lotion P50",
+      "Facial essence|First treatment essence", "Double cleansing", "Oil cleanser",
+      "Enzyme powder|Enzyme cleanser", "Exfoliating toner", "Tranexamic acid", "Kojic acid",
+      "Alpha arbutin|Arbutin", "Copper peptides", "Adapalene|Differin", "Hydrocolloid patch",
+      "Petroleum jelly|Vaseline", "Aquaphor", "Bio-Oil", "Nivea Creme", "Beauty balm",
+      "Sun stick|Sunscreen stick", "Sun serum", "Ferulic acid", "Glutathione", "Propolis", "Mugwort",
+      "Rice water", "Green tea extract", "Tea tree oil", "Witch hazel", "Rose water",
+      "Thermal water|Thermal spring water", "Facial roller|Jade roller", "Gua sha", "LED mask",
+      "Microcurrent device", "Derma roller|Microneedling", "Ice roller", "Konjac sponge",
+      "Cotton pads", "Muslin cloth", "Mandelic acid serum", "Polyglutamic acid", "Beta-glucan",
+      "Panthenol|Vitamin B5", "Allantoin", "Madecassoside", "Ectoin", "Bakuchiol oil", "Snail cream",
+      "Ginseng cream", "Mucin essence", "Cica cream", "Cicaplast", "Effaclar", "Toleriane",
+      "Anthelios", "Lipikar", "Mineral 89", "Sensibio", "Atoderm", "Hydro Boost", "Ultra Facial Cream",
+      "Advanced Night Repair", "Facial Treatment Essence", "Good Genes", "C-Firma", "Protini",
+      "Lala Retro", "Watermelon Glow", "Dewy Skin Cream", "Peptide Glazing Fluid", "Buffet",
+      "Natural Moisturizing Factors|NMF", "Advanced Snail 96 Mucin Power Essence", "Relief Sun",
+      "Glow Deep Serum", "Heartleaf toner|Anua toner", "Dive-In serum", "Centella ampoule",
+      "Daily Moisture Lotion", "Moisturizing Cream", "Hydrating Cleanser", "Foaming Cleanser",
+      "Daily Facial Cleanser", "Gentle Skin Cleanser", "Vitamin C Suspension",
+      "Retinol 0.5% in Squalane", "Lactic Acid 10%"
+    ],
+    "absolutezero": [
+      "Azelaic Acid Suspension", "Multi-Peptide Serum"
+    ]
+  }
+}

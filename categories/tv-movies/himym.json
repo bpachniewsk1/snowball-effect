@@ -1,0 +1,99 @@
+{
+  "id": "himym-characters",
+  "prompt": "Name a character from How I Met Your Mother",
+  "matchSurname": true,
+  "ignoreWords": [
+    "the"
+  ],
+  "ranking": {
+    "manual": true
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 72
+  },
+  "answers": {
+    "slush": [
+      "Ted Mosby|Ted|Professor Mosby|Mosby",
+      "Barney Stinson|Barney|Stinson",
+      "Robin Scherbatsky|Robin|Scherbatsky",
+      "Marshall Eriksen|Marshall|Eriksen",
+      "Lily Aldrin|Lily|Aldrin",
+      "Tracy McConnell|The Mother|Tracy",
+      "Ranjit",
+      "Carl|Carl the bartender",
+      "Victoria",
+      "Stella Zinman|Stella",
+      "Zoey Pierson|Zoey",
+      "Nora",
+      "Quinn Garvey|Quinn",
+      "Patrice"
+    ],
+    "snowflake": [
+      "Robin Sparkles",
+      "Wendy the Waitress|Wendy",
+      "Marvin Eriksen|Marvin",
+      "Loretta Stinson|Loretta",
+      "James Stinson|James",
+      "Penny Mosby|Penny",
+      "Luke Mosby|Luke",
+      "Kevin Venkataraghavan|Kevin",
+      "Don Frank|Don",
+      "Gael",
+      "Jeanette Peterson|Jeanette",
+      "Mickey Aldrin|Mickey",
+      "Judy Eriksen|Judy",
+      "Marvin Eriksen Jr.|Marvin Waitforit Eriksen"
+    ],
+    "icefrost": [
+      "Simon Tremblay|Simon",
+      "Scooter",
+      "Sandy Rivers|Sandy",
+      "Hammond Druthers|Druthers",
+      "Arthur Hobbs|Arthur",
+      "Jerome Whittaker|Jerry Whittaker|Jerome",
+      "Virginia Mosby|Virginia",
+      "Alfred Mosby|Alfred",
+      "Heather Mosby|Heather",
+      "Ellie Stinson|Ellie",
+      "Cindy",
+      "Abby",
+      "Karen",
+      "Natalie",
+      "Lucy",
+      "Max",
+      "Louis"
+    ],
+    "brainfreeze": [
+      "Jessica Glitter",
+      "Marcus Eriksen|Marcus",
+      "Becky",
+      "The Captain|George Van Smoot",
+      "Punchy",
+      "Brad Morris|Brad",
+      "Gary Blauman|Blauman",
+      "Garrison Cootes|Cootes",
+      "Daphne",
+      "Linus",
+      "Darren",
+      "Klaus",
+      "Naomi|The Slutty Pumpkin",
+      "Carly Whittaker|Carly",
+      "Tony Grafanello|Tony",
+      "Tom",
+      "Lois Aldrin|Grandma Lois",
+      "Robin Scherbatsky Sr.",
+      "Genevieve Scherbatsky|Genevieve",
+      "Katie Scherbatsky|Katie",
+      "Trudy",
+      "Mitch|The Naked Man",
+      "Stuart",
+      "Claudia",
+      "William Zabka|Billy Zabka"
+    ],
+    "absolutezero": [
+      "Alan Thicke",
+      "Jim Nantz"
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "best-picture-winners",
+  "prompt": "Name a film that won the Oscar for Best Picture",
+  "ignoreWords": [
+    "the"
+  ],
+  "ranking": {
+    "hints": [
+      "(film)"
+    ],
+    "expect": "film|movie|animated|motion picture",
+    "wikidata": "?item wdt:P166 wd:Q102427 ; wdt:P31 wd:Q11424 ."
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-26",
+    "answers": 97,
+    "coverage": "100%"
+  },
+  "handpicked": {
+    "snowflake": [
+      "Forrest Gump"
+    ]
+  },
+  "answers": {
+    "slush": [
+      "The Godfather|The Godfather Part I|Godfather Part 1", "Titanic", "The Silence of the Lambs",
+      "Oppenheimer", "Gladiator", "Gone with the Wind|GWTW", "The Departed", "No Country for Old Men",
+      "Schindler's List", "The Godfather Part II", "Casablanca", "Parasite|Gisaengchung",
+      "Lawrence of Arabia", "Forrest Gump", "A Beautiful Mind|Beautiful Mind"
+    ],
+    "snowflake": [
+      "Rocky", "The Lord of the Rings: The Return of the King", "Birdman|Birdman or",
+      "Slumdog Millionaire", "One Flew Over the Cuckoo's Nest", "American Beauty", "Braveheart",
+      "Green Book", "The Sound of Music", "Rain Man", "12 Years a Slave|Twelve Years a Slave",
+      "Ben-Hur", "Amadeus", "The Bridge on the River Kwai", "Argo",
+      "Everything Everywhere All at Once|EEAAO", "The King's Speech",
+      "The Deer Hunter|Voyage au bout de l'enfer", "Million Dollar Baby", "Crash"
+    ],
+    "icefrost": [
+      "The Shape of Water", "Platoon",
+      "One Battle After Another|BC Project|The Battle of Baktan Cross|Desert Highway|Baktan Cross",
+      "The English Patient", "Anora", "The Last Emperor|L'ultimo imperatore|Le dernier empereur",
+      "Dances with Wolves", "Kramer vs. Kramer", "Moonlight", "Shakespeare in Love", "Unforgiven",
+      "Spotlight", "The Hurt Locker", "Gandhi", "All About Eve", "Chicago", "Chariots of Fire",
+      "The Artist", "On the Waterfront", "Midnight Cowboy", "Annie Hall", "Rebecca", "Out of Africa",
+      "My Fair Lady"
+    ],
+    "brainfreeze": [
+      "The French Connection", "All Quiet on the Western Front|À l'Ouest, rien de nouveau",
+      "The Sting", "Terms of Endearment", "From Here to Eternity", "West Side Story",
+      "It Happened One Night|Night Bus", "The Apartment", "Driving Miss Daisy", "Nomadland",
+      "In the Heat of the Night", "An American in Paris|American in Paris", "Patton", "CODA",
+      "The Best Years of Our Lives", "How Green Was My Valley", "Wings",
+      "A Man for All Seasons|Man for All Seasons", "Ordinary People", "Mutiny on the Bounty",
+      "Mrs. Miniver", "Oliver!", "Around the World in 80 Days", "The Lost Weekend", "Cimarron",
+      "Marty", "The Broadway Melody", "The Greatest Show on Earth", "Gigi", "All the King's Men",
+      "You Can't Take It With You", "The Great Ziegfeld", "Going My Way", "Tom Jones",
+      "Gentleman's Agreement", "The Life of Emile Zola"
+    ],
+    "absolutezero": [
+      "Cavalcade", "Hamlet"
+    ]
+  }
+}

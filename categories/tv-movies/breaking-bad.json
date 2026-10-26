@@ -1,0 +1,100 @@
+{
+  "id": "breaking-bad-characters",
+  "prompt": "Name a character from Breaking Bad",
+  "matchSurname": true,
+  "ignoreWords": [
+    "the"
+  ],
+  "ranking": {
+    "manual": true
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 73
+  },
+  "answers": {
+    "slush": [
+      "Walter White|Walt|Heisenberg|Mr. White|White",
+      "Jesse Pinkman|Jesse|Cap'n Cook|Pinkman",
+      "Saul Goodman|Saul|Jimmy McGill",
+      "Gustavo Fring|Gus|Gus Fring",
+      "Hank Schrader|Hank|Schrader",
+      "Skyler White|Skyler",
+      "Mike Ehrmantraut|Mike|Ehrmantraut",
+      "Walter White Jr.|Flynn|Walt Jr.",
+      "Marie Schrader|Marie",
+      "Tuco Salamanca|Tuco",
+      "Hector Salamanca|Hector|Tio Salamanca|Tio",
+      "Todd Alquist|Todd",
+      "Gale Boetticher|Gale",
+      "Jane Margolis|Jane",
+      "Lydia Rodarte-Quayle|Lydia"
+    ],
+    "snowflake": [
+      "Steven Gomez|Gomez|Gomie",
+      "Badger|Brandon Mayhew",
+      "Skinny Pete",
+      "Huell Babineaux|Huell",
+      "Jack Welker|Uncle Jack",
+      "Krazy-8|Domingo Molina",
+      "The Cousins",
+      "Leonel Salamanca|Leonel",
+      "Marco Salamanca|Marco",
+      "Combo|Christian Ortega",
+      "Andrea Cantillo|Andrea",
+      "Brock Cantillo|Brock",
+      "Ted Beneke|Ted",
+      "Elliott Schwartz|Elliott"
+    ],
+    "icefrost": [
+      "Gretchen Schwartz|Gretchen",
+      "Emilio Koyama|Emilio",
+      "Donald Margolis|Donald",
+      "Holly White|Holly",
+      "Don Eladio|Don Eladio Vuente|Eladio",
+      "Juan Bolsa",
+      "Tyrus Kitt|Tyrus",
+      "Victor",
+      "Francesca Liddy|Francesca",
+      "Patrick Kuby|Kuby",
+      "Ed Galbraith|The Disappearer|Ed",
+      "Lawson",
+      "Kenny",
+      "Spooge",
+      "Wendy",
+      "Tortuga",
+      "No-Doze"
+    ],
+    "brainfreeze": [
+      "Gonzo",
+      "Declan",
+      "Max Arciniega|Max",
+      "Carmen Molina|Carmen",
+      "Hugo Archuleta|Hugo",
+      "Bogdan Wolynetz|Bogdan",
+      "Duane Chow|Chow",
+      "Dennis Markowski|Dennis",
+      "Peter Schuler|Herr Schuler",
+      "George Merkert|Merkert",
+      "Kaylee Ehrmantraut|Kaylee",
+      "Drew Sharp",
+      "Old Joe",
+      "Jake Pinkman|Jake",
+      "Adam Pinkman",
+      "Diane Pinkman",
+      "Dan Wachsberger|Dan",
+      "Dr. Delcavoli|Delcavoli",
+      "Ken|Ken Wins",
+      "Frankie",
+      "Matt",
+      "Lester",
+      "Clovis",
+      "Barry Goodman",
+      "Mr. Lambert"
+    ],
+    "absolutezero": [
+      "Spooge's lady",
+      "Pamela"
+    ]
+  }
+}
