@@ -340,6 +340,7 @@ export class App {
         <div class="timer-track"><div class="timer-fill" id="timer-fill"></div></div>
         <span class="timer-secs" id="timer-secs">${cat.timeLimit}</span>
       </div>
+      <button type="button" class="did-you-mean hidden" id="dym" aria-live="polite" data-silent></button>
       <form class="answer-form" id="answer-form" autocomplete="off">
         <input id="answer" type="text" maxlength="80" placeholder="your answer…"
           autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" aria-label="Your answer" />
@@ -370,8 +371,28 @@ export class App {
       form.classList.add('shake');
     };
 
+    // "Did you mean …?": shown for near misses; Enter (or a click) takes it, typing anything else drops it.
+    const dym = $<HTMLButtonElement>('#dym');
+    let offer: { forInput: string; display: string } | null = null;
+    const dropOffer = () => {
+      offer = null;
+      dym.classList.add('hidden');
+    };
+    input.addEventListener('input', () => {
+      if (offer && input.value.trim() !== offer.forInput) dropOffer();
+    });
+    dym.addEventListener('click', () => {
+      if (!offer) return;
+      input.value = offer.forInput;
+      form.requestSubmit();
+    });
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+      if (offer && input.value.trim() === offer.forInput) {
+        input.value = offer.display;
+        dropOffer();
+      }
       const now = performance.now();
       const timing = this.timer !== null ? { elapsed: (now - this.clockStart) / 1000, left: (this.clockEnd - now) / 1000 } : undefined;
       const outcome = roll.submit(input.value, timing);
@@ -387,6 +408,13 @@ export class App {
           feedback.innerHTML = say(`You already tried “${esc(outcome.input)}”.`) + this.triesHtml(roll.misses);
           input.select();
           break;
+        case 'near':
+          sfx.blip();
+          offer = { forInput: outcome.input, display: outcome.suggestion };
+          dym.innerHTML = `Did you mean <b>${esc(outcome.suggestion)}</b>? <span class="dym-key">ENTER ↵</span>`;
+          dym.classList.remove('hidden');
+          input.focus({ preventScroll: true });
+          return;
         case 'wrong': {
           sfx.wrong();
           shake();
@@ -1187,7 +1215,7 @@ export class App {
         ${say('Type an answer before time runs out (25 s). Wrong answers just buzz — keep trying until you get one or the clock hits zero.')}
         ${say('Every right answer pushes your snowball up the mountain, and <b>rarer (colder) answers push it further</b>: up to 100 m for an Absolute Zero (only 1–2 exist per category!). Seven perfect answers reach <b>700 m — space</b>. Like Sisyphus, the ball always slips back down at the end. One must imagine the snowman happy.')}
         <table class="tier-table">${rows}</table>
-        ${say('Small typos are fine. Click the penguin. Click your snowman. You know you want to.', 'muted')}
+        ${say('Small typos are fine, and close misses get a “Did you mean…?” (press Enter to take it). Click the penguin. Click your snowman. You know you want to.', 'muted')}
         <p class="muted small credits">Snowball Effect is a non-commercial fan game inspired by Krillion's daily rarity format and Undertale's look. Not affiliated with or endorsed by either. Original music, sound and art; fonts under the Open Font License; answer data from Wikidata. <a href="./privacy.html">Privacy &amp; credits</a></p>
         <div class="center"><button class="menu" id="close-howto">GOT IT</button></div>
       </div>`;

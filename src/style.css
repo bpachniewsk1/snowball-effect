@@ -1303,3 +1303,32 @@ dialog#profile .name-field input {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
+
+/* "Did you mean …?" above the answer box */
+.did-you-mean {
+  display: block;
+  width: 100%;
+  margin: 0 0 6px;
+  padding: 6px 10px;
+  text-align: left;
+  font: inherit;
+  font-size: 21px;
+  color: var(--white);
+  background: #0b1a33;
+  border: 3px dashed var(--frost);
+  cursor: pointer;
+}
+.did-you-mean b {
+  color: var(--frost);
+}
+.did-you-mean:hover,
+.did-you-mean:focus-visible {
+  border-style: solid;
+  outline: none;
+}
+.dym-key {
+  font-family: var(--head);
+  font-size: 9px;
+  color: var(--muted);
+  margin-left: 6px;
+}

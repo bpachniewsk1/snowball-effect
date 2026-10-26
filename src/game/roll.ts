@@ -1,6 +1,6 @@
 import { ALL_CATEGORIES, PACKS } from '../core/categories';
 import { LAUNCH_DATE, dateKey, dayNumber, pickDailyCategories } from '../core/daily';
-import { matchAnswer } from '../core/matcher';
+import { matchAnswer, suggestAnswer } from '../core/matcher';
 import { TEST_MODE } from '../core/testmode';
 import { uuid } from '../net/telemetry';
 import { hashString, mulberry32, shuffle } from '../core/rng';
@@ -29,6 +29,8 @@ export type SubmitOutcome =
   /** Already guessed this wrong answer — no new penalty, just a nudge. */
   | { kind: 'repeat'; input: string }
   | { kind: 'wrong'; input: string }
+  /** Not on the list, but very close to one answer: ask "Did you mean …?" (not counted as wrong). */
+  | { kind: 'near'; input: string; suggestion: string }
   | { kind: 'scored'; record: RoundRecord; typo: boolean };
 
 export interface Rank {
@@ -194,7 +196,7 @@ export class Roll {
   }
 
   /** Wrong answers don't end the round — keep guessing until right or out of time. */
-  submit(input: string, timing?: AnswerTiming): SubmitOutcome {
+  submit(input: string, timing?: AnswerTiming, allowSuggest = true): SubmitOutcome {
     const cat = this.current;
     if (!cat) return { kind: 'empty' };
     const result = matchAnswer(cat, input);
@@ -202,6 +204,8 @@ export class Roll {
 
     if (result.kind === 'miss') {
       const guess = input.trim();
+      const near = allowSuggest ? suggestAnswer(cat, input) : null;
+      if (near) return { kind: 'near', input: guess, suggestion: near.display };
       const misses = (this.save.pendingMisses ??= []);
       if (misses.some((m) => m.toLowerCase() === guess.toLowerCase())) return { kind: 'repeat', input: guess };
       misses.push(guess);
