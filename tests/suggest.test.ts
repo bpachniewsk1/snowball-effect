@@ -1,10 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { readFileSync } from 'node:fs';
-import { parseCategory } from '../src/core/categories';
+import { ALL_CATEGORIES, parseCategory } from '../src/core/categories';
 import { matchAnswer, suggestAnswer } from '../src/core/matcher';
 
 const cat = (answers: Record<string, string[]>, extra = {}) => parseCategory({ id: 't', prompt: 'p', answers, ...extra }, 'test');
-const real = (f: string) => parseCategory(JSON.parse(readFileSync(`categories/${f}.json`, 'utf8')), 'x');
+const real = (id: string) => ALL_CATEGORIES.find((c) => c.id === id)!;
 
 describe('did you mean', () => {
   const capitals = cat({ slush: ['Amsterdam', 'Ankara', 'Athens'], icefrost: ['Antananarivo', 'Asmara'] });
@@ -24,8 +23,8 @@ describe('did you mean', () => {
   });
 
   it('works on real categories', () => {
-    expect(suggestAnswer(real('football/gk-poland'), 'Szczes')?.display).toBe('Wojciech Szczęsny');
-    expect(suggestAnswer(real('tv-movies/breaking-bad'), 'Heisenbrg man')).toBeNull();
-    expect(suggestAnswer(real('trivia/chemical-elements'), 'Plutonim')?.display).toBe('Plutonium');
+    expect(suggestAnswer(real('goalkeepers-poland'), 'Szczes')?.display).toBe('Wojciech Szczęsny');
+    expect(suggestAnswer(real('breaking-bad-characters'), 'Heisenbrg man')).toBeNull();
+    expect(suggestAnswer(real('chemical-elements'), 'Plutonim')?.display).toBe('Plutonium');
   });
 });
