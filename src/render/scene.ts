@@ -638,6 +638,12 @@ export class Scene {
     return this.ballX - r * 0.85 - AV_RIGHT + 3 + this.wobbleOffset();
   }
 
+  /** Forward lean while pushing up the slope, as pixels of shift per pixel of height (0 = upright). */
+  private leanFor(feetWX: number): number {
+    const falling = this.seq && ['fall', 'burst', 'fade'].includes(this.seq.phase);
+    return this.isFlat(feetWX) || falling ? 0 : 0.07;
+  }
+
   /** How high the snowman is off the ground: a small hop when clicked, a big leap out of a runaway ball's way. */
   private hop(): number {
     if (this.spin <= 0) return 0;
@@ -863,10 +869,8 @@ export class Scene {
     const feetWX = this.manX() + 32;
     const feetX = this.sx(feetWX);
     const feetY = this.sy(this.groundAt(feetWX));
-    const falling = this.seq && ['fall', 'burst', 'fade'].includes(this.seq.phase);
-    const lean = this.isFlat(feetWX) || falling ? 0 : -SLOPE * 0.55;
-    const headX = feetX + 50 * Math.sin(lean);
-    const headY = feetY - 50 * Math.cos(lean) - this.hop();
+    const headX = feetX + Math.round(50 * this.leanFor(feetWX)) * (this.faceLeft ? -1 : 1);
+    const headY = feetY - 50 - this.hop();
     const k = easeInOut(this.crownLand);
     const cx = Math.round(restX + (headX - restX) * k);
     const cy = Math.round(restY + (headY - restY) * k);
@@ -1150,12 +1154,10 @@ export class Scene {
       const feetY = this.sy(this.groundAt(feetWX));
       const pushing = !!this.tween || (this.strain && !this.seq);
       const bob = pushing ? Math.floor(this.t * (this.tween ? 10 : 16)) % 2 : 0;
-      const falling = this.seq && ['fall', 'burst', 'fade'].includes(this.seq.phase);
-      const lean = this.isFlat(feetWX) || falling ? 0 : -SLOPE * 0.55;
+      const lean = this.leanFor(feetWX);
       this.avatarBox = { x: feetX - 28, y: feetY - AV_FEET - bob, w: AV_RIGHT, h: AV_FEET };
       ctx.save();
       ctx.translate(feetX, feetY);
-      ctx.rotate(lean);
       let sxScale = this.faceLeft ? -1 : 1;
       const hop = this.hop();
       if (this.spin > 0) {
@@ -1164,7 +1166,17 @@ export class Scene {
         sxScale *= Math.abs(c) < 0.08 ? 0.08 * Math.sign(c || 1) : c;
       }
       ctx.scale(sxScale, 1);
-      ctx.drawImage(this.avatar, -32, -AV_FEET - bob - hop);
+      if (lean === 0) {
+        ctx.drawImage(this.avatar, -32, -AV_FEET - bob - hop);
+      } else {
+        // Lean forward into the push by shifting whole pixel rows (a shear), never rotating —
+        // rotating pixel art smears it (the eye used to blur on the slope).
+        const top = -AV_FEET - bob - hop;
+        for (let row = 0; row < this.avatar.height; row++) {
+          const shift = Math.round((AV_FEET - row) * lean);
+          ctx.drawImage(this.avatar, 0, row, this.avatar.width, 1, -32 + shift, top + row, this.avatar.width, 1);
+        }
+      }
       ctx.restore();
       // Sweat once the ball is bigger than it.
       if (pushing && r > 22 && Math.random() < 0.04) {

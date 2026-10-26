@@ -937,23 +937,23 @@ img.avatar,
 }
 .avatar-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(156px, 1fr));
+  gap: 14px;
 }
 .avatar-opt {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  padding: 8px 4px;
+  padding: 12px 6px;
   background: #0b1a33;
   border: 4px solid #333;
   font-family: var(--head);
-  font-size: 9px;
+  font-size: 13px;
 }
 .avatar-opt img {
   width: 100%;
-  max-width: 128px;
+  max-width: 192px;
   height: auto;
 }
 .avatar-opt:hover,
@@ -997,7 +997,7 @@ img.avatar,
 }
 .avatar-opt .hint {
   font-family: var(--body);
-  font-size: 13px;
+  font-size: 19px;
   line-height: 1.15;
   color: var(--muted);
   text-align: center;
@@ -1283,4 +1283,23 @@ button.menu.locked {
 .pager {
   align-items: center;
   gap: 12px;
+}
+
+/* The snowman picker is 50% larger than other dialogs. */
+dialog#profile {
+  width: min(960px, calc(100vw - 32px));
+}
+dialog#profile h2 {
+  font-size: 1.5em;
+}
+dialog#profile .name-field {
+  font-size: 18px;
+}
+dialog#profile .name-field input {
+  font-size: 26px;
+}
+@media (max-width: 560px) {
+  .avatar-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
 }
