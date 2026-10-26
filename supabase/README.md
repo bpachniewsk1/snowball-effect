@@ -40,6 +40,14 @@ Preview the dashboard any time with `admin.html?demo`.
 Raw IP addresses are never written: `track()` stores `sha256(secret salt + date + ip)`. Players can opt
 out on the privacy page; browsers sending Global Privacy Control are never tracked.
 
+## Suggestions
+
+When a player clicks **suggest it** after a wrong guess, `track()` stores it in `public.suggestions`:
+one row per category + suggestion (matched case-insensitively), counting how often and by how many
+players it was suggested. The admin dashboard lists the pending ones (most-requested first) with
+**Add / Reject** buttons and a **Download JSON** export. `public.suggestions_pending_count()` returns
+just the number (no text), so a scheduled check can tell when it's worth reviewing (at 100+).
+
 ## Retention (optional)
 
 To delete data older than 24 months automatically, enable the `pg_cron` extension (Database →

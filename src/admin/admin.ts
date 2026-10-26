@@ -102,6 +102,87 @@ async function dashboard(): Promise<void> {
   render(data);
 }
 
+// ---------- suggestions ----------
+
+interface Suggestion {
+  id: number;
+  category: string;
+  input: string;
+  times: number;
+  players: number;
+  firstSeen: string;
+  lastSeen: string;
+  status: string;
+}
+
+const isDemo = () => new URLSearchParams(location.search).has('demo');
+
+async function rpc(name: string, body: unknown): Promise<unknown> {
+  const res = await fetch(`${SB_URL}/rest/v1/rpc/${name}`, {
+    method: 'POST',
+    headers: { apikey: SB_KEY!, Authorization: `Bearer ${token()}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) throw new Error(`${name}: ${res.status}`);
+  return res.json();
+}
+
+async function loadSuggestions(): Promise<void> {
+  const box = document.getElementById('sugg-box');
+  if (!box) return;
+  let list: Suggestion[];
+  try {
+    list = isDemo()
+      ? [
+          { id: 1, category: 'football-clubs-b', input: 'Werder Bremen', times: 14, players: 11, firstSeen: '', lastSeen: new Date().toISOString(), status: 'pending' },
+          { id: 2, category: 'oil-types', input: 'Snake oil', times: 6, players: 6, firstSeen: '', lastSeen: new Date().toISOString(), status: 'pending' },
+          { id: 3, category: 'csgo-pros', input: 'donk', times: 5, players: 4, firstSeen: '', lastSeen: new Date().toISOString(), status: 'pending' },
+        ]
+      : ((await rpc('admin_suggestions', { only_status: 'pending' })) as Suggestion[]);
+  } catch (e) {
+    box.innerHTML = `<h2>Suggestions</h2><p class="error">${esc(String(e))} — re-run supabase/schema.sql?</p>`;
+    return;
+  }
+  const render = () => {
+    box.innerHTML = `
+      <div class="top"><h2>Suggestions · ${list.length} pending</h2>
+        <button class="btn small" id="sugg-dl" ${list.length ? '' : 'disabled'}>DOWNLOAD JSON</button></div>
+      <p class="muted">Answers players asked to add ("suggest it" after a wrong guess), most-requested first. Duplicates are merged.</p>
+      ${table(
+        ['category', 'suggestion', 'players', 'times', 'last', ''],
+        list.map((x) => [
+          esc(x.category),
+          `<b>${esc(x.input)}</b>`,
+          num(x.players),
+          num(x.times),
+          x.lastSeen ? esc(when(x.lastSeen)) : '—',
+          `<button class="btn small" data-act="added" data-id="${x.id}">ADD</button> <button class="btn small ghost" data-act="rejected" data-id="${x.id}">REJECT</button>`,
+        ]),
+      )}`;
+    document.getElementById('sugg-dl')?.addEventListener('click', () => {
+      const blob = new Blob([JSON.stringify(list, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `snowball-suggestions-${new Date().toISOString().slice(0, 10)}.json`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+    });
+    box.querySelectorAll<HTMLButtonElement>('button[data-act]').forEach((b) =>
+      b.addEventListener('click', async () => {
+        const id = Number(b.dataset.id);
+        try {
+          if (!isDemo()) await rpc('admin_set_suggestions', { ids: [id], new_status: b.dataset.act });
+          list = list.filter((x) => x.id !== id);
+          render();
+        } catch (e) {
+          alert(String(e));
+        }
+      }),
+    );
+  };
+  render();
+}
+
 // ---------- rendering ----------
 
 interface Overview {
@@ -198,6 +279,8 @@ function render(d: Overview): void {
       ${card('avg session', dur(t.avgSessionSec))}
     </section>
 
+    <section class="box" id="sugg-box"><h2>Suggestions</h2><p class="muted">Loading…</p></section>
+
     <section class="box"><h2>Per day</h2>${dayChart(d.perDay)}</section>
 
     <div class="grid">
@@ -240,6 +323,7 @@ function render(d: Overview): void {
     void dashboard();
   });
   document.getElementById('refresh')!.addEventListener('click', () => void dashboard());
+  void loadSuggestions();
   document.getElementById('logout')!.addEventListener('click', () => {
     setToken(null);
     login();

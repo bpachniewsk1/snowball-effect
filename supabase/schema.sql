@@ -110,6 +110,26 @@ alter table public.rolls enable row level security;
 alter table public.rounds enable row level security;
 alter table public.events enable row level security;
 
+-- Answers players suggested ("suggest it" after a wrong guess). One row per category + suggestion;
+-- repeats from other players only bump the counters. Reviewed by hand once enough have piled up.
+create table if not exists public.suggestions (
+  id bigint generated always as identity primary key,
+  category_id text not null,
+  input_key text not null,          -- lower-cased, trimmed: what duplicates are matched on
+  input text not null,              -- latest spelling as typed
+  times int not null default 1,
+  players int not null default 1,
+  player_ids uuid[] not null default '{}',
+  first_seen timestamptz not null default now(),
+  last_seen timestamptz not null default now(),
+  status text not null default 'pending' check (status in ('pending', 'added', 'rejected')),
+  note text,
+  test boolean not null default false,
+  unique (category_id, input_key, test)
+);
+create index if not exists suggestions_status_idx on public.suggestions (status);
+alter table public.suggestions enable row level security;
+
 -- ---------- writes: public.track(payload) ----------
 
 create or replace function public.track(payload jsonb)
@@ -174,6 +194,19 @@ begin
                (select coalesce(array_agg(left(m, 80)), '{}') from (select jsonb_array_elements_text(coalesce(d -> 'misses', '[]'::jsonb)) as m limit 30) ms),
                coalesce((d ->> 'timedOut')::boolean, false), least((d ->> 'timeMs')::int, 600000), is_test
         where exists (select 1 from rolls where id = (d ->> 'rollId')::uuid);
+      when 'suggest' then
+        if coalesce(trim(d ->> 'input'), '') <> '' and coalesce(d ->> 'categoryId', '') <> '' then
+          insert into suggestions (category_id, input_key, input, player_ids, test)
+          values (left(d ->> 'categoryId', 60), lower(left(trim(d ->> 'input'), 80)), left(trim(d ->> 'input'), 80), array[pid], is_test)
+          on conflict (category_id, input_key, test) do update
+            set times = suggestions.times + 1,
+                input = excluded.input,
+                last_seen = now(),
+                player_ids = case when pid = any (suggestions.player_ids) then suggestions.player_ids
+                                  else suggestions.player_ids || pid end,
+                players = case when pid = any (suggestions.player_ids) then suggestions.players
+                               else suggestions.players + 1 end;
+        end if;
       when 'roll_finish' then
         update rolls set finished_at = now(), points = (d ->> 'points')::int
         where id = (d ->> 'rollId')::uuid and player_id = pid and finished_at is null;
@@ -287,6 +320,63 @@ $$;
 
 revoke all on function public.admin_overview(int, boolean) from public;
 grant execute on function public.admin_overview(int, boolean) to authenticated;
+
+-- ---------- suggestions: count (public) and review (admin) ----------
+
+-- Just a number (no text), so a scheduled check can see when it's time to review.
+create or replace function public.suggestions_pending_count()
+returns int
+language sql
+security definer
+set search_path = public
+as $$ select count(*)::int from suggestions where status = 'pending' and not test $$;
+revoke all on function public.suggestions_pending_count() from public;
+grant execute on function public.suggestions_pending_count() to anon, authenticated;
+
+create or replace function public.admin_suggestions(only_status text default 'pending')
+returns jsonb
+language plpgsql
+security definer
+set search_path = public, private
+as $$
+begin
+  if not exists (select 1 from private.admins where email = lower(auth.jwt() ->> 'email')) then
+    raise exception 'not an admin';
+  end if;
+  return coalesce((
+    select jsonb_agg(jsonb_build_object(
+      'id', id, 'category', category_id, 'input', input, 'times', times, 'players', players,
+      'firstSeen', first_seen, 'lastSeen', last_seen, 'status', status, 'note', note
+    ) order by players desc, times desc, last_seen desc)
+    from suggestions
+    where not test and (only_status is null or status = only_status)
+  ), '[]'::jsonb);
+end;
+$$;
+revoke all on function public.admin_suggestions(text) from public;
+grant execute on function public.admin_suggestions(text) to authenticated;
+
+create or replace function public.admin_set_suggestions(ids bigint[], new_status text, new_note text default null)
+returns int
+language plpgsql
+security definer
+set search_path = public, private
+as $$
+declare n int;
+begin
+  if not exists (select 1 from private.admins where email = lower(auth.jwt() ->> 'email')) then
+    raise exception 'not an admin';
+  end if;
+  if new_status not in ('pending', 'added', 'rejected') then
+    raise exception 'bad status';
+  end if;
+  update suggestions set status = new_status, note = coalesce(new_note, note) where id = any (ids);
+  get diagnostics n = row_count;
+  return n;
+end;
+$$;
+revoke all on function public.admin_set_suggestions(bigint[], text, text) from public;
+grant execute on function public.admin_set_suggestions(bigint[], text, text) to authenticated;
 
 -- ---------- after running this file ----------
 -- 1. Authentication → Users → "Add user": create YOUR admin login (email + password).
