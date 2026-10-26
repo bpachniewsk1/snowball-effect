@@ -50,6 +50,36 @@ function skyAt(a: number): { top: RGB; bottom: RGB } {
 const NIGHT: RGB = [8, 10, 34];
 const SNOW = { top: [250, 252, 255] as RGB, body: [236, 244, 251] as RGB, shade: [205, 222, 236] as RGB };
 const ICE = { top: [222, 248, 255] as RGB, body: [176, 226, 246] as RGB, shade: [128, 190, 226] as RGB };
+/** The summit: black glacier ice, moonlit edges. */
+const OBSIDIAN = { top: [104, 126, 196] as RGB, body: [16, 20, 44] as RGB, shade: [34, 44, 90] as RGB };
+const GLOW_A: RGB = [127, 232, 255];
+const GLOW_B: RGB = [184, 140, 255];
+
+/** Pixel line (Bresenham) — keeps thin details crisp at low resolution. */
+function pixelLine(ctx: CanvasRenderingContext2D, x0: number, y0: number, x1: number, y1: number): void {
+  x0 = Math.round(x0);
+  y0 = Math.round(y0);
+  x1 = Math.round(x1);
+  y1 = Math.round(y1);
+  const dx = Math.abs(x1 - x0);
+  const dy = -Math.abs(y1 - y0);
+  const sx = x0 < x1 ? 1 : -1;
+  const sy = y0 < y1 ? 1 : -1;
+  let err = dx + dy;
+  for (let guard = 0; guard < 2000; guard++) {
+    ctx.fillRect(x0, y0, 1, 1);
+    if (x0 === x1 && y0 === y1) break;
+    const e2 = 2 * err;
+    if (e2 >= dy) {
+      err += dy;
+      x0 += sx;
+    }
+    if (e2 <= dx) {
+      err += dx;
+      y0 += sy;
+    }
+  }
+}
 
 /** Draws a filled pixel circle, optionally clipped to another circle. */
 function fillCircle(
@@ -93,6 +123,8 @@ interface Flake {
   speed: number;
   drift: number;
   size: number;
+  /** Behind the mountain (small, slow) or in front. */
+  back: boolean;
 }
 interface Shooter {
   x: number;
@@ -143,6 +175,7 @@ export class Scene {
   private stars: { x: number; y: number; tw: number; big: boolean }[] = [];
   private clouds: { alt: number; x: number; w: number }[] = [];
   private ballCache = new Map<number, HTMLCanvasElement>();
+  private nebula: HTMLCanvasElement;
 
   // Rarity mood (rare answers darken the sky and bring out stars).
   private moodStars: { x: number; y: number; tw: number; big: boolean; tint: boolean }[] = [];
@@ -165,9 +198,11 @@ export class Scene {
     this.resize();
     window.addEventListener('resize', () => this.resize());
     const rand = mulberry32(hashString('snow'));
-    for (let i = 0; i < 90; i++) {
-      this.flakes.push({ x: rand(), y: rand(), speed: 0.03 + rand() * 0.06, drift: rand() * 6, size: rand() < 0.2 ? 2 : 1 });
+    for (let i = 0; i < 320; i++) {
+      const back = i % 2 === 0;
+      this.flakes.push({ x: rand(), y: rand(), speed: 0.03 + rand() * 0.06, drift: rand() * 6, size: !back && rand() < 0.25 ? 2 : 1, back });
     }
+    this.nebula = this.makeNebula(rand);
     for (let i = 0; i < 160; i++) this.stars.push({ x: rand(), y: rand() * 0.9, tw: rand() * 6, big: rand() < 0.1 });
     for (let i = 0; i < 280; i++) {
       this.moodStars.push({ x: rand(), y: rand() * 0.9, tw: rand() * 6, big: rand() < 0.15, tint: rand() < 0.3 });
@@ -445,11 +480,26 @@ export class Scene {
     }
     this.particles = this.particles.filter((p) => p.life > 0);
 
+    // Snow: the wind picks up with altitude; the back layer is slower (parallax).
+    const alt = this.alt01;
     for (const f of this.flakes) {
-      f.y += f.speed * dt;
-      f.x += (Math.sin(this.t + f.drift) * 0.004 - dx / this.W) * (f.size === 2 ? 1.3 : 0.8);
+      const depth = f.back ? 0.55 : f.size === 2 ? 1.3 : 1;
+      f.y += f.speed * dt * depth * (1 + alt * 0.8);
+      f.x += (Math.sin(this.t + f.drift) * 0.004 - (0.006 + alt * 0.05) * dt - (dx / this.W) * 0.8) * depth;
       if (f.y > 1) f.y -= 1;
       f.x = ((f.x % 1) + 1) % 1;
+    }
+    // Faint glowing motes rise around the summit.
+    if (alt > 0.8 && Math.random() < dt * 14 * smooth(0.8, 0.95, alt)) {
+      this.particles.push({
+        x: Math.random() * this.W,
+        y: this.anchorY + 10 + Math.random() * 30,
+        vx: (Math.random() - 0.5) * 6,
+        vy: -6 - Math.random() * 10,
+        life: 2.5 + Math.random() * 1.5,
+        color: Math.random() < 0.5 ? css(GLOW_A) : css(GLOW_B),
+        gravity: -1,
+      });
     }
 
     const rate = this.moodLevel >= 4 ? 2.2 : this.moodLevel === 3 ? 0.6 : 0;
@@ -602,14 +652,17 @@ export class Scene {
     this.drawMoodSky();
     this.drawRidges(a);
     this.drawClouds();
+    this.drawSnowfall(a, true);
     this.drawSpire();
     this.drawTerrain();
     this.drawBaseCamp();
     this.drawFlags();
     this.drawSpacePenguins(a);
+    this.drawMist(a);
     this.drawRoller();
     this.drawParticles();
-    this.drawSnowfall(a);
+    this.drawSnowfall(a, false);
+    this.drawVignette(a);
     const { ctx, W, H } = this;
     if (this.flash > 0) {
       ctx.fillStyle = `rgba(235,228,255,${this.flash * 0.55})`;
@@ -672,6 +725,13 @@ export class Scene {
           ctx.fillRect(x, y + i * 5, 1, 5);
         }
       }
+    }
+    // A dim nebula hangs over the top of the world.
+    const neb = smooth(0.7, 0.95, a);
+    if (neb > 0) {
+      ctx.globalAlpha = neb * 0.75;
+      ctx.drawImage(this.nebula, Math.round(W * 0.5 - this.nebula.width / 2), Math.round(H * 0.02));
+      ctx.globalAlpha = 1;
     }
     // Sun in the valley; the moon grows as you climb.
     const sunA = 1 - smooth(0.3, 0.6, a);
@@ -776,32 +836,50 @@ export class Scene {
     }
   }
 
-  /** The iceberg crown on the summit. */
+  /** The summit crown: black glacier shards, moonlit edges, veins of cold light. */
   private drawSpire(): void {
     const { ctx } = this;
     const xs = this.summitX;
-    if (this.sx(xs - 12) > this.W + 10 || this.sx(xs + 110) < -10) return;
+    if (this.sx(xs - 20) > this.W + 10 || this.sx(xs + 120) < -10) return;
     const base = this.sy(this.topPx);
-    // Sits on the far side of the summit, so the crown still shows behind a giant snowball.
-    const pts: [number, number][] = [
-      [-12, 0], [4, 22], [16, 14], [30, 50], [42, 34], [56, 86], [68, 44], [80, 64], [92, 24], [108, 0],
+    const pulse = 0.5 + 0.5 * Math.sin(this.t * 1.3);
+    // Left base, right base, tip and a shoulder, relative to the summit (dx right, dy up).
+    const shards: { l: number; r: number; tip: [number, number]; sh: [number, number] }[] = [
+      { l: -18, r: 10, tip: [-6, 30], sh: [2, 14] },
+      { l: 2, r: 40, tip: [20, 64], sh: [32, 30] },
+      { l: 60, r: 112, tip: [86, 92], sh: [100, 40] },
+      { l: 28, r: 84, tip: [52, 138], sh: [66, 70] },
     ];
-    const poly = (ps: [number, number][], color: string) => {
+    const poly = (pts: number[][], color: string) => {
       ctx.fillStyle = color;
       ctx.beginPath();
-      ps.forEach(([dx, dy], i) => {
-        const X = this.sx(xs + dx);
-        const Y = base - dy;
-        if (i) ctx.lineTo(X, Y);
-        else ctx.moveTo(X, Y);
-      });
+      pts.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)));
       ctx.closePath();
       ctx.fill();
     };
-    poly(pts, this.dim([150, 210, 238]));
-    poly(pts.map(([dx, dy]) => [dx + 3, dy * 0.82] as [number, number]), this.dim([190, 234, 252]));
-    ctx.fillStyle = this.dim([240, 252, 255]);
-    for (const [dx, dy] of [[30, 48], [56, 84], [80, 62]]) ctx.fillRect(this.sx(xs + dx), base - dy + 2, 1, 7);
+    for (const s of shards) {
+      const L = [this.sx(xs + s.l), base];
+      const R = [this.sx(xs + s.r), base];
+      const T = [this.sx(xs + s.tip[0]), base - s.tip[1]];
+      const S = [this.sx(xs + s.sh[0]), base - s.sh[1]];
+      poly([L, T, S, R], css([12, 15, 34]));
+      poly([T, S, R, [T[0] + 2, base]], css([26, 33, 70]));
+      // Moonlight catches the right-hand edges.
+      ctx.fillStyle = css([118, 146, 226]);
+      pixelLine(ctx, T[0], T[1], S[0], S[1]);
+      ctx.fillStyle = css([70, 90, 160]);
+      pixelLine(ctx, S[0], S[1], R[0], R[1]);
+      // A vein of cold light up the middle, breathing slowly.
+      ctx.fillStyle = css(mix(GLOW_A, GLOW_B, pulse), 0.35 + 0.45 * pulse);
+      pixelLine(ctx, (L[0] + R[0]) / 2, base - 2, T[0] + (S[0] - T[0]) * 0.25, T[1] + (S[1] - T[1]) * 0.25 + 3);
+    }
+    // Something glows at the very top.
+    const tip = shards[3].tip;
+    const tx = this.sx(xs + tip[0]);
+    const ty = base - tip[1];
+    for (let r = 7; r >= 1; r -= 2) fillCircle(ctx, tx, ty, r, css(GLOW_B, (0.05 + 0.06 * pulse) * (8 - r) * 0.5));
+    ctx.fillStyle = css([230, 240, 255], 0.6 + 0.4 * pulse);
+    ctx.fillRect(tx, ty, 1, 1);
   }
 
   private drawTerrain(): void {
@@ -812,18 +890,28 @@ export class Scene {
       const h = this.groundAt(wx);
       const y = this.sy(h);
       if (y >= H) continue;
-      const ice = smooth(0.5, 0.85, h / top);
-      ctx.fillStyle = this.dim(mix(SNOW.top, ICE.top, ice));
+      // Snow → blue ice → black glacier ice near the summit.
+      const ice = smooth(0.5, 0.8, h / top);
+      const ob = smooth(0.8, 0.96, h / top);
+      const tone = (k: 'top' | 'body' | 'shade') => this.dim(mix(mix(SNOW[k], ICE[k], ice), OBSIDIAN[k], ob));
+      ctx.fillStyle = tone('top');
       ctx.fillRect(x, y, 1, 2);
-      ctx.fillStyle = this.dim(mix(SNOW.body, ICE.body, ice));
+      ctx.fillStyle = tone('body');
       ctx.fillRect(x, y + 2, 1, H - y - 2);
-      // Shading speckles and ice cracks fixed to the world, so they scroll with it.
+      // Shading speckles and cracks fixed to the world, so they scroll with it.
       const wxi = Math.floor(wx);
-      ctx.fillStyle = this.dim(mix(SNOW.shade, ICE.shade, ice));
-      for (let d = 7 + (((wxi * 7) % 5) + 5) % 5; d < H - y; d += 9) {
+      ctx.fillStyle = tone('shade');
+      for (let d = 7 + ((((wxi * 7) % 5) + 5) % 5); d < H - y; d += 9) {
         if (((wxi + d) & 3) === 0) ctx.fillRect(x, y + d, 1, 1);
       }
-      if (ice > 0.4 && (wxi % 23 === 0 || wxi % 37 === 0)) {
+      if (ob > 0.3 && (wxi % 17 === 0 || wxi % 29 === 0 || wxi % 41 === 0)) {
+        // Glowing fissures in the black ice.
+        const glow = 0.25 + 0.45 * (0.5 + 0.5 * Math.sin(this.t * 1.4 + wxi * 0.7));
+        ctx.fillStyle = css(wxi % 2 ? GLOW_A : GLOW_B, glow * ob);
+        const len = 3 + (Math.abs(wxi) % 7);
+        ctx.fillRect(x, y + 3, 1, len);
+        ctx.fillRect(x + (wxi % 3 === 0 ? 1 : -1), y + 3 + len, 1, 3);
+      } else if (ice > 0.4 && ob < 0.5 && (wxi % 23 === 0 || wxi % 37 === 0)) {
         ctx.fillStyle = this.dim([110, 170, 210]);
         ctx.fillRect(x, y + 3, 1, 5);
       }
@@ -922,16 +1010,16 @@ export class Scene {
       const Y = this.sy(this.topPx + dy + bob);
       if (X < -20 || X > this.W + 20) return;
       ctx.save();
-      ctx.globalAlpha = show;
+      ctx.globalAlpha = show * 0.7;
       ctx.translate(X, Y);
       ctx.rotate(Math.sin(this.t * 0.5 + i) * 0.5 + i);
       ctx.scale(2, 2);
       ctx.drawImage(spriteCanvas(PENGUIN[0], i % 2 === 1), -4.5, -4.5);
       ctx.restore();
       // Fishbowl helmet.
-      ctx.globalAlpha = show * 0.3;
-      fillCircle(ctx, X, Y - 3, 9, '#cfeeff');
-      ctx.globalAlpha = show * 0.9;
+      ctx.globalAlpha = show * 0.15;
+      fillCircle(ctx, X, Y - 3, 9, '#9fb8ff');
+      ctx.globalAlpha = show * 0.55;
       ctx.strokeStyle = '#e8f8ff';
       ctx.lineWidth = 1;
       ctx.beginPath();
@@ -1026,12 +1114,78 @@ export class Scene {
     ctx.globalAlpha = 1;
   }
 
-  /** No snow in space. */
-  private drawSnowfall(a: number): void {
-    const al = 0.85 * (1 - smooth(0.55, 0.8, a));
-    if (al <= 0.02) return;
+  /** Background snow thickens the higher you climb; the wind picks up and it turns icy blue up top. */
+  private drawSnowfall(a: number, back: boolean): void {
     const { ctx, W, H } = this;
-    ctx.fillStyle = `rgba(255,255,255,${al})`;
-    for (const f of this.flakes) ctx.fillRect(Math.round(f.x * W), Math.round(f.y * H), f.size, f.size);
+    const share = 0.25 + 0.75 * smooth(0, 0.9, a);
+    const count = Math.floor(this.flakes.length * share);
+    const tint = mix([255, 255, 255], [190, 214, 255], smooth(0.75, 1, a));
+    ctx.fillStyle = css(tint, back ? 0.45 : 0.85);
+    for (let i = 0; i < count; i++) {
+      const f = this.flakes[i];
+      if (f.back !== back) continue;
+      ctx.fillRect(Math.round(f.x * W), Math.round(f.y * H), f.size, f.size);
+    }
+  }
+
+  /** Slow mist bands drifting across the top of the world. */
+  private drawMist(a: number): void {
+    const m = smooth(0.8, 0.97, a);
+    if (m <= 0) return;
+    const { ctx, W } = this;
+    for (let k = 0; k < 4; k++) {
+      const y = Math.round(this.anchorY - 34 + k * 13 + Math.sin(this.t * 0.35 + k) * 3);
+      const off = (this.t * (6 + k * 3) + k * 57) % 140;
+      ctx.fillStyle = css([150, 160, 230], m * (0.04 + 0.02 * k));
+      // Wisps of uneven length, so it reads as drifting fog rather than lines.
+      for (let x = -140 + off, n = 0; x < W; x += 140, n++) {
+        const len = 40 + ((n * 37 + k * 23) % 60);
+        ctx.fillRect(Math.round(x), y, len, 2);
+        ctx.fillRect(Math.round(x) + 8, y - 1, Math.max(0, len - 20), 1);
+      }
+    }
+  }
+
+  /** The edges of the screen darken near the summit. */
+  private drawVignette(a: number): void {
+    const v = smooth(0.75, 1, a);
+    if (v <= 0) return;
+    const { ctx, W, H } = this;
+    const g = ctx.createRadialGradient(W * 0.5, H * 0.3, Math.min(W, H) * 0.25, W * 0.5, H * 0.3, Math.max(W, H) * 0.75);
+    g.addColorStop(0, 'rgba(2,3,12,0)');
+    g.addColorStop(1, `rgba(2,3,12,${0.6 * v})`);
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, W, H);
+  }
+
+  /** Dithered purple/teal clouds of the nebula, built once. */
+  private makeNebula(rand: () => number): HTMLCanvasElement {
+    const c = document.createElement('canvas');
+    c.width = 240;
+    c.height = 110;
+    const g = c.getContext('2d')!;
+    const blobs: [number, number, number, RGB][] = [
+      [70, 50, 48, [96, 52, 150]],
+      [150, 40, 56, [34, 96, 130]],
+      [200, 70, 36, [120, 60, 160]],
+      [110, 75, 30, [40, 120, 150]],
+    ];
+    for (const [bx, by, br, col] of blobs) {
+      for (let y = by - br; y < by + br; y++) {
+        for (let x = bx - br; x < bx + br; x++) {
+          const d = Math.hypot(x - bx, (y - by) * 1.6) / br;
+          if (d > 1) continue;
+          // Ordered dither: denser in the middle, speckled at the edges.
+          if (((x * 7 + y * 13) % 10) / 10 > (1 - d) * 0.9 || ((x + y) & 1) === 1) continue;
+          g.fillStyle = css(col, 0.35 + 0.3 * (1 - d));
+          g.fillRect(x, y, 1, 1);
+        }
+      }
+    }
+    for (let i = 0; i < 40; i++) {
+      g.fillStyle = `rgba(220,230,255,${0.3 + rand() * 0.5})`;
+      g.fillRect(Math.floor(rand() * 240), Math.floor(rand() * 110), 1, 1);
+    }
+    return c;
   }
 }
