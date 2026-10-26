@@ -269,7 +269,12 @@ begin
               where kind = 'unlock' and created_at >= since and (include_test or not test) group by 1) u), '[]'::jsonb),
     'recentPlayers', coalesce((select jsonb_agg(x) from (
         select jsonb_build_object(
-          'name', pl.name, 'avatar', pl.avatar, 'firstSeen', pl.first_seen, 'lastSeen', pl.last_seen,
+          -- Unnamed players get a stable number by first visit: "Nameless snowman #12".
+          'name', coalesce(nullif(trim(pl.name), ''), 'Nameless snowman #' || (
+            select count(*) from players p2
+            where coalesce(trim(p2.name), '') = '' and (p2.first_seen, p2.id) <= (pl.first_seen, pl.id)
+          )),
+          'avatar', pl.avatar, 'firstSeen', pl.first_seen, 'lastSeen', pl.last_seen,
           'rolls', (select count(*) from rolls where player_id = pl.id and finished_at is not null),
           'best', (select max(points) from rolls where player_id = pl.id),
           'streak', pl.stats -> 'streak'
