@@ -1313,13 +1313,13 @@ dialog#profile .name-field input {
   text-align: left;
   font: inherit;
   font-size: 21px;
-  color: var(--white);
-  background: #0b1a33;
-  border: 3px dashed var(--frost);
+  color: #9fd8ff;
+  background: rgba(143, 227, 240, 0.08);
+  border: 3px dashed #9fd8ff;
   cursor: pointer;
 }
 .did-you-mean b {
-  color: var(--frost);
+  color: #cdeeff;
 }
 .did-you-mean:hover,
 .did-you-mean:focus-visible {

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { parseCategory } from '../src/core/categories';
-import { matchAnswer } from '../src/core/matcher';
+import { matchAnswer, suggestAnswer } from '../src/core/matcher';
 import { normalize } from '../src/core/normalize';
 import type { CategoryFile } from '../src/core/types';
 
@@ -48,14 +48,14 @@ describe('matchAnswer', () => {
     expect(display(countries, 'sanmarino')).toBe('San Marino');
   });
 
-  it('forgives small typos', () => {
-    const r = matchAnswer(countries, 'San Marnio');
-    expect(r.kind).toBe('match');
-    expect(r.kind === 'match' && r.typo).toBe(true);
+  it('never accepts typos on their own, but suggests the answer', () => {
+    expect(matchAnswer(countries, 'San Marnio').kind).toBe('miss');
+    expect(suggestAnswer(countries, 'San Marnio')?.display).toBe('San Marino');
   });
 
-  it('refuses typos that could mean two answers', () => {
-    expect(display(countries, 'Irax')).toBeNull(); // Iran or Iraq?
+  it('suggests nothing when a typo could mean two answers', () => {
+    expect(display(countries, 'Irax')).toBeNull();
+    expect(suggestAnswer(countries, 'Irax')).toBeNull(); // Iran or Iraq?
   });
 
   it('prefers exact matches over close ones', () => {

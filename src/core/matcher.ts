@@ -63,29 +63,7 @@ export function matchAnswer(cat: Category, raw: string): MatchResult {
   const lead = input.match(/^(\d+)\D/);
   if (lead && keys.has(lead[1])) return { kind: 'match', answer: keys.get(lead[1])!, typo: false };
 
-  if (cat.exactOnly || /^\d+$/.test(input)) return { kind: 'miss', input: raw };
-
-  const budget = typoBudget(input.length);
-  if (budget === 0) return { kind: 'miss', input: raw };
-
-  // Best fuzzy hit must be strictly closer than any hit for a *different* answer.
-  let best: Answer | null = null;
-  let bestD = Infinity;
-  let runnerUpD = Infinity;
-  for (const [k, a] of keys) {
-    // Don't fuzz against very short keys ("Io" shouldn't match "Ion").
-    if (typoBudget(k.length) === 0) continue;
-    const d = editDistance(input, k, budget);
-    if (d > budget) continue;
-    if (d < bestD) {
-      if (best && best !== a) runnerUpD = bestD;
-      best = a;
-      bestD = d;
-    } else if (a !== best && d < runnerUpD) {
-      runnerUpD = d;
-    }
-  }
-  if (best && bestD < runnerUpD) return { kind: 'match', answer: best, typo: true };
+  // Typos are never accepted on their own — they get a "Did you mean …?" (see suggestAnswer).
   return { kind: 'miss', input: raw };
 }
 
@@ -101,6 +79,27 @@ export function suggestAnswer(cat: Category, raw: string, threshold = SUGGEST_TH
   const input = normalize(raw, cat.ignoreWords);
   if (input.length < 4 || /^\d+$/.test(input)) return null;
   const { keys } = buildIndex(cat);
+
+  // 1) A small typo (1 letter for short words, 2 for long ones) of exactly one answer.
+  const budget = typoBudget(input.length);
+  let typo: Answer | null = null;
+  let typoD = Infinity;
+  let typoRunnerUp = Infinity;
+  for (const [k, a] of keys) {
+    if (typoBudget(k.length) === 0) continue;
+    const d = editDistance(input, k, budget);
+    if (d > budget) continue;
+    if (d < typoD) {
+      if (typo && typo !== a) typoRunnerUp = typoD;
+      typo = a;
+      typoD = d;
+    } else if (a !== typo && d < typoRunnerUp) {
+      typoRunnerUp = d;
+    }
+  }
+  if (typo && typoD < typoRunnerUp) return typo;
+
+  // 2) Otherwise anything at least `threshold` similar, if one answer clearly wins.
   let best: Answer | null = null;
   let bestS = 0;
   let runnerUpS = 0;
