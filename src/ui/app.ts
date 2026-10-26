@@ -1129,6 +1129,7 @@ export class App {
         ${say('Every right answer pushes your snowball up the mountain, and <b>rarer (colder) answers push it further</b>: up to 100 m for an Absolute Zero (only 1–2 exist per category!). Seven perfect answers reach <b>700 m — space</b>. Like Sisyphus, the ball always slips back down at the end. One must imagine the snowman happy.')}
         <table class="tier-table">${rows}</table>
         ${say('Small typos are fine. Click the penguin. Click your snowman. You know you want to.', 'muted')}
+        <p class="muted small credits">Snowball Effect is a non-commercial fan game inspired by Krillion's daily rarity format and Undertale's look. Not affiliated with or endorsed by either. Original music, sound and art; fonts under the Open Font License; answer data from Wikidata. <a href="./privacy.html">Privacy &amp; credits</a></p>
         <div class="center"><button class="menu" id="close-howto">GOT IT</button></div>
       </div>`;
     dlg.querySelector('#close-howto')!.addEventListener('click', () => dlg.close());

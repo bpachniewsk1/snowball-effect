@@ -1,4 +1,4 @@
-/* Undertale-ish: black boxes, chunky white borders, orange menu buttons that go yellow with a ♥ when selected. */
+/* Retro RPG look: black boxes, chunky white borders, orange menu buttons that go yellow with a ❄ when selected. */
 :root {
   --black: #000;
   --white: #fff;
@@ -6,6 +6,7 @@
   --orange: #ff9b29;
   --yellow: #ffef3a;
   --heart: #ff1a1a;
+  --frost: #8fe3f0;
   --danger: #ff4d4d;
   --border: 5px;
   --head: 'Press Start 2P', ui-monospace, monospace;
@@ -166,14 +167,14 @@ button.menu {
   margin: 2px;
 }
 button.menu::before {
-  content: '♥';
+  content: '\2744\FE0E';
   position: absolute;
   left: 13px;
   top: 50%;
   transform: translateY(-52%);
   font-family: system-ui, sans-serif;
   font-size: 18px;
-  color: var(--heart);
+  color: var(--frost);
   visibility: hidden;
 }
 button.menu:hover,
@@ -877,11 +878,11 @@ input.heart {
   cursor: pointer;
 }
 input.heart::after {
-  content: '♥';
+  content: '\2744\FE0E';
   font-family: system-ui, sans-serif;
   font-size: 16px;
   line-height: 1;
-  color: var(--heart);
+  color: var(--frost);
   visibility: hidden;
 }
 input.heart:checked::after {

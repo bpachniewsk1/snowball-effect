@@ -1,6 +1,6 @@
 # Snowball Effect ☃️
 
-A Krillion-style daily trivia game in a snowman universe. Your snowman pushes a snowball across the snow; the **colder (rarer) your answers, the bigger it grows**. Undertale-flavoured UI: black boxes, chunky borders, typewriter text.
+A Krillion-style daily trivia game in a snowman universe. Your snowman pushes a snowball across the snow; the **colder (rarer) your answers, the bigger it grows**. Retro-RPG UI (inspired by Undertale's look): black boxes, chunky borders, typewriter text, a ❄ menu cursor.
 
 ```bash
 npm install
@@ -140,6 +140,10 @@ Tier unlocks need **exactly** that tier: an Absolute Zero doesn't unlock Winky (
 - Lifetime progress (answers per tier, timeouts, rolls finished, best snowball, best streak) is kept in `localStorage` (`snowball:v2:progress`).
 - Sound effects are synthesized with Web Audio in [src/audio/sfx.ts](src/audio/sfx.ts), so there are no audio files: text blips, typing ticks, button clicks, snow crunch, a sound per tier that gets bigger the colder it is (Slush splat → Snowflake chime → Icefrost crack → Brain Freeze whoomp → Absolute Zero fanfare), a buzzer for wrong guesses, ticking for the last 5 seconds, and a "wheee" for spins.
 - Background music is an original music-box loop generated live in [src/audio/music.ts](src/audio/music.ts) (chords, arpeggio, melody are plain arrays — easy to rewrite). SFX and MUSIC toggles are separate and remembered.
+
+## Credits & inspiration
+
+Snowball Effect is a non-commercial fan game **inspired by** Krillion's daily rarity format and Undertale's look. It is not affiliated with or endorsed by either, and uses none of their assets: the music, sound effects, sprites and snowmen are original. Fonts: Press Start 2P and DotGothic16 (SIL Open Font License). Answer data: Wikidata (CC0) and Wikipedia page views.
 
 ## Saving & stats
 
