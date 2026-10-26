@@ -1,0 +1,81 @@
+{
+  "id": "bestselling-games",
+  "prompt": "Name a video game that sold more than 10 million copies",
+  "ignoreWords": [
+    "the"
+  ],
+  "ranking": {
+    "hints": [
+      "(video game)"
+    ],
+    "expect": "video game|game|developed|published|nintendo|playstation|xbox|role-playing|shooter|platform"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-26",
+    "answers": 125,
+    "coverage": "96%"
+  },
+  "answers": {
+    "slush": [
+      "Grand Theft Auto V|GTA V|GTA 5", "Call of Duty: Modern Warfare|Modern Warfare 2019",
+      "Minecraft", "Red Dead Redemption 2|RDR2",
+      "Grand Theft Auto: San Andreas|GTA San Andreas|San Andreas", "Grand Theft Auto IV|GTA IV|GTA 4",
+      "Cyberpunk 2077", "Grand Theft Auto: Vice City|GTA Vice City|Vice City", "Elden Ring",
+      "Grand Theft Auto III|GTA III|GTA 3", "The Witcher 3: Wild Hunt|The Witcher 3", "Tetris",
+      "The Elder Scrolls V: Skyrim|Skyrim", "Super Mario Bros.", "World of Warcraft|WoW"
+    ],
+    "snowflake": [
+      "Baldur's Gate 3", "Hogwarts Legacy", "Call of Duty 4: Modern Warfare|COD4",
+      "Resident Evil 2|Resident Evil 2 Remake|RE2", "Red Dead Redemption", "Sonic the Hedgehog",
+      "Resident Evil 7: Biohazard|Resident Evil 7|RE7", "Resident Evil Village|RE Village",
+      "Marvel's Spider-Man|Spider-Man PS4", "Call of Duty: Modern Warfare 2|MW2",
+      "The Legend of Zelda: Breath of the Wild|Breath of the Wild|BOTW",
+      "Pokémon Red and Blue|Pokémon Red|Pokémon Blue", "God of War", "Street Fighter II",
+      "Black Myth: Wukong|Wukong", "The Last of Us",
+      "The Legend of Zelda: Tears of the Kingdom|Tears of the Kingdom|TOTK",
+      "PUBG: Battlegrounds|PUBG|PlayerUnknown's Battlegrounds", "Stardew Valley",
+      "Call of Duty: Black Ops|Black Ops", "Call of Duty: Modern Warfare 3|MW3", "It Takes Two",
+      "Horizon Zero Dawn", "Call of Duty: Black Ops II|Black Ops 2", "Super Mario 64",
+      "Pokémon Scarlet and Violet|Pokémon Scarlet|Pokémon Violet", "Terraria"
+    ],
+    "icefrost": [
+      "Super Smash Bros. Ultimate|Smash Ultimate", "Tomb Raider|Tomb Raider 2013",
+      "Final Fantasy VII|Final Fantasy 7|FF7", "Valheim", "Ghost of Tsushima",
+      "Uncharted 4: A Thief's End|Uncharted 4", "Sekiro: Shadows Die Twice|Sekiro", "Half-Life 2",
+      "Garry's Mod", "Call of Duty: Ghosts", "Fallout 4", "Super Mario Odyssey",
+      "Call of Duty: WWII|COD WW2", "Super Mario Galaxy", "Call of Duty: Black Ops III|Black Ops 3",
+      "Pokémon FireRed and LeafGreen|Pokémon FireRed|Pokémon LeafGreen", "Wii Fit", "Wii Fit Plus",
+      "Pokémon Yellow", "Halo 3", "StarCraft", "Super Mario World",
+      "Pokémon Ruby and Sapphire|Pokémon Ruby|Pokémon Sapphire",
+      "Pokémon HeartGold and SoulSilver|Pokémon HeartGold|Pokémon SoulSilver",
+      "Animal Crossing: New Horizons", "Pokémon Sword and Shield|Pokémon Sword|Pokémon Shield",
+      "Mario Kart 8 Deluxe|Mario Kart 8", "Diablo III|Diablo 3", "Overwatch", "Wii Sports",
+      "Monster Hunter: World", "Human: Fall Flat"
+    ],
+    "brainfreeze": [
+      "The Sims", "Borderlands 2", "Halo: Reach",
+      "Pokémon Diamond and Pearl|Pokémon Diamond|Pokémon Pearl",
+      "Pokémon Gold and Silver|Pokémon Gold|Pokémon Silver",
+      "Pokémon Black and White|Pokémon Black|Pokémon White", "Super Mario Bros. Wonder|Mario Wonder",
+      "Pokémon Legends: Arceus|Legends Arceus", "Pokémon X and Y|Pokémon X|Pokémon Y",
+      "Super Mario Bros. 3", "Pokémon Sun and Moon|Pokémon Sun|Pokémon Moon",
+      "Dark Souls III|Dark Souls 3", "Mortal Kombat 11|MK11", "Monster Hunter Rise",
+      "Pokémon Omega Ruby and Alpha Sapphire|Pokémon Omega Ruby",
+      "Super Smash Bros. Brawl|Smash Bros Brawl",
+      "Pokémon Brilliant Diamond and Shining Pearl|Pokémon Brilliant Diamond",
+      "Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!|Pokémon Let's Go",
+      "Super Mario 3D World + Bowser's Fury|Super Mario 3D World", "Tekken 7", "New Super Mario Bros.",
+      "Wii Sports Resort", "Duck Hunt", "The Sims 2", "Super Mario Land", "Borderlands 3",
+      "Luigi's Mansion 3", "Gran Turismo|Gran Turismo 1", "Mario Kart Wii", "Nintendogs",
+      "Gran Turismo 4", "New Super Mario Bros. Wii", "The Sims 3", "Splatoon 2",
+      "New Super Mario Bros. U Deluxe", "Super Mario Party", "Mario Party Superstars",
+      "Animal Crossing: New Leaf", "Gran Turismo 3: A-Spec|Gran Turismo 3", "Gran Turismo 5",
+      "Super Mario Land 2: 6 Golden Coins|Super Mario Land 2", "Splatoon 3", "Super Mario 3D Land",
+      "Mario Kart 7", "Animal Crossing: Wild World", "Mario Kart DS", "Wii Play", "Ring Fit Adventure",
+      "Brain Age|Dr. Kawashima's Brain Training|Brain Training"
+    ],
+    "absolutezero": [
+      "Kinect Adventures", "Brain Age 2"
+    ]
+  }
+}

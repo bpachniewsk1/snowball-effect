@@ -1,0 +1,102 @@
+{
+  "id": "cartoon-characters",
+  "prompt": "Name a cartoon character (US, Polish, Czech, German, Russian, Chinese, Japanese… any)",
+  "ignoreWords": [
+    "the"
+  ],
+  "ranking": {
+    "hints": [
+      "(character)",
+      "(Looney Tunes)",
+      "(Disney)"
+    ],
+    "expect": "character|cartoon|animat|anime|manga|fictional|mascot|series|comic|film|television"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-26",
+    "answers": 333,
+    "coverage": "71%"
+  },
+  "answers": {
+    "slush": [
+      "Winnie the Pooh|Pooh|Kubuś Puchatek|Puchatek", "Mickey Mouse|Mickey", "Pikachu", "Bugs Bunny",
+      "SpongeBob SquarePants|SpongeBob", "Goku|Son Goku", "Bart Simpson|Bart", "Doraemon",
+      "Homer Simpson|Homer", "Road Runner", "Goofy", "Hello Kitty", "Donald Duck", "Totoro",
+      "Foghorn Leghorn"
+    ],
+    "snowflake": [
+      "Sun Wukong|Monkey King", "Popeye", "Snoopy", "Eeyore|Kłapouchy", "Betty Boop", "Scooby-Doo",
+      "Peter Griffin", "Eric Cartman|Cartman", "Luffy|Monkey D. Luffy", "Kenny McCormick|Kenny",
+      "Daffy Duck", "Pepé Le Pew", "Elmer Fudd", "Shaggy|Shaggy Rogers", "Taz|Tasmanian Devil",
+      "Tweety", "Ash Ketchum|Ash|Satoshi", "Speedy Gonzales", "Felix the Cat", "Piglet|Prosiaczek",
+      "Bolek", "Lolek", "Wolf|Nu, pogodi! Wolf|Volk|Wilk", "Hare|Zayats|Zając", "Masha|Masza", "Nezha",
+      "Charlie Brown", "Naruto|Naruto Uzumaki", "Patrick Star|Patrick", "Yosemite Sam",
+      "Marvin the Martian", "Johnny Bravo", "Rick Sanchez|Rick", "Woody Woodpecker",
+      "Scrooge McDuck|Sknerus McKwacz", "Porky Pig", "Tom|Tom Cat", "Sylvester", "Yogi Bear",
+      "Pink Panther", "Squidward|Squidward Tentacles", "Garfield", "Ponyo", "Minnie Mouse",
+      "Olive Oyl", "Detective Conan|Conan Edogawa", "Marge Simpson", "Stewie Griffin", "Mr. Krabs",
+      "Ed, Edd n Eddy|Edd", "Mr. Burns", "Fred Flintstone", "Tigger", "Lisa Simpson",
+      "Pat & Mat|Pat a Mat|Sąsiedzi", "Eren Yeager|Eren Jaeger", "Kyle Broflovski", "Ned Flanders",
+      "Stan Marsh", "Pluto", "Sailor Moon", "Perry the Platypus|Perry", "Bender", "Morty Smith|Morty",
+      "Light Yagami", "Maggie Simpson", "Sandy Cheeks", "Wile E. Coyote", "Cheburashka|Czeburaszka",
+      "Zoro|Roronoa Zoro", "Aang", "Krtek|The Little Mole|Krecik|Der kleine Maulwurf",
+      "Tanjiro|Tanjiro Kamado", "Top Cat", "Huey, Dewey and Louie|Huey|Dewey|Louie", "Barney Rubble",
+      "Plankton", "Mojo Jojo", "Daisy Duck"
+    ],
+    "icefrost": [
+      "Kaonashi|No-Face", "Sazae-san", "Sasuke|Sasuke Uchiha", "Beavis", "Vegeta",
+      "Nezuko|Nezuko Kamado", "Zuko", "Brian Griffin", "Boo-Boo", "Dexter", "Blossom", "Bubbles",
+      "Buttercup", "Rigby", "Phineas", "Dora|Dora the Explorer", "Doug Funnie", "Tola",
+      "Pampalini|Pampalini łowca zwierząt", "Baltazar Gąbka", "Smok Wawelski|Wawel Dragon", "Filemon",
+      "Bonifacy", "Gapiszon", "Rumcajs|Rumcajs the robber", "Cipísek|Cypisek", "Manka", "Rákosníček",
+      "Křemílek a Vochomůrka|Kremilek", "Pejsek a kočička|Doggy and Pussycat", "Kocour Mikeš|Mikeš",
+      "Willi|Gucio", "Flip", "Bibi Blocksberg", "Heidi", "Werner", "Sharik",
+      "Uncle Fyodor|Dyadya Fyodor", "Pechkin", "Kesha|Kesha the Parrot", "Umka", "Kuzya", "Nyusha",
+      "Big Big Wolf|Hui Tai Lang", "Lazy Goat|Lan Yang Yang", "Briar|Xiong Da", "Bramble|Xiong Er",
+      "Logger Vick|Guang Touqiang", "Big Head Son|Datou Erzi", "Chihiro", "Kiki", "Anpanman", "Meowth",
+      "James", "Saitama", "Howl", "Jiji", "Ichigo Kurosaki|Ichigo", "Gumball Watterson|Gumball",
+      "Billy and Mandy|Grim", "Timmy Turner", "Porco Rosso", "Jerry|Jerry Mouse", "Bluto|Brutus",
+      "Lola Bunny", "Invader Zim|Zim", "Numbuh One", "Inspector Gadget",
+      "Maya the Bee|Pszczółka Maja|Biene Maja", "Astro Boy", "Chibi Maruko-chan|Maruko", "Hamtaro",
+      "Gossamer", "Droopy", "Mordecai", "L|L Lawliet", "Rocky and Bullwinkle|Rocky|Bullwinkle",
+      "Leela|Turanga Leela", "Finn the Human|Finn", "Aeon Flux", "Crocodile Gena|Gena|Krokodyl Gena",
+      "Granny", "Nobita|Nobita Nobi", "Puss in Boots", "Tommy Pickles",
+      "Pete|Black Pete|Czarny Piotruś", "Hank Hill", "Reksio", "Fry|Philip J. Fry", "Mr. Magoo",
+      "Spike Spiegel", "Huckleberry Hound", "CatDog", "Sandmännchen|Sandman", "Baloo"
+    ],
+    "brainfreeze": [
+      "Chip and Dale|Chip|Dale", "Wilma Flintstone", "Mighty Mouse", "Jimmy Neutron", "Krosh",
+      "Miś Uszatek", "Betty Rubble", "Koziołek Matołek", "Asuka Langley", "Yugi Muto|Yugi",
+      "Jake the Dog", "BoJack Horseman", "Shin-chan|Crayon Shin-chan", "Deku|Izuku Midoriya",
+      "Wickie|Vicky the Viking|Wicky", "Danny Phantom", "Gon Freecss|Gon", "Levi Ackerman|Levi",
+      "Kenshiro", "Hedgehog in the Fog|Yozhik", "Courage the Cowardly Dog|Courage", "Ferb",
+      "Snagglepuss", "Edward Elric|Ed Elric", "Michigan J. Frog", "Lupin III|Lupin", "Steven Universe",
+      "Pleasant Goat|Xi Yang Yang", "Muttley", "Dio Brando|Dio", "Space Ghost",
+      "Chopper|Tony Tony Chopper", "Majin Buu|Buu", "Hong Kong Phooey",
+      "Karlsson-on-the-Roof|Karlsson", "Rei Ayanami|Rei", "Mikasa Ackerman|Mikasa", "Bob Belcher",
+      "Dick Dastardly", "Ao Bing", "Jotaro Kujo|Jotaro", "The Bear|Misha|Masha's Bear", "Misa Amane",
+      "Die Maus|The Mouse", "Frieza", "Sakura Kinomoto|Cardcaptor Sakura", "Inuyasha",
+      "Kakashi|Kakashi Hatake", "Underdog", "Wander", "Calabash Brothers|Huluwa|Calabash Boys",
+      "Benjamin Blümchen", "GG Bond|Zhu Zhu Xia", "Tabaluga", "Black Cat Detective|Black Cat Sheriff",
+      "Arnold", "Leopold the Cat|Kot Leopold", "Dudley Do-Right", "Luntik", "Matroskin", "Pumuckl",
+      "Gohan", "Dunno|Neznayka", "Shinji Ikari|Shinji", "Miś Colargol|Colargol|Barnaby",
+      "Darkwing Duck", "Jessie", "Quick Draw McGraw", "Shapoklyak", "Urmel", "Daria",
+      "Bob a Bobek|Bob and Bobek", "Pan Kleks", "Mach a Šebestová", "Ferda Mravenec|Ferda the Ant",
+      "Bill Cipher", "Maxipes Fík", "Lauras Stern|Laura's Star", "Clarabelle Cow", "Captain Caveman",
+      "Heckle and Jeckle", "Usopp", "Sakura Haruno", "Princess Bubblegum", "Dipper Pines|Dipper",
+      "Penelope Pitstop", "Mabel Pines|Mabel", "Krillin", "Ice King", "Catbus", "Horace Horsecollar",
+      "Screwy Squirrel", "Launchpad McQuack", "Hector the Bulldog", "Jonny Quest", "Heathcliff",
+      "Butt-Head", "Ren|Ren Höek", "Stimpy", "Helga Pataki|Helga", "GIR", "Star Butterfly",
+      "Marceline", "Lumpy Space Princess", "Plastuś|Plastusiek", "Pomysłowy Dobromir|Dobromir",
+      "Trefliki", "Fixiki|Simka|Nolik", "Losyash", "Sovunya", "Kopatych", "Barash",
+      "Bremen Town Musicians|Troubadour", "Funtik", "Doraemi", "Gian|Takeshi Goda", "Suneo", "Shizuka",
+      "Hinata", "Piccolo", "Nami", "Sanji", "Ryuk", "All Might", "Bakugo|Katsuki Bakugo", "Killua",
+      "Asuna", "Mononoke|San", "Calcifer", "Haku", "Gerald McBoing-Boing", "Magilla Gorilla",
+      "Angelica Pickles", "Kirito", "Gyro Gearloose|Diodak", "Monkey King: Hero Is Back|Dasheng",
+      "Atom Ant", "Gladstone Gander|Goguś Kwabotyn", "Samurai Jack", "Rocko", "Reptar", "Tom Terrific"
+    ],
+    "absolutezero": [
+      "Večerníček", "Kuiba"
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "jobs-18th-century",
+  "prompt": "Name a job that existed in the 18th century",
+  "ignoreWords": [
+    "the"
+  ],
+  "ranking": {
+    "hints": [
+      "(occupation)",
+      "(profession)",
+      "(trade)"
+    ],
+    "expect": "occupation|profession|trade|worker|person|job|craft|someone who|maker|career|role|military|clergy|title"
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 269
+  },
+  "answers": {
+    "slush": [
+      "Blacksmith|Smith", "Farmer", "Baker", "Butcher", "Carpenter", "Soldier", "Sailor", "Merchant",
+      "Priest", "Doctor|Physician", "Teacher", "Tailor", "Fisherman", "Shoemaker|Cobbler", "Pirate"
+    ],
+    "snowflake": [
+      "Cooper", "Wheelwright", "Tanner", "Chandler|Candle maker", "Weaver", "Spinner", "Miller",
+      "Brewer", "Innkeeper|Tavern keeper", "Shopkeeper", "Apothecary", "Surgeon",
+      "Barber-surgeon|Barber", "Midwife", "Vicar", "Monk", "Nun", "Musketeer", "Officer", "Admiral",
+      "Privateer", "Highwayman", "Constable", "Watchman", "Judge", "Lawyer", "Clerk", "Scribe",
+      "Printer", "Bookbinder", "Bookseller", "Governess", "Tutor", "Nanny", "Wet nurse", "Maid",
+      "Servant", "Butler", "Footman", "Valet", "Coachman", "Gardener", "Gamekeeper", "Shepherd",
+      "Milkmaid", "Stonemason|Mason", "Bricklayer", "Glassblower", "Potter", "Silversmith",
+      "Goldsmith", "Clockmaker", "Watchmaker", "Gunsmith", "Locksmith", "Chimney sweep", "Lamplighter",
+      "Town crier", "Rat catcher", "Tax collector", "Banker", "Shipwright", "Cartographer|Mapmaker"
+    ],
+    "icefrost": [
+      "Navigator", "Explorer", "Astronomer", "Chemist", "Botanist", "Composer", "Musician", "Painter",
+      "Sculptor", "Architect", "Actor", "Playwright", "Poet", "Novelist", "Philosopher", "King",
+      "Queen", "Ambassador|Diplomat", "Executioner|Hangman", "Jailer", "Coal miner|Miner",
+      "Peddler|Hawker", "Cook", "Seamstress", "Hatter", "Farrier", "Mathematician", "Grenadier",
+      "Dragoon", "Hussar", "Cavalryman", "Drummer boy", "Quartermaster", "Boatswain|Bosun",
+      "Cabin boy", "Ship's surgeon", "Whaler", "Customs officer", "Excise man", "Toll collector",
+      "Postman|Post rider", "Ferryman", "Bargeman|Bargee", "Collier", "Fishmonger", "Costermonger",
+      "Cheesemaker", "Chocolatier", "Confectioner", "Scullery maid", "Laundress|Washerwoman",
+      "Milliner", "Wigmaker|Peruke maker", "Dyer", "Fuller", "Cordwainer", "Currier", "Cartwright",
+      "Drover", "Carter", "Thatcher", "Glazier", "Tinsmith|Tinker", "Cutler", "Saddler",
+      "Harness maker", "Ploughman", "Cowherd", "Swineherd", "Dairymaid", "Groom|Stable boy",
+      "Night soil man|Gong farmer", "Knacker", "Moneylender", "Rope maker|Roper", "Sailmaker"
+    ],
+    "brainfreeze": [
+      "Engraver", "Journalist", "Courtier", "Lady-in-waiting", "Chamberlain", "Steward", "Housekeeper",
+      "Land agent", "Bailiff", "Sheriff", "Magistrate", "Justice of the peace", "Notary", "Surveyor",
+      "Engineer", "Instrument maker", "Organist", "Choirmaster", "Sexton", "Gravedigger", "Undertaker",
+      "Parish clerk", "Schoolmaster", "Professor", "Librarian", "Printer's devil", "Typefounder",
+      "Papermaker", "Bookkeeper", "Accountant", "Auctioneer", "Pawnbroker", "Stockbroker",
+      "Insurance broker|Underwriter", "Coffeehouse keeper", "Distiller", "Vintner", "Maltster",
+      "Hop picker", "Forester", "Woodcutter", "Charcoal burner", "Lumberjack", "Trapper", "Fur trader",
+      "Missionary", "Bishop", "Cardinal", "Pope", "Rabbi", "Imam", "Link boy",
+      "Sedan chair carrier|Chairman", "Linkman", "Crossing sweeper", "Mudlark", "Tosher",
+      "Leech collector", "Resurrectionist|Body snatcher", "Whipping boy", "Groom of the Stool",
+      "Hurdy-gurdy player", "Ballad seller", "Broadside seller", "Scrivener", "Clerk of works",
+      "Wainwright", "Bowyer", "Fletcher", "Journeyman", "Apprentice", "Indentured servant",
+      "Lacemaker", "Stocking knitter|Hosier", "Haberdasher", "Mercer", "Draper", "Glover", "Furrier",
+      "Hosteller|Ostler", "Postilion", "Turnpike keeper", "Lock keeper", "Lighthouse keeper",
+      "Harbour master", "Press gang|Impressment officer", "Sutler", "Camp follower", "Vivandière",
+      "Bellman", "Beadle", "Almoner", "Herbalist", "Bonesetter", "Tooth puller|Dentist",
+      "Quack|Charlatan", "Alchemist", "Astrologer", "Fortune teller", "Tallow chandler",
+      "Soap boiler|Soap maker", "Salt boiler", "Saltpetre man", "Gunpowder maker", "Cannon founder",
+      "Bell founder", "Pewterer", "Brazier", "Coppersmith", "Nailer|Nail maker", "Pin maker",
+      "Button maker", "Snuff maker"
+    ],
+    "absolutezero": [
+      "Tobacconist", "Clay pipe maker"
+    ]
+  }
+}

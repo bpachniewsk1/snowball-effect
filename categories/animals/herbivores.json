@@ -1,0 +1,63 @@
+{
+  "id": "herbivores",
+  "prompt": "Name a herbivore (an animal that eats only plants)",
+  "ignoreWords": [
+    "the"
+  ],
+  "ranking": {
+    "hints": [
+      "(animal)"
+    ],
+    "expect": "mammal|species|genus|family|animal|herbivor|bird|reptile|dinosaur|ungulate|deer|antelope|bovid|rodent|insect|tortoise|turtle|primate|marsupial|order"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-26",
+    "answers": 197,
+    "coverage": "90%"
+  },
+  "answers": {
+    "slush": [
+      "Panda|Giant panda", "Horse", "Elephant", "Cow", "Rabbit", "Hippopotamus|Hippo", "Gorilla",
+      "Deer", "Giraffe", "Kangaroo", "Goat", "Koala", "Sheep", "Rhinoceros|Rhino", "Capybara"
+    ],
+    "snowflake": [
+      "Moose", "Red panda", "Zebra", "Guinea pig", "Okapi", "Elk|Wapiti", "Donkey", "Beaver", "Camel",
+      "Woolly mammoth|Mammoth", "Sloth", "Reindeer|Caribou", "Bison", "Wombat", "Mule", "Wallaby",
+      "Antelope", "Eland", "Caterpillar", "Grasshopper", "Snail", "Porcupine", "Manatee", "Parrot",
+      "Alpaca", "Dugong", "Stegosaurus", "Hare", "Tapir", "Triceratops", "Llama", "Water buffalo",
+      "Chinchilla", "Musk ox", "Yak", "Tortoise|Galápagos tortoise", "Hyrax", "Wildebeest|Gnu",
+      "Ankylosaurus", "Nutria|Coypu", "Mountain goat", "Marmot", "Brachiosaurus", "Butterfly",
+      "Buffalo|African buffalo"
+    ],
+    "icefrost": [
+      "Honeybee|Bee", "Groundhog|Woodchuck", "Przewalski's horse", "Iguana", "Diplodocus",
+      "White-tailed deer", "Pronghorn", "Red deer", "Springbok", "Pika", "Prairie dog", "Gaur",
+      "Impala", "Termite", "Ibex", "Swan", "Muntjac", "Oryx", "Vole", "Muskrat", "Bactrian camel",
+      "Cicada", "Gazelle", "Cockatoo", "Quokka", "Dik-dik", "Fruit bat|Flying fox", "Aphid", "Sambar",
+      "Vicuña", "Dromedary", "Kiang", "Locust", "Silkworm", "Goose", "Budgerigar|Budgie", "Kakapo",
+      "Macaw", "Roe deer", "Bighorn sheep", "Parasaurolophus", "Argentinosaurus", "Brontosaurus",
+      "Green sea turtle", "Chamois", "Guanaco", "Quagga", "Pachycephalosaurus",
+      "Megatherium|Giant ground sloth", "Mule deer", "Kudu", "Sika deer", "Gopher|Pocket gopher",
+      "Hoatzin"
+    ],
+    "brainfreeze": [
+      "Fallow deer", "Mouflon", "Iguanodon", "Lovebird", "Mouse-deer|Chevrotain",
+      "Chital|Spotted deer", "Markhor", "Apatosaurus", "White rhinoceros", "Mara|Patagonian mara",
+      "Saiga", "Asian elephant", "Water deer", "Onager", "Père David's deer|Milu", "Therizinosaurus",
+      "Takin", "Agouti", "Woolly rhinoceros", "Marine iguana", "Weevil", "Takahe", "Bongo",
+      "Tree kangaroo", "Paca", "Rock hyrax", "Stick insect|Walking stick", "Barasingha", "Nyala",
+      "Serow", "Black rhinoceros", "Addax", "Sable antelope", "Hartebeest", "Gerenuk", "Waterbuck",
+      "Indian rhinoceros", "Duiker", "Bharal|Blue sheep", "Klipspringer", "Forest elephant", "Lechwe",
+      "Topi", "Paraceratherium|Indricotherium", "Goral", "Dwarf hippopotamus|Pygmy hippo", "Sauropod",
+      "Saola", "Steenbok", "Tahr", "Javan rhinoceros", "Land iguana", "Degu", "Kirk's dik-dik",
+      "Sumatran rhinoceros", "Glyptodon", "Malayan tapir", "Diprotodon", "Gemsbok", "Pademelon",
+      "Edmontosaurus", "Beira", "Kouprey", "Anoa", "Styracosaurus", "Banteng", "Protoceratops",
+      "Maiasaura", "Greater glider", "Tamaraw", "Leaf insect", "Potoroo", "Sitatunga",
+      "Mountain tapir", "Chiru|Tibetan antelope", "Bettong", "Blesbok", "Bontebok", "Royal antelope",
+      "Suni", "Tsessebe"
+    ],
+    "absolutezero": [
+      "Springhare", "Dibatag"
+    ]
+  }
+}

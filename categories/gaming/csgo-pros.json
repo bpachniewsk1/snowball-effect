@@ -1,0 +1,49 @@
+{
+  "id": "csgo-pros",
+  "prompt": "Name a CS:GO pro player (players who only played CS2 don't count)",
+  "ranking": {
+    "manual": true
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 235
+  },
+  "answers": {
+    "slush": [
+      "s1mple", "ZywOo", "NiKo", "device|dev1ce", "olofmeister", "GeT_RiGhT", "f0rest|forest",
+      "kennyS", "coldzera", "FalleN", "shroud", "pashaBiceps|pasha", "Snax", "dupreeh", "electronic"
+    ],
+    "snowflake": [
+      "m0NESY|monesy", "sh1ro", "ropz", "rain", "karrigan", "Twistzz", "broky", "EliGE", "Stewie2K",
+      "tarik", "n0thing", "Skadoodle", "autimatic", "GuardiaN", "flamie", "Zeus", "Edward", "seized",
+      "markeloff", "Xyp9x", "gla1ve", "Magisk", "Kjaerbye", "cajunb", "blameF", "k0nfig", "JW",
+      "flusha", "KRIMZ", "pronax", "Xizt", "friberg", "Fifflaren", "allu", "NEO", "TaZ", "byali",
+      "MICHU", "shox", "apEX", "Happy", "NBK-", "ScreaM", "huNter-", "jks", "fer", "TACO", "fnx",
+      "boltz", "felps", "b1t", "Perfecto", "Boombl4", "Hobbit", "Ax1Le"
+    ],
+    "icefrost": [
+      "nafany", "interz", "AdreN", "Dosia", "mou", "XANTARES", "woxic", "Aleksib", "frozen", "Spinx",
+      "flameZ", "stavn", "cadiaN", "Hiko", "nitr0", "NAF", "FugLy", "ceh9", "B1ad3", "Starix",
+      "kioShiMa", "Maikelele", "Golden", "Lekr0", "twist", "REZ", "Brollan", "hampus", "Plopski",
+      "aizy", "valde", "MSL", "Bubzkji", "Lucky", "es3tag", "KSCERATO", "yuurih", "arT", "VINI",
+      "chelo", "LUCAS1", "HEN1", "kNgV-", "RUSH", "jdm64", "Grim", "oSee", "YEKINDAR", "Jame",
+      "qikert", "buster", "FL1T", "n0rb3r7", "fame", "iM", "jL", "dexter", "Bymas", "torzsi",
+      "xertioN", "chrisJ", "oskar", "STYKO", "suNny", "Spiidi"
+    ],
+    "brainfreeze": [
+      "nex", "tabseN", "syrsoN", "k1to", "gob b", "smooya", "ALEX", "RpK", "misutaaa", "Kyojin",
+      "SmithZz", "Ex6TenZ", "bodyy", "JaCkz", "AmaNEk", "nexa", "HooXi", "sergej", "xseveN", "Aerial",
+      "Jamppi", "hades", "dycha", "SunPayus", "Snappi", "Maden", "NertZ", "TeSeS", "sjuush", "refrezh",
+      "jabbi", "mezii", "tiziaN", "freakazoid", "seang@res|seangares", "sgares", "Semphis", "Slemmy",
+      "ShahZaM", "SicK", "Subroza", "Brehze", "CeRq", "Ethan", "stanislaw", "daps", "swag", "steel",
+      "DaZeD", "AZK", "floppy", "junior", "FNS", "koosta", "pimp", "mixwell", "DeathMaker", "loWel",
+      "mopoz", "MAJ3R", "paz", "Calyx", "ngiN", "GruBy", "Kuben", "rallen", "innocent", "phr",
+      "Furlan", "Vegi", "mantuu", "ISSAA", "LEGIJA", "saffee", "drop", "dumau", "JOTA", "decenty",
+      "try", "exit", "AZR", "Gratisfaction", "jkaem", "USTILO", "Liazz", "Hatz", "INS", "BnTeT",
+      "cromen", "hoody", "Maniac", "Fox", "Draken", "dennis", "Hyper", "pyth", "Xeppaa", "zehN"
+    ],
+    "absolutezero": [
+      "Rickeh", "s0m"
+    ]
+  }
+}

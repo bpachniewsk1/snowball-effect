@@ -1,0 +1,55 @@
+{
+  "id": "minecraft-things",
+  "prompt": "Name a Minecraft tool, mob or smeltable item",
+  "ignoreWords": [
+    "the"
+  ],
+  "ranking": {
+    "manual": true
+  },
+  "ranked": {
+    "by": "hand-picked order",
+    "answers": 180
+  },
+  "answers": {
+    "slush": [
+      "Creeper", "Zombie", "Skeleton", "Enderman", "Pickaxe|Diamond pickaxe", "Sword|Diamond sword",
+      "Iron ore", "Spider", "Villager", "Pig", "Cow", "Sheep", "Chicken", "Ender Dragon", "Axe"
+    ],
+    "snowflake": [
+      "Shovel", "Hoe", "Bow", "Crossbow", "Trident", "Shears", "Flint and steel", "Fishing rod",
+      "Bucket", "Compass", "Clock", "Lead", "Name tag", "Wither", "Wither skeleton", "Blaze", "Ghast",
+      "Slime", "Magma cube", "Witch", "Iron golem", "Snow golem", "Pillager", "Phantom", "Drowned",
+      "Husk", "Stray", "Warden", "Piglin", "Zombified piglin|Zombie pigman", "Hoglin", "Wolf", "Cat",
+      "Horse", "Fox", "Panda", "Polar bear", "Axolotl", "Bee", "Parrot", "Dolphin"
+    ],
+    "icefrost": [
+      "Squid", "Wandering trader", "Gold ore", "Raw iron", "Raw gold", "Sand", "Cobblestone",
+      "Ancient debris", "Raw beef|Beef", "Raw porkchop|Porkchop", "Raw chicken", "Potato",
+      "Log|Wood|Oak log", "Clay ball|Clay", "Copper ore", "Raw copper", "Netherrack", "Cactus",
+      "Netherite pickaxe", "Netherite sword", "Netherite axe", "Mace", "Spyglass", "Brush",
+      "Recovery compass", "Carrot on a stick", "Warped fungus on a stick", "Map", "Bundle",
+      "Wooden pickaxe", "Stone pickaxe", "Iron pickaxe", "Golden pickaxe", "Cave spider", "Silverfish",
+      "Endermite", "Shulker", "Guardian", "Elder guardian", "Vindicator", "Evoker", "Vex", "Ravager",
+      "Piglin brute", "Zoglin", "Strider", "Breeze", "Bogged", "Creaking"
+    ],
+    "brainfreeze": [
+      "Happy ghast", "Copper golem", "Allay", "Sniffer", "Camel", "Armadillo", "Frog", "Tadpole",
+      "Goat", "Glow squid", "Turtle", "Rabbit", "Bat", "Ocelot", "Llama", "Trader llama", "Donkey",
+      "Mule", "Mooshroom", "Cod", "Salmon", "Pufferfish", "Tropical fish", "Skeleton horse",
+      "Zombie horse", "Zombie villager", "Illusioner", "Raw mutton|Mutton", "Raw rabbit", "Kelp",
+      "Red sand", "Stone", "Clay block", "Sea pickle", "Wet sponge", "Sandstone", "Nether gold ore",
+      "Nether quartz ore", "Coal ore", "Diamond ore", "Emerald ore", "Lapis lazuli ore|Lapis ore",
+      "Redstone ore", "Chorus fruit", "Cobbled deepslate", "Quartz block", "Basalt", "Iron sword",
+      "Iron axe", "Iron armor|Iron chestplate", "Golden sword", "Stone bricks", "Nether bricks",
+      "Polished blackstone bricks", "Chainmail armor|Chainmail chestplate", "Golden horse armor",
+      "Iron horse armor", "Golden axe", "Golden shovel", "Golden hoe", "Iron shovel", "Iron hoe",
+      "Stone axe", "Wooden sword", "Wooden shovel", "Deepslate iron ore", "Deepslate gold ore",
+      "Deepslate copper ore", "Deepslate diamond ore", "Deepslate coal ore", "Deepslate emerald ore",
+      "Deepslate lapis ore", "Deepslate redstone ore"
+    ],
+    "absolutezero": [
+      "Deepslate bricks", "Deepslate tiles"
+    ]
+  }
+}

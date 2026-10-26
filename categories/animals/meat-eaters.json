@@ -1,0 +1,68 @@
+{
+  "id": "meat-eaters",
+  "prompt": "Name an animal that eats meat (carnivores and omnivores count)",
+  "ignoreWords": [
+    "the"
+  ],
+  "ranking": {
+    "hints": [
+      "(animal)"
+    ],
+    "expect": "mammal|species|genus|family|animal|predator|carnivor|bird|fish|shark|reptile|snake|lizard|dinosaur|whale|dolphin|cat|dog|bear|insect|arachnid|spider|crocodil|primate|order|owl|eagle|hawk|falcon|seal"
+  },
+  "ranked": {
+    "by": "en.wikipedia pageviews, 60 days to 2026-10-26",
+    "answers": 231,
+    "coverage": "96%"
+  },
+  "answers": {
+    "slush": [
+      "Orca|Killer whale", "Tiger", "Lion", "Wolf", "Polar bear", "Cheetah", "Snake", "Fox|Red fox",
+      "Leopard", "Domestic cat|Cat", "Bear|Brown bear", "Dog", "Human", "Shark|Great white shark",
+      "Wolverine"
+    ],
+    "snowflake": [
+      "Sperm whale", "Jaguar", "Hyena", "Komodo dragon", "Tyrannosaurus|T. rex|Tyrannosaurus rex",
+      "Cougar|Puma|Mountain lion", "Raccoon", "Coyote", "Honey badger", "Octopus", "Praying mantis",
+      "Black bear|American black bear", "Penguin", "Crocodile", "Snow leopard", "Tasmanian devil",
+      "Owl", "Megalodon", "Python", "Rat", "Chimpanzee", "Stoat|Ermine", "Grizzly bear", "Dingo",
+      "Pig|Wild boar", "King cobra|Cobra", "Osprey", "Seal", "Mongoose", "Walrus", "Dolphin", "Lynx",
+      "Scorpion", "Tarantula|Spider", "Badger", "Leopard seal", "Chicken", "Spinosaurus", "Otter",
+      "Eagle", "Meerkat", "Bobcat", "Ferret", "Fisher", "African wild dog|Painted wolf", "Sea otter",
+      "Opossum|Possum", "Narwhal", "Weasel", "Velociraptor", "Alligator", "Binturong", "Crow|Raven",
+      "Arctic fox"
+    ],
+    "icefrost": [
+      "Bald eagle", "Caracal", "Jackal", "Anaconda", "Armadillo", "Pallas's cat|Manul",
+      "Falcon|Peregrine falcon", "Smilodon|Sabre-toothed cat|Saber-toothed tiger", "Frog",
+      "Golden eagle", "Skunk", "Vulture", "Hedgehog", "Ocelot", "Barracuda", "Sea lion", "Coati",
+      "Piranha", "Dragonfly", "Allosaurus", "Monitor lizard", "Dire wolf", "Axolotl", "Magpie",
+      "Giant squid", "Mink", "Serval", "Rattlesnake", "Maned wolf", "Heron", "Spotted hyena",
+      "Harpy eagle", "Sloth bear", "Thylacine|Tasmanian tiger", "Anglerfish", "Pelican", "Salamander",
+      "Albatross", "Pike", "Kite", "Centipede", "Ethiopian wolf", "Red wolf", "Beluga|Beluga whale",
+      "Mantis shrimp", "Black mamba", "Bull shark", "Colossal squid", "Fossa", "Barn owl",
+      "Ladybird|Ladybug", "Squid", "Hawk", "Jaguarundi", "Condor", "Cormorant", "Snowy owl", "Gharial",
+      "Sand cat", "Pangolin", "Tiger shark", "Wolf spider", "Secretary bird", "Puffin"
+    ],
+    "brainfreeze": [
+      "Shoebill", "Roadrunner", "Dhole", "Tuna", "Fennec fox", "Baboon", "Kingfisher", "Sun bear",
+      "Aardvark", "Civet", "Swordfish", "Leopard cat", "Gull|Seagull", "Giganotosaurus",
+      "Hammerhead shark", "Spectacled bear", "Porpoise", "Caiman", "Sable", "Moray eel",
+      "Clouded leopard", "Elephant seal", "Giant otter", "Pine marten|Marten", "Boa constrictor|Boa",
+      "Margay", "Lionfish", "Kestrel", "Polecat", "Striped hyena", "Fishing cat", "Aardwolf",
+      "Tuatara", "Viper", "Shrike", "Gila monster", "Bush dog", "Stork", "Genet", "Marlin", "Toad",
+      "Jumping spider", "Quoll", "Raccoon dog", "Electric eel", "Robber fly", "Skua", "Mole",
+      "Brown hyena", "Mako shark", "Buzzard", "Antlion", "Cone snail", "Snapping turtle",
+      "Anteater|Giant anteater", "Sea star|Starfish", "Kookaburra", "Shrew",
+      "Lammergeier|Bearded vulture", "Loon", "Aye-aye", "Arapaima", "Tarsier", "Ringtail",
+      "Box jellyfish|Jellyfish", "Caracara", "Harrier", "Slow loris", "Assassin bug", "Gyrfalcon",
+      "Goliath tiger fish|Tigerfish", "Vampire squid", "Numbat", "Stonefish", "Pistol shrimp",
+      "Hellbender", "Frigatebird", "Anhinga", "Grebe", "Gannet", "Sea lamprey|Lamprey", "Tayra",
+      "Cacomistle", "Antechinus", "Zorilla", "Solenodon", "Wolf eel", "Sparrowhawk", "Ferret-badger",
+      "Goshawk", "Merganser", "Pitohui", "Olingo", "Dunnart", "Linsang", "Grison"
+    ],
+    "absolutezero": [
+      "Kowari", "Mangrove monitor"
+    ]
+  }
+}
