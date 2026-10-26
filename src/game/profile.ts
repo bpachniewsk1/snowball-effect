@@ -1,4 +1,5 @@
 // Player profile: snowman avatar + nickname, plus lifetime progress used to unlock more snowmen.
+import { TEST_MODE } from '../core/testmode';
 import type { TierId } from '../core/tiers';
 
 export interface Progress {
@@ -65,7 +66,7 @@ export const STARTER = AVATARS[0];
 // ---------- storage ----------
 
 const PROFILE_KEY = 'snowball:v1:profile';
-const PROGRESS_KEY = 'snowball:v2:progress';
+const PROGRESS_KEY = TEST_MODE ? 'snowball:test:progress' : 'snowball:v2:progress';
 
 function read<T>(key: string): Partial<T> | null {
   try {

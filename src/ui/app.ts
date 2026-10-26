@@ -18,6 +18,7 @@ import { isMuted, setMuted, setRollSound, sfx, unlockAudio } from '../audio/sfx'
 import { initMusic, isMusicOff, setMusicOff } from '../audio/music';
 import { PENGUIN, spriteCanvas } from '../render/sprites';
 import { nextFact } from '../game/facts';
+import { TEST_MODE } from '../core/testmode';
 import type { Scene } from '../render/scene';
 import { $, esc, say } from './util';
 import { LavaScreen } from './lava';
@@ -145,6 +146,7 @@ export class App {
     this.render(`
       <div class="stack center">
         <h1>SNOWBALL EFFECT</h1>
+        ${TEST_MODE ? '<p class="test-badge">TEST MODE · separate saves · <a href="./">leave</a></p>' : ''}
         ${say('Answer prompts. The <em>colder</em> (rarer) your answer, the higher your snowman pushes its snowball up the mountain. Wrong? Keep trying until time runs out.')}
         <div class="title-grid">
           ${this.profileChip()}
@@ -290,7 +292,12 @@ export class App {
           autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go" aria-label="Your answer" />
         <button type="submit" class="menu" data-silent>ROLL</button>
       </form>
-      <div class="feedback" id="feedback" aria-live="assertive">${this.triesHtml(roll.misses)}</div>`);
+      <div class="feedback" id="feedback" aria-live="assertive">${this.triesHtml(roll.misses)}</div>
+      ${
+        TEST_MODE
+          ? `<div class="test-bar"><span>TEST</span>${TIER_IDS.map((id) => `<button type="button" class="test-tier" data-tier="${id}" style="--tier:${TIERS[id].color}">${esc(TIERS[id].label)}</button>`).join('')}<button type="button" class="test-tier" data-tier="timeout">Time out</button></div>`
+          : ''
+      }`);
 
     const input = $<HTMLInputElement>('#answer');
     const form = $<HTMLFormElement>('#answer-form');
@@ -347,6 +354,21 @@ export class App {
       }
       input.focus({ preventScroll: true });
     });
+
+    // Test mode: answer with any tier (a real answer from the list) or force a timeout.
+    this.panel.querySelectorAll<HTMLButtonElement>('.test-tier').forEach((b) =>
+      b.addEventListener('click', () => {
+        if (b.dataset.tier === 'timeout') {
+          this.stopTimer();
+          this.showReveal(cat, roll.timeout(input.value), false);
+          return;
+        }
+        const pool = cat.answers.filter((a) => a.tier === b.dataset.tier);
+        if (!pool.length) return this.toast('No answer of that tier here');
+        input.value = pool[Math.floor(Math.random() * pool.length)].display;
+        form.requestSubmit();
+      }),
+    );
 
     // The clock starts once the prompt has finished typing itself out.
     this.typeOut($('#prompt'), cat.prompt, () =>
@@ -524,7 +546,7 @@ export class App {
           <div class="row center-row">
             <button class="link" id="how">How to play</button>
             ${suggestions.length ? `<button class="link" id="sugg">Copy ${suggestions.length} suggested answer(s)</button>` : ''}
-            ${DEV ? '<button class="link" id="reset">[dev] reset this roll</button>' : ''}
+            ${DEV || TEST_MODE ? '<button class="link" id="reset">[test] reset this roll</button>' : ''}
           </div>
         </div>
       </div>`);

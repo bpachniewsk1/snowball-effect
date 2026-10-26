@@ -1,6 +1,7 @@
 import { ALL_CATEGORIES, PACKS } from '../core/categories';
 import { dateKey, dayNumber, pickDailyCategories } from '../core/daily';
 import { matchAnswer } from '../core/matcher';
+import { TEST_MODE } from '../core/testmode';
 import { hashString, mulberry32, shuffle } from '../core/rng';
 import { MISS_EMOJI, TIERS, formatAltitude } from '../core/tiers';
 import type { Answer, Category } from '../core/types';
@@ -222,7 +223,7 @@ export class Roll {
       this.mode === 'custom'
         ? 'Snowball Effect (custom)'
         : `Snowball Effect #${this.number}${this.archive ? ' (archive)' : ''}`;
-    return `${title} ☃️\n${formatAltitude(this.points)} · ${rankAt(this.points).name}\n${marks}`;
+    return `${title}${TEST_MODE ? ' [TEST]' : ''} ☃️\n${formatAltitude(this.points)} · ${rankAt(this.points).name}\n${marks}`;
   }
 
   categoryFor(record: RoundRecord): Category | undefined {

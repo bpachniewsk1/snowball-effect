@@ -142,6 +142,7 @@ Tier unlocks need **exactly** that tier: an Absolute Zero doesn't unlock Winky (
 
 ## Dev tricks
 
+- **Test mode: add `?test` to the URL** (works on the live site too). Every prompt gets a TEST bar that answers with a real answer of any tier (Slush … Absolute Zero) or forces a timeout. Seven Absolute Zero clicks is a real 700/700 with the summit and slip. Test mode saves separately (`snowball:test:*`), so your real streak, stats and unlocks are untouched; the results screen has a *reset this roll* link so you can replay the daily.
 - **SIM 700 M** / **SIM RANDOM** replay a whole 7-answer climb in the scene (drumroll, pushes, rarity mood, then the summit and slip) without touching any saves.
 - **CLEAR ALL DATA** (top-left, red) wipes localStorage and reloads. It shows on the dev server (`npm run dev`) or with `?dev`, never in a normal production build.
 - `/?dev&date=2026-11-02` plays any day. On the results screen in dev mode there's a **reset this roll** button.

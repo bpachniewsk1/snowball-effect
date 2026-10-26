@@ -1,7 +1,8 @@
+import { TEST_MODE } from '../core/testmode';
 import type { TierId } from '../core/tiers';
 
 // v2: five-tier rarity (saves from the old six-tier system don't carry over).
-const PREFIX = 'snowball:v2:';
+const PREFIX = TEST_MODE ? 'snowball:test:' : 'snowball:v2:';
 
 export interface RoundRecord {
   categoryId: string;

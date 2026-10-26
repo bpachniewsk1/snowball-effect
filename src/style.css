@@ -1219,3 +1219,41 @@ button.menu.locked {
     text-align: left;
   }
 }
+
+/* ---------- test mode (?test) ---------- */
+.test-badge {
+  margin: 0;
+  font-family: var(--head);
+  font-size: 10px;
+  color: var(--yellow);
+}
+.test-badge a {
+  color: inherit;
+}
+.test-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 8px;
+  border: 2px dashed var(--yellow);
+}
+.test-bar > span {
+  font-family: var(--head);
+  font-size: 10px;
+  color: var(--yellow);
+}
+.test-tier {
+  font-family: var(--head);
+  font-size: 9px;
+  padding: 6px 8px;
+  color: var(--black);
+  background: var(--tier, var(--muted));
+  border: 0;
+  cursor: pointer;
+}
+.test-tier:hover,
+.test-tier:focus-visible {
+  outline: 2px solid var(--yellow);
+}
