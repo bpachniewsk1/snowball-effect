@@ -38,8 +38,8 @@ function rollDate(): string {
 }
 
 const MASCOT_LINES = [
-  'The penguin spins. It is not very effective.',
-  'The penguin is filled with determination. And fish.',
+  'The penguin spins. Nothing happens. It feels great anyway.',
+  'The penguin is full of fish and confidence.',
   'You feel like you are going to have a cool time.',
   'The penguin judges your answers in silence.',
   'Waddle waddle.',
@@ -47,6 +47,19 @@ const MASCOT_LINES = [
   'The penguin has seen a polar bear. It is fine. Probably.',
   'Brain freeze!',
 ];
+/** During a roll the penguin stays quiet on facts — no free hints. */
+const MASCOT_ROLL_LINES = [
+  'The penguin knows a fun fact about this. It is not allowed to tell you.',
+  'No fun facts during a roll. Penguin rules.',
+  'The penguin would give you a hint, but that is probably against the rules.',
+  'The penguin zips its beak. Figure it out yourself.',
+  'The penguin is cheering for you. Silently. Professionally.',
+  'The penguin pretends it does not know the answer. It definitely does.',
+  'The penguin has a fact ready. It will tell you after the roll.',
+  'Waddle waddle. (That was not a hint.)',
+];
+/** Long enough to actually read a fact: ~0.45 s per word, at least 12 s. */
+const factMs = (text: string) => Math.max(12000, text.split(/\s+/).length * 450);
 
 export class App {
   private roll: Roll | null = null;
@@ -269,6 +282,7 @@ export class App {
     this.hud.classList.remove('hidden');
     this.scene.setState(roll.points, roll.maxPoints, true);
     if (roll.finished) return this.showResults();
+    this.hideMascotBubble();
     track('roll_start', { rollId: roll.id, mode: roll.mode, date: roll.date, number: roll.number, archive: roll.archive, prompts: roll.categories.length });
     this.render('');
     if (!roll.started) sfx.crunch();
@@ -872,17 +886,22 @@ export class App {
       void btn.offsetWidth; // restart the animation
       btn.classList.add('spinning');
       sfx.spin();
-      if (this.spins % 10 === 0) this.mascotSay(`The penguin has spun ${this.spins} times. It is dizzy.`, 3000);
-      else if (Math.random() < 0.7) this.mascotSay(`Fun fact: ${nextFact()}`, 8000);
-      else this.mascotSay(MASCOT_LINES[Math.floor(Math.random() * MASCOT_LINES.length)], 3000);
+      const pick = (lines: string[]) => lines[Math.floor(Math.random() * lines.length)];
+      if (this.spins % 10 === 0) this.mascotSay(`The penguin has spun ${this.spins} times. It is dizzy.`, 4000);
+      else if (this.inRoll()) this.mascotSay(pick(MASCOT_ROLL_LINES), 4500);
+      else if (Math.random() < 0.7) {
+        const fact = `Fun fact: ${nextFact()}`;
+        this.mascotSay(fact, factMs(fact));
+      } else this.mascotSay(pick(MASCOT_LINES), 4000);
     });
 
-    // Every so often, a fun fact — but never while a prompt's clock is running.
+    // Every so often, a fun fact — but never once a roll is under way.
     const schedule = () =>
       window.setTimeout(() => {
-        const busy = this.timer !== null || this.typing !== null || this.lava.active || document.querySelector('dialog[open]');
+        const busy = this.inRoll() || this.timer !== null || this.typing !== null || this.lava.active || document.querySelector('dialog[open]');
         if (!busy && !document.hidden) {
-          this.mascotSay(`Fun fact: ${nextFact()}`, 8000);
+          const fact = `Fun fact: ${nextFact()}`;
+          this.mascotSay(fact, factMs(fact));
           btn.classList.add('hop');
           window.setTimeout(() => btn.classList.remove('hop'), 600);
           sfx.blip();
@@ -890,6 +909,16 @@ export class App {
         schedule();
       }, 35000 + Math.random() * 20000);
     schedule();
+  }
+
+  /** A roll is being played (not just its results screen). */
+  private inRoll(): boolean {
+    return !!this.roll && !this.roll.finished;
+  }
+
+  private hideMascotBubble(): void {
+    $<HTMLElement>('#mascot-say').classList.add('hidden');
+    if (this.bubbleHide) window.clearTimeout(this.bubbleHide);
   }
 
   private bubbleHide: number | null = null;
